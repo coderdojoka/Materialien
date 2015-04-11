@@ -25,17 +25,18 @@ def aktualisiere(dt):
 
 Spiel.init(300, 300, "Hallo Welt", aktualisiere)
 zf = Spiel.lese_zeichen_flaeche()
-flaeche = ZeichenFlaeche( ZeichenFlaeche.neue_pygame_flaeche(250, 250, False),  GELB)
+flaeche = ZeichenFlaeche(neue_pygame_flaeche(250, 250, False),  GELB)
 zf.fuege_hinzu(flaeche)
 
 p = Polygon([(20, 20), (10, 40), (40, 50), (50, 20)])
 l = Linien([(300, 20), (400, 40), (50, 200)], True)
 r = Rechteck(0,0, 40, 40, BLAU)
 
+
 schrift = Schrift(20)
 t = Text("Hallo Welt", 200, 0, schrift, BLAU, ROT)
 
-p_box = Rechteck(p.dimension.x, p.dimension.y, p.dimension.breite, p.dimension.hoehe, GRUEN)
+p_box = Rechteck(p.x, p.y, p.dimension.breite, p.dimension.hoehe, GRUEN)
 # p_box = Rechteck(l.dimension.x, l.dimension.y, l.dimension.breite, l.dimension.hoehe, GRUEN)
 
 

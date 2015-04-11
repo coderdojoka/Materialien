@@ -1,7 +1,6 @@
 __author__ = 'Mark Weinreuter'
 import pygame
-import py2cd
-from py2cd.box import *
+
 from py2cd.objekte import *
 
 
@@ -11,17 +10,19 @@ class Linie(ZeichenbaresObjekt):
     """
 
     def render(self, pyg_zeichen_flaeche):
-        return pygame.draw.line(pyg_zeichen_flaeche, self.farbe,
-                                (self.x_intern, self.y_intern),
-                                (self.x_intern + self.ende[0], self.y_intern + self.ende[1]), self.dicke)
+        pygame.draw.line(pyg_zeichen_flaeche, self.farbe,
+                         (self.x, self.y), self.__verschobenes_ende, self.dicke)
 
-    def __init__(self, start, ende, farbe=(0, 0, 0), dicke=1):
+    def aktualisiere_end_punkt(self):
+        self.__verschobenes_ende = (self.x + self.__ende[0], self.y + self.__ende[1])
+
+    def __init__(self, start, ende, eltern_flaeche, farbe=(0, 0, 0), dicke=1):
         """
-
+        Erstellt eine neue Linie zwischen den beiden gegebenen Punkten.
         :param start
-        :type start: tuple[int]
+        :type start: tuple[float]
         :param ende
-        :type ende: tuple[int]
+        :type ende: tuple[float]
         :param farbe:
         :type farbe: tuple[int]
         :param dicke:
@@ -30,16 +31,15 @@ class Linie(ZeichenbaresObjekt):
         :rtype:
         """
 
-        # punkte umrechnen, so dass diese bei 0,0 beginnen
-        self.ende = (ende[0] - start[0], -(ende[1] - start[1]))
+        # punkte umrechnen, so dass diese bei 0,0 beginnen, und start zu x,y Position wird
+        self.__start = start
+        self.__ende = (ende[0] - start[0], -(ende[1] - start[1]))
         self.dicke = dicke
 
-        super().__init__(farbe, py2cd.spiel.Spiel.haupt_flaeche)
+        self.__verschobenes_ende = self.__ende
+        """
+        Internes Tupel für den Endpunkt, der aktualisiert werden muss, wenn die Position geändert wird
+        :type: tuple[float]
+        """
 
-        # reihenfolge!
-        self.x_intern = start[0]
-        self.y_intern = start[1] - self.dimension.hoehe
-
-    def berechne_groesse(self):
-        return umgebendes_rechteck([(0, 0), self.ende], self._eltern_flaeche.dimension.hoehe)
-
+        super().__init__(start[0], start[1], self.__ende[0], self.__ende[1], eltern_flaeche, farbe, self.aktualisiere_end_punkt)

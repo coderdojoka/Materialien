@@ -1,9 +1,8 @@
 __author__ = 'Mark Weinreuter'
 
 import pygame
-import py2cd
+
 from py2cd.objekte import *
-from py2cd.box import *
 
 
 class Schrift():
@@ -37,9 +36,9 @@ class Text(ZeichenbaresObjekt):
 
     def render(self, pyg_zeichen_flaeche):
         return pyg_zeichen_flaeche.blit(self.schrift.render(self.text, True, self.farbe, self.hintergrund),
-                                        (self.x_intern, self.y_intern))
+                                        (self.x, self.y))
 
-    def __init__(self, text, x, y, schrift, farbe=(0, 0, 0), hintergrund=None):
+    def __init__(self, text, x, y, schrift, eltern_flaeche, farbe=(0, 0, 0), hintergrund=None):
         """
         Ein neuer Text an der angebenen Position
         :param text:
@@ -59,12 +58,23 @@ class Text(ZeichenbaresObjekt):
         :rtype:
         """
         self.hintergrund = hintergrund
+        """
+        Die Hintergrundfarbe
+        :type: tuple[int]
+        """
         self.text = text
+        """
+        Der anzuzeigende Text
+        :type:str
+        """
         self.schrift = schrift
-        super().__init__(farbe, py2cd.spiel.Spiel.haupt_flaeche)
-        # nach init!
-        self.setze_position(x, y)
+        """
+        Die verwendete Schrift
+        :type:Schrift
+        """
 
-    def berechne_groesse(self):
+        # bereche größe
         dim = self.schrift.berechne_groesse(self.text)
-        return Box(0, 0, dim[0], dim[1])
+
+        # Eltern Konstruktor
+        super().__init__(x, y, dim[0], dim[1], eltern_flaeche, farbe)

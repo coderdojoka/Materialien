@@ -1,30 +1,38 @@
 __author__ = 'Mark Weinreuter'
 
-def umgebendes_rechteck(punkte, e_hoehe):
-    r = Box(punkte[0][0], punkte[0][1], punkte[0][0], punkte[0][1])
+
+def berechne_groesse(punkte):
+    x = punkte[0][0]
+    y = punkte[0][1]
+    breite = punkte[0][0]
+    hoehe = punkte[0][1]
+
     for p in punkte:
 
-        if p[0] < r.x:
-            r.x = p[0]
+        if p[0] < x:
+            x = p[0]
 
-        if p[0] > r.breite:
-            r.breite = p[0]
+        if p[0] > breite:
+            breite = p[0]
 
-        if p[1] < r.y:
-            r.y = p[1]
+        if p[1] < y:
+            y = p[1]
 
-        if p[1] > r.hoehe:
-            r.hoehe = p[1]
+        if p[1] > hoehe:
+            hoehe = p[1]
 
     # größe anpassen
-    r.breite -= r.x
-    r.hoehe -= r.y
+    breite -= x
+    hoehe -= y
 
-    r.y = e_hoehe - r.y - r.hoehe
-    return r
+    return breite, hoehe
 
 
 class Box:
+    """
+    Eine einfache Box (Rechteck) mit Position und Breite, Hoehe
+    """
+
     def __init__(self, x, y, breite, hoehe):
         self.x = x
         self.y = y

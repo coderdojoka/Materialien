@@ -1,11 +1,11 @@
-import py2cd
-
 __author__ = 'Mark Weinreuter'
+
+import sys
 
 import pygame
 from pygame.locals import *
+
 from py2cd.flaeche import ZeichenFlaeche
-import sys
 
 
 class Spiel:
@@ -64,7 +64,7 @@ class Spiel:
         Spiel.hoehe = hoehe
 
         # die Hauptzeichenfläche des Spiels!
-        Spiel.haupt_flaeche = ZeichenFlaeche(pygame.display.set_mode((breite, hoehe)), (255, 255, 255))
+        Spiel.haupt_flaeche = ZeichenFlaeche(0, 0, pygame.display.set_mode((breite, hoehe)), None, (255, 255, 255))
 
         # Fenstertitel
         Spiel.setze_fenster_titel(titel)

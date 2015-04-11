@@ -1,28 +1,32 @@
 __author__ = 'Mark Weinreuter'
 
 import pygame
-import py2cd
+
 from py2cd.objekte import *
 from py2cd.box import *
 
 
 class Polygon(ZeichenbaresObjekt):
-    def __init__(self, punkte, farbe=(0, 0, 0), dicke=0):
+
+    def __init__(self, punkte, eltern_flaeche, farbe=(0, 0, 0), dicke=0):
         """
         Erstellt ein neues Polygon mit den gegebenen Eckpunkte
         :param punkte:
-        :type punkte: list [int, int]
-        :param dicke:
-        :type dicke: int
+        :type: punkte: list [int, int]
+        :param eltern_flaeche:
+        :type eltern_flaeche: py2cd.flaeche.ZeichenFlaeche
         :param farbe:
-        :type farbe: tuple [int]
+        :type: farbe: tuple [int]
+        :param dicke:
+        :type: dicke: int
         :return:
         :rtype:
         """
 
-        x = punkte[0][0]  # x und y speichern und später setzen
+        # Konvertiere die Punkte so, das der erset Punkt bei (0,0) liegt und der erste Punkt wird als x,y-Koordinaten
+        x = punkte[0][0]
         y = punkte[0][1]
-        self.punkte = [(p[0] - punkte[0][0], -(p[1] - punkte[0][1])) for p in punkte]
+        self._punkte = [(p[0] - x, (p[1] - y)) for p in punkte]
         """
         Die Punkteliste. Die Punkte werden so umgerechnet, dass sie relativ zum Startpunkt sind.
         :type: list[int, int]
@@ -35,25 +39,17 @@ class Polygon(ZeichenbaresObjekt):
         :type: int
         """
 
-        # parent init()
-        super().__init__(farbe, py2cd.spiel.Spiel.haupt_flaeche)
+        # berechne die Größe
+        dim = berechne_groesse(self._punkte)
 
-
-        # position jetzt setzen
-        self.x_intern = x
-        self.y_intern = y - self.dimension.hoehe  # cheat um für den setter zu überlisten :D
-
-        self.position_geaendert = self._aktualisiere_punkte  # aktualisierungsfunktion bei punktänderung
-        self._aktualisiere_punkte()
+        # Eltern init()
+        super().__init__(x, y, dim[0], dim[1], eltern_flaeche, farbe, self._aktualisiere_punkte)
 
     def render(self, pyg_zeichen_flaeche):
         return pygame.draw.polygon(pyg_zeichen_flaeche, self.farbe, self._verschobene_punkte, self.dicke)
 
     def _aktualisiere_punkte(self):
-        self._verschobene_punkte = [(p[0] + self.x_intern, p[1] + self.y_intern) for p in self.punkte]
-
-    def berechne_groesse(self):
-        return umgebendes_rechteck(self.punkte, self._eltern_flaeche.dimension.hoehe)
+        self._verschobene_punkte = [(p[0] + self.x, p[1] + self.y) for p in self._punkte]
 
 
 class Linien(Polygon):
@@ -61,14 +57,26 @@ class Linien(Polygon):
     Mehrere Linie zwischen den angegebenen Punkten. Alle Punkte werden der Reihe nach verbunden. 1 -> 2 -> 3...
     """
 
-    def berechne_groesse(self):
-        return umgebendes_rechteck(self.punkte, self._eltern_flaeche.dimension.hoehe)
-
     def render(self, pyg_zeichen_flaeche):
         return pygame.draw.lines(pyg_zeichen_flaeche, self.farbe, self._geschlossen, self._verschobene_punkte,
                                  self.dicke)
 
-    def __init__(self, punkte, geschlossen=False, farbe=(0, 0, 0), dicke=1):
+    def __init__(self, punkte, eltern_flaeche, geschlossen=False, farbe=(0, 0, 0), dicke=1):
+        """
+        Erstellt ein neues Liniensystem aus den gegebenen Punkten
+        :param punkte:
+        :type punkte: list[tuple[float]]
+        :param eltern_flaeche:
+        :type eltern_flaeche: py2cd.flaeche.ZeichenFlaeche
+        :param geschlossen:
+        :type geschlossen: bool
+        :param farbe:
+        :type farbe: tuple[int]
+        :param dicke:
+        :type dicke: int
+        :return:
+        :rtype:
+        """
         self._geschlossen = geschlossen
 
-        super().__init__(punkte, farbe, dicke)
+        super().__init__(punkte, eltern_flaeche, farbe, dicke)

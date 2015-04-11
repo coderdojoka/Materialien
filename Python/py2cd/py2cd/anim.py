@@ -19,7 +19,7 @@ class Animation(ZeichenbaresObjekt):
     Zeigt einen Animation an, indem eine Liste von Bildern(ZeichenFlaechen) in angegeben Zeitabschnitten durchgewechselt werden.
     """
 
-    def berechne_groesse(self):
+    def lese_dimension(self):
         return Box(0, 0, self.breite, self.hoehe)
 
     def __init__(self, flaechen, alpha=True):
