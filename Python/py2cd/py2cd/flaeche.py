@@ -32,7 +32,7 @@ class ZeichenFlaeche(ZeichenbaresObjekt):
     Eine Fläche auf der gezeichnet werden kann. Es können z.B. Rechtecke oder Bilder gezeichnet werden.
     """
 
-    def __init__(self, x, y, pygame_flaeche, eltern_flaeche, farbe=None):
+    def __init__(self, x, y, pygame_flaeche, eltern_flaeche, farbe=(0, 0, 0, 0)):
         """
         Eine neue Zeichenfläche
         :param x:

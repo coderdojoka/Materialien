@@ -18,7 +18,7 @@ class ZeichenbaresObjekt:
         :param hoehe:
         :type hoehe: float
         :param farbe:
-        :type farbe:tuple[int]
+        :type farbe:tuple[int]|None
         :param eltern_flaeche:
         :type eltern_flaeche: py2cd.flaeche.ZeichenFlaeche
         :return:
@@ -91,15 +91,47 @@ class ZeichenbaresObjekt:
         return self.__y
 
     @property
-    def abstand_oben(self, oben):
-        return self._eltern_flaeche.hoehe - oben
+    def abstand_oben(self):
+        return self.__y
 
     @abstand_oben.setter
     def abstand_oben(self, oben):
-        self.__y = self._eltern_flaeche.hoehe - oben
+        self.__y = oben
+        self.position_geaendert()
+
+    @property
+    def abstand_unten(self):
+        return self._eltern_flaeche.hoehe - (self.__y + self.hoehe)
+
+    @abstand_unten.setter
+    def abstand_unten(self, unten):
+        self.__y = self._eltern_flaeche.hoehe - (unten + self.hoehe)
+        self.position_geaendert()
+
+    @property
+    def abstand_rechts(self):
+        return self._eltern_flaeche.breite - (self.__x + self.breite)
+
+    @abstand_rechts.setter
+    def abstand_rechts(self, rechts):
+        self.__x = self._eltern_flaeche.breite - (rechts + self.breite)
+        self.position_geaendert()
+
+    @property
+    def abstand_links(self):
+        return self.__y
+
+    @abstand_links.setter
+    def abstand_links(self, links):
+        self.__x = links
         self.position_geaendert()
 
     def position(self):
+        """
+        Gibt die aktuelle Position als Tupel zurück.
+        :return:
+        :rtype: tuple[float]
+        """
         return self.__x, self.__y
 
     def render(self, pyg_zeichen_flaeche):
@@ -135,18 +167,26 @@ class ZeichenbaresObjekt:
         self.__y += y
         self.position_geaendert()
 
-
     def setze_position(self, x=0, y=0):
         self.__x = x
         self.__y = y
         self.position_geaendert()
-
 
     def zentriere(self):
         d_breite = self._eltern_flaeche.breite - self.breite
         d_hoehe = self._eltern_flaeche.hoehe - self.hoehe
         self.__x = d_breite / 2
         self.__y = d_hoehe / 2
+        self.position_geaendert()
+
+    def zentriere_vertikal(self):
+        d_hoehe = self._eltern_flaeche.hoehe - self.hoehe
+        self.__y = d_hoehe / 2
+        self.position_geaendert()
+
+    def zentriere_horizontal(self):
+        d_breite = self._eltern_flaeche.breite - self.breite
+        self.__x = d_breite / 2
         self.position_geaendert()
 
     def lese_welt_position(self):
@@ -161,7 +201,6 @@ class ZeichenbaresObjekt:
             obj = obj._eltern_flaeche
 
         return x, y
-
 
     def punkt_in_rechteck(self, punkt):
         """

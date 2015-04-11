@@ -81,6 +81,7 @@ class Spiel:
         """
 
         # Versions Info
+        print("Python: ", sys.version)
         print("Pygame: ", pygame.version.ver)
 
         # Initialisiert pygame
@@ -233,7 +234,7 @@ class Spiel:
         Spiel._maus_taste_gedrueckt = funktion
 
     @staticmethod
-    def lese_zeichen_flaeche():
+    def gib_zeichen_flaeche():
         """
         Gibt die Hauptzeichenfläche des Spiels zurück. Darauf kann (muss) gezeichnet werden.
         :return:

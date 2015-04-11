@@ -13,21 +13,27 @@ PAUSIERT = 2
 
 class Animation(ZeichenbaresObjekt):
     """
-    Zeigt einen Animation an, indem eine Liste von Bildern(ZeichenFlaechen) in angegeben Zeitabschnitten durchgewechselt werden.
+    Zeigt einen Animation an, indem eine Liste von Bildern(ZeichenFlaechen) in angegeben Zeitabschnitten
+    durch gewechselt werden.
     """
 
-    def __init__(self, flaechen, alpha=True):
+    def __init__(self, flaechen_und_zeiten, wiederhole=False, alpha=True):
         """
-
-        :param flaechen:
-        :type flaechen:list[(str|ZeichenFlaeche, int)]
+        Erstellt einen neue Instanz aus den Flächen.
+        :param flaechen_und_zeiten:
+        :type flaechen_und_zeiten:list[(str|ZeichenFlaeche, int)]
+        :param wiederhole:
+        :type wiederhole: bool
         :param alpha:
         :type alpha:bool
         :return:
         :rtype:
         """
 
-        self._wiederhole_animation = False
+        self._wiederhole_animation = wiederhole
+        """
+        Gibt an ob die Animation wiederholt wird oder nicht
+        """
         self._flaechen_zeiten = []
         """
         :type: list[(ZeichenFlaeche, int)]
@@ -43,7 +49,7 @@ class Animation(ZeichenbaresObjekt):
         breite = 0
         hoehe = 0
 
-        for zf in flaechen:
+        for zf in flaechen_und_zeiten:
 
             flaeche = zf[0]
 
