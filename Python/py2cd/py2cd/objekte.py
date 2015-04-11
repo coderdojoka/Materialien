@@ -118,7 +118,7 @@ class ZeichenbaresObjekt:
         :return:
         :rtype:
         """
-        self.render(self._eltern_flaeche._pyg_flaeche)
+        self.render(self._eltern_flaeche.pyg_flaeche)
 
 
     def aendere_position(self, x, y):

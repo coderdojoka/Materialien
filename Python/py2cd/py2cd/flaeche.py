@@ -48,7 +48,6 @@ class ZeichenFlaeche(ZeichenbaresObjekt):
         :return:
         :rtype:
         """
-        super().__init__(x, y, pygame_flaeche.get_width(), pygame_flaeche.get_height(), eltern_flaeche, farbe)
 
         self._zeichenbareObjekte = []
         """
@@ -56,12 +55,13 @@ class ZeichenFlaeche(ZeichenbaresObjekt):
         :type: list[ZeichenbaresObjekt]
         """
 
-        self._pyg_flaeche = pygame_flaeche
+        self.pyg_flaeche = pygame_flaeche
         """
         Die eigentliche pygame Zeichenfläche auf der gezeichnet wird.
         :type:pygame.Surface
         """
 
+        super().__init__(x, y, pygame_flaeche.get_width(), pygame_flaeche.get_height(), eltern_flaeche, farbe)
 
     @staticmethod
     def lade_bild_aus_datei(pfad, alpha=False):
@@ -76,17 +76,17 @@ class ZeichenFlaeche(ZeichenbaresObjekt):
         :rtype:
         """
         try:
-            img = pygame.image.load(pfad)
+            bild = pygame.image.load(pfad)
         except pygame.error:
-            raise AttributeError("Das bild: %s konnte nicht geladen werden!" % pfad)
+            raise AttributeError("Das Bild: %s konnte nicht geladen werden!" % pfad)
 
         # laut Doku soll convert() aufgerufen werden?!
         if alpha:
-            img = img.convert_alpha()
+            bild = bild.convert_alpha()
         else:
-            img = img.convert()
+            bild = bild.convert()
 
-        return ZeichenFlaeche(img, py2cd.spiel.Spiel.haupt_flaeche)
+        return ZeichenFlaeche(0, 0, bild, None)
 
     def fuege_hinzu(self, objekt):
         """
@@ -123,18 +123,18 @@ class ZeichenFlaeche(ZeichenbaresObjekt):
     def zeichne_alles(self):
 
         if self.farbe is not None:
-            self._pyg_flaeche.fill(self.farbe)
+            self.pyg_flaeche.fill(self.farbe)
 
         # zeichne alle
         for zb in self._zeichenbareObjekte:
-            zb.render(self._pyg_flaeche)
+            zb.render(self.pyg_flaeche)
 
     def render(self, pyg_zeichen_flaeche):
         self.zeichne_alles()
-        return pyg_zeichen_flaeche.blit(self._pyg_flaeche, (self.x, self.y))
+        return pyg_zeichen_flaeche.blit(self.pyg_flaeche, (self.x, self.y))
 
     def setze_farbmaske(self, farbe):
-        self._pyg_flaeche.set_colorkey(farbe)
+        self.pyg_flaeche.set_colorkey(farbe)
 
     def lese_farbmaske(self):
-        return self._pyg_flaeche.get_colorkey()
+        return self.pyg_flaeche.get_colorkey()
