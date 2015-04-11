@@ -91,3 +91,31 @@ class Linien(Polygon):
         self._geschlossen = geschlossen
 
         super().__init__(punkte, eltern_flaeche, farbe, dicke)
+
+
+class AALinien(Polygon):
+    """
+    Mehrere Linie zwischen den angegebenen Punkten. Alle Punkte werden der Reihe nach verbunden. 1 -> 2 -> 3...
+    """
+
+    def render(self, pyg_zeichen_flaeche):
+        return pygame.draw.aalines(pyg_zeichen_flaeche, self.farbe, self._geschlossen, self._verschobene_punkte,
+                                   True)
+
+    def __init__(self, punkte, eltern_flaeche, geschlossen=False, farbe=(0, 0, 0)):
+        """
+        Erstellt ein neues Liniensystem aus den gegebenen Punkten
+        :param punkte:
+        :type punkte: list[tuple[float]]
+        :param eltern_flaeche:
+        :type eltern_flaeche: py2cd.flaeche.ZeichenFlaeche
+        :param geschlossen:
+        :type geschlossen: bool
+        :param farbe:
+        :type farbe: tuple[int]
+        :return:
+        :rtype:
+        """
+        self._geschlossen = geschlossen
+
+        super().__init__(punkte, eltern_flaeche, farbe)

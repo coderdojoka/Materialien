@@ -14,6 +14,7 @@ from py2cd.anim import Animation
 def aktualiserungs_funktion(t):
     pass
 
+
 Spiel.init(400, 400, "Hallo Animation", aktualiserungs_funktion)
 HINTER_GRUND = (100, 50, 50)
 
@@ -23,6 +24,7 @@ zf.farbe = HINTER_GRUND
 zeit = 1000 / 11
 Spiel.fps = 30
 
+os.chdir("py2cd/beispiele")
 bf = ZeichenFlaeche.lade_bild_aus_datei("testimages/bolt_strike_0001.png", True)
 
 boltAnim = Animation([('testimages/bolt_strike_0001.png', zeit),
@@ -34,7 +36,7 @@ boltAnim = Animation([('testimages/bolt_strike_0001.png', zeit),
                       ('testimages/bolt_strike_0007.png', zeit),
                       ('testimages/bolt_strike_0008.png', zeit),
                       ('testimages/bolt_strike_0009.png', zeit),
-                      ('testimages/bolt_strike_0010.png', zeit)], alpha=False)
+                      ('testimages/bolt_strike_0010.png', zeit)])
 
 boltAnim.start()
 boltAnim.setze_wiederhole(True)
@@ -48,7 +50,7 @@ fireAnim = Animation([("testimages/flame_a_0001.png", zeit),
                       ("testimages/flame_a_0003.png", zeit),
                       ("testimages/flame_a_0004.png", zeit),
                       ("testimages/flame_a_0005.png", zeit),
-                      ("testimages/flame_a_0006.png", zeit)], False, False)
+                      ("testimages/flame_a_0006.png", zeit)], False)
 fireAnim.start()
 fireAnim.setze_wiederhole(True)
 fireAnim.setze_position(200, 200)

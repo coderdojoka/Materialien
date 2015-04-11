@@ -1,3 +1,5 @@
+import math
+
 __author__ = 'Mark Weinreuter'
 
 import os
@@ -13,7 +15,7 @@ from py2cd.text import Schrift, Text
 from py2cd.rechteck import Rechteck
 from py2cd.farben import *
 from py2cd.flaeche import ZeichenFlaeche, neue_pygame_flaeche
-
+from py2cd.mathe import Plot
 
 def aktualisiere(dt):
     l.aendere_position(1, -1)
