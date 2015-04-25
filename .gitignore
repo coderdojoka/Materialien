@@ -1,2 +1,11 @@
 Python/*/*/__pycache__
+Python/*/__pycache__
 Python/py2cd/.idea/
+*.out
+*.log
+*.aux
+*.toc
+*.nav
+*.synctex.gz
+*.snm
+
