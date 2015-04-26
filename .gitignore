@@ -1,6 +1,9 @@
 Python/*/*/__pycache__
 Python/*/__pycache__
 Python/py2cd/.idea/
+
+Lektionen/*/_minted-*/
+
 *.out
 *.log
 *.aux
@@ -9,4 +12,4 @@ Python/py2cd/.idea/
 *.synctex.gz
 *.snm
 *.vrb
-
+*.pyg
