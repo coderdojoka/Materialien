@@ -8,4 +8,5 @@ Python/py2cd/.idea/
 *.nav
 *.synctex.gz
 *.snm
+*.vrb
 

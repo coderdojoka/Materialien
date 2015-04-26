@@ -1,87 +1,43 @@
-\documentclass[xcolor=svgnames,handout,ngerman]{beamer}
+\newcommand*{\VorlagenPfad}{../../Vorlagen}%
+\documentclass{\VorlagenPfad/coderdojokabeamer}
 
-\usepackage[utf8]    {inputenc}
-\usepackage[T1]      {fontenc}
-\usepackage[english] {babel}
-
-\usepackage{amsmath,amsfonts,graphicx}
-\usepackage{beamerleanprogress}
-
-
-
-\title
-  [\hspace{2em}]
-  {Bedingungen und Falls-Abfragen}
-
-\author
-  [CoderDojoKa]{}
-
-\date
-  {April 24, 2015}
-
-\institute
-  {CoderDojo Karlsruhe}
-
+\title{Bedingungen und Falls-Abfragen}
+\author{CoderDojo Karlsruhe}
+\date{April 24, 2015}
 
 \begin{document}
 
 \maketitle
 
-\section
-  {Bedingungen}
+\section{Bedingungen}
 
-\begin{frame}
-	{Bedingungen}
-  "Wenn morgen die Sonne scheint gehe ich ins Schwimmbad"
-  
+\begin{frame}{Bedingungen}
+  "Wenn morgen die Sonne scheint, gehe ich ins Schwimmbad"
 \end{frame}
 
-\begin{frame}
-	{Falls-Abfrage}
-	
-
-	Falls \textless scheint morgen die Sonne?\textgreater:
-	\\
+\begin{frame}{Falls-Abfrage}
+	Falls \textless scheint morgen die Sonne?\textgreater:\\
 	\noindent\hspace*{12mm} gehe\_ins\_Schwimmbad()
-	
 \end{frame}
 
-
-
-\begin{frame}
-	{Bedingungen}
-	
+\begin{frame}{Bedingungen}
 	Eine Bedingung ist eine Aussage, die nur zu Ja(Wahr) oder Nein(Falsch) ausgewertet werden kann.
-	
 \end{frame}
 
-
-\begin{frame}
-	{Bedingungen mit Alternativen}
-	"Wenn morgen die Sonne scheint gehe ich ins Schwimmbad, ansonsten ins Kino"
-	
+\begin{frame}{Bedingungen mit Alternativen}
+	"Wenn morgen die Sonne scheint, gehe ich ins Schwimmbad, ansonsten ins Kino"
 \end{frame}
 
-\begin{frame}
-	{Falls-Ansonsten-Abfrage}
-	
-	
-	Falls \textless scheint morgen die Sonne?\textgreater:
-	\\
-	\noindent\hspace*{12mm} gehe\_ins\_Schwimmbad()
-	\\
-	Ansonsten:
-	\\
+\begin{frame}{Falls-Ansonsten-Abfrage}
+	Falls \textless scheint morgen die Sonne?\textgreater:\\
+	\noindent\hspace*{12mm} gehe\_ins\_Schwimmbad()\\
+	Ansonsten:\\
 	\noindent\hspace*{12mm} gehe\_ins\_Kino()
-	
 \end{frame}
 
-\section
-  {Bedingungen verknüpfen}
+\section{Bedingungen verknüpfen}
 
-\begin{frame}
-  {Bedingungen verknüpfen mit Und}
-
+\begin{frame}{Bedingungen verknüpfen mit Und}
 	Wenn morgen die Sonne scheint UND es wärmer als $25^{\circ}C$ ist, gehe ich ins Schwimmbad.
  \begin{table}[t,clr]
  	\begin{center}
@@ -92,15 +48,12 @@
  			wahr			& wahr						&			\\ \hline
  			falsch			& falsch					&			\\ \hline
  			falsch			& wahr						&			\\ \hline
- 			
  		\end{tabular}
  	\end{center}
  \end{table}
 \end{frame}
 
-\begin{frame}
-	{Bedingungen verknüpfen mit Oder}
-	
+\begin{frame}{Bedingungen verknüpfen mit Oder}
 	Wenn morgen die Sonne scheint ODER es wärmer als $25^{\circ}C$ ist, gehe ich ins Schwimmbad.
 	\begin{table}[t,clr]
 		\begin{center}
@@ -111,7 +64,6 @@
 				wahr			& wahr						&			\\ \hline
 				falsch			& falsch					&			\\ \hline
 				falsch			& wahr						&			\\ \hline
-				
 			\end{tabular}
 		\end{center}
 	\end{table}
@@ -119,9 +71,7 @@
 
 \section{Im Code}
 
-\begin{frame}
-  {Scratch}
-
+\begin{frame}{Scratch}
   \begin{figure}[t]
     \centering
     \includegraphics[scale=.6]{scratch_if_else}
@@ -129,16 +79,15 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}
-	{Python}
-	
-	\begin{figure}[t]
-		\centering
-		\includegraphics[scale=.3]{python_if_else}
-		\caption{Falls-Ansonsten in Python}
-	\end{figure}
+\begin{frame}[fragile]{Python}
+  \begin{minted}{python}
+  if wert < 10:
+      print("Kleiner 10.")
+  else:
+      print("Größer oder gleich 10.")
+
+  print("Nach if-Abfrage.")
+  \end{minted}
 \end{frame}
 
-
 \end{document}
-
