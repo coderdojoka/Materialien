@@ -6,4 +6,4 @@ alter = input("Wie alt bist du?\n")
 # Gibt den eingelesenen Namen auf der Konsole aus
 print("Hallo", name)
 
-print("Du bist also", "Jahre alt!")
+print("Du bist also", alter, "Jahre alt!")

@@ -1,0 +1,52 @@
+%% Author: Mark weinreuter
+\newcommand*{\VorlagenPfad}{../../Vorlagen}%
+\documentclass{\VorlagenPfad/coderdojokatext}
+
+% Titel, Kategorie müssen als Kommando für den Header/Footer definiert werden.
+\newcommand{\Titel}{while- und for-Schleifen}
+\newcommand{\Kategorie}{Basics:\space} 
+
+\begin{document}
+
+{\huge Vorläufige Version, To be improved...}
+\begin{center}
+	{\huge \Titel}
+\end{center}
+
+\section{Wiederholungen} Du hast die Aufgabe ein Programm zu schreiben, das die Zahlen von 1 bis 100 auszugibt. Wie könnte man diese Aufgabe lösen? Einfach hintereinander hinschreiben:
+
+\begin{pythoncode}
+print(1)
+print(2)
+# ... 96 Zeilen mehr
+print(99)
+print(100)
+\end{pythoncode}
+
+Diese Methode ist umständlich und sehr aufwendig. Glücklicherweiße gibt es dafür eine schlaue Lösung.
+
+\section{Die for-Schleife} Die \code{for}-Schleife dient dazu Elemente, z.B. die einer Liste einzeln durchzugehen und aufzulisten.
+
+\begin{pythoncode}
+for zahl in range(1, 100):
+	print(zahl)
+\end{pythoncode}
+
+\code{range(1, 100)} (engl. für Bereich) erzeugt eine Liste mit allen Zahlen zwischen dem Startwert 1 und dem Endwert 100. Diese werden dann nacheinander in die Variable \code{zahl} geschrieben. Daraufhin werden alle eingerückten Zeilen der \code{for}-Schleife ausgeführt.
+\\
+Der obige Code gibt also alle Zahlen zwischen 1 und 100 aus!
+
+\begin{pythoncode}
+for zahl in range(1, 100, 2):
+	print(zahl)
+\end{pythoncode}
+\code{range(1, 100, 2)} erzeugt eine Liste mit allen Zahlen zwischen 1 und 100 in 2-er Schritten. Also \code{1, 3, ..., 97, 99}. Anstelle von \code{2} kann jede beliebige andere Zahl verwendet werden.
+
+\section{Aufgaben}
+\begin{itemize}
+	\item Schreibe eine \code{for}-Schleife, die alle Zahlen zwischen 40 und 100 in 3-er Schritten ausgibt
+	\item Experimentiere mit den Werten von \code{range}. Was passiert, wenn der Startwert größer ist als der Endwert? Was passiert, wenn der 'Hochzählwert' (z.B. die 2 im obigen Beispiel) größer ist als der Endwert. Was passiert, wenn der 'Hochzählwert' negativ ist?
+	\item Schreibe eine \code{for}-Schleife, die alle Zahlen zwischen 100 und 1 ausgibt. Also \code{100, 99, ..., 2, 1}.
+\end{itemize}
+
+\end{document}
