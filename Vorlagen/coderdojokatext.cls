@@ -72,8 +72,25 @@
 	\begin{ttfamily}#1\end{ttfamily}
 }
 
+\newcommand{\renewminted}[3][]{
+  \ifthenelse{\equal{#1}{}}
+    {\def\minted@envname{#2code}}
+    {\def\minted@envname{#1}}
+  \renewenvironment{\minted@envname}
+    {\VerbatimEnvironment
+      \begin{minted}[#3]{#2}}
+    {\end{minted}}
+  \renewenvironment{\minted@envname *}[1]
+    {\VerbatimEnvironment\begin{minted}[#3,##1]{#2}}
+    {\end{minted}}}
+
 \newminted{python}{linenos, stepnumber=1, tabsize=4}
 \newminted[pseudocode]{php}{linenos, stepnumber=1, tabsize=4}
+
+\AtBeginEnvironment{merkbox}{
+\renewminted{python}{linenos=false, stepnumber=1, tabsize=4}
+\renewminted[pseudocode]{php}{linenos=false, stepnumber=1, tabsize=4}
+}
 
 \newtcolorbox{merkbox}[1][]{
   breakable,
