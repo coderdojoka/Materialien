@@ -1,4 +1,5 @@
-package aufgabe1;
+package aufgabe;
+
 
 public class Person {
 
