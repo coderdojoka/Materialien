@@ -48,4 +48,4 @@
 }
 
 % \usepackage instead of \usetheme to support relative paths
-\usepackage{\VorlagenPfad/beamerthemecoderdojoka}
+\usepackage[usetotalslideindicator]{\VorlagenPfad/beamerthemecoderdojoka}
