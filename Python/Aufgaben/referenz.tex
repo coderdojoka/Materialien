@@ -1,0 +1,146 @@
+%% Author: Mark weinreuter
+\newcommand*{\VorlagenPfad}{../../Vorlagen}%
+\documentclass{\VorlagenPfad/coderdojokatext}
+
+% Titel, Kategorie müssen als Kommando für den Header/Footer definiert werden.
+\newcommand{\Titel}{Python - Befehlsreferenz}
+
+\begin{document}
+\setcounter{chapter}{1}
+
+\begin{center}
+	{\huge \Titel}
+\end{center}
+
+\section{Allgemein}
+\subsection{Kommentare}
+\begin{pythoncode}
+# Ein Kommentar, der bis ans Zeilenende geht
+"""
+Ein Kommentar, der über
+mehrere Zeilen geht.
+"""
+\end{pythoncode}
+\subsection{Variablen}
+\begin{pythoncode}
+# Eine neue Variable Zahl mit dem Namen 'meineZahl' und Wert 42
+meineZahl = 42
+
+# Eine andere Variable mit einem Text-Wert, Texte müssen in ".." stehen.
+meinText = "Hallo Welt"
+\end{pythoncode}
+
+\subsection{Ausgabe}
+
+\begin{pythoncode}
+# Gibt einen Text aus
+print("Hallo Welt")
+
+\end{pythoncode}
+\begin{pythoncode}
+# Gibt den Wert einer Variablen aus
+name = "Mark"
+print("Hallo")
+print(name)
+
+# 'print' akzeptiert mehrere Werte gleichzeitig
+print("Hallo", name)
+\end{pythoncode}
+
+\subsection{Operationen}
+\begin{pythoncode}
+wert  = 10 # Mit Zahlen kann ganz normal rechnen
+wert = 10 + 20  # = 30
+wert = 10 - 20  # = -10
+wert = 10 / 2   # = 5
+wert = 10 * 2   # = 20
+\end{pythoncode}
+
+
+\begin{pythoncode}
+# Texte kann man '+' aneinander anfügen
+begruessung  = "Hallo "
+text = begruessung + "Mark" # "Hallo Mark"
+# Texte kann man auch multiplizieren/wiederholen
+text = "Ha" * 3  # HaHaHa
+\end{pythoncode}
+
+\section{Schleifen}
+
+\subsection{Bedingung}
+\begin{pythoncode}
+# Eine Bedingung kann entweder Wahr (True) oder Falsch (False) sein
+bedingung = 10 > 20 # False
+print("Die Bedingung ist:", bedingung)
+\end{pythoncode}
+
+\subsection{if-Abfragen}
+\begin{pythoncode}
+wert = 10 # Eine Variable mit einem beliebigen Wert (hier 10)
+
+# eine if-Abfrage überprüft die Bedingung ob diese Wahr oder falsch ist
+if wert > 20: 
+	# wird ausgeführt wenn die Bedingung wahr ist (ACHTUNG: Einrückung)
+	print("Der Wert ist größer als 20")
+
+# Hier gehts weiter (ACHUTUNG: Nicht eingerückt)
+\end{pythoncode}
+
+\begin{pythoncode}
+# mit einer if-else Abfrage kann man auch auf eine nicht erfüllte
+# Bedingung mit dem 'else'-Zweig reagieren
+if wert > 20: 
+	# wird ausgeführt wenn die Bedingung erfüllt ist
+	print("Der Wert ist größer als 20") 
+else:
+	# wird ausgeführt wenn die Bedingung nicht erfüllt ist
+	print("Wert ist kleiner oder gleich 20.")
+
+# Hier gehts weiter (nicht eingerückt)
+\end{pythoncode}
+
+\subsection{while-Schleifen}
+\begin{pythoncode}
+# Führt solange den eingerückten Code aus, wie die Bedingung erfüllt ist
+zahl = 1
+while zahl < 10: 
+	# dieser eingerückte Code wird wiederholt (ACHUTUNG: Einrückung)
+	print("Zahl:", zahl) # Wert ausgeben
+	zahl = zahl +1 # Zähler erhöhen
+
+# Hier gehts weiter (ACHTUNG: nicht eingerückt)
+\end{pythoncode}
+
+\section{Eingabe durch den Benutzer}
+\subsection{input - Text einlesen}
+\begin{pythoncode}
+# mit input(..) kann man den Benutzer aufforden einen Text einzugeben
+eingabeText = input("Bitte Text eingeben: "); 
+print(eingabeText); # gibt den eingelesenen Text aus
+\end{pythoncode}
+
+\subsection{input - Eine Zahl einlesen}
+\begin{pythoncode}
+# mit input(..) kann man den Benutzer aufforden einen Text einzugeben
+eingabeText = input("Bitte eine Zahl eingeben: "); 
+
+# Diesen Text wollen wir mittels int(..) in eine Zahl konvertieren:
+eingabeZahl = int(eingabeText) 
+# ACHTUNG: wird keine Zahl eingeben, so stürzt das Programm ab
+print(eingabeZahl); # gibt die eingelesene Zahl aus
+\end{pythoncode}
+
+
+\section{Zufallszahlen}
+
+\begin{pythoncode}
+# das random Modul muss (einmal) importiert werden um die Funktion
+# random.randint() verwenden zu können
+import random 
+
+# generiert eine Zufallszahl zwischen 1 und 100
+zufallsZahl = random.randint(1,100)
+\end{pythoncode}
+
+
+\end{document}
