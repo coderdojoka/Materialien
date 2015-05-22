@@ -13,3 +13,5 @@ Lektionen/*/_minted-*/
 *.snm
 *.vrb
 *.pyg
+*.pygstyle
+*.pygtex
