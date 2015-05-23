@@ -1,7 +1,7 @@
 __author__ = 'Mark Weinreuter'
 
-import py2cd
 import pygame
+
 from py2cd.objekte import ZeichenbaresObjekt
 
 

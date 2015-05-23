@@ -42,4 +42,5 @@ class Linie(ZeichenbaresObjekt):
         :type: tuple[float]
         """
 
-        super().__init__(start[0], start[1], self.__ende[0], self.__ende[1], eltern_flaeche, farbe, self.aktualisiere_end_punkt)
+        super().__init__(start[0], start[1], self.__ende[0], self.__ende[1], eltern_flaeche, farbe,
+                         self.aktualisiere_end_punkt)

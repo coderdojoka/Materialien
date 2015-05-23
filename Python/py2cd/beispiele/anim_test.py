@@ -1,12 +1,5 @@
 __author__ = 'Mark Weinreuter'
 
-import os
-import sys
-
-# wir sind in beispiele
-os.chdir("../../")
-sys.path.append("py2cd")
-
 from py2cd.spiel import *
 from py2cd.anim import Animation
 
@@ -24,7 +17,6 @@ zf.farbe = HINTER_GRUND
 zeit = 1000 / 11
 Spiel.fps = 30
 
-os.chdir("py2cd/beispiele")
 bf = ZeichenFlaeche.lade_bild_aus_datei("testimages/bolt_strike_0001.png", True)
 
 boltAnim = Animation([('testimages/bolt_strike_0001.png', zeit),

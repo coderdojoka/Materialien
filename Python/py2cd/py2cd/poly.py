@@ -3,7 +3,6 @@ __author__ = 'Mark Weinreuter'
 import pygame
 
 from py2cd.objekte import *
-from py2cd.box import *
 
 
 class Polygon(ZeichenbaresObjekt):

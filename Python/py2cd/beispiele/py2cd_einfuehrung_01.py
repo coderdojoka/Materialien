@@ -1,33 +1,7 @@
-"""
-             ____         _
- _ __  _   _|___ \ ___ __| |
-| '_ \| | | | __) / __/ _` |
-| |_) | |_| |/ __/ (_| (_| |
-| .__/ \__, |_____\___\__,_|
-|_|    |___/
-
-
-py2cd ist ein (hoffentlich) einfach zu verwendendes "2D-Framework" in Deutsch.
-
-Es können graphische Objekte, wie Rechtecke, Linien, Kreise, Polygone gezeichnet werden.
-Außerdem wird das Anzeigen von Bilder und Animationen, als schnelle Abfolge von Bilder, angeboten.
-
-
-"""
-
-
-# Hack um py2cd im PythonPfad bekannt zu machen
-import os
-import sys
-
-# wir sind in beispiele
-os.chdir("../../")
-sys.path.append("py2cd")
-
+__author__ = "Mark Weinreuter"
 
 from py2cd.linie import Linie
 from py2cd.poly import Polygon
-
 
 from py2cd.spiel import Spiel
 from py2cd.farben import *
@@ -57,7 +31,6 @@ text = Text("Hallo Welt", 0, 0, Schrift(20), Spiel.gib_zeichen_flaeche())
 
 # setzt die Position an die gegebene Stelle: oben mittig mit Abstand 10 pixel vom Rand
 text.setze_position((Spiel.breite - text.breite) / 2, Spiel.hoehe - text.hoehe - 10)
-
 
 Spiel.starten()
 """

@@ -152,7 +152,6 @@ class ZeichenbaresObjekt:
         """
         self.render(self._eltern_flaeche.pyg_flaeche)
 
-
     def aendere_position(self, x, y):
         """
         Ändert die Position um den gegebenen Wert, d.h: self._x = self._x + x.
@@ -216,4 +215,3 @@ class ZeichenbaresObjekt:
         top = (start[1] <= punkt[1] <= (start[1] + self.hoehe))
 
         return left and top
-

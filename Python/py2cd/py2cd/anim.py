@@ -1,5 +1,7 @@
 __author__ = 'Mark Weinreuter'
 
+# Inspired by Al Sweigarts pyganim: http://inventwithpython.com/pyganim/
+
 import py2cd
 
 from py2cd.spiel import Spiel

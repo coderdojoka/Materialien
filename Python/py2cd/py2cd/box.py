@@ -1,7 +1,7 @@
 __author__ = 'Mark Weinreuter'
 
 
-def berechne_groesse2(punkte):
+def berechne_groesse_unused(punkte):
     x = punkte[0][0]
     y = punkte[0][1]
     breite = punkte[0][0]
