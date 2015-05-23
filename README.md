@@ -3,10 +3,10 @@ Sammlung von Beispielprogrammen, Übungen etc.
 
 ## Python  
 Hier finden sich [Aufgaben](Python/Aufgaben), [Beispiele](Python/Beispiele) und Anleitungen für die Programmierung mit Python. Die Beispiele sind für Python3 ausgelegt. Die aktuelle Python Version ist 3.4 und sollte installiert werden.
-Hinweise zur Installation von Python können in [hier](Lektionen/installation/installation.pdf) gefunden werden.
+Hinweise zur Installation von Python können in [hier](Installation/installation_python.pdf) gefunden werden.
 ### py2cd  
 [py2cd](Python/py2cd) ist einfaches Zeichen-/Spiele-Framework, dass einen Wrapper um das in Spiele-Framework [pygame](https://pygame.org) bietet. Es ist auf Deutsch geschrieben, so dass die Befehle einfacher und verständlicher benutzt werden können.
-Hinweise zur Installation sind [hier](Lektionen/installation/pygame_installation.pdf) zu finden.
+Hinweise zur Installation sind [hier](Installation/pygame_installation.pdf) zu finden.
 
 
 ## Für Mentoren
