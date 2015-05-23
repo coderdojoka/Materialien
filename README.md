@@ -6,7 +6,7 @@ Hier finden sich [Aufgaben](Python/Aufgaben), [Beispiele](Python/Beispiele) und 
 Hinweise zur Installation von Python können in [hier](Installation/installation_python.pdf) gefunden werden.
 ### py2cd  
 [py2cd](Python/py2cd) ist einfaches Zeichen-/Spiele-Framework, dass einen Wrapper um das in Spiele-Framework [pygame](https://pygame.org) bietet. Es ist auf Deutsch geschrieben, so dass die Befehle einfacher und verständlicher benutzt werden können.
-Hinweise zur Installation sind [hier](Installation/pygame_installation.pdf) zu finden.
+Hinweise zur Installation sind [hier](Installation/installation_pygame.pdf) zu finden.
 
 
 ## Für Mentoren
