@@ -17,8 +17,16 @@ Die Vorlage verwendet das in Python geschriebene [Pygments](http://pygments.org/
 ```python
 pip install Pygments
 ```
-installiert werden (vorrausgestzt Python und [pip](https://pip.pypa.io/en/latest/installing.html) (kommt mit Python 3.4 standartmäßig mit) sind installiert).
+installiert werden (vorrausgestzt Python und [pip](https://pip.pypa.io/en/latest/installing.html) (kommt mit Python 3.4 standartmäßig mit) sind installiert).  
+
+Außerdem muss Latex-Dokument dann mit dem 'shell-escape' Flag kompiliert werden:
+```
+-shell-escape
+```
+
 
 ## Aufgaben
-Zur Zeit gibt es noch noch relativ wenige Aufgaben und Tutorials. Dies soll sich in nächster Zeit allerdings ändern :)
-Hier z.B. eine Aufgabe ist z.B. für das Spiel [Zahlenraten](Python/Aufgaben/zahlenraten.pdf).
+Zur Zeit gibt es noch noch relativ wenige Aufgaben und Tutorials. Dies soll sich in nächster Zeit allerdings ändern :)  
+Ein Tutorial ist z.B. das Spiel [Zahlenraten](Python/Aufgaben/zahlenraten.pdf).  
+
+Ein Aufgabe ist z.B. [Maler](Python/Aufgaben/maler.pdf).
