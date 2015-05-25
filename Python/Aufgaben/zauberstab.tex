@@ -1,0 +1,75 @@
+% Vorlage verwenden. ACHTUNG der Pfad ist relativ und geht davon aus, 
+% diese Datei zwei Ordnerebenen höher liegt als Vorlagen
+\newcommand*{\VorlagenPfad}{../../Vorlagen}%
+\documentclass{\VorlagenPfad/coderdojokatext}
+
+% Titel als Kommando für den Header/Footer definieren
+\newcommand{\Titel}{Der Zauberstab}
+
+\begin{document}
+	
+	
+	\begin{center}
+		{\huge \Titel}
+	\end{center}
+	
+	\section{Die Aufgabenstellung} Du hast einen Brief bekommen mit einer Einladung: Du darfst in Hogwarts zaubern lernen! Doch erstmals musst du einkaufen gehen, denn was ist ein Magier ohne Eule, Besen und Zauberstab?
+	\\ \\
+	Im Zauberstabladen bekommst du vom Zauberstabhersteller Ollivander alle seine Zauberstäbe nacheinander vorgelegt. Du willst natürlich der größte Magier aller Zeiten werden und musst deshalb den stärksten aller Stäbe auswählen!
+	\\ \\
+	Ollivander zeigt dir nacheinander die Zauberstäbe und sagt zu jedem Zauberstab aus welchem Material dieser gemacht ist und wie stark er ist.
+	Du hörst zu, bis Olivander das Wort "`fertig"' sagt und antwortest dann mit dem Material des stärksten Zauberstabes, der dir gezeigt wurde.
+	\\ \\
+	Schreibe ein Programm, in das du die von Ollivander genannten Materialen und Stärken einträgst. Sobald "`fertig"' eingeben wird, sollst du das stärkste eingegeben Material ausgeben.
+	\\
+	\\
+	Hinweis: Die Stärke aller Zauberstäbe ist größer als 0!
+	
+	\subsection{Vorrausetzungen} Um diese Aufgabe erfolgreich lösen zu können solltest du dich mit \code{if}-Bedingungen, Variablentypen und \code{while}-Schleifen auskennen.
+	\subsection{Vorüberlegungen}
+	Welche Schritte sind nötig um das Problem zu lösen?
+	\begin{itemize}
+		\item Wie können Eingaben eingelesen werden und welche werden benötigt?
+		\item Wie lange werden Eingaben gelesen und wann wird abgebrochen?
+		\item Was soll ausgegeben werden?
+	\end{itemize}
+
+\subsection{Ablauf-Beispiele}
+Hier findest du 2 Beispiele wie das Programm ablaufen könnte. 
+\subsubsection{Beispiel 1}
+\begin{pseudocode*}{linenos=false}
+# Es wird eingegeben:
+Zeder
+3
+Bambus
+2 
+Buche 
+6 
+Plastik 
+1 
+Phönixfeder 
+10 
+fertig
+
+# Du gibst auf der Konsole aus: 
+Phönixfeder
+
+\end{pseudocode*}
+
+\subsubsection{Beispiel 2}
+
+\begin{pseudocode*}{linenos=false}
+# Es wird eingegeben:
+Diamant
+100
+Pappe
+2
+fertig
+
+# Du gibst auf der Konsole aus:
+Diamant
+\end{pseudocode*}
+
+Schaffst du es den stärksten Zauberstab für dich zu finden?
+	
+\end{document}

@@ -1,0 +1,51 @@
+% Vorlage verwenden. ACHTUNG der Pfad ist relativ und geht davon aus, 
+% diese Datei zwei Ordnerebenen höher liegt als Vorlagen
+\newcommand*{\VorlagenPfad}{../../Vorlagen}%
+\documentclass{\VorlagenPfad/coderdojokatext}
+
+% Titel als Kommando für den Header/Footer definieren
+\newcommand{\Titel}{Klopf Klopf}
+
+\begin{document}
+	\setcounter{chapter}{1}
+	
+	\begin{center}
+		{\huge \Titel}
+	\end{center}
+	
+	\section{Die Aufgabenstellung} Donald Duck braucht mal wieder Geld und schickt dich deswegen zu Onkel Dagoberts Geldspeicher. Doch Onkel Dagobert hält gerade ein Nickerchen und du muss mehrmals rufen, damit er aufwacht und dir die Geldspeichertür aufmacht.
+	\\ \\
+	Du weißt, wie tief Onkel Dagobert schläft (wird dir als Nummer gegeben). \\
+	Du musst genau so oft "`HALLO"' rufen, um ihn aufzuwecken.
+	Kannst du ihn aus dem Bett bekommen?
+	
+	\subsection{Vorrausetzungen} Um diese Aufgabe erfolgreich lösen zu können solltest du dich mit \code{while}- oder \code{for}-Schleifen auskennen.
+	
+\subsection{Beispiele}
+\subsubsection{Beispiel 1}
+\begin{pseudocode*}{linenos=false}
+# Einlesen wie tief Onkel Dagobert schläft:
+6
+
+# Du gibst auf der Konsole aus:
+HALLO
+HALLO
+HALLO
+HALLO
+HALLO
+HALLO
+
+\end{pseudocode*}
+	
+\subsubsection{Beispiel 2}
+
+\begin{pseudocode*}{linenos=false}
+# Einlesen wie tief Onkel Dagobert schläft:
+2
+
+# Du gibst auf der Konsole aus:
+HALLO
+HALLO
+\end{pseudocode*}	
+
+\end{document}
