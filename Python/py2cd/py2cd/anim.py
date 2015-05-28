@@ -1,19 +1,21 @@
+import pygame
+
+from py2cd.bild import Bild
+
 __author__ = 'Mark Weinreuter'
 
 # Inspired by Al Sweigarts pyganim: http://inventwithpython.com/pyganim/
 
-import py2cd
-
 from py2cd.spiel import Spiel
 from py2cd.flaeche import ZeichenFlaeche
-from py2cd.objekte import ZeichenbaresObjekt
+from py2cd.objekte import ZeichenbaresElement
 
 GESTOPPT = 0
 GESTARTET = 1
 PAUSIERT = 2
 
 
-class Animation(ZeichenbaresObjekt):
+class Animation(ZeichenbaresElement):
     """
     Zeigt einen Animation an, indem eine Liste von Bildern(ZeichenFlaechen) in angegeben Zeitabschnitten
     durch gewechselt werden.
@@ -57,17 +59,17 @@ class Animation(ZeichenbaresObjekt):
 
             # Die Fläche kann entweder aus einer Datei geladen werden
             if isinstance(flaeche, str):
-                flaeche = ZeichenFlaeche.lade_bild_aus_datei(zf[0], alpha)
+                flaeche = Bild.lade_bild_aus_datei(zf[0], alpha)
 
             # oder schon eine Zeichenfläche sein
-            elif not isinstance(flaeche, ZeichenFlaeche):
-                raise AttributeError("Entweder ZeichenFlaeche oder Strings übergeben.")
+            elif not isinstance(flaeche, pygame.Surface):
+                raise AttributeError("Entweder Surface oder Strings übergeben.")
 
             # die größten werte ermitteln
-            if flaeche.breite > breite:
-                breite = flaeche.breite
-            if flaeche.hoehe > hoehe:
-                hoehe = flaeche.hoehe
+            if flaeche.get_width() > breite:
+                breite = flaeche.get_width()
+            if flaeche.get_height() > hoehe:
+                hoehe = flaeche.get_height()
 
             # Zur List hinzufügen und Zeit addieren
             self._flaechen_zeiten.append((flaeche, zf[1]))
@@ -75,7 +77,7 @@ class Animation(ZeichenbaresObjekt):
 
         self._anzahl_flaechen = len(self._flaechen_zeiten)
 
-        super().__init__(0, 0, breite, hoehe, py2cd.spiel.Spiel.haupt_flaeche, None)
+        super().__init__(0, 0, breite, hoehe, None)
 
     def start(self):
         if self._zustand == GESTOPPT:
@@ -113,12 +115,12 @@ class Animation(ZeichenbaresObjekt):
                         return
 
             # Zeichne das aktuelle bild
-            pyg_zeichen_flaeche.blit(self._flaechen_zeiten[self._aktuelle_flaeche][0].pyg_flaeche,
+            pyg_zeichen_flaeche.blit(self._flaechen_zeiten[self._aktuelle_flaeche][0],
                                      (self.x, self.y))
 
         elif self._zustand == PAUSIERT:
             # das aktuelle bild wird immer noch gezeichnet
-            return pyg_zeichen_flaeche.blit(self._flaechen_zeiten[self._aktuelle_flaeche][0].pyg_flaeche,
+            return pyg_zeichen_flaeche.blit(self._flaechen_zeiten[self._aktuelle_flaeche][0],
                                             (self.x, self.y))
 
     def setze_wiederhole(self, wiederhole=True):

@@ -7,8 +7,8 @@ class Plot(AALinien):
     Einfaches Werkzeug um eine mathematische Kurve zu plotten
     """
 
-    def __init__(self, gleichung, start, ende, eltern_flaeche, farbe=(0, 0, 0), vergroesserung_x=10,
-                 vergroesserung_y=10, unterteilung=100):
+    def __init__(self, gleichung, start, ende, farbe=(0, 0, 0), vergroesserung_x=10,
+                 vergroesserung_y=10, unterteilung=100, eltern_flaeche=None):
         """
         Plottet die gegebenen Gleichung zwischen Start und Endwert
         :param gleichung: Die zu plottende Funktion, z.B: lambda x: x**2
@@ -45,4 +45,4 @@ class Plot(AALinien):
             unterteilung -= 1
 
         # Eltern Konstruktor
-        super().__init__(punkte, eltern_flaeche, False, farbe)
+        super().__init__(punkte, False, farbe, eltern_flaeche)

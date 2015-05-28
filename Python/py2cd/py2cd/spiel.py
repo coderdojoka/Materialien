@@ -5,8 +5,6 @@ import sys
 import pygame
 from pygame.locals import *
 
-from py2cd.flaeche import ZeichenFlaeche
-
 
 class Spiel:
     """
@@ -14,6 +12,7 @@ class Spiel:
     Es muss Spiel.init() und Spiel.starten() aufgerufen werden.
     """
 
+    _ist_aktiv = True
     breite = 640
     """
     Die Breite des Spiels (Fensters)
@@ -94,8 +93,12 @@ class Spiel:
         Spiel.breite = breite
         Spiel.hoehe = hoehe
 
+        # wird hier importiert, da sonst ein Fehler auftritt (wegen cyclischen Imports)
+        from py2cd.flaeche import ZeichenFlaeche
+
         # die Hauptzeichenfläche des Spiels!
-        Spiel.haupt_flaeche = ZeichenFlaeche(0, 0, pygame.display.set_mode((breite, hoehe)), None, (255, 255, 255))
+        Spiel.haupt_flaeche = ZeichenFlaeche(0, 0, pygame.display.set_mode((breite, hoehe)),
+                                             (255, 255, 255))
 
         # Fenstertitel
         Spiel.setze_fenster_titel(titel)
@@ -123,7 +126,7 @@ class Spiel:
         # erster tick für zeit_unterschied_ms
         Spiel._clock.tick(Spiel.fps)
 
-        while True:  # spiel schleife
+        while Spiel._ist_aktiv:  # spiel schleife
 
             # wir gehen alle events durch
             for event in pygame.event.get():
@@ -237,8 +240,8 @@ class Spiel:
     def gib_zeichen_flaeche():
         """
         Gibt die Hauptzeichenfläche des Spiels zurück. Darauf kann (muss) gezeichnet werden.
-        :return:
-        :rtype:py2cd.zeichen_flaeche.ZeichenFlaeche
+        :return: Die Zeichenfläche
+        :rtype:py2cd.flaeche.ZeichenFlaeche
         """
         return Spiel.haupt_flaeche
 

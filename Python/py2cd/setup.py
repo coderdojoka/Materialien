@@ -15,4 +15,5 @@ setup(name='py2cd',
       install_requires=[
           'pygame'
       ],
+      test_suite="tests",
       zip_safe=False)

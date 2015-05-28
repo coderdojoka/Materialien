@@ -5,8 +5,8 @@ import pygame
 from py2cd.objekte import *
 
 
-class Polygon(ZeichenbaresObjekt):
-    def __init__(self, punkte, eltern_flaeche, farbe=(0, 0, 0), dicke=0):
+class Polygon(ZeichenbaresElement):
+    def __init__(self, punkte, farbe=(0, 0, 0), dicke=0, eltern_flaeche=None):
         """
         Erstellt ein neues Polygon mit den gegebenen Eckpunkte
         :param punkte:
@@ -53,7 +53,7 @@ class Polygon(ZeichenbaresObjekt):
         """
 
         # Eltern init()
-        super().__init__(x_min, y_min, x_max - x_min, y_max - y_min, eltern_flaeche, farbe, self._aktualisiere_punkte)
+        super().__init__(x_min, y_min, x_max - x_min, y_max - y_min, farbe, eltern_flaeche, self._aktualisiere_punkte)
 
     def render(self, pyg_zeichen_flaeche):
         return pygame.draw.polygon(pyg_zeichen_flaeche, self.farbe, self._verschobene_punkte, self.dicke)
@@ -71,7 +71,7 @@ class Linien(Polygon):
         return pygame.draw.lines(pyg_zeichen_flaeche, self.farbe, self._geschlossen, self._verschobene_punkte,
                                  self.dicke)
 
-    def __init__(self, punkte, eltern_flaeche, geschlossen=False, farbe=(0, 0, 0), dicke=1):
+    def __init__(self, punkte, geschlossen=False, farbe=(0, 0, 0), dicke=1, eltern_flaeche=None):
         """
         Erstellt ein neues Liniensystem aus den gegebenen Punkten
         :param punkte:
@@ -89,7 +89,7 @@ class Linien(Polygon):
         """
         self._geschlossen = geschlossen
 
-        super().__init__(punkte, eltern_flaeche, farbe, dicke)
+        super().__init__(punkte, farbe, dicke, eltern_flaeche)
 
 
 class AALinien(Polygon):
@@ -101,7 +101,7 @@ class AALinien(Polygon):
         return pygame.draw.aalines(pyg_zeichen_flaeche, self.farbe, self._geschlossen, self._verschobene_punkte,
                                    True)
 
-    def __init__(self, punkte, eltern_flaeche, geschlossen=False, farbe=(0, 0, 0)):
+    def __init__(self, punkte, geschlossen=False, farbe=(0, 0, 0), eltern_flaeche=None):
         """
         Erstellt ein neues Liniensystem aus den gegebenen Punkten
         :param punkte:
@@ -117,4 +117,4 @@ class AALinien(Polygon):
         """
         self._geschlossen = geschlossen
 
-        super().__init__(punkte, eltern_flaeche, farbe)
+        super().__init__(punkte, farbe, eltern_flaeche=eltern_flaeche)

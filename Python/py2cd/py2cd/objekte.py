@@ -1,12 +1,12 @@
 __author__ = 'Mark Weinreuter'
 
 
-class ZeichenbaresObjekt:
+class Zeichenbar:
     """
     Überklasse für alle zeichenbaren Objekte. Diese haben ein Position (x,y) und eine Farbe.
     """
 
-    def __init__(self, x, y, breite, hoehe, eltern_flaeche, farbe, position_geändert=lambda: None):
+    def __init__(self, x, y, breite, hoehe, farbe, eltern_flaeche, position_geändert=lambda: None):
         """
          Ein neues Zeichenbares Objekt mit der gegebenen (Hintergrund-)Farbe und Elternflaeche.
         :param x:
@@ -32,19 +32,25 @@ class ZeichenbaresObjekt:
         """ :type: py2cd.zf.ZeichenFlaeche"""
 
         self.__x = x
-        """:type: float """
+        """
+        Die interne x-Position
+        :type: float """
 
         self.__y = y
-        """:type: float """
+        """
+        Die interne y-Position
+        :type: float """
 
         self.__hoehe = hoehe
         """
-        Die Höhe der umgebenden Box
+        Die Höhe der umgebenden Box (Rechteck)
+        :type:float
         """
 
         self.__breite = breite
         """
         Die Breite der umgebenden Box
+        :type:float
         """
 
         self.position_geaendert = position_geändert
@@ -57,6 +63,7 @@ class ZeichenbaresObjekt:
         if self._eltern_flaeche is not None:
             self._eltern_flaeche.fuege_hinzu(self)
 
+        # die Position wurde aktualisiert
         self.position_geaendert()
 
     @property
@@ -119,7 +126,7 @@ class ZeichenbaresObjekt:
 
     @property
     def abstand_links(self):
-        return self.__y
+        return self.__x
 
     @abstand_links.setter
     def abstand_links(self, links):
@@ -215,3 +222,24 @@ class ZeichenbaresObjekt:
         top = (start[1] <= punkt[1] <= (start[1] + self.hoehe))
 
         return left and top
+
+
+class ZeichenbaresElement(Zeichenbar):
+    def __init__(self, x, y, breite, hoehe, farbe, eltern_flaeche=None, position_geändert=lambda: None):
+        if eltern_flaeche is None:
+            # falls keine Elternfläche angegeben wurde, dann wir die Haupt-Zeichenfläche verwendet
+            from py2cd.spiel import Spiel
+
+            eltern_flaeche = Spiel.haupt_flaeche
+
+        super().__init__(x, y, breite, hoehe, farbe, eltern_flaeche, position_geändert)
+
+    def render(self, pyg_zeichen_flaeche):
+        """
+
+        :param pyg_zeichen_flaeche:
+        :type pyg_zeichen_flaeche:
+        :return:
+        :rtype:pygame.Rect
+        """
+        raise NotImplementedError("render() Methode muss überschrieben werden!")

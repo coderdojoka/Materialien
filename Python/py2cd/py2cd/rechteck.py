@@ -2,10 +2,10 @@ __author__ = 'Mark Weinreuter'
 
 import pygame
 
-from py2cd.objekte import ZeichenbaresObjekt
+from py2cd.objekte import ZeichenbaresElement
 
 
-class Rechteck(ZeichenbaresObjekt):
+class Rechteck(ZeichenbaresElement):
     """
     Ein Rechteck, das angezeigt werden kann.
     """
@@ -15,7 +15,7 @@ class Rechteck(ZeichenbaresObjekt):
                          (self.x, self.y, self.breite, self.hoehe),
                          self.dicke)
 
-    def __init__(self, x, y, breite, hoehe, eltern_flaeche, farbe=(0, 0, 0), dicke=0):
+    def __init__(self, x, y, breite, hoehe, farbe=(0, 0, 0), dicke=0, eltern_flaeche=None):
         """
         Erstellt ein neues Rechteck mit den gegebenen Maßen.
         :param x:
@@ -35,5 +35,5 @@ class Rechteck(ZeichenbaresObjekt):
         :return:
         :rtype:
         """
-        super().__init__(x, y, breite, hoehe, eltern_flaeche, farbe)
+        super().__init__(x, y, breite, hoehe, farbe, eltern_flaeche)
         self.dicke = dicke

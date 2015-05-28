@@ -2,18 +2,18 @@ __author__ = 'Mark Weinreuter'
 
 import pygame
 
-from py2cd.objekte import ZeichenbaresObjekt
+from py2cd.objekte import Zeichenbar
 
 
 def neue_pygame_flaeche(breite, hoehe, alpha=False):
     """
     Erstellt einen neues pygame.Surface Objekt, das intern zum Zeichnen verwendet wird.
     :param breite:
-    :type breite:
+    :type breite: int
     :param hoehe:
-    :type hoehe:
+    :type hoehe: int
     :param alpha:
-    :type alpha:
+    :type alpha: bool
     :return:
     :rtype:pygame.Surface
     """
@@ -27,12 +27,12 @@ def neue_pygame_flaeche(breite, hoehe, alpha=False):
     return flaeche
 
 
-class ZeichenFlaeche(ZeichenbaresObjekt):
+class ZeichenFlaeche(Zeichenbar):
     """
     Eine Fläche auf der gezeichnet werden kann. Es können z.B. Rechtecke oder Bilder gezeichnet werden.
     """
 
-    def __init__(self, x, y, pygame_flaeche, eltern_flaeche, farbe=(0, 0, 0, 0)):
+    def __init__(self, x, y, pygame_flaeche, farbe=(0, 0, 0, 0), eltern_flaeche=None):
         """
         Eine neue Zeichenfläche
         :param x:
@@ -61,42 +61,18 @@ class ZeichenFlaeche(ZeichenbaresObjekt):
         :type:pygame.Surface
         """
 
-        super().__init__(x, y, pygame_flaeche.get_width(), pygame_flaeche.get_height(), eltern_flaeche, farbe)
-
-    @staticmethod
-    def lade_bild_aus_datei(pfad, alpha=False):
-        """
-        Lädt das Bild aus der beschrieben Datei.
-        ACHTUNG: Kann das Bild nicht geladen werden, wird ein Fehler geworfen!
-        :param pfad:
-        :type pfad:str
-        :param alpha: Falls das Bild Transparenz unterstüzten soll
-        :type alpha:bool
-        :return:
-        :rtype:
-        """
-        try:
-            bild = pygame.image.load(pfad)
-        except pygame.error:
-            raise AttributeError("Das Bild: %s konnte nicht geladen werden!" % pfad)
-
-        # laut Doku soll convert() aufgerufen werden?!
-        if alpha:
-            bild = bild.convert_alpha()
-        else:
-            bild = bild.convert()
-
-        return ZeichenFlaeche(0, 0, bild, None)
+        super().__init__(x, y, pygame_flaeche.get_width(),
+                         pygame_flaeche.get_height(), farbe, eltern_flaeche=eltern_flaeche)
 
     def fuege_hinzu(self, objekt):
         """
         Fügt ein zeichenbares Objekt zur Liste hinzu, d.h. es wird in jedem Update gezeichnet.
         :param objekt: das zeichenbare Objekt
-        :type objekt:ZeichenbaresObjekt
+        :type objekt:Zeichenbar
         :return:
         :rtype:
         """
-        if not issubclass(objekt.__class__, ZeichenbaresObjekt):
+        if not issubclass(objekt.__class__, Zeichenbar):
             raise AttributeError("Objekt muss von ZeichenbaresObjekt erben!")
 
         # falls das Objekt bereits registeriert ist, entferne es

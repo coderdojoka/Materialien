@@ -1,10 +1,11 @@
 __author__ = 'Mark Weinreuter'
+
 import pygame
 
-from py2cd.objekte import *
+from py2cd.objekte import ZeichenbaresElement
 
 
-class Linie(ZeichenbaresObjekt):
+class Linie(ZeichenbaresElement):
     """
     Eine Linie die angezeigt werden kann.
     """
@@ -16,7 +17,7 @@ class Linie(ZeichenbaresObjekt):
     def aktualisiere_end_punkt(self):
         self.__verschobenes_ende = (self.x + self.__ende[0], self.y + self.__ende[1])
 
-    def __init__(self, start, ende, eltern_flaeche, farbe=(0, 0, 0), dicke=1):
+    def __init__(self, start, ende, farbe=(0, 0, 0), dicke=1, eltern_flaeche=None):
         """
         Erstellt eine neue Linie zwischen den beiden gegebenen Punkten.
         :param start
@@ -42,5 +43,5 @@ class Linie(ZeichenbaresObjekt):
         :type: tuple[float]
         """
 
-        super().__init__(start[0], start[1], self.__ende[0], self.__ende[1], eltern_flaeche, farbe,
-                         self.aktualisiere_end_punkt)
+        super().__init__(start[0], start[1], self.__ende[0], self.__ende[1],
+                         farbe, eltern_flaeche, position_geändert=self.aktualisiere_end_punkt)

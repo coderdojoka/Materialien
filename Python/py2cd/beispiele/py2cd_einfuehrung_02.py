@@ -54,14 +54,11 @@ def aktualisiere_spiel(delta):
     # bewege die Box
     box.aendere_position(bewegung_x, bewegung_y)
 
-# Die Hauptzeichenfläche des Spiel, diese muss beim Erstellen von Objekten, wie z.B. Rechtecken übergeben werden
-flaeche = Spiel.gib_zeichen_flaeche()
+reckt = Rechteck(270, 200, 100, 100,  GELB)
 
-reckt = Rechteck(270, 200, 100, 100, flaeche, GELB)
+dreieck = Polygon([(270, 300), (320, 340), (370, 300)],  ROT)
 
-dreieck = Polygon([(270, 300), (320, 340), (370, 300)], flaeche, ROT)
-
-box = Rechteck(10, 10, 50, 50, flaeche, GRUEN)
+box = Rechteck(10, 10, 50, 50,  GRUEN)
 
 # Funktion die aufgerufen wird, wenn die Maus bewegt wurde
 Spiel.registriere_maus_bewegt(maus_bewegt)

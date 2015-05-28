@@ -2,10 +2,10 @@ __author__ = 'Mark Weinreuter'
 
 import pygame
 
-from py2cd.objekte import *
+from py2cd.objekte import ZeichenbaresElement
 
 
-class Schrift():
+class Schrift:
     """
     Eine Schrift, die zum Darstellen von Text verwendet werden kann.
     """
@@ -29,7 +29,7 @@ class Schrift():
         return self._pyg_schrift.render(text, aa, farbe, hintergrund)
 
 
-class Text(ZeichenbaresObjekt):
+class Text(ZeichenbaresElement):
     """
     Ein Text, der angezeigt werden kann.
     """
@@ -38,7 +38,7 @@ class Text(ZeichenbaresObjekt):
         return pyg_zeichen_flaeche.blit(self.schrift.render(self.text, True, self.farbe, self.hintergrund),
                                         (self.x, self.y))
 
-    def __init__(self, text, x, y, schrift, eltern_flaeche, farbe=(0, 0, 0), hintergrund=None):
+    def __init__(self, text, x, y, schrift, farbe=(0, 0, 0), hintergrund=None, eltern_flaeche=None):
         """
         Ein neuer Text an der angebenen Position
         :param text:
@@ -73,8 +73,8 @@ class Text(ZeichenbaresObjekt):
         :type:Schrift
         """
 
-        # bereche größe
+        # berechne Größe
         dim = self.schrift.berechne_groesse(self.text)
 
         # Eltern Konstruktor
-        super().__init__(x, y, dim[0], dim[1], eltern_flaeche, farbe)
+        super().__init__(x, y, dim[0], dim[1], farbe, eltern_flaeche)
