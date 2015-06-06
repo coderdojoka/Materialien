@@ -1,3 +1,12 @@
+print('###Python###')
+import platform
+print('Version: {0}'.format(platform.python_version()))
+print('Build: {0}'.format(' '.join(platform.python_build())))
+print('Compiler: {0}'.format(platform.python_compiler()))
+print('Implementation: {0}'.format(platform.python_implementation()))
+print('System: {0} - {1} - {2}'.format(platform.system(), platform.release(), platform.version()))
+print('')
+
 print('###CPU###')
 try:
     from cpuinfo import cpuinfo
