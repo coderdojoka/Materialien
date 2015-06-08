@@ -1,0 +1,33 @@
+% Die folgenden zwei Befehle binden die CoderDojo-Styles ein.
+% ACHTUNG: der Pfad ist relativ und muss entsprechend der Ordnerstruktur angepasst werden!
+% Beispiel: - der Vorlagen-Ordner liegt zwei Ebenen tiefer => ../../Vorlagen
+%			
+\newcommand*{\VorlagenPfad}{.}	% wir sind im gleichen Verzeichnis, wie die Style-Datei => '.'
+\documentclass{\VorlagenPfad/coderdojokatext}
+
+% Titel als Kommando für den Header/Footer definieren
+\newcommand{\Titel}{Der Titel}
+
+
+\begin{document}
+
+
+% Titel anzeigen und um den Header/Footer zu generieren
+\begin{center}
+	{\huge \Titel}
+\end{center}
+
+\section{Bubberfisch}
+Bubberfisch bubberte durch Bubberfischhausen.
+
+\section{Bubber-Code}
+Quellcode kann aus einer Datei eingelsen werden...
+\inputminted[firstline=5, lastline=8,linenos]{python}{../Python/Beispiele/zahlen_raten.py}
+
+oder auch direkt hier stehen
+
+\begin{pythoncode}
+print("Hallo Welt")
+\end{pythoncode}
+
+\end{document}
