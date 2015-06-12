@@ -77,6 +77,15 @@
   \PassOptionsToPackage{blockbg}{beamercolorthemecoderdojoka}%
 }
 
+% Option: useseparationline
+%         add a line to separate footline
+
+\newif\if@useSeparationLine
+\@useSeparationLinefalse
+\DeclareOptionBeamer{useseparationline}{
+  \@useSeparationLinetrue
+}
+
 % Option: ...
 
 \DeclareOptionBeamer*{
@@ -291,6 +300,11 @@
 \usenavigationsymbolstemplate{}
 \setbeamertemplate{footline}
 {%
+\if@useSeparationLine%
+  \begin{beamercolorbox}[colsep=0.2pt]{separation line}%
+  \end{beamercolorbox}%
+  \vspace*{0.5em}%
+\fi%
 \begin{beamercolorbox}[wd=\textwidth,ht=3ex,dp=3ex,leftskip=0.3cm,rightskip=0.3cm]{footline}%
   $\vcenter{\hbox{\includegraphics[height=1.5em]{\VorlagenPfad/logo}}}$ \hspace{1pt} CoderDojo \emph{\textbf{Karlsruhe}}%
   \hfill\usebeamerfont{page number in head/foot}%
