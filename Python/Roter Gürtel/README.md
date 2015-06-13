@@ -24,7 +24,7 @@ In dieser Stufe sollen die folgendende 5 Grundlagen gemeistert werden:
 	- Überlegung: Erkennen von Systemfunktionen, z.B. print(), etc...
 
 
-Zu jedem Thema muss mindestens eine Aufgabe gelöst werden. Anschließend die "Endgegener"-Aufgabe gelöst werden um den roten Gürtel zu erhalten.
+Zu jedem Thema soll mindestens eine Aufgabe gelöst werden. Um den roten Gürtel zu erhalten muss eine Abschlussaufgabe gelöst werden.
 
 ## Aufgaben  
 - Listen

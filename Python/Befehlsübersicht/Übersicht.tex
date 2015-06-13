@@ -1,9 +1,9 @@
 %% Author: Mark weinreuter
-\newcommand*{\VorlagenPfad}{../Vorlagen}%
+\newcommand*{\VorlagenPfad}{../../Vorlagen}%
 \documentclass{\VorlagenPfad/coderdojokatext}
 
 % Titel, Kategorie müssen als Kommando für den Header/Footer definiert werden.
-\newcommand{\Titel}{Python - Befehlsreferenz}
+\newcommand{\Titel}{Python - Befehlsübersicht}
 
 \begin{document}
 \setcounter{chapter}{1}
@@ -99,7 +99,7 @@ else:
 # Hier gehts weiter (nicht eingerückt)
 \end{pythoncode}
 
-\subsection{while-Schleifen}
+\subsection{while-Schleife}
 \begin{pythoncode}
 # Führt solange den eingerückten Code aus, wie die Bedingung erfüllt ist
 zahl = 1
@@ -107,6 +107,17 @@ while zahl < 10:
 	# dieser eingerückte Code wird wiederholt (ACHUTUNG: Einrückung)
 	print("Zahl:", zahl) # Wert ausgeben
 	zahl = zahl +1 # Zähler erhöhen
+
+# Hier gehts weiter (ACHTUNG: nicht eingerückt)
+\end{pythoncode}
+
+\subsection{for-Schleife}
+\begin{pythoncode}
+# Führt solange den eingerückten Code aus, wie die Bedingung erfüllt ist
+
+for zahl in range(1, 10): # In nimmt Werte 1-9 an
+	# dieser eingerückte Code wird wiederholt (ACHUTUNG: Einrückung)
+	print("Zahl:", zahl) # Wert ausgeben
 
 # Hier gehts weiter (ACHTUNG: nicht eingerückt)
 \end{pythoncode}
