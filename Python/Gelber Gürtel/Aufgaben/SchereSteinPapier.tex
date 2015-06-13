@@ -1,0 +1,53 @@
+% Vorlage verwenden. ACHTUNG der Pfad ist relativ und geht davon aus, 
+% diese Datei zwei Ordnerebenen höher liegt als Vorlagen
+\newcommand*{\VorlagenPfad}{../../Vorlagen}%
+\documentclass{\VorlagenPfad/coderdojokatext}
+\usepackage{graphicx}
+
+% Titel als Kommando für den Header/Footer definieren
+\newcommand{\Titel}{Schere Stein Papier}
+
+\begin{document}
+	\setcounter{chapter}{1}
+	
+	\begin{center}
+		{\huge \Titel}
+	\end{center}
+	
+	\section{Die Aufgabenstellung} Donald Duck ist ein schlechter Verlierer. Deswegen will er seinen Enkel Trick beim Schere-Stein-Papier Spiel immer fertigmachen! Doch wie? Schließlich kann er doch nicht wissen was Trick wählen wird. Und Donald ist es eigentlich peinlich, weil er sich einfach nicht merken kann, womit man Schere, Stein oder Papier schlagen kann. Falls du es auch vergessen hast, hier ist ein erklärendes Bild:
+	\\
+	\begin{figure}[h]
+	\includegraphics[scale=0.5]{Schere_Stein_Papier}
+	\centering
+	\end{figure}
+	\\ \\
+	Dir wird gesagt was Trick wählen wird, du sollst Donald helfen und das ausgeben, was Tricks Wahl schlägt, sodass Donald immer gewinnt!
+	\\ \\
+	
+	\subsection{Voraussetzungen} Um diese Aufgabe erfolgreich lösen zu können solltest du dich mit \code{if}-Bedingungen auskennen.
+	
+	\newpage
+	
+	\subsection{Beispiele}
+	\subsubsection{Beispiel 1}
+	Eingabe: \\ \\
+	Schere
+	\\ \\
+	Du gibst auf der Konsole aus: \\ \\
+	Stein
+	
+	\subsubsection{Beispiel 2}
+	Eingabe: \\ \\
+	Stein
+	\\ \\
+	Du gibst auf der Konsole aus: \\ \\
+	Papier
+	
+	\subsubsection{Beispiel 3}
+	Eingabe: \\ \\
+	Papier
+	\\ \\
+	Du gibst auf der Konsole aus: \\ \\
+	Schere
+	
+\end{document}

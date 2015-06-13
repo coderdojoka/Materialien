@@ -1,0 +1,71 @@
+%% Author: Mark weinreuter
+\newcommand*{\VorlagenPfad}{../../../Vorlagen}%
+\documentclass{\VorlagenPfad/coderdojokatext}
+
+% Titel, Kategorie müssen als Kommando für den Header/Footer definiert werden.
+\newcommand{\Titel}{Zahlenraten - Das Spiel}
+
+\begin{document}
+\setcounter{chapter}{1}
+
+\begin{center}
+	{\huge \Titel}
+\end{center}
+
+\section{Die Aufgabenstellung} Du sollest ein einfaches Spiel programmieren, bei dem der Benutzer eine vom Computer zufällig ausgewählte Zahl zwischen 1 und 100 erraten soll.
+\\Das Ganze sieht so aus, dass der Spieler eine Zahl eingibt, die von dem Programm gelesen wird. Dies wird solange getan, bis der Spieler die richtige Zahl eingegeben hat.
+\\
+Um dem Spieler eine Hilfe zu geben, soll das Programm 'zu groß' oder 'zu klein' ausgeben, jenachdem ob die geratene Zahl größer oder kleiner als die vom Computer ausgewählte Zufallszahl ist.
+\\Außerdem sollen die benötigten Versuche gezählt werden, um vergleichen zu können welcher Spieler die Zahl am Schnellsten erraten hat.
+
+\subsection{Ideensammlung} Wenn du die Aufgabenstellung verstanden hast, lies nicht sofort weiter beim Punkt Umsetzung weiter, sondern nimm dir kurz Zeit um zu überlegen was alles benötigt wird um das Programm umzusetzen. Stelle dir zum Beispiel folgendene Fragen:
+\begin{itemize}
+	\item Welche Eingaben muss der Benutzer machen und wie bekommst du diese in dein Programm?
+	\item Wie erzeugt man eine Zufallszahl?
+	\item Wie kann überprüft werden ob eine Lösung korrekt ist?
+\end{itemize}
+
+\subsection{Beispielauführung} Um sich besser vorstellen zu können, wie das Ganze aussehen soll, hilft es sich eine Beispielausgabe vorzustellen/anzuschauen, wie das Spiel ablaufen könnte:
+
+\begin{pseudocode*}{linenos=false}
+Willkommen beim Zahlenraten. Bitte gib deinen ersten Tipp ab:
+50
+Zu groß!
+30
+Zu klein!
+40
+Zu klein!
+42.
+Richtig! Du hast 4 Versuche benötigt.
+\end{pseudocode*}
+
+\section{Umsetzung}
+Da das Spiel darauf aufbaut, eine Zufallszahl zu erraten, muss im ersten Schritt eine Zufallszahl erzeugt werden. Hierbei erzeugt der Computer eine Zahl in einem gewissen Zahlenbereich, z.B. zwischen \code{1} und \code{100}.
+
+\subsection{Eine Zufallszahl erzeugen}
+Eine Zufallszahl kann relativ einfach erzeugt werden, da sich jemand bereits die Mühe gemacht hat, dies für uns zu programmieren. Um diese Funktionalität zu verwenden muss man lediglich das Modul \code{random} (engl. für Zufall) importieren und wie folgt verwenden.
+
+\inputminted[firstline=1, lastline=3, linenos]{python}{../../Beispiele/zahlen_raten.py}
+
+\subsection{Benutzereingaben einlesen}
+Als nächsten Schritt müssen wir nur noch die Eingaben des Spielers (seine geratene Zahl einlesen).
+
+\inputminted[firstline=5, lastline=11, linenos]{python}{../../Beispiele/zahlen_raten.py}
+Wir lesen hier mit \code{input(..)} den ersten Tipp des Spielers ein. Gleichzeitig setzen wir die Anzahl der benötigten Versuche auf \code{1}.
+
+\subsection{Eingabe überprüfen und erneut raten lassen}
+Wir haben nun eine Zufallszahl erstellt und eine Eingabe vom Benutzer eingelsen. Wir müssen nun lediglich die Eingabe auf Richtigkeit überprüfen.
+\\Dafür müssen wir im Falle einer falschen Eingabe den Hinweis ausgeben, ob die Eingabe zu groß oder klein war, einen neuen Tipp des Spielers einlesen und die Anzahl der Versuch erhöhen.
+\\Ist die Eingabe des Benutzers hingegen korrekt, wollen keine weiteren Zahlen mehr einlesen, sondern nur noch ausgeben wie viele Versuche benötigt wurden und das Programm beenden.
+\inputminted[firstline=12, linenos]{python}{../../Beispiele/zahlen_raten.py}
+
+
+
+
+\pagebreak
+\section{Alles zusammengesetzt}
+Setzt man nun die einzelnen Programmteile zusammen erhält man folgendes Programm.
+
+\inputminted[linenos]{python}{../../Beispiele/zahlen_raten.py}
+
+\end{document}

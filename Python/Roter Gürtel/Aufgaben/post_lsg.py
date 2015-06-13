@@ -30,11 +30,11 @@ briefe = "Brief 1", "Brief 2", "Brief 3"
 empfaenger = "Horst", "Ilse", "Hans"
 briefkasten = {}
 
-print("Es gibt diese Briefkästen:")
+print("Es gibt diese Briefkästen, die so durchnummeriert sind:")
 for i in range(0, len(empfaenger)):
 	print(i, ":", empfaenger[i])
 
-print("")
+print()
 print("Es gibt Post!")
 for brief in briefe:
 	hausnummer = input("Zu welcher Hausnummer soll dieser Brief? ")
@@ -44,4 +44,7 @@ for brief in briefe:
 print("")
 print("Alle Briefe wurden zugestellt!")
 for i in range(0, len(empfaenger)):
-	print(empfaenger[i], "hat diesen Brief bekommen:", briefkasten[i])
+	if i in briefkasten:
+		print(empfaenger[i], "hat diesen Brief bekommen:", briefkasten[i])
+	else:
+		print(empfaenger[i], "hat keinen Brief bekommen")

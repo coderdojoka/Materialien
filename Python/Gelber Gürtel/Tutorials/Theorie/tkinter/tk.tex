@@ -1,0 +1,43 @@
+%% Author: Mark weinreuter
+\newcommand*{\VorlagenPfad}{../../../../Vorlagen}%
+\documentclass{\VorlagenPfad/coderdojokatext}
+
+% Titel, Kategorie müssen als Kommando für den Header/Footer definiert werden.
+\newcommand{\Titel}{while- und for-Schleifen}
+\newcommand{\Kategorie}{Basics:\space} 
+
+\begin{document}
+
+\section{Ein Fenster}
+In diesem Abschnitt wirst du ein Fenster in Python erzeugen. Dazu musst du zun"achst die folgende Zeile in ein leeres Textdokument schreiben:
+
+\inputminted[linenos,firstline=1,lastline=1]{python}{../../../Beispiele/fenster_beispiel.py}
+
+Damit signalisierst du deinem Computer, dass du in deinem Programm Fenster verwenden m"ochtest. Er sucht dann alle Informationen, die daf"ur ben"otigt werden.\par
+Anschlie"send erzeuge das Fenster durch folgenden Befehl:
+
+\begin{pythoncode}
+fenster = Tk()
+fenster.mainloop()
+\end{pythoncode}
+	
+Die erste Zeile erzeugt ein neues Objekt namens \code{fenster}. Es ist vom Typ \code{Tk}. Falls dir das an diesem Punkt noch nicht einleuchtet, lass dich ermutigen und programmiere einfach weiter. Falls du es dennoch ganz genau wissen m"ochtes, frage doch einen Tutor nach "`Objekten"'.
+Die zweite Zeile zeigt das Fenster einfach an.
+Jetzt kannst du das Programm ausf"uhren und wirst mit deinem ersten eigenen Python-Fenster belohnt. Geschafft.\par
+Es sieht noch etwas kahl aus. Verziere es mit etwas Text:
+
+\inputminted[linenos,firstline=5,lastline=6]{python}{../../../Beispiele/fenster_beispiel.py}
+
+Achte darauf, dass die Zeile \code{fenster.mainloop()} unbedingt am \textbf{Ende} deines Textdokuments steht. Dies wird w"ahrend der gesamten Anleitung so bleiben. F"uhre dein Programm aus und du erh"altst ein (sehr kleines) Fenster mit deinem Text. Trommelwirbel!\par
+Schauen wir uns die folgende Zeile etwas genauer an:
+\begin{pythoncode}
+text = Label(master=fenster, text = "Bubberfisch")
+\end{pythoncode}
+Es wird ein "`Label"', also ein Textfeld, mit dem Namen \code{text} erzeugt. Du musst deinem Computer nat"urlich mitteilen, wohin der Text geschrieben werden soll. Dies geschieht durch \code{master=fenster}. (Du erinnerst dich nat"urlich daran, dass \code{fenster} der Name deines Fensters ist!) Der Text selbst wird als \code{text= "Bubberfisch"} angegeben.\par
+Spiele ein wenig mit dieser Zeile und schreibe verschiedene Nachrichten auf ein Fenster.
+
+\subsection{Das komplette Beispiel}
+
+\inputminted[linenos]{python}{../../../Beispiele/fenster_beispiel.py}
+
+\end{document}
