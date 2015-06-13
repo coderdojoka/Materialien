@@ -10,6 +10,11 @@ Für diesen Gürtel müssen folgendende 4 Grundlagen verstanden werden:
 - geschachtelte Schleifen
 	- for-schleifen schachteln
 	- for und while schachteln
+
+- Einführung in Tkinter als GUI-Framework
+	- Fenster mit Text
+	- Fenster mit Button + Klick-Event
+
 - Funktionen I
 	- einfache Funktion ohne Parameter
 	- Funktionen aufrufen
@@ -29,6 +34,8 @@ Zu jedem Thema muss mindestens eine Aufgabe gelöst werden. Anschließend die "E
 	- Maler
 	- ...
 
+- Tkinter
+	- ...
 
 - Funktionen I
 	- ... 
