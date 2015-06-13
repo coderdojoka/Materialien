@@ -1,35 +1,41 @@
 # Gelber Gürtel - Grundlagen
 
 ## Tutorials
-Für diesen Gürtel müssen folgendende 5 Grundlagen verstanden werden:
+In dieser Stufe sollen die folgenden fünf Grundlagen gemeistert werden:
 
-- Umgang mit Variablen
+- Umgang mit [Variablen](Tutorials/Variablen/variablen.pdf)
 	- Variablen verwenden, lesen und setzen
 	- Operationen mit Zahlen
 	- Ausgabe von Variablen mit print()
-- Umgang mit Text (Strings)
+- Umgang mit [Text](Tutorials/Text/text.pdf)
 	- Operationen
 	- Ausgabe
-- Einlesen von Inhalten
+- [Einlesen](Tutorials/Eingabe/Eingabe.pdf) von Inhalten 
 	- Text
 	- Zahlen
-- if-Abfrage
+- [if-Abfrage](Tutorials/if_Abfragen/if_text.pdf)
 	- einfache if-Abfragen
-- while-Schleife
+- [while](Tutorials/while/while.pdf)-Schleife
 	- einfache while-Schleifen	
 
 
-Zu jedem Thema muss mindestens eine Aufgabe gelöst werden. Anschließend die "Endgegener"-Aufgabe gelöst werden um den gelben Gürtel zu erhalten.
+Zu jedem Thema muss mindestens eine Aufgabe gelöst werden. Um den gelben Gürtel zu erhalten, muss eine "Endgegener"-Aufgabe gelöst werden.
 
 ## Aufgaben  
 
 - Variablen
-- Text
-- while-Schleife
-	- KlopfKlopf
-	- 
-- if-Abfrage
+	- [Zauberstab](Aufgaben/zauberstab.pdf)
 	- ...
+- Text
+	- ...
+- while-Schleife
+	- [Klopf Klopf](Aufgaben/klopfklopf.pdf)
+	- ...
+- if-Abfrage
+	- [Fußballspiel](Aufgaben/Fussball.pdf)
+	- [Schere, Stein, Papier](Aufgaben/SchereSteinPapier.pdf)
+- Eingabe
+	- [321](Aufgaben/321.pdf)
 
 ## Abschlussaufgabe
-Als Endgegneraufgabe soll (möglichst eigenständig) das Spiel "Zahlenraten" programmiert werden
+Als Endgegneraufgabe soll (möglichst eigenständig) das Spiel [Zahlenraten](zahlenraten.pdf) programmiert werden

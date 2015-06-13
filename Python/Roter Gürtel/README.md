@@ -1,7 +1,7 @@
 # Roter Gürtel - Fortschritte
 
 ## Tutorials
-Für diesen Gürtel müssen folgendende 4 Grundlagen verstanden werden:
+In dieser Stufe sollen die folgendende 5 Grundlagen gemeistert werden:
 
 - Listen und for-Schleifen
 	- Listen füllen, modifizieren, löschen
@@ -11,7 +11,7 @@ Für diesen Gürtel müssen folgendende 4 Grundlagen verstanden werden:
 	- for-schleifen schachteln
 	- for und while schachteln
 
-- Einführung in Tkinter als GUI-Framework
+- [Einführung in Tkinter](Tutorials/tkinter/tk.pdf) als GUI-Framework
 	- Fenster mit Text
 	- Fenster mit Button + Klick-Event
 
@@ -31,7 +31,7 @@ Zu jedem Thema muss mindestens eine Aufgabe gelöst werden. Anschließend die "E
 	- ...
 
 - geschachtelte Schleifen
-	- Maler
+	- [Maler](Aufgaben/maler.pdf)
 	- ...
 
 - Tkinter
@@ -44,4 +44,4 @@ Zu jedem Thema muss mindestens eine Aufgabe gelöst werden. Anschließend die "E
 	- ...
 
 ## Abschlussaufgabe
-...
+Als Abschluss soll der [Geldspeicher](Geldspeicher/geldspeicher.pdf) geknackt werden.
