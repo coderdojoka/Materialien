@@ -1,0 +1,101 @@
+\newcommand*{\VorlagenPfad}{../../Vorlagen/}	% wir sind im gleichen Verzeichnis, wie die Style-Datei => '.'
+\documentclass{\VorlagenPfad/coderdojokatext}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+\begin{center}
+{\huge CoderDojo Karlsruhe} \\ \ \\ \large{Scratch-Tutorial: Bewegung, Aussehen und Ereignisse}
+\end{center}
+
+
+% Scratch Farben
+\definecolor{Bew}{RGB}{74, 108, 212}
+\definecolor{Aus}{RGB}{138, 85, 215}
+\definecolor{Kla}{RGB}{187, 66, 195}
+\definecolor{Mal}{RGB}{14, 154, 108}
+\definecolor{Spe}{RGB}{238, 125, 22}
+\definecolor{Ere}{RGB}{200, 131, 48}
+\definecolor{Ste}{RGB}{225, 169, 26}
+\definecolor{Fue}{RGB}{44, 165, 226}
+\definecolor{Ope}{RGB}{92, 183, 18}
+\definecolor{Wei}{RGB}{99, 45, 153}
+% Scratch Befehle
+\newcommand{\Block}[2]{\textcolor{#1}{'#2'}}
+\newcommand{\SFarbe}[2]{\textcolor{#1}{#2}}
+\newcommand{\KBew}{\textcolor{Bew}{Bewegung}}
+\newcommand{\KAus}{\textcolor{Aus}{Aussehen}}
+\newcommand{\KKla}{\textcolor{Kla}{Klang}}
+\newcommand{\KMal}{\textcolor{Mal}{Malstift}}
+\newcommand{\KSpe}{\textcolor{Spe}{Speicher}}
+\newcommand{\KEre}{\textcolor{Ere}{Ereignisse}}
+\newcommand{\KSte}{\textcolor{Ste}{Steuerung}}
+\newcommand{\KFue}{\textcolor{Fue}{Fühlen}}
+\newcommand{\KOpe}{\textcolor{Ope}{Operatoren}}
+\newcommand{\KWei}{\textcolor{Wei}{Weitere Blöcke}}
+
+% \newcommand*{\color_bew}[1]{\textcolor{Bew}{$1} }
+
+
+\section{Installation und Einstellungen}
+Falls noch nicht geschehen lade dir den Scratch 2.0 Offline Editor herunter (frage dazu bitte einen der Mentoren) oder verwende die Online Anwendung unter  \href{http://www.scratch.mit.edu/}{http://www.scratch.mit.edu/} für die du nichts installieren musst. Klicke auf dafür auf der Webseite auf die Katze mit dem großen grünen Punkt auf dem steht: 'Probier es aus', um den Online-Editor zu starten.
+
+
+\textbf{WICHTIG:} schalte die Sprache auf Deutsch um. Klicke auf den \glqq Kreis\grqq  links oben zwischen dem Scratch-Schriftzug und \glqq Datei\grqq und wähle  \glqq Deutsch\grqq aus. 
+
+
+\section{Erste Schritte}
+Oben in der Mitte des Scratch-Fensters sieht man verschiedenfarbige Kategorien:
+\begin{itemize}
+\item \KBew
+\item \KAus
+\item \KKla
+\item \KMal
+\item \KSpe
+\item \KEre
+\item \KSte
+\item \KFue
+\item \KOpe
+\item \KWei
+\end{itemize}
+
+In diesem Abschnitt geht es um die Kategorien \KBew, \KAus und \KEre. Nimm dir bitte einen Stift und Papier zur Hand, um dir wichtige Fragen und Antworten zu notieren. Das hilft dir später dir das wichtige zu merken. Falls du gerade keinen Stift und Papier findest, frag einen der Mentoren.
+
+\subsection{Bewegung}
+Schaue dir die Kategorie Bewegung mal genauer an indem du darauf klickst. Unter den verschiedenen Kategorien erscheinen Blöcke in dieser \SFarbe{Bew}{Farbe}.
+Ziehe einen oder mehrere Blöcke in das große leere Feld rechts.
+\begin{itemize}
+\item Was passiert? (Achte auf die Katze)
+\item Wie ist das weiße Feld, die Bühne, um die Katze aufgebaut? Was bedeuten x und y? und was sind die Maximal- und Minimalwerte für x und y?
+\item Lies die Aufschrift jedes Blockes durch und überlege dir was er tut
+\item verbinde mehrere Blöcke indem du sie nahe zusammen bewegst
+\item Was passiert, wenn du auf die verbunden Blöcke klickst?
+\item die weißen Felder auf den Blöcken lassen sich verändern! Klicke einmal auf ein solches Feld und tippe dann eine andere Zahl ein. Was tut sich?
+\end{itemize}
+
+\subsection{Aussehen}
+Die Blöcke in dieser Kategorie haben alle die \SFarbe{Aus}{Farbe lila}. 
+Verwende wieder einige der Blöcke und notiere dir was passiert. Zögere nicht einen Mentor zu fragen, wenn du einen Block nicht ganz verstehst.
+
+Was passiert beim Block \Block{Aus}{Wechsle Kostüm}? Schau mal über den verschiedenen Kategorien nach: Dort steht Skripte, Kostüme und Klänge. Klicke auf Kostüme. Du siehst zwei verschiedene Bilder der Katze. Bei einem scheint sie zu laufen. Wenn du den Block \Block{Aus}{wechsle Kostüm} verwendest, erscheint auf der Bühne das zweite Bild der Katze. Wie kommst du zum ersten Bild zurück? Achte auf das kleine schwarze Dreieck ganz links auf einigen der Blöcke. Was passiert, wenn du den anklickst?
+
+Du siehst sicher auch den Block \Block{Aus}{wechsle zu Bühnenbild}. Es tut sich nichts, wenn du auf diesen Block drückst. Das lässt sich ändern! Links unten im Fenster gibt es dazu verschiedene Möglichkeiten. Unter \glqq Neues Bühnenbild\grqq sieht man da vier kleine Bildchen. Davon interessant sind vorerst die ersten beiden. Wenn du den Mauszeiger auf diese Bildchen ziehst, aber nicht darauf klickst erscheint ein Text:
+
+\begin{enumerate}
+\item[1. Bildchen:] Bühnenbild aus Bibliothek wählen
+\item[2. Bildchen:] Neues Bühnenbild zeichnen
+\end{enumerate}
+
+Probiere beides aus indem du einmal auf das Bildchen klickst. 
+Wenn du nun mehr als ein Bühnenbild erstellt hast, funktioniert auch der Block \Block{Aus}{wechsle zu Bühnenbild}.
+
+Verbinde nun einige Blöcke aus beiden Kategorien miteinander und klicke drauf. Was passiert jetzt?
+Falls dein Fenster inzwischen zu voll geworden ist, kannst du einige der Blöcke, die du gerade nicht mehr brauchst wieder zurück in die Mitte zu den anderen Blöcken ziehen. Diese Blöcke verschwinden dann.
+
+\subsection{Ereignisse}
+Nun brauchst du nur noch ein \KEre $\,$ um deine Blöcke zu starten. Klicke Dazu auf die Kategorie \KEre. Die ersten drei Blöcke dieser Farbe sind die wichtigsten. Die anderen Blöcke dieser Kategorie werden erst später gebraucht. Überlege dir was die ersten drei Blöcke tun und verbinde deine Blöcke mit einem dieser Blöcke. Du siehst die Blöcke aus der Kategorie \KEre $\,$ lassen sich nur ganz oben an die anderen Blöcke anheften und nicht in der Mitte oder Unten. Diese Blöcke sind also immer die Starter. Welche anderen Tasten außer der Leertaste kann man noch verwenden um einen Block zu Starten? Was bedeutet die Grüne Flagge auf dem ersten Block und wie Startet man diesen Block?
+
+Konntest du alle Fragen beantworten? Zeige einem Mentor was du gemacht hast und stelle ihm ruhig Fragen zu allem.
+
+\end{document}
