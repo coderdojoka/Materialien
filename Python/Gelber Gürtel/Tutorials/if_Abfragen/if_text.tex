@@ -8,8 +8,6 @@
 
 \begin{document}
 
-
-
 \begin{center}
 	{\huge \Titel}
 \end{center}
@@ -19,7 +17,6 @@ An vielen Stellen im täglichen Leben, sowie auch beim Programmieren müssen Ent
 'Soll ich früher aufstehen, um ihn Ruhe zu früchstücken oder lass ich das Frühstück ausfallen, damit ich länger schlafen kann?'
 	
 Um nun abends den Wecker zu stellen muss man sich Folgendes überlegen und ausführen:
-
 
 \begin{pseudocode}
 Falls <Will ich frühstücken?>:
@@ -134,7 +131,7 @@ else:
 
 print("Nach if-Abfrage.")
 \end{pythoncode}
-Führt man dies nun aus mit den Werten \code{wert = 5} und \code{wert = 15} aus, verhält sich die Ausgabe wie folgt:
+Führt man dies nun mit den Werten \code{wert = 5} und \code{wert = 15} aus, verhält sich die Ausgabe wie folgt:
 \begin{pseudocode}
 # wert = 5
 Kleiner 10.
@@ -151,17 +148,19 @@ Nach if-Abfrage.
 \\
 \includegraphics[scale=1]{scratch_if_else}
 \\
-Man sieht hier sehr schön die Einrückungen der 'sage'-Blöcke, während der grüne sptize Block die Bedingung darstellt.
+Man sieht hier sehr schön die Einrückungen der 'sage'-Blöcke, während der grüne spitze Block die Bedingung darstellt.
 
 
 \section{Aufgaben}
 \begin{itemize}
-	\item Du hast eine Variable 'zufall', die einen zufälligen Wert hat:
-	\begin{pythoncode}
+\item Um das Ganze spannender zu gestalten führen wir hier noch Zufallszahlen ein.\\
+Dein Computer kann zufällige Zahlen in einem angegeben Bereich für dich erzeugen.
+Dazu musst du nur folgende zwei Zeilen Code einfügen:
+\begin{pythoncode}
 import random
 zufall = random.randint(1, 100)
-	\end{pythoncode}
-	Schreibe eine if-else Abfrage die bestimmt, ob der Wert der Variablen größer oder gleich 50 ist oder nicht. Gib dies dann mithilfe des print() aus.
+\end{pythoncode}
+Schreibe eine if-else Abfrage die bestimmt, ob der Wert der Zufallsvariablen größer oder gleich 50 ist. Gib dies dann mithilfe von print() aus.
 \end{itemize}
 
 \end{document}

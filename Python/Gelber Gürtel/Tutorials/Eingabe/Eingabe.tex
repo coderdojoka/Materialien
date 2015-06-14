@@ -13,12 +13,12 @@
 
 \section{Eingaben}
 Ein Program, in den der Benutzer nichts eingeben kann ist meinstens langweilig.
-Deswegen ist es praktisch, dass wir mit relativ einfach Eingaben, die der Benutzer tippt einlesen können.\\
+Deswegen ist es praktisch, dass wir relativ einfach die Eingaben einlesen können.\\
 
-Die funktioniert mithilfe von \code{input()}.
+Dies funktioniert mithilfe von \code{input()}.
 
 \inputminted[firstline=1, lastline=2]{python}{../../../Beispiele/eingabe.py}
-Was in den Klammern bei \code{input(...)} steht wird zuerst auf der Konsole ausgeben, dann wir auf einen Eingabe des Benutzers gewartet.\\
+Was in den Klammern bei \code{input(...)} steht wird zuerst auf der Konsole ausgeben, dann wird auf einen Eingabe des Benutzers gewartet.\\
 \textbf{Wichtig:} das Programm wartet solange bis der Benutzer etwas auf der Konsole eingetippt und mit 'Enter' bestätigt hat!
 
 \inputminted[firstline=2, lastline=2]{python}{../../../Beispiele/eingabe.py}
@@ -27,17 +27,17 @@ Wie in dem Tutorial zu Variablen schon erklärt wurde, ist \code{name} eine Vari
 den der Benutzer eintippt und mittels \code{input()} gelesen wird.
 
 \section{Zahlen einlesen}
-Mittles \code{input()} kann nur Text eingelsen werden! Auch wenn der Benutzer \code{12} eintippt, so wird dies als Text \code{"12"} interpretiert.
+Mittles \code{input()} kann nur Text eingelesen werden! Auch wenn der Benutzer \code{12} eintippt, so wird dies als Text \code{"12"} interpretiert.
 Wir können mit Text allerdings nicht rechnen. Aus diesem Grund müssen wir den eingelesenen Text mithilfe von \code{int(...)} in eine ganze Zahl konvertieren.
 
 \inputminted[firstline=4, lastline=5]{python}{../../../Beispiele/eingabe.py}
-Hier wird nun zuerst das Alter als Text eingelsen und dann konvertiert. Die Variable \code{alter} enthält zunächst also einen Text und danach die Zahl, die dieser Text darstellt.
+Hier wird nun zuerst das Alter als Text eingelesen und dann in eine Zahl umgewandelt. Die Variable \code{alter} enthält zunächst also einen Text und danach die Zahl, die dieser Text darstellt.
 
 \section{Aufgaben}
 \begin{itemize}
-	\item Lies deinen Namen von der Konsole ein und gib in aus.
+	\item Lies deinen Namen von der Konsole ein und gib diesen aus.
 	\item Was passiert, wenn du einen Text in eine Zahl umwandelst und der Text ist keine Zahl?
-	\item Lies dein Alter ein und berechne wie viele Tage du ungefähr alt bist (Hinweis: nimm an, dass ein Monat 30 Tage hat)
+	\item Lies dein Alter ein und berechne wie viele Monate du ungefähr alt bist
 \end{itemize}
 
 \end{document}
