@@ -1,7 +1,7 @@
-# Liest einen Text von der Konsole ein (\n erzeugt einen Zeilenumbruch)
-name = input("Wie heißt du?\n")	
+# Liest einen Text von der Konsole ein
+name = input("Wie heißt du?: ")	
 
-alter = input("Wie alt bist du?\n") # Alter als Text einlesen
+alter = input("Wie alt bist du?: ") # Alter als Text einlesen
 alter = int(alter) # Text in eine Zahl konvertieren
 
 # Gibt den eingelesenen Namen auf der Konsole aus

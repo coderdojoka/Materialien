@@ -5,15 +5,22 @@
 % Titel, Kategorie müssen als Kommando für den Header/Footer definiert werden.
 \newcommand{\Titel}{Python - Befehlsübersicht}
 
+
+% hack to force a chapter to be on the same page. This has some issues with the header
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
 \begin{document}
-\setcounter{chapter}{1}
+\setcounter{chapter}{0}
 
 \begin{center}
 	{\huge \Titel}
 \end{center}
 
-\section{Allgemein}
-\subsection{Kommentare}
+\chapter{Grundlagen}
+\section{Kommentare}
 \begin{pythoncode}
 # Ein Kommentar, der bis ans Zeilenende geht
 """
@@ -21,7 +28,7 @@ Ein Kommentar, der über
 mehrere Zeilen geht.
 """
 \end{pythoncode}
-\subsection{Variablen}
+\section{Variablen}
 \begin{pythoncode}
 # Eine neue Variable Zahl mit dem Namen 'meineZahl' und Wert 42
 meineZahl = 42
@@ -30,7 +37,7 @@ meineZahl = 42
 meinText = "Hallo Welt"
 \end{pythoncode}
 
-\subsection{Ausgabe}
+\section{Ausgabe}
 
 \begin{pythoncode}
 # Gibt einen Text aus
@@ -47,16 +54,19 @@ print(name)
 print("Hallo", name)
 \end{pythoncode}
 
-\subsection{Operationen}
+\section{Operationen}
+\subsection{Umgang mit Zahlen}
 \begin{pythoncode}
-wert  = 10 # Mit Zahlen kann ganz normal rechnen
-wert = 10 + 20  # = 30
-wert = 10 - 20  # = -10
-wert = 10 / 2   # = 5
-wert = 10 * 2   # = 20
+# Mit Zahlen kann ganz normal rechnen
+wert = 10 
+wert = 10 + 20	# = 30
+wert = 10 - 20	# = -10
+wert = 10 / 2	# = 5
+wert = 10 * 2	# = 20
+wert = 10 % 3	# = 1, Da 10 / 3 = 3 Rest 1	
 \end{pythoncode}
 
-
+\subsection{Umgang mit Text}
 \begin{pythoncode}
 # Texte kann man '+' aneinander anfügen
 begruessung  = "Hallo "
@@ -65,7 +75,7 @@ text = begruessung + "Mark" # "Hallo Mark"
 text = "Ha" * 3  # HaHaHa
 \end{pythoncode}
 
-\section{Schleifen}
+\section{if-Abfragen}
 
 \subsection{Bedingung}
 \begin{pythoncode}
@@ -73,8 +83,7 @@ text = "Ha" * 3  # HaHaHa
 bedingung = 10 > 20 # False
 print("Die Bedingung ist:", bedingung)
 \end{pythoncode}
-
-\subsection{if-Abfragen}
+\subsection{if}
 \begin{pythoncode}
 wert = 10 # Eine Variable mit einem beliebigen Wert (hier 10)
 
@@ -85,7 +94,7 @@ if wert > 20:
 
 # Hier gehts weiter (ACHUTUNG: Nicht eingerückt)
 \end{pythoncode}
-
+\subsection{if-else}
 \begin{pythoncode}
 # mit einer if-else Abfrage kann man auch auf eine nicht erfüllte
 # Bedingung mit dem 'else'-Zweig reagieren
@@ -98,6 +107,10 @@ else:
 
 # Hier gehts weiter (nicht eingerückt)
 \end{pythoncode}
+
+
+
+\section{Schleifen}
 
 \subsection{while-Schleife}
 \begin{pythoncode}
@@ -152,6 +165,116 @@ import random
 # generiert eine Zufallszahl zwischen 1 und 100
 zufallsZahl = random.randint(1,100)
 \end{pythoncode}
+
+
+
+
+
+
+\chapter{Fortgeschritte Grundlagen}
+% next chapter :D
+
+\section{Geschachtelte For-Schleifen}
+\begin{pythoncode}
+# geschachtelte for-Schleife, die die innere Schleife 9 mal ausführt	
+for zahlAussen in range(1, 10): 	# nimmt Werte 1-9 an
+	for zahlInnen in range(1, 10):	# nimmt Werte 1-9 an
+		# beide Wert ausgeben
+		print("Äußere Zahl:", zahlAussen, "Innere Zahl:", zahlInnen) 
+\end{pythoncode}
+
+\section{Funktionen}
+
+\subsection{Eine einfache Funktion}
+\begin{pythoncode}
+# Funktion definieren
+def sageHallo():
+	print("Hallo Welt")
+	
+# Funktion aufrufen
+sageHallo()	
+\end{pythoncode}
+
+\subsection{Funktion mit Übergabeparametern}
+\begin{pythoncode}
+# Funktion definieren
+def sageHallo(name, alter):
+	print("Hallo", name)
+	print("Du bist", alter, "Jahre alt")
+
+# Funktion aufrufen
+sageHallo("Mark", 22)	
+\end{pythoncode}
+
+\subsection{Funktion mit Rückgabewerten}
+\begin{pythoncode}
+# Funktion definieren
+def addiere(zahl1, zahl2):
+	summe = zahl1 + zahl2
+	return summe
+
+# Funktion aufrufen
+ergebnis = addiere(12, 22)
+print(ergebnis)
+\end{pythoncode}
+
+
+\section{Listen}
+
+\subsection{Eine Liste erstellen}
+\begin{pythoncode}
+# eine Liste erstellen
+liste = [1, 2, 3, 4, 5]
+\end{pythoncode}
+
+
+\subsection{Eine Liste ausgeben}
+\begin{pythoncode}
+	
+# die Elemente einer Liste könne so ausgeben werden
+for element in liste:
+	print(element)
+	
+# Hilfsfunktion für das Ausgeben einer Liste
+def liste_ausgeben(liste):	
+	print("Liste mite", len(liste), "Einträgen")
+	# die Elemente ausgeben
+	for element in liste:
+	print(element)
+	
+# Diese ruft man dann so auf
+liste_ausgeben(liste)
+\end{pythoncode}
+
+\subsection{Einen Eintrag aus der Liste lesen}
+\begin{pythoncode}
+liste = ["hallo", "test", "welt"]	
+# Ein Eintrag kann so gelesen werden:
+ersterEintrag = liste[0] # = "hallo". Achtung wir beginnen bei 0 !
+
+# Negative Indices beginnen am Ende zu zählen
+letzterEintrag = liste[-1] # = "welt". Wir beginnen bei -1 !
+
+print(ersterEintrag, letzterEintrag) # => "Hallo Welt"
+
+\end{pythoncode}
+
+\subsection{Die Liste erweitern}
+\subsubsection{Einen Eintrag hinzufügen}
+\begin{pythoncode}
+# einen Eintrag anfügen
+liste.append(6)
+liste_ausgeben(liste)
+\end{pythoncode}
+
+\subsubsection{Zwei Listen kombinieren}
+\begin{pythoncode}
+# Liste mit einer anderen Liste kombinieren
+liste = liste + [7, 8, 9]
+liste_ausgeben(liste)
+\end{pythoncode}
+
+
 
 
 \end{document}

@@ -19,6 +19,6 @@ meinText = 'Hallo'
 buchstabe = meinText[2]  # dritter Buchstabe! Die erste Stelle ist 0!
 print(buchstabe)  # Gibt 'l' aus
 
-# Dies erzeugt einen Fehler! Text sind nicht veränderlich
+# Dies erzeugt einen Fehler! Texte sind nicht veränderlich
 meinText[3] = 'b'
 
