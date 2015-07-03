@@ -1,5 +1,7 @@
-# Materialien
-Sammlung von Beispielprogrammen, Übungen etc.
+# Materialien - USB Stick Version
+Dieser Branch dient dazu nur die für die Teilnehmer wichtigen Materialien zu sammeln, wie die Anleitungen und die Code-Beispiele. Deswegen werden auf diesem Branch unnötige Dateien wie Tex-Files gelöscht. Dieser Branch sollte also immer auf dem Stand sein wie der master-Branch nur eben keine unnötigen Dateien enthalten.   
+Ziel ist es diese Repo auf die USB-Sticks der Teilnehmer zu klonen
+
 
 ## Python  
 Hier finden sich [Beispiele](Python/Beispiele) und Anleitungen für die Programmierung mit Python. Die Beispiele sind für Python3 ausgelegt. Die aktuelle Python Version ist 3.4 und sollte installiert werden.
@@ -7,22 +9,6 @@ Hinweise zur Installation von Python können in [hier](Installation/installation
 ### py2cd  
 [py2cd](Python/py2cd) ist einfaches Zeichen-/Spiele-Framework, dass einen Wrapper um das in Spiele-Framework [pygame](https://pygame.org) bietet. Es ist auf Deutsch geschrieben, so dass die Befehle einfacher und verständlicher benutzt werden können.
 Hinweise zur Installation sind [hier](Installation/installation_pygame.pdf) zu finden.
-
-
-## Für Mentoren
-
-### LaTeX
-Die meisten unserer Materialien sind mit LaTeX erstellt. Deshalb sind im [Vorlagen-Ordner](Vorlagen) LaTeX-Templates zu finden, so dass alle Materialien ein einheitliches Aussehen erhalten (und um uns das Leben einfacher zu machen).
-Die Vorlage verwendet das in Python geschriebene [Pygments](http://pygments.org/) um Code zu formatieren und muss deswegen installiert sein. Dies kann zum Beispiel über den Python Package Index mittels
-```python
-pip install Pygments
-```
-installiert werden (vorrausgestzt Python und [pip](https://pip.pypa.io/en/latest/installing.html) (kommt mit Python 3.4 standartmäßig mit) sind installiert).  
-
-Außerdem muss Latex-Dokument dann mit dem 'shell-escape' Flag kompiliert werden:
-```
--shell-escape
-```
 
 
 ## Aufgaben
