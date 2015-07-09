@@ -11,7 +11,7 @@ from py2cd.linie import Linie
 
 Spiel.init(640, 480, "Hallo Mathe")
 
-plot = Plot(lambda x: 0, -4, 4, zf, SCHWARZ, 100, 100)
+plot = Plot(lambda x: 0, -4, 4, SCHWARZ, 100, 100)
 plot.zentriere()
 
 yAchse = Linie((Spiel.breite / 2, Spiel.hoehe), (Spiel.breite / 2, -Spiel.hoehe),  SCHWARZ)
