@@ -53,6 +53,9 @@ class Zeichenbar:
         :type:float
         """
 
+        self.__sichtbar = True
+        """ Ob das Objekt gezeichnet werden soll."""
+
         self.position_geaendert = position_geändert
         """
         Funktion die aufgerufen wird, wenn die Position geändert wurde.
@@ -157,7 +160,8 @@ class Zeichenbar:
         :return:
         :rtype:
         """
-        self.render(self._eltern_flaeche.pyg_flaeche)
+        if self.__sichtbar:
+            self.render(self._eltern_flaeche.pyg_flaeche)
 
     def aendere_position(self, x, y):
         """
@@ -208,6 +212,15 @@ class Zeichenbar:
 
         return x, y
 
+    def verstecke(self):
+        self.__sichtbar = False
+
+    def zeige(self):
+        self.__sichtbar = True
+
+    def entferne(self):
+        self._eltern_flaeche.entferne(self)
+
     def punkt_in_rechteck(self, punkt):
         """
         Überprüft, ob der Punkt im umgebenden Rechteckt liegt.
@@ -222,6 +235,21 @@ class Zeichenbar:
         top = (start[1] <= punkt[1] <= (start[1] + self.hoehe))
 
         return left and top
+
+    def beruehrt_rechteck(self, r2_links, r2_oben, breite, hoehe):
+        r1_rechts = self.x + self.breite
+        r1_unten = self.y + self.hoehe
+
+        r2_rechts = r2_links + breite
+        r2_unten = r2_oben + hoehe
+
+        # print("Ich: ", self.x, self.y, self.breite, self.hoehe)
+        # print("Du: ", r2_links, r2_oben, r2_rechts, r2_unten)
+
+        return not (r2_links > r1_rechts or r2_rechts < self.x or r2_oben > r1_unten or r2_unten < self.y)
+
+    def beruehrt_umgebendes_rechteck(self, zeichenbar):
+        return self.beruehrt_rechteck(zeichenbar.x, zeichenbar.y, zeichenbar.breite, zeichenbar.hoehe)
 
 
 class ZeichenbaresElement(Zeichenbar):

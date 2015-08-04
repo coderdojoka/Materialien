@@ -3,7 +3,8 @@ __author__ = 'Mark Weinreuter'
 import sys
 
 import pygame
-from pygame.locals import *
+from pygame.constants import *
+from py2cd.farben import *
 
 
 class Spiel:
@@ -256,3 +257,12 @@ class Spiel:
         :rtype:
         """
         Spiel._aktualisiere = funktion
+
+    @staticmethod
+    def entferne_aktualisierung():
+        """
+        Entfernt die Aktualisierugsfuntion
+        :return:
+        :rtype:
+        """
+        Spiel._aktualisiere = lambda dt: None

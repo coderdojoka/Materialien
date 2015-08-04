@@ -34,6 +34,9 @@ class Text(ZeichenbaresElement):
     Ein Text, der angezeigt werden kann.
     """
 
+    def setze_text(self, text):
+        self.text = text
+
     def render(self, pyg_zeichen_flaeche):
         return pyg_zeichen_flaeche.blit(self.schrift.render(self.text, True, self.farbe, self.hintergrund),
                                         (self.x, self.y))
