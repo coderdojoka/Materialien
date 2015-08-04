@@ -103,7 +103,7 @@ class ZeichenFlaeche(Zeichenbar):
 
         # zeichne alle
         for zb in self._zeichenbareObjekte:
-            zb.render(self.pyg_flaeche)
+            zb.zeichne()
 
     def render(self, pyg_zeichen_flaeche):
         self.zeichne_alles()

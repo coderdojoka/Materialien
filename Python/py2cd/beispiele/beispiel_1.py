@@ -69,6 +69,7 @@ kollision = Rechteck(48, 40, 40, 40, ROT)
 
 schrift = Schrift(20)
 t = Text("Hallo Welt", 200, 0, schrift, BLAU, ROT)
+t.verstecke()
 
 p_box = Rechteck(p.x, p.y, p.breite, p.hoehe, ROT)
 p_box = Rechteck(l.x, l.y, l.breite, l.hoehe, (255, 0, 0, 120))
