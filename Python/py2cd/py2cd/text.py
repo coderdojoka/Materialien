@@ -2,7 +2,10 @@ __author__ = 'Mark Weinreuter'
 
 import pygame
 
+
 from py2cd.objekte import ZeichenbaresElement
+import pygame.freetype
+
 
 
 class Schrift:
@@ -10,10 +13,10 @@ class Schrift:
     Eine Schrift, die zum Darstellen von Text verwendet werden kann.
     """
 
-    def __init__(self, schrift_groesse, schrift_art='freesansbold.ttf'):
+    def __init__(self, schrift_groesse, schrift_art=None):
         self.schrift_art = schrift_art
         self.schrift_groesse = schrift_groesse
-        self._pyg_schrift = pygame.font.Font(schrift_art, schrift_groesse)
+        self._pyg_schrift = pygame.font.SysFont(schrift_art, schrift_groesse)
 
     def berechne_groesse(self, text):
         """
@@ -35,10 +38,13 @@ class Text(ZeichenbaresElement):
     """
 
     def setze_text(self, text):
-        self.text = text
+        self.__text = text
+        dim = self.schrift.berechne_groesse(self.__text)
+        self._aendere_groesse(*dim)
+
 
     def render(self, pyg_zeichen_flaeche):
-        return pyg_zeichen_flaeche.blit(self.schrift.render(self.text, True, self.farbe, self.hintergrund),
+        return pyg_zeichen_flaeche.blit(self.schrift.render(self.__text, True, self.farbe, self.hintergrund),
                                         (self.x, self.y))
 
     def __init__(self, text, x, y, schrift, farbe=(0, 0, 0), hintergrund=None, eltern_flaeche=None):
@@ -65,7 +71,7 @@ class Text(ZeichenbaresElement):
         Die Hintergrundfarbe
         :type: tuple[int]
         """
-        self.text = text
+        self.__text = text
         """
         Der anzuzeigende Text
         :type:str
@@ -77,7 +83,8 @@ class Text(ZeichenbaresElement):
         """
 
         # berechne Größe
-        dim = self.schrift.berechne_groesse(self.text)
+        dim = self.schrift.berechne_groesse(self.__text)
 
         # Eltern Konstruktor
         super().__init__(x, y, dim[0], dim[1], farbe, eltern_flaeche)
+

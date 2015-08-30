@@ -3,9 +3,12 @@ __author__ = 'Mark Weinreuter'
 import sys
 
 import pygame
-from pygame.constants import *
-from py2cd.farben import *
+import pygame.freetype
 
+from pygame.constants import *
+
+# Initialisiert pygame
+pygame.init()
 
 class Spiel:
     """
@@ -27,10 +30,16 @@ class Spiel:
     Die Anzahl der Aktualisierungen pro Sekunde ("Frames per second)
     :type: float """
 
-    haupt_flaeche = None
+    __haupt_flaeche = None
     """
     Die ZeichenFlaeche des Spiels (Fensters)
     :type: py2cd.zeichen_flaeche.ZeichenFlaeche """
+
+    standard_flaeche = None
+    """
+    Die Fläche zu der Objekte standartmäßig hinzugefügt werden, falls die Elternfläche nicht explizit angegben ist.
+    :type: py2cd.zeichen_flaeche.ZeichenFlaeche
+    """
 
     _tasten = {}
     """
@@ -84,9 +93,6 @@ class Spiel:
         print("Python: ", sys.version)
         print("Pygame: ", pygame.version.ver)
 
-        # Initialisiert pygame
-        pygame.init()
-
         # die spiel schleife
         Spiel._aktualisiere = aktualisierungs_funktion
 
@@ -94,12 +100,14 @@ class Spiel:
         Spiel.breite = breite
         Spiel.hoehe = hoehe
 
-        # wird hier importiert, da sonst ein Fehler auftritt (wegen cyclischen Imports)
+        # wird hier erst importiert, da sonst ein Fehler auftritt (wegen cyclischen Imports?)
         from py2cd.flaeche import ZeichenFlaeche
 
         # die Hauptzeichenfläche des Spiels!
-        Spiel.haupt_flaeche = ZeichenFlaeche(0, 0, pygame.display.set_mode((breite, hoehe)),
-                                             (255, 255, 255))
+        Spiel.__haupt_flaeche = ZeichenFlaeche(0, 0, pygame.display.set_mode((breite, hoehe)),
+                                               (255, 255, 255))
+
+        Spiel.standard_flaeche = Spiel.__haupt_flaeche
 
         # Fenstertitel
         Spiel.setze_fenster_titel(titel)
@@ -130,42 +138,42 @@ class Spiel:
         while Spiel._ist_aktiv:  # spiel schleife
 
             # wir gehen alle events durch
-            for event in pygame.event.get():
+            for ereignis in pygame.event.get():
 
                 # Fenster schließen
-                if event.type == QUIT:
+                if ereignis.type == QUIT:
                     Spiel.beenden()
 
                 # Maus bewegt
-                elif event.type == MOUSEMOTION:
+                elif ereignis.type == MOUSEMOTION:
                     if Spiel._mausBewegt:
-                        Spiel._mausBewegt(event)
+                        Spiel._mausBewegt(ereignis)
 
                 # Maustaste gedrückt
-                elif event.type == MOUSEBUTTONDOWN:
+                elif ereignis.type == MOUSEBUTTONDOWN:
                     if Spiel._maus_taste_gedrueckt:
-                        Spiel._maus_taste_gedrueckt(event)
+                        Spiel._maus_taste_gedrueckt(ereignis)
 
                 # Maustaste losgelassen
-                elif event.type == MOUSEBUTTONUP:
+                elif ereignis.type == MOUSEBUTTONUP:
                     if Spiel._maus_taste_losgelassen:
-                        Spiel._maus_taste_losgelassen(event)
+                        Spiel._maus_taste_losgelassen(ereignis)
 
                 # Taste losgelassen
-                elif event.type == KEYUP:
-                    if event.key in Spiel._tasten:
-                        Spiel._tasten[event.key](False, event)
+                elif ereignis.type == KEYUP:
+                    if ereignis.key in Spiel._tasten:
+                        Spiel._tasten[ereignis.key](False, ereignis)
 
                 # Taste gedrückt
-                elif event.type == KEYDOWN:
-                    if event.key in Spiel._tasten:
-                        Spiel._tasten[event.key](True, event)
+                elif ereignis.type == KEYDOWN:
+                    if ereignis.key in Spiel._tasten:
+                        Spiel._tasten[ereignis.key](True, ereignis)
 
             Spiel.zeit_unterschied_ms = Spiel._clock.get_time()
             Spiel._aktualisiere(Spiel.zeit_unterschied_ms / Spiel.fps)
 
             # zeichne alles!!!
-            Spiel.haupt_flaeche.zeichne_alles()
+            Spiel.__haupt_flaeche.zeichne_alles()
 
             # muss aufgerufen werden um Änderungen anzuzeigen
             pygame.display.update()
@@ -244,7 +252,7 @@ class Spiel:
         :return: Die Zeichenfläche
         :rtype:py2cd.flaeche.ZeichenFlaeche
         """
-        return Spiel.haupt_flaeche
+        return Spiel.__haupt_flaeche
 
     @staticmethod
     def setze_aktualisierung(funktion):

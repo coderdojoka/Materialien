@@ -87,6 +87,7 @@ class Zeichenbar:
         """
         return self.__hoehe
 
+    # x, y sind nicht direkt setzbar, da position_geandert sonst immer 2mal aufgerufen würde
     @property
     def x(self):
         """
@@ -99,6 +100,10 @@ class Zeichenbar:
     @property
     def y(self):
         return self.__y
+
+    @property
+    def mitte(self):
+        return self.x + self.breite / 2, self.y + self.hoehe / 2
 
     @property
     def abstand_oben(self):
@@ -199,6 +204,17 @@ class Zeichenbar:
         self.__x = d_breite / 2
         self.position_geaendert()
 
+    def setze_mitte(self, mitte_x, mitte_y):
+        self.__x = mitte_x - (self.breite / 2)
+        self.__y = mitte_y - (self.hoehe / 2)
+        self.position_geaendert()
+
+    def zentriere_in_objekt(self, objekt):
+        if not isinstance(objekt, Zeichenbar):
+            raise ValueError("Objekt muss Zeichenbar sein.")
+
+        self.setze_mitte(*objekt.mitte)
+
     def lese_welt_position(self):
         x = self.x
         y = self.y
@@ -217,6 +233,10 @@ class Zeichenbar:
 
     def zeige(self):
         self.__sichtbar = True
+
+    def nach_vorne(self):
+        self._eltern_flaeche._zeichenbareObjekte.remove(self)
+        self._eltern_flaeche._zeichenbareObjekte.append(self)
 
     def entferne(self):
         self._eltern_flaeche.entferne(self)
@@ -251,6 +271,11 @@ class Zeichenbar:
     def beruehrt_umgebendes_rechteck(self, zeichenbar):
         return self.beruehrt_rechteck(zeichenbar.x, zeichenbar.y, zeichenbar.breite, zeichenbar.hoehe)
 
+    def _aendere_groesse(self, breite, hoehe):
+        self.__breite = breite
+        self.__hoehe = hoehe
+        self.position_geaendert()
+
 
 class ZeichenbaresElement(Zeichenbar):
     def __init__(self, x, y, breite, hoehe, farbe, eltern_flaeche=None, position_geändert=lambda: None):
@@ -258,7 +283,7 @@ class ZeichenbaresElement(Zeichenbar):
             # falls keine Elternfläche angegeben wurde, dann wir die Haupt-Zeichenfläche verwendet
             from py2cd.spiel import Spiel
 
-            eltern_flaeche = Spiel.haupt_flaeche
+            eltern_flaeche = Spiel.standard_flaeche
 
         super().__init__(x, y, breite, hoehe, farbe, eltern_flaeche, position_geändert)
 
