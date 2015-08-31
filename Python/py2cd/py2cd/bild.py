@@ -9,7 +9,7 @@ class Bild(ZeichenbaresElement):
     def render(self, pyg_zeichen_flaeche):
         pyg_zeichen_flaeche.blit(self._bild, (self.x, self.y))
 
-    def __init__(self, x, y, bild, alpha=False):
+    def __init__(self, x, y, bild, alpha=False,eltern_flaeche=None, position_geaendert=lambda:None):
         """
 
         :param x:
@@ -26,7 +26,7 @@ class Bild(ZeichenbaresElement):
         if isinstance(bild, str):
             bild = Bild.lade_bild_aus_datei(bild, alpha)
 
-        super().__init__(x, y, bild.get_width(), bild.get_height(), None)
+        super().__init__(x, y, bild.get_width(), bild.get_height(),farbe=None, eltern_flaeche=eltern_flaeche, position_geaendert=position_geaendert)
         self._bild = bild
 
     @staticmethod

@@ -40,6 +40,8 @@ class Text(ZeichenbaresElement):
     def setze_text(self, text):
         self.__text = text
         dim = self.schrift.berechne_groesse(self.__text)
+        print(self.__text)
+        print(dim)
         self._aendere_groesse(*dim)
 
 

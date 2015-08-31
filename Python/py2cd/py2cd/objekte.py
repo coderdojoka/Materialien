@@ -278,14 +278,14 @@ class Zeichenbar:
 
 
 class ZeichenbaresElement(Zeichenbar):
-    def __init__(self, x, y, breite, hoehe, farbe, eltern_flaeche=None, position_geändert=lambda: None):
+    def __init__(self, x, y, breite, hoehe, farbe, eltern_flaeche=None, position_geaendert=lambda: None):
         if eltern_flaeche is None:
             # falls keine Elternfläche angegeben wurde, dann wir die Haupt-Zeichenfläche verwendet
             from py2cd.spiel import Spiel
 
             eltern_flaeche = Spiel.standard_flaeche
 
-        super().__init__(x, y, breite, hoehe, farbe, eltern_flaeche, position_geändert)
+        super().__init__(x, y, breite, hoehe, farbe, eltern_flaeche, position_geaendert)
 
     def render(self, pyg_zeichen_flaeche):
         """

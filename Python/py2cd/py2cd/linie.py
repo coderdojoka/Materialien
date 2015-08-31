@@ -44,4 +44,4 @@ class Linie(ZeichenbaresElement):
         """
 
         super().__init__(start[0], start[1], self.__ende[0], self.__ende[1],
-                         farbe, eltern_flaeche, position_geändert=self.aktualisiere_end_punkt)
+                         farbe, eltern_flaeche, position_geaendert=self.aktualisiere_end_punkt)
