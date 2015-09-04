@@ -51,7 +51,7 @@ class Spiel:
     Taktgeber für das Spiel um die Fps einzustellen
     :type: pygame.time.Clock"""
 
-    _aktualisiere = None
+    __aktualisiere = None
     """
     Die Funktion, die aufgerufen wird, wenn das Spiel aktualisiert wird (fps mal).
     :type: (float) -> None
@@ -72,8 +72,8 @@ class Spiel:
     _maus_taste_losgelassen = None
     """ :type: callable|None """
 
-    @staticmethod
-    def init(breite=640, hoehe=480, titel="Python Spiel", aktualisierungs_funktion=lambda zeit: None):
+    @classmethod
+    def init(cls,breite=640, hoehe=480, titel="Python Spiel", aktualisierungs_funktion=lambda zeit: None):
         """
         Initialisiert das Spiel.
         HINWEIS: Das Spiel muss! als Erstes initialisiert werden
@@ -94,7 +94,7 @@ class Spiel:
         print("Pygame: ", pygame.version.ver)
 
         # die spiel schleife
-        Spiel._aktualisiere = aktualisierungs_funktion
+        Spiel.__aktualisiere = aktualisierungs_funktion
 
         # Dimension des Fensters
         Spiel.breite = breite
@@ -170,7 +170,7 @@ class Spiel:
                         Spiel._tasten[ereignis.key](True, ereignis)
 
             Spiel.zeit_unterschied_ms = Spiel._clock.get_time()
-            Spiel._aktualisiere(Spiel.zeit_unterschied_ms / Spiel.fps)
+            Spiel.__aktualisiere(Spiel.zeit_unterschied_ms / Spiel.fps)
 
             # zeichne alles!!!
             Spiel.__haupt_flaeche.zeichne_alles()
@@ -264,7 +264,7 @@ class Spiel:
         :return:
         :rtype:
         """
-        Spiel._aktualisiere = funktion
+        Spiel.__aktualisiere = funktion
 
     @staticmethod
     def entferne_aktualisierung():
@@ -273,4 +273,4 @@ class Spiel:
         :return:
         :rtype:
         """
-        Spiel._aktualisiere = lambda dt: None
+        Spiel.__aktualisiere = lambda dt: None

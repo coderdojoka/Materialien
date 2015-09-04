@@ -238,7 +238,7 @@ class Zeichenbar:
         self._eltern_flaeche._zeichenbareObjekte.remove(self)
         self._eltern_flaeche._zeichenbareObjekte.append(self)
 
-    def entferne(self):
+    def selbst_entfernen(self):
         self._eltern_flaeche.entferne(self)
 
     def punkt_in_rechteck(self, punkt):

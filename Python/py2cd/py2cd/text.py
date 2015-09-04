@@ -1,11 +1,9 @@
 __author__ = 'Mark Weinreuter'
 
 import pygame
-
-
-from py2cd.objekte import ZeichenbaresElement
 import pygame.freetype
 
+from py2cd.objekte import ZeichenbaresElement
 
 
 class Schrift:
@@ -40,16 +38,13 @@ class Text(ZeichenbaresElement):
     def setze_text(self, text):
         self.__text = text
         dim = self.schrift.berechne_groesse(self.__text)
-        print(self.__text)
-        print(dim)
         self._aendere_groesse(*dim)
-
 
     def render(self, pyg_zeichen_flaeche):
         return pyg_zeichen_flaeche.blit(self.schrift.render(self.__text, True, self.farbe, self.hintergrund),
                                         (self.x, self.y))
 
-    def __init__(self, text, x, y, schrift, farbe=(0, 0, 0), hintergrund=None, eltern_flaeche=None):
+    def __init__(self, text, x, y, schrift=Schrift(20), farbe=(0, 0, 0), hintergrund=None, eltern_flaeche=None):
         """
         Ein neuer Text an der angebenen Position
         :param text:
@@ -89,4 +84,3 @@ class Text(ZeichenbaresElement):
 
         # Eltern Konstruktor
         super().__init__(x, y, dim[0], dim[1], farbe, eltern_flaeche)
-

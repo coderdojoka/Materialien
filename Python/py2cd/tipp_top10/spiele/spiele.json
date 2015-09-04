@@ -1,0 +1,16 @@
+{
+  "spiele": [
+    {
+      "name": "Ufos und Schafe",
+      "modul": "ufos_und_schafe",
+      "haupt_klasse": "UfoUndSchafeSpiel",
+      "bild": "ufos_und_schafe.png"
+    },
+    {
+      "name": "TestEintrag",
+      "modul": "ufos_und_schafe",
+      "haupt_klasse": "UfoUndSchafeSpiel",
+      "bild": "schaf_1.png"
+    }
+  ]
+}

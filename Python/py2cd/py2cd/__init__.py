@@ -15,3 +15,4 @@ Außerdem wird das Anzeigen von Bilder und Animationen, als schnelle Abfolge von
 
 
 """
+from py2cd.farben import *

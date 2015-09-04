@@ -1,6 +1,6 @@
 import pygame
 
-from py2cd.bild import Bild
+from py2cd.bild import Bild, BildSpeicher
 
 __author__ = 'Mark Weinreuter'
 
@@ -21,11 +21,11 @@ class Animation(ZeichenbaresElement):
     durch gewechselt werden.
     """
 
-    def __init__(self, flaechen_und_zeiten, wiederhole=False, alpha=True):
+    def __init__(self, pygame_flaechen_und_zeiten, wiederhole=False, alpha=True):
         """
         Erstellt einen neue Instanz aus den Flächen.
-        :param flaechen_und_zeiten:
-        :type flaechen_und_zeiten:list[(str|ZeichenFlaeche, int)]
+        :param pygame_flaechen_und_zeiten:
+        :type pygame_flaechen_und_zeiten:list[(str|ZeichenFlaeche, int)]
         :param wiederhole:
         :type wiederhole: bool
         :param alpha:
@@ -53,26 +53,31 @@ class Animation(ZeichenbaresElement):
         breite = 0
         hoehe = 0
 
-        for zf in flaechen_und_zeiten:
+        for zf in pygame_flaechen_und_zeiten:
 
-            flaeche = zf[0]
+            animations_bild = zf[0]
 
-            # Die Fläche kann entweder aus einer Datei geladen werden
-            if isinstance(flaeche, str):
-                flaeche = Bild.lade_bild_aus_datei(zf[0], alpha)
+            # Die Fläche kann entweder aus einer Datei/ dem Bildspeicher geladen werden
+            if isinstance(animations_bild, str):
+                # Falls im Speicher, nehmen wir dieses Bild
+                if BildSpeicher.ist_bild_vorhanden(animations_bild):
+                    animations_bild = BildSpeicher.gib_pygame_flaeche(animations_bild)
+                else:
+                    # Ansonsten laden wir es
+                    animations_bild = Bild.lade_bild_aus_datei(animations_bild, alpha)
 
-            # oder schon eine Zeichenfläche sein
-            elif not isinstance(flaeche, pygame.Surface):
+            # oder schon eine pygame surface sein
+            elif not isinstance(animations_bild, pygame.Surface):
                 raise AttributeError("Entweder Surface oder Strings übergeben.")
 
             # die größten werte ermitteln
-            if flaeche.get_width() > breite:
-                breite = flaeche.get_width()
-            if flaeche.get_height() > hoehe:
-                hoehe = flaeche.get_height()
+            if animations_bild.get_width() > breite:
+                breite = animations_bild.get_width()
+            if animations_bild.get_height() > hoehe:
+                hoehe = animations_bild.get_height()
 
             # Zur List hinzufügen und Zeit addieren
-            self._flaechen_zeiten.append((flaeche, zf[1]))
+            self._flaechen_zeiten.append((animations_bild, zf[1]))
             self._gesamt_zeit += zf[1]
 
         self._anzahl_flaechen = len(self._flaechen_zeiten)
@@ -123,6 +128,12 @@ class Animation(ZeichenbaresElement):
             return pyg_zeichen_flaeche.blit(self._flaechen_zeiten[self._aktuelle_flaeche][0],
                                             (self.x, self.y))
 
+    def zeige_bild(self, index):
+        if index < 0 or index > len(self._flaechen_zeiten):
+            raise ValueError("Index muss größer 0 und kleiner als die Anzahl an Bildern sein")
+
+        self._aktuelle_flaeche = index
+
     def setze_wiederhole(self, wiederhole=True):
         self._wiederhole_animation = wiederhole
 
@@ -131,3 +142,22 @@ class Animation(ZeichenbaresElement):
 
     def pause(self):
         self._zustand = PAUSIERT
+
+
+class AnimationSpeicher:
+    __alle_animationen = {}
+
+    @classmethod
+    def ist_animation_vorhanden(cls, schluessel):
+        return schluessel in cls.__alle_animationen
+
+    @classmethod
+    def registriere_animation(cls, schluessel, bilder_und_zeiten, wiederhole=False,alpha=True):
+        cls.__alle_animationen[schluessel] = (bilder_und_zeiten, wiederhole, alpha)
+
+    @classmethod
+    def gib_animation(cls, schluessel):
+        if schluessel not in cls.__alle_animationen:
+            raise ValueError("Animation nicht im Speicher vorhanden.")
+
+        return Animation(*cls.__alle_animationen[schluessel])

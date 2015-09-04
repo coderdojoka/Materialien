@@ -23,6 +23,7 @@ def neue_pygame_flaeche(breite, hoehe, alpha=False):
         flaeche.convert_alpha()
     else:
         flaeche = pygame.Surface([breite, hoehe])
+        flaeche.convert()
 
     return flaeche
 
@@ -32,15 +33,15 @@ class ZeichenFlaeche(Zeichenbar):
     Eine Fläche auf der gezeichnet werden kann. Es können z.B. Rechtecke oder Bilder gezeichnet werden.
     """
 
-    def __init__(self, x, y, pygame_flaeche, farbe=(0, 0, 0, 0), eltern_flaeche=None):
+    def __init__(self, x, y, pygame_flaeche_breite, farbe=(0, 0, 0, 0), eltern_flaeche=None):
         """
         Eine neue Zeichenfläche
         :param x:
         :type x: float
         :param y:
         :type y: float
-        :param pygame_flaeche:
-        :type pygame_flaeche: pygame.Surface
+        :param pygame_flaeche_breite:
+        :type pygame_flaeche_breite: pygame.Surface|tuple(int,int,bool)
         :param eltern_flaeche:
         :type eltern_flaeche:
         :param farbe:
@@ -55,14 +56,24 @@ class ZeichenFlaeche(Zeichenbar):
         :type: list[ZeichenbaresObjekt]
         """
 
-        self.pyg_flaeche = pygame_flaeche
+
+        if isinstance(pygame_flaeche_breite, tuple):
+            self.pyg_flaeche = neue_pygame_flaeche(*pygame_flaeche_breite)
+        elif isinstance(pygame_flaeche_breite, pygame.Surface):
+            self.pyg_flaeche = pygame_flaeche_breite
+        else:
+            raise ValueError("Bubberfisch")
+
+
+
+
         """
         Die eigentliche pygame Zeichenfläche auf der gezeichnet wird.
         :type:pygame.Surface
         """
 
-        super().__init__(x, y, pygame_flaeche.get_width(),
-                         pygame_flaeche.get_height(), farbe, eltern_flaeche=eltern_flaeche)
+        super().__init__(x, y, self.pyg_flaeche.get_width(),
+                         self.pyg_flaeche.get_height(), farbe, eltern_flaeche=eltern_flaeche)
 
     def fuege_hinzu(self, objekt):
         """
