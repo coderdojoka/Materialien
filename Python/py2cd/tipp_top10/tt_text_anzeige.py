@@ -185,8 +185,11 @@ class LektionenUebersicht:
 
     @staticmethod
     def lade_lektionen():
-        with  open("lektionen.json") as datei:
+
+        with open("lektionen.json", encoding="latin1") as datei:
             text = datei.read()
+
+        text = text.encode("latin1").decode("utf-8")
 
         lektionen_json = json.loads(text)
         lektionen_info = lektionen_json["lektionen"]
@@ -197,13 +200,16 @@ class LektionenUebersicht:
         LektionenUebersicht.__lektionen = []
 
         for i in range(anzahl_lektionen):
-            datei = open(datei_name % i)
+            with  open(datei_name % i, encoding="latin1") as datei:
+                text = datei.read()
+
+            text = text.encode("latin1").decode("utf-8")
+            zeilen = text.split("\n")
 
             woerter = defaultdict(list)
-            for zeile in datei:
+            for zeile in zeilen:
                 zeile = zeile.strip()
                 woerter[len(zeile)].append(zeile)
-            datei.close()
 
             for key in woerter:
                 woerter[key] = sorted(woerter[key])

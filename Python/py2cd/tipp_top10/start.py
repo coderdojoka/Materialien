@@ -43,7 +43,7 @@ class TTHaupt(Spiel):
         # Tastatur erstellen
         initialisiere_tasten(tastatur_flaeche)
 
-        cls.punkte_stand = Text("0",10,5, Schrift(32))
+        cls.punkte_stand = Text("0", 10, 5, Schrift(32))
         cls.punkte_stand.nach_vorne()
 
         def punkte_geaendert(wert):
@@ -73,7 +73,6 @@ class TTHaupt(Spiel):
                 TextUebersicht.buchstabe_getippt(ereignis.unicode)
         else:
             tasten[ereignis.key].losgelassen()
-
 
     @classmethod
     def _lade_spiele(cls):
@@ -192,12 +191,15 @@ class TTHaupt(Spiel):
 
         _modul = __import__(cls.aktuelles_spiel["modul"], globals(), locals())
         _class = getattr(_modul, cls.aktuelles_spiel["haupt_klasse"])
-        spiel_flaeche = ZeichenFlaeche(0, 0, (fenster_breite, spiel_hoehe,True) ,eltern_flaeche=cls.hintergrund_flaeche)
+        spiel_flaeche = ZeichenFlaeche(0, 0, (fenster_breite, spiel_hoehe, True), eltern_flaeche=cls.hintergrund_flaeche)
         spiel = _class(spiel_flaeche)
         cls.setze_aktualisierung(spiel.aktualisiere)
 
         # die Startseite entfernen
         cls.start_flaeche.selbst_entfernen()
+        Spiel.registriere_maus_losgelassen(lambda e: None)
+        Spiel.registriere_maus_gedrueckt(lambda e: None)
+
         # Spielfläache hinzufügen, und spiel starten
         cls.gib_zeichen_flaeche().fuege_hinzu(cls.hintergrund_flaeche)
         cls.rahmen.nach_vorne()

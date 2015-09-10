@@ -271,6 +271,27 @@ class Zeichenbar:
     def beruehrt_umgebendes_rechteck(self, zeichenbar):
         return self.beruehrt_rechteck(zeichenbar.x, zeichenbar.y, zeichenbar.breite, zeichenbar.hoehe)
 
+    def beruehrt_linken_oder_rechten_rand(self):
+        return self.beruehrt_linken_rand() or self.beruehrt_rechten_rand()
+
+    def beruehrt_oberen_oder_unteren_rand(self):
+        return self.beruehrt_oberen_rand() or self.beruehrt_unternen_rand()
+
+    def beruehrt_rand(self):
+        return self.beruehrt_linken_rand() or self.beruehrt_oberen_rand() or self.beruehrt_rechten_rand() or self.beruehrt_unternen_rand()
+
+    def beruehrt_oberen_rand(self):
+        return self.__y <= 0
+
+    def beruehrt_unternen_rand(self):
+        return self.__y + self.hoehe >= self._eltern_flaeche.hoehe
+
+    def beruehrt_linken_rand(self):
+        return self.__x <= 0
+
+    def beruehrt_rechten_rand(self):
+        return self.__x + self.breite >= self._eltern_flaeche.breite
+
     def _aendere_groesse(self, breite, hoehe):
         self.__breite = breite
         self.__hoehe = hoehe

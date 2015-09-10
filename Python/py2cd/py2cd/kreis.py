@@ -11,8 +11,9 @@ class Kreis(ZeichenbaresElement):
     """
 
     def render(self, pyg_zeichen_flaeche):
+        # Mitte verschieben, damit x,y immer der linke Rand ist
         pygame.draw.circle(pyg_zeichen_flaeche, self.farbe,
-                           (self.x, self.y), self.radius, self.dicke)
+                           (int(self.x + self.radius), int(self.y + self.radius)), self.radius, self.dicke)
 
     def __init__(self, x, y, radius, farbe=(0, 0, 0), dicke=0, eltern_flaeche=None):
         """
