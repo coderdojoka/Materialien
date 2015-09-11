@@ -1,0 +1,70 @@
+{
+  "datei_name": "lektionen/woerter_lektion_%d.txt",
+  "lektionen": [
+    {
+      "name" : "Lektion 1: asdfjklö",
+      "buchstaben": "asdfjklö",
+      "sonderzeichen": ""
+    },
+    {
+      "name" : "Lektion 2: en",
+      "buchstaben": "asdfjklöen",
+      "sonderzeichen": ""
+    },
+    {
+      "name" : "Lektion 3: ri",
+      "buchstaben": "asdfjklöenri",
+      "sonderzeichen": ""
+    },
+    {
+      "name" : "Lektion 4: th",
+      "buchstaben": "asdfjklöenrith",
+      "sonderzeichen": ""
+    },
+    {
+      "name" : "Lektion 5: cu",
+      "buchstaben": "asdfjklöenrithcu",
+      "sonderzeichen": ""
+    },
+    {
+      "name" : "Lektion 6: g.:",
+      "buchstaben": "asdfjklöenrithcug",
+      "sonderzeichen": ".:"
+    },
+    {
+      "name" : "Lektion 7: om",
+      "buchstaben": "asdfjklöenrithcugom",
+      "sonderzeichen": ".:"
+    },
+    {
+      "name" : "Lektion 8: bw",
+      "buchstaben": "asdfjklöenrithcugombw",
+      "sonderzeichen": ".:"
+    },
+    {
+      "name" : "Lektion 9: z,;",
+      "buchstaben": "asdfjklöenrithcugombwz",
+      "sonderzeichen": ".:,;"
+    },
+    {
+      "name" : "Lektion 10: vp",
+      "buchstaben": "asdfjklöenrithcugombwzvp",
+      "sonderzeichen": ".:,;"
+    },
+    {
+      "name" : "Lektion 11: üä",
+      "buchstaben": "asdfjklöenrithcugombwzvpüä",
+      "sonderzeichen": ".:,;"
+    },
+    {
+      "name" : "Lektion 12: ßq",
+      "buchstaben": "asdfjklöenrithcugombwzvpüäßq",
+      "sonderzeichen": ".:,;"
+    },
+    {
+      "name" : "Lektion 13: yx",
+      "buchstaben": "asdfjklöenrithcugombwzvpüäßqyx",
+      "sonderzeichen": ".:,;"
+    }
+  ]
+}

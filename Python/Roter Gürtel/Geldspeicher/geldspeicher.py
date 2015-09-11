@@ -15,7 +15,7 @@ __kombi_gs_v2 = [
     chr(random.randint(97, 122)),
     chr(random.randint(97, 122))
 ]
-
+print(__kombi_gs_v1)
 
 def rate_passwort(z1, z2, z3):
     """
@@ -38,7 +38,7 @@ def rate_passwort_buchstaben(c1, c2, c3):
 def __test_kombination(z1, z2, z3, __kombi):
 
     # alle drei ziffern vergleichen
-    if z1 == __kombi[0] and z2 == __kombi[2] and z3 == __kombi[3]:
+    if z1 == __kombi[0] and z2 == __kombi[1] and z3 == __kombi[2]:
 
         # Kombination ist richtig
         print("Gelspeicher geöffnet")

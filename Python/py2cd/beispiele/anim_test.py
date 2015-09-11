@@ -53,59 +53,6 @@ fireAnim.abstand_links = 12
 fireAnim.zentriere_vertikal()
 
 
-zeit /=2
-
-blitzAnim = Animation([("sprites/explosion/explosion_0.png", zeit),
-                      ("sprites/explosion/explosion_1.png", zeit),
-                      ("sprites/explosion/explosion_2.png", zeit),
-                      ("sprites/explosion/explosion_3.png", zeit),
-                       ("sprites/explosion/explosion_4.png", zeit),
-                       ("sprites/explosion/explosion_5.png", zeit),
-                       ("sprites/explosion/explosion_6.png", zeit),
-                       ("sprites//explosion/explosion_7.png", zeit),
-                       ("sprites/explosion/explosion_8.png", zeit),
-                       ("sprites/explosion/explosion_9.png", zeit),
-                       ("sprites/explosion/explosion_10.png", zeit),
-                       ("sprites/explosion/explosion_11.png", zeit),
-                       ("sprites/explosion/explosion_12.png", zeit),
-                       ("sprites/explosion/explosion_13.png", zeit),
-                       ("sprites/explosion/explosion_14.png", zeit),
-                       ("sprites/explosion/explosion_15.png", zeit),
-                       ("sprites/explosion/explosion_16.png", zeit),
-                       ("sprites/explosion/explosion_17.png", zeit),
-                       ("sprites/explosion/explosion_18.png", zeit),
-                       ("sprites/explosion/explosion_19.png", zeit),
-                       ], False)
-blitzAnim.start()
-blitzAnim.setze_wiederhole(True)
-blitzAnim.setze_position(300, 400)
-blitzAnim.abstand_unten = 0
-blitzAnim.abstand_links = 12
-
-
-
-schiff_anim = Animation([("sprites/weltall/Ship/f1.png", zeit),
-                         ("sprites/weltall/Ship/f2.png", zeit),
-                         ("sprites/weltall/Ship/f3.png", zeit),
-                         ("sprites/weltall/Ship/f4.png", zeit)], False)
-schiff_anim.start()
-schiff_anim.setze_wiederhole(True)
-schiff_anim.setze_position(200, 200)
-
-
-
-ufo_anim = Animation([("sprites/weltall/Enemy/Example/e_f1.png", zeit),
-                         ("sprites/weltall/Enemy/Example/e_f2.png", zeit),
-                         ("sprites/weltall/Enemy/Example/e_f3.png", zeit),
-                         ("sprites/weltall/Enemy/Example/e_f4.png", zeit)], False)
-ufo_anim.start()
-ufo_anim.setze_wiederhole(True)
-ufo_anim.setze_position(310, 200)
-
-
-
-
-
 
 Spiel.registriere_taste_gedrueckt(K_p, lambda a, b: boltAnim.pause())
 Spiel.registriere_taste_gedrueckt(K_s, lambda a, b: boltAnim.start())

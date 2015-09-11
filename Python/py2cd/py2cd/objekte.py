@@ -53,6 +53,9 @@ class Zeichenbar:
         :type:float
         """
 
+        self.__sichtbar = True
+        """ Ob das Objekt gezeichnet werden soll."""
+
         self.position_geaendert = position_geändert
         """
         Funktion die aufgerufen wird, wenn die Position geändert wurde.
@@ -84,6 +87,7 @@ class Zeichenbar:
         """
         return self.__hoehe
 
+    # x, y sind nicht direkt setzbar, da position_geandert sonst immer 2mal aufgerufen würde
     @property
     def x(self):
         """
@@ -96,6 +100,10 @@ class Zeichenbar:
     @property
     def y(self):
         return self.__y
+
+    @property
+    def mitte(self):
+        return self.x + self.breite / 2, self.y + self.hoehe / 2
 
     @property
     def abstand_oben(self):
@@ -157,7 +165,8 @@ class Zeichenbar:
         :return:
         :rtype:
         """
-        self.render(self._eltern_flaeche.pyg_flaeche)
+        if self.__sichtbar:
+            self.render(self._eltern_flaeche.pyg_flaeche)
 
     def aendere_position(self, x, y):
         """
@@ -195,6 +204,17 @@ class Zeichenbar:
         self.__x = d_breite / 2
         self.position_geaendert()
 
+    def setze_mitte(self, mitte_x, mitte_y):
+        self.__x = mitte_x - (self.breite / 2)
+        self.__y = mitte_y - (self.hoehe / 2)
+        self.position_geaendert()
+
+    def zentriere_in_objekt(self, objekt):
+        if not isinstance(objekt, Zeichenbar):
+            raise ValueError("Objekt muss Zeichenbar sein.")
+
+        self.setze_mitte(*objekt.mitte)
+
     def lese_welt_position(self):
         x = self.x
         y = self.y
@@ -207,6 +227,19 @@ class Zeichenbar:
             obj = obj._eltern_flaeche
 
         return x, y
+
+    def verstecke(self):
+        self.__sichtbar = False
+
+    def zeige(self):
+        self.__sichtbar = True
+
+    def nach_vorne(self):
+        self._eltern_flaeche._zeichenbareObjekte.remove(self)
+        self._eltern_flaeche._zeichenbareObjekte.append(self)
+
+    def selbst_entfernen(self):
+        self._eltern_flaeche.entferne(self)
 
     def punkt_in_rechteck(self, punkt):
         """
@@ -223,16 +256,57 @@ class Zeichenbar:
 
         return left and top
 
+    def beruehrt_rechteck(self, r2_links, r2_oben, breite, hoehe):
+        r1_rechts = self.x + self.breite
+        r1_unten = self.y + self.hoehe
+
+        r2_rechts = r2_links + breite
+        r2_unten = r2_oben + hoehe
+
+        # print("Ich: ", self.x, self.y, self.breite, self.hoehe)
+        # print("Du: ", r2_links, r2_oben, r2_rechts, r2_unten)
+
+        return not (r2_links > r1_rechts or r2_rechts < self.x or r2_oben > r1_unten or r2_unten < self.y)
+
+    def beruehrt_umgebendes_rechteck(self, zeichenbar):
+        return self.beruehrt_rechteck(zeichenbar.x, zeichenbar.y, zeichenbar.breite, zeichenbar.hoehe)
+
+    def beruehrt_linken_oder_rechten_rand(self):
+        return self.beruehrt_linken_rand() or self.beruehrt_rechten_rand()
+
+    def beruehrt_oberen_oder_unteren_rand(self):
+        return self.beruehrt_oberen_rand() or self.beruehrt_unternen_rand()
+
+    def beruehrt_rand(self):
+        return self.beruehrt_linken_rand() or self.beruehrt_oberen_rand() or self.beruehrt_rechten_rand() or self.beruehrt_unternen_rand()
+
+    def beruehrt_oberen_rand(self):
+        return self.__y <= 0
+
+    def beruehrt_unternen_rand(self):
+        return self.__y + self.hoehe >= self._eltern_flaeche.hoehe
+
+    def beruehrt_linken_rand(self):
+        return self.__x <= 0
+
+    def beruehrt_rechten_rand(self):
+        return self.__x + self.breite >= self._eltern_flaeche.breite
+
+    def _aendere_groesse(self, breite, hoehe):
+        self.__breite = breite
+        self.__hoehe = hoehe
+        self.position_geaendert()
+
 
 class ZeichenbaresElement(Zeichenbar):
-    def __init__(self, x, y, breite, hoehe, farbe, eltern_flaeche=None, position_geändert=lambda: None):
+    def __init__(self, x, y, breite, hoehe, farbe, eltern_flaeche=None, position_geaendert=lambda: None):
         if eltern_flaeche is None:
             # falls keine Elternfläche angegeben wurde, dann wir die Haupt-Zeichenfläche verwendet
             from py2cd.spiel import Spiel
 
-            eltern_flaeche = Spiel.haupt_flaeche
+            eltern_flaeche = Spiel.standard_flaeche
 
-        super().__init__(x, y, breite, hoehe, farbe, eltern_flaeche, position_geändert)
+        super().__init__(x, y, breite, hoehe, farbe, eltern_flaeche, position_geaendert)
 
     def render(self, pyg_zeichen_flaeche):
         """
