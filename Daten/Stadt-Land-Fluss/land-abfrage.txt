@@ -1,0 +1,11 @@
+//Setze Zeitlimit auf 3600s = 60min * 60s = 1h
+[timeout:3600]
+
+//Gebe die deutschen Namen der Staaten als Liste aus
+[out:csv("name:de")];
+
+//Wähle alle Staaten aus
+node[place=country]["name:de"];
+
+// Gib das Resultat aus
+out;
