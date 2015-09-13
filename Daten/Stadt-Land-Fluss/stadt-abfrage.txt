@@ -1,0 +1,14 @@
+//Setze Zeitlimit auf 3600s = 60min * 60s = 1h
+[timeout:3600]
+
+//Gebe die Namen der Städte als Liste aus
+[out:csv("name")];
+
+//Suche in Deutschland
+area[name="Deutschland"];
+
+//Wähle alle Großstädte, Städte, Kleinstädte und Dörfer aus
+node(area)[place~"city|town|village|hamlet"][name];
+
+// Gib das Resultat aus
+out;

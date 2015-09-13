@@ -1,0 +1,22 @@
+//Setze Zeitlimit auf 3600s = 60min * 60s = 1h
+[timeout:3600]
+
+//Gebe die Namen der Flüsse als Liste aus
+[out:csv("name")];
+
+//Suche in Deutschland
+area[name="Deutschland"];
+
+//Wähle die Wege aller Flüsse aus und speichere diese in 'w_alle'
+way(area)[waterway~"river|stream|canal"][name] -> .w_alle;
+
+//Wähle die Relationen aller Flüsse aus und speichere diese in 'r_alle'
+rel[waterway~"river|stream|canal"][name](area) -> .r_alle;
+
+//Suche alle Wege die zu den Relationen 'r_alle' gehören und speichere diese in 'wr_alle'
+way(r.r_alle)->.wr_alle;
+
+//Wähle alle Flüsse aus die nicht in einer Relation sind oder die übergeordnete Relation
+((.w_alle; - .wr_alle;); .r_alle;);
+
+out;
