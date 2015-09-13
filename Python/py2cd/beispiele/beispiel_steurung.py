@@ -1,10 +1,9 @@
 __author__ = 'Mark Weinreuter'
 
-from py2cd.spiel import *
-from py2cd.kreis import Kreis
-from py2cd.text import Schrift, Text
-from py2cd.rechteck import Rechteck
+from py2cd import *
 from py2cd.farben import *
+from pygame.constants import *
+
 
 links_down = False
 rechts_down = False

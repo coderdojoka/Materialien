@@ -7,9 +7,6 @@ import pygame.freetype
 
 from pygame.constants import *
 
-# Initialisiert pygame
-pygame.init()
-
 class Spiel:
     """
     Die Hauptklasse des Spiels.

@@ -1,16 +1,10 @@
 __author__ = 'Mark Weinreuter'
 
-import pygame
-
-pygame.init()
-
 import sys
-from py2cd.bild import BildWechsler
+
+from py2cd import *
 from tipp_top10.gui import CheckBox, KlickText, Anklickbar
 from tipp_top10.konstanten import *
-
-from py2cd.rechteck import Rechteck
-from py2cd.flaeche import ZeichenFlaeche
 from tipp_top10.tt_tastatur import *
 from tipp_top10.spiele.ufos_und_schafe import *
 

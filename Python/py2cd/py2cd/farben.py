@@ -1,6 +1,5 @@
 __author__ = 'Mark Weinreuter'
 
-
 # ein paar vordefiniert Farben
 WEISS = (255, 255, 255)
 SCHWARZ = (0, 0, 0)

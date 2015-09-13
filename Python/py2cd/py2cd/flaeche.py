@@ -56,16 +56,12 @@ class ZeichenFlaeche(Zeichenbar):
         :type: list[ZeichenbaresObjekt]
         """
 
-
         if isinstance(pygame_flaeche_breite, tuple):
             self.pyg_flaeche = neue_pygame_flaeche(*pygame_flaeche_breite)
         elif isinstance(pygame_flaeche_breite, pygame.Surface):
             self.pyg_flaeche = pygame_flaeche_breite
         else:
             raise ValueError("Bubberfisch")
-
-
-
 
         """
         Die eigentliche pygame Zeichenfläche auf der gezeichnet wird.

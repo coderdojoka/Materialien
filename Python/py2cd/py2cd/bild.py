@@ -121,6 +121,7 @@ class BildSpeicher:
     def lade_bild(cls, schluessel, pfad, alpha=True):
         bild = cls.lade_bild_aus_datei(pfad, alpha)
         cls.__alle_bilder[schluessel] = bild
+        return bild
 
     @classmethod
     def gib_bild(cls, schluessel, x=0, y=0):

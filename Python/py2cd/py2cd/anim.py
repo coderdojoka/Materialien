@@ -1,6 +1,6 @@
 import pygame
 
-from py2cd.bild import Bild, BildSpeicher
+from py2cd.bild import BildSpeicher
 
 __author__ = 'Mark Weinreuter'
 
@@ -64,7 +64,7 @@ class Animation(ZeichenbaresElement):
                     animations_bild = BildSpeicher.gib_pygame_flaeche(animations_bild)
                 else:
                     # Ansonsten laden wir es
-                    animations_bild = Bild.lade_bild_aus_datei(animations_bild, alpha)
+                    animations_bild = BildSpeicher.lade_bild_aus_datei(animations_bild, alpha)
 
             # oder schon eine pygame surface sein
             elif not isinstance(animations_bild, pygame.Surface):
@@ -152,8 +152,10 @@ class AnimationSpeicher:
         return schluessel in cls.__alle_animationen
 
     @classmethod
-    def registriere_animation(cls, schluessel, bilder_und_zeiten, wiederhole=False,alpha=True):
+    def registriere_animation(cls, schluessel, bilder_und_zeiten, wiederhole=False, alpha=True):
         cls.__alle_animationen[schluessel] = (bilder_und_zeiten, wiederhole, alpha)
+
+        return Animation(*cls.__alle_animationen[schluessel])
 
     @classmethod
     def gib_animation(cls, schluessel):

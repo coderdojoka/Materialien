@@ -1,8 +1,6 @@
 __author__ = "Mark Weinreuter"
 
-from py2cd.poly import Polygon
-from py2cd.rechteck import Rechteck
-from py2cd.spiel import Spiel
+from py2cd import *
 from py2cd.farben import *
 
 # Der erste Schritt um ein Spiel zu starten ist immer, der Initialisierungsfunktion init()

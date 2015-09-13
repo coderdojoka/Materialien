@@ -1,9 +1,6 @@
-from py2cd.bild import Bild
+from py2cd import *
 
 __author__ = 'Mark Weinreuter'
-
-from py2cd.spiel import *
-from py2cd.anim import Animation
 
 
 def aktualiserungs_funktion(t):
@@ -19,10 +16,8 @@ zf.farbe = HINTER_GRUND
 zeit = 1000 / 11
 Spiel.fps = 30
 
-bf = Bild.lade_bild_aus_datei("testimages/bolt_strike_0001.png", True)
-
 boltAnim = Animation([('testimages/bolt_strike_0001.png', zeit),
-                      (Bild.lade_bild_aus_datei('testimages/bolt_strike_0002.png', True), zeit),
+                      ('testimages/bolt_strike_0002.png', zeit),
                       ('testimages/bolt_strike_0003.png', zeit),
                       ('testimages/bolt_strike_0004.png', zeit),
                       ('testimages/bolt_strike_0005.png', zeit),

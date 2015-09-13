@@ -1,6 +1,5 @@
 from py2cd import *
-from py2cd.bild import BildWechsler
-from py2cd.text import Text
+from py2cd.farben import *
 
 __author__ = 'Mark Weinreuter'
 

@@ -37,4 +37,3 @@ class Rechteck(ZeichenbaresElement):
         """
         super().__init__(x, y, breite, hoehe, farbe, eltern_flaeche)
         self.dicke = dicke
-
