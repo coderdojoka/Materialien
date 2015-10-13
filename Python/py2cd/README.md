@@ -10,7 +10,7 @@ Für Windows kann [hier](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pygame) die 
 herunterladen und mittels:    
 ```
 pip install --use-wheel pygame‑1.9.2a0‑cp34‑none‑win32.whl
-```    
+```
 installiert werden.
 
 

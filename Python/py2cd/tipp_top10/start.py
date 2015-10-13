@@ -1,13 +1,14 @@
+from pgu.gui.input import Input
+
 __author__ = 'Mark Weinreuter'
 
 import sys
 
 from py2cd import *
-from tipp_top10.gui import CheckBox, KlickText, Anklickbar
+from tipp_top10.gui import CheckBox, KlickText, Anklickbar, RadioButtonGruppe
 from tipp_top10.konstanten import *
 from tipp_top10.tt_tastatur import *
 from tipp_top10.spiele.ufos_und_schafe import *
-
 
 class TTHaupt(Spiel):
     aktuelles_spiel = None
@@ -39,6 +40,7 @@ class TTHaupt(Spiel):
 
         cls.punkte_stand = Text("0", 10, 5, Schrift(32))
         cls.punkte_stand.nach_vorne()
+
 
         def punkte_geaendert(wert):
             cls.punkte += wert
@@ -108,6 +110,7 @@ class TTHaupt(Spiel):
         cls.cbLoeschen = CheckBox(40, 540, lambda gesetzt: TextUebersicht.fehler_muessen_korrigiert_werden(gesetzt))
         cls.cbGross = CheckBox(40, 580, lambda gesetzt: TextUebersicht.soll_woerter_gross_schreiben(gesetzt))
 
+
         schrift = Schrift(30, "freesansbold.ttf")
         schriftGross = Schrift(50, "freesansbold.ttf")
 
@@ -130,6 +133,9 @@ class TTHaupt(Spiel):
         cls.lektionen_index = 0
         cls.lektionenText = Text("dd", 0, 500, schrift)
         cls.lektion_wechseln(0)
+
+        RadioButtonGruppe(3)
+
 
         # b = BildWechsler(100, 40, ["pfeil_r_normal", "pfeil_r_ueber", "pfeil_r_aktiv"])
 
@@ -187,17 +193,22 @@ class TTHaupt(Spiel):
         _class = getattr(_modul, cls.aktuelles_spiel["haupt_klasse"])
         spiel_flaeche = ZeichenFlaeche(0, 0, (fenster_breite, spiel_hoehe, True), eltern_flaeche=cls.hintergrund_flaeche)
         spiel = _class(spiel_flaeche)
-        cls.setze_aktualisierung(spiel.aktualisiere)
 
         # die Startseite entfernen
         cls.start_flaeche.selbst_entfernen()
         Spiel.registriere_maus_losgelassen(lambda e: None)
         Spiel.registriere_maus_gedrueckt(lambda e: None)
 
+        def update(dt):
+            spiel.aktualisiere(dt)
+
+        cls.setze_aktualisierung(update)
+
         # Spielfläache hinzufügen, und spiel starten
         cls.gib_zeichen_flaeche().fuege_hinzu(cls.hintergrund_flaeche)
         cls.rahmen.nach_vorne()
         spiel.aufbauen()
+
 
 
 if __name__ == "__main__":

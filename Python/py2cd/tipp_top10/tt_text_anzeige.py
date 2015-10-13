@@ -6,11 +6,9 @@ import json
 
 from py2cd.farben import TRANSPARENT, ROT
 from py2cd.text import Text, Schrift
-
+from tipp_top10.level import schwierigkeit
 
 class TextUebersicht:
-    max_buchstaben = 3
-    __max_buchstaben_grenze = 16
     __alle_texte = []
     aktueller_text = None
     fehler_anzahl = 0
@@ -57,6 +55,7 @@ class TextUebersicht:
                 if ta.text[0] == buchstabe:
                     TextUebersicht.aktueller_text = ta
                     ta.nach_vorne()
+                    print(ta.text)
                     break
 
         # Falls kein Text vorhanden Tippfehler
@@ -73,9 +72,9 @@ class TextUebersicht:
             TextUebersicht.__alle_texte.remove(TextUebersicht.aktueller_text)
             TextUebersicht.aktueller_text = None
             TextUebersicht.__woerter_komplett += 1
-            if TextUebersicht.__woerter_komplett > TextUebersicht.__max_buchstaben_grenze:
-                TextUebersicht.max_buchstaben += 1
-                TextUebersicht.__max_buchstaben_grenze *= 2
+            if TextUebersicht.__woerter_komplett > schwierigkeit.naechstes_level:
+                schwierigkeit.max_buchstaben += 1
+                schwierigkeit.naechstes_level *= 2
 
         elif ergebnis == -1:
             TextUebersicht.fehler_anzahl += 1
@@ -234,7 +233,7 @@ class Lektion:
 
     def gib_wort(self, laenge=-1):
         if laenge == -1:
-            laenge = random.randint(1, min(TextUebersicht.max_buchstaben, len(self.woerter) - 1))
+            laenge = random.randint(1, min(schwierigkeit.max_buchstaben, len(self.woerter) - 1))
 
         # Ein Wort auswählen
         woerter = self.woerter[laenge]

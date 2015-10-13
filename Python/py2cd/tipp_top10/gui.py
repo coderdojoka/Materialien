@@ -45,13 +45,44 @@ class KlickText(Text, Anklickbar):
 
 
 class CheckBox(BildWechsler, Anklickbar):
-    def __init__(self, x, y, wenn_geaendert=lambda wert: None):
-        BildWechsler.__init__(self, x, y, ["unchecked", "checked"])
-        Anklickbar.__init__(self, self.punkt_in_rechteck, self.__maus_unten)
+    def __init__(self, x, y, wenn_geaendert=lambda wert: None, bilder=("unchecked", "checked")):
+        BildWechsler.__init__(self, x, y, bilder)
+        Anklickbar.__init__(self, self.punkt_in_rechteck, self.__wenn_geklickt)
         self.gesetzt = False
         self.wenn_geaendert = wenn_geaendert
 
-    def __maus_unten(self, ereignis):
-        self.gesetzt = not self.gesetzt
+    def __wenn_geklickt(self, ereignis):
+        self.umschalten()
+
+    def umschalten(self, wert=None):
+        if wert is not None and self.gesetzt == wert:
+            return
+
+        self.gesetzt = not self.gesetzt if wert == None else wert
         self.zeige_bild(self.gesetzt)
         self.wenn_geaendert(self.gesetzt)
+
+
+class RadioButtonGruppe():
+    def __init__(self, anzahl):
+        self.buttons = []
+        self.welcher = 0
+
+        for i in range(anzahl):
+            button = CheckBox(0, i * 40, (lambda a: lambda x: self.geaendert(a))(i))
+            self.buttons.append(button)
+
+        self.buttons[0].umschalten()
+
+    def setze_button(self, index, x, y):
+        self.buttons[index].aendere_position(x, y)
+
+    def geaendert(self, welcher):
+        print(welcher)
+        if welcher == self.welcher:
+            self.buttons[self.welcher].umschalten(True)
+            return
+
+        self.buttons[self.welcher].umschalten(False)
+        self.welcher = welcher
+        self.buttons[self.welcher].umschalten(True)

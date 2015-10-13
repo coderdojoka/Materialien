@@ -1,4 +1,5 @@
 from py2cd import *
+from pygame.constants import *
 
 __author__ = 'Mark Weinreuter'
 

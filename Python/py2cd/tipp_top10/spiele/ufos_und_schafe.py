@@ -5,6 +5,7 @@ from py2cd.bild import Bild, BildSpeicher
 from py2cd.spiel import Spiel
 from tipp_top10.tt_basis import TTBasis
 from tipp_top10.tt_text_anzeige import *
+from tipp_top10.level import schwierigkeit
 
 
 class UfoUndSchafeSpiel(TTBasis):
@@ -50,9 +51,8 @@ class UfoUndSchafeSpiel(TTBasis):
         s = self.neues_schaf()
         s.fallschirm_rettung(300, 200)
 
-        self.neues_ufo()
-        self.neues_ufo()
-        self.neues_ufo()
+        for i in range(schwierigkeit.anzahl_ufos):
+            self.neues_ufo()
 
         anzahl = 60
         b = Spiel.breite / anzahl
