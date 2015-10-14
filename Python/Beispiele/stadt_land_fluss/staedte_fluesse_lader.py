@@ -1,27 +1,11 @@
 __author__ = 'Mark Weinreuter'
 
 # Zum Laden von Webseite
-import urllib.request
+from webseiten_helfer import *
 
 # Zum Durchsuchen von HTML-Text.
 # ACHTUNG: dieses Python-Paket muss installiert sein!!! Z.B. mittels 'pip install beautifulsoup4' in der Konsole
 from bs4 import BeautifulSoup
-
-
-# Lädt den HTML-Text einer Webseite
-def lade_webseite(url):
-    html = ""
-
-    # Alle Fehler abfangen bei ungültigen Urls
-    try:
-
-        with urllib.request.urlopen(url) as response:
-            html = response.read()
-
-    except Exception as e:
-        print("Fehler beim Laden:", e)
-
-    return html
 
 
 def lade_fluesse():

@@ -2,6 +2,7 @@ Python/*/*/__pycache__
 Python/*/__pycache__
 Python/py2cd/.idea/
 Python/*/.idea/
+Python/.idea/
 Lektionen/*/_minted-*/
 
 *.out

@@ -1,12 +1,12 @@
 # Materialien
-Sammlung von Beispielprogrammen, Übungen etc.
+Sammlung von Beispielprogrammen, Übungen etc. Es gibt zwei Branches, dieser hier, der an die Mentoren gerichtet ist, und der 'usb_stick' Branch, der für die Teilnehmer (und deren USB-Sticks) gedacht ist :)
+
+## Scratch
+Hier finden sich einige kleine Scratch Programme und Anleitungen.
 
 ## Python  
-Hier finden sich [Beispiele](Python/Beispiele) und Anleitungen für die Programmierung mit Python. Die Beispiele sind für Python3 ausgelegt. Die aktuelle Python Version ist 3.4 und sollte installiert werden.
+Hier finden sich [Beispiele](Python/Beispiele) und Anleitungen für die Programmierung mit Python. Die Beispiele sind für Python3 ausgelegt. Die aktuelle Python Version ist 3.4/3.5 und sollte installiert werden.
 Hinweise zur Installation von Python können in [hier](Installation/installation_python.pdf) gefunden werden.
-### py2cd  
-[py2cd](Python/py2cd) ist einfaches Zeichen-/Spiele-Framework, dass einen Wrapper um das in Spiele-Framework [pygame](https://pygame.org) bietet. Es ist auf Deutsch geschrieben, so dass die Befehle einfacher und verständlicher benutzt werden können.
-Hinweise zur Installation sind [hier](Installation/installation_pygame.pdf) zu finden.
 
 
 ## Für Mentoren
@@ -17,11 +17,11 @@ Die Vorlage verwendet das in Python geschriebene [Pygments](http://pygments.org/
 ```python
 pip install Pygments
 ```
-installiert werden (vorrausgestzt Python und [pip](https://pip.pypa.io/en/latest/installing.html) (kommt mit Python 3.4 standartmäßig mit) sind installiert).  
+installiert werden (vorrausgesetzt Python und [pip](https://pip.pypa.io/en/latest/installing.html) sind installiert).  
 
-Außerdem muss Latex-Dokument dann mit dem 'shell-escape' Flag kompiliert werden:
+Außerdem müssen Latex-Dokumente mit dem 'shell-escape' Flag kompiliert werden (dies kann man z.B. in den TexMaker-Einstellungen eintragen):
 ```
--shell-escape
+latex ... -shell-escape
 ```
 
 
