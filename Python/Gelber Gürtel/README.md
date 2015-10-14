@@ -3,39 +3,39 @@
 ## Tutorials
 In dieser Stufe sollen die folgenden fünf Grundlagen gemeistert werden:
 
-- Umgang mit [Variablen](Tutorials/Variablen/Variablen.pdf)
+- Umgang mit [Variablen](https://github.com/coderdojoka/Materialien/raw/master/Python/Gelber%20G%C3%BCrtel/Tutorials/Variablen/Variablen.pdf)
 	- Variablen verwenden, lesen und setzen
 	- Operationen mit Zahlen
 	- Ausgabe von Variablen mit print()
-- Umgang mit [Text](Tutorials/Text/Text.pdf)
+- Umgang mit [Text](https://github.com/coderdojoka/Materialien/raw/master/Python/Gelber%20G%C3%BCrtel/Tutorials/Text/Text.pdf)
 	- Operationen
 	- Ausgabe
-- [Einlesen](Tutorials/Eingabe/Eingabe.pdf) von Inhalten 
+- [Einlesen](https://github.com/coderdojoka/Materialien/raw/master/Python/Gelber%20G%C3%BCrtel/Tutorials/Eingabe/Eingabe.pdf) von Inhalten 
 	- Text
 	- Zahlen
-- [if-Abfrage](Tutorials/if_Abfragen/if_text.pdf)
+- [if-Abfrage](https://github.com/coderdojoka/Materialien/raw/master/Python/Gelber%20G%C3%BCrtel/Tutorials/if_Abfragen/if_text.pdf)
 	- einfache if-Abfragen
-- [while](Tutorials/while/while.pdf)-Schleife
+- [for- und while-Schleifen](https://github.com/coderdojoka/Materialien/raw/master/Python/Gelber%20G%C3%BCrtel/Tutorials/while/while.pdf)-Schleife
 	- einfache while-Schleifen	
 
 
-Zu jedem Thema soll mindestens eine Aufgabe gelöst werden. Um den gelben Gürtel zu erhalten, muss eine "Endgegener"-Aufgabe gelöst werden.
+Zu jedem Thema soll mindestens eine Aufgabe gelöst werden. Zum Schluss sollte die Aufgabe Zahlenraten gelöst werden.
 
 ## Aufgaben  
 
 - Variablen
-	- [Zauberstab](Aufgaben/zauberstab.pdf)
+	- [Zauberstab](https://github.com/coderdojoka/Materialien/raw/master/Python/Gelber%20G%C3%BCrtel/Aufgaben/zauberstab.pdf)
 	- ...
 - Text
 	- ...
 - while-Schleife
-	- [Klopf Klopf](Aufgaben/klopfklopf.pdf)
+	- [Klopf Klopf](https://github.com/coderdojoka/Materialien/raw/master/Python/Gelber%20G%C3%BCrtel/Aufgaben/klopfklopf.pdf)
 	- ...
 - if-Abfrage
-	- [Fußballspiel](Aufgaben/Fussball.pdf)
-	- [Schere, Stein, Papier](Aufgaben/SchereSteinPapier.pdf)
+	- [Fußballspiel](https://github.com/coderdojoka/Materialien/raw/master/Python/Gelber%20G%C3%BCrtel/Aufgaben/Fussball.pdf)
+	- [Schere, Stein, Papier](https://github.com/coderdojoka/Materialien/raw/master/Python/Gelber%20G%C3%BCrtel/Aufgaben/SchereSteinPapier.pdf)
 - Eingabe
-	- [321](Aufgaben/321.pdf)
+	- [321](https://github.com/coderdojoka/Materialien/raw/master/Python/Gelber%20G%C3%BCrtel/Aufgaben/321.pdf)
 
 ## Abschlussaufgabe
-Als Endgegneraufgabe soll, möglichst eigenständig, das Spiel [Zahlenraten](Zahlenraten/zahlenraten.pdf) programmiert werden.
+Als Abschluss soll, möglichst eigenständig, das Spiel [Zahlenraten](https://github.com/coderdojoka/Materialien/raw/master/Python/Gelber%20G%C3%BCrtel/Zahlenraten/zahlenraten.pdf) programmiert werden.

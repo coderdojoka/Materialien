@@ -1,0 +1,1062 @@
+Donau
+Rhein
+Elbe
+Oder
+Weser
+Mosel (Rhein)
+Main
+Inn (Donau)
+Saale (Elbe)
+Spree (Havel)
+Ems (Nordsee)
+Neckar
+Havel
+Eger (Elbe)
+Werra (rechter, längerer Quellfluss der Weser)
+Isar (Donau) #
+Mulde
+Leine (Aller)
+Lech (Donau)
+Aller
+Weiße Elster (Saale)
+Lausitzer Neiße (Oder) #
+Saar (Mosel) #
+Lahn (Rhein) #
+Salzach (Inn)
+Lippe
+Altmühl (Donau)
+Fulda (linker, wasserreicherer Quellfluss der Weser) #
+Ruhr
+Elde (Elbe)
+Unstrut (Saale)
+Hunte (Weser)
+Jagst (Neckar)
+Eider (Nordsee)
+Schwarze Elster (Elbe) #
+Amper
+Vechte (Rhein)
+Eder (Fulda) #
+Sauer (Mosel)
+Rur (Maas) #
+Bode
+Hase (Else/Ems) #
+Kocher
+Vechte (Zwarte Water) #
+Zwickauer Mulde (linker Quellfluss der Mulde)
+Naab
+Regen
+Sauer (Ardennen)
+Oste (Nordsee)
+Sieg
+Wertach (Lech)
+Alz
+Iller (Donau)
+Warnow
+Fränkische Saale (Main) #
+Kyll (Mosel)
+Peene (Ostsee) #
+Paar (Donau)
+Wörnitz (Donau) #
+Tauber (Main) #
+Ilm (Saale)
+Lenne (Ruhr) #
+Lesum
+Zschopau (Freiberger Mulde)
+Nahe (Rhein)
+Rhin (Havel)
+Freiberger Mulde (mit Zschopau 151 km; rechter Quellfluss der Mulde)
+Trave (Ostsee)
+Elz (über Alte Elz; nur Elz: 90 km)
+Wümme (
+Niers (Maas) #
+Wupper
+Berkel (IJssel) #
+Loisach (Isar)
+Nied
+Diemel (Weser) #
+Vils
+Rott (Inn)
+Ilmenau
+Enz
+Große Röder (Schwarze Elster)
+Oker (Aller)
+Erft
+Mies (Berounka)
+Ohre (Elbe) #
+Saalach (Salzach)
+Uecker
+Wied (Rhein)
+Pegnitz
+Innerste (Leine) #
+Blies (Saar) #
+Fuhse (Aller)
+Milde-Biese-Aland (Elbe)
+Schwalm (Eder)
+Dahme (Spree)
+Dosse (Havel)
+Kinzig (BW)
+Friedberger Ach (Donau) #
+Wipper (TH) (Unstrut) #
+Nagold (Enz) #
+Wutach (Rhein)
+Nidda (Main)
+Pleiße (Weiße Elster)
+Dinkel (Vechte) #
+Stör (Elbe)
+Vils (Naab)
+Ahr (Rhein) #
+Gera (Unstrut)
+Große Aue (Weser)
+Große Laber (Donau) #
+Wipper (ST) (Saale)
+Emscher (Rhein) #
+Prüm (Sauer) #
+Stepenitz (BB) (Elbe)
+Wesenitz (Elbe)
+Ilm (BY) (Abens) #
+Kinzig (HE) (Main) #
+Helbe (Unstrut) #
+Itz (Main)
+Rems (Neckar) #
+Waldnaab (Naab)
+Murg (Rhein)
+Tiroler Achen (Chiemsee)
+Flöha (Zschopau)
+Our (Sauer) #
+Vils (Naab) (Naab) #
+Wiesent (Regnitz)
+Abens (Donau) #
+Isen (Inn)
+Schmutter (Donau)
+Schwarze Laber (Donau) #
+Aisch (Regnitz) #
+Mindel (Donau) #
+Trebel (Peene) #
+Lieser (Mosel)
+Jeetze/Jeetzel (Elbe)
+Treene (Eider)
+Argen
+Recknitz (Saaler Bodden / Ostsee) #
+Sude (Elbe) #
+Werre (Weser)
+Alte und Neue Jäglitz (Havel und Dosse) #
+Issel mit Oude Ijssel[Anmerkung 2] #
+Sauer (Elsass) (Rhein)
+Agger (Sieg) #
+Böhme (Aller)
+Glan (Nahe) #
+Randow (Uecker)
+Tollense (Peene)
+Wetter (Nidda) #
+Chemnitz (Zwickauer Mulde) #
+Selke (Bode) #
+Werse (Ems)
+Löcknitz (Elbe)
+Bille (Elbe)
+Fränkische Rezat (Rednitz) #
+Gennach (Wertach) #
+Helme (Unstrut)
+Ilz (Donau) #
+Nuthe (BB) (Havel)
+Haune (Fulda) #
+Nister (Sieg)
+Fils (Neckar)
+Nidder (Nidda) #
+Salm (Mosel)
+Weida (Weiße Elster) #
+Wern (Main)
+Emmer (Weser)
+Roter Main (linker Quellfluss des Mains) #
+Schussen (Rhein)
+Schwentine (Kieler Förde / Ostsee)
+Weser (Ourthe) #
+Nims (Prüm) #
+Selz (Rhein) #
+Weißeritz mit Wilder Weißeritz (Elbe)
+Haidenaab (Naab)
+Nebel (Warnow)
+Ohm (Lahn)
+Parthe (Weiße Elster) #
+Pfinz (Rhein)
+Pulsnitz (Schwarze Elster)
+Schwarzach (Naab) #
+Schwarzach (Rednitz) #
+Sempt (Isar) #
+Speyerbach (Rhein)
+Weschnitz (Rhein) #
+Zusam (Donau)
+Alme (Lippe)
+Elzbach (Mosel)
+Fuhne (Mulde, Saale)
+Mildenitz (Warnow)
+Nette (Rhein)
+Rench (Rhein) #
+Löbauer Wasser (Spree)
+Luhe (Ilmenau)
+Mangfall (Inn)
+Regnitz (Main) #
+Schunter (Oker) #
+Wondreb (Eger)
+Alsenz (Nahe) #
+Burgdorfer Aue mit Fuhsekanal (Aller) #
+Kammel (Mindel)
+Lein (Kocher) #
+Plane (Havel)
+Schutter (Kinzig)
+Steinach (Rodach) #
+Weida (Weiße Elster)
+Wurm (Rur) #
+Lauchert (Donau)
+Oder (Rhume)
+Stecknitz (Trave) #
+Ulster (Werra)
+Brenz (Donau)
+Dill (Lahn)
+Günz (Donau)
+Hörsel mit „Kleine Leina“ (Werra)
+Lauter (Rhein) #
+Örtze (Aller)
+Roth (Donau)
+Pfreimd (Naab)
+Wiese (Rhein)
+Wisenta (Saale) #
+Baunach (Main)
+Inde (Rur) #
+Murr (Neckar)
+Nesse (Hörsel)
+Rot (Donau)
+Stever (Lippe) #
+Alf (Mosel) #
+Alster (Elbe)
+Elsenz (Neckar)
+Schwarza (Saale)
+Linzer Aach (Rhein)
+Queich (Rhein)
+Rodach (Main) #
+Rögnitz (Sude)
+Stepenitz (Mecklenburg) (Trave)
+Welse (Oder)
+Bocholter Aa (Oude Ijssel)
+Chamb (Regen)
+Prims (Saar) #
+Eyach (Neckar) #
+Ise (Aller)
+Kraichbach (Rhein) #
+Möhne (Ruhr) #
+Mümling
+Riß (Donau)
+Schwarzbach (Blies)
+Simmerbach (Nahe) #
+Sinn (Fränkische Saale) #
+Urft (Rur) #
+Volme (Ruhr) #
+Weil (Lahn) #
+Würm (Nagold) #
+Breg
+Erse/Aue (Fuhse)
+Glonn (Amper) #
+Hörsel (Werra) #
+Müglitz (Elbe)
+Schwarzwasser (Mulde)
+Uchte (Biese)
+Üßbach (Alf) #
+Wilde Weißeritz
+Bühler (Kocher) #
+Dreisam
+Karthane (Elbe)
+Kleine Laber (Große Laber) #
+Nethe (Weser) #
+Nieplitz (Nuthe)
+Rhume (Leine)
+Große Striegis (rechter Quellfluss der Striegis) #
+Gersprenz (Main) #
+Holtemme (Bode)
+Hoyerswerdaer Schwarzwasser (Schwarze Elster)
+Düssel (Rhein)[Anmerkung 3] #
+Rednitz (Regnitz) #
+Ruwer (Mosel) #
+Schwalm (Maas) #
+Alb (Rhein) #
+Bigge (Lenne)
+Bobritzsch (Freiberger Mulde)
+Bröl (Sieg)
+Delme (Ochtum)
+Emsbach (Lahn) #
+Glane (Ems)
+Glems (Enz)
+Hamme (rechter Quellfluss der Lesum) #
+Horloff (Nidda)
+Kirnitzsch (Elbe)
+Malxe (Neiße/Spree)
+Nette (Rhein) #
+Pinnau (Elbe) #
+Singold (Wertach) #
+Steinfurter Aa (Vechte) #
+Sülz (Agger) #
+Weißer Main (rechter Quellfluss des Mains) #
+Este (Elbe) #
+Glenne (Lippe)
+Lossa (Unstrut) #
+Sur (Salzach)
+Weiße Laber (Altmühl)
+Wiesbach (Nahe)
+Bega (Werre) #
+Brigach (linker Quellfluss der Donau)
+Eckbach (Rhein) #
+Ilse (Oker)
+Lune (Weser)
+Nette (Innerste)
+Pfrimm (Rhein)
+Schwarzbach (Rhein) #
+Starzel (Neckar)
+Zenn (Regnitz) #
+Brettach (Kocher) #
+Fichtelnaab (Waldnaab)
+Geeste (Weser)
+Isenach (Rhein) #
+Ennepe (Volme) #
+Modau (Rhein) #
+Alb (Rhein) #
+Bega (Werre) #
+Elbbach (Lahn)
+Meiße (Aller)
+Sulzach (Wörnitz)
+Zwota (Eger)
+Appelbach (Nahe)
+Ascha (Schwarzach)
+Augraben (Tollense)
+Bibert (Rednitz) #
+Dhünn (Wupper)
+Ehle (Elbe)
+Eisbach (Rhein)
+Erfa (Main)
+Felda (Werra)
+Glotter (Dreisam)
+Göltzsch (Weiße Elster)
+Hengstbach (Rhein)
+Hessel (Ems)
+Lüder (Fulda) #
+Motel (Schilde)
+Reiche Ebrach (Regnitz) #
+Schaale (Sude)
+Schilde (Schaale)
+Seeve (Elbe)
+Streu (Fränkische Saale) #
+Twiste (Diemel) #
+Wipfra (Gera)
+Würm (Amper und Isar)
+Zorge (Helme)
+Antrift (Schwalm) #
+Bückeburger Aue (Weser)
+Barthe (Barther Bodden) #
+Dhron (Mosel) #
+Lauter (Glan)
+Milde Abschnitt von „Milde
+Nuthe (ST) (Elbe)
+Rotbach (Erft)
+Schwartau (Trave)
+Zwönitz (Chemnitz) #
+Efze (Schwalm)
+Eschach (Neckar)
+Glatt (Rhein) #
+Großer Dieckfluss (Große Aue)
+Klosterbach (Ochtum) #
+Lachte (Aller)
+Maisach (Amper) #
+Orke (Eder)
+Rauhe Ebrach (Regnitz)
+Rossel (Saar)
+Söse (Rhume)
+Vehne (Aue)
+Krückau (Elbe)
+Arlau (Nordsee)
+Berste (Spree)
+Biber (Donau)
+Eger (Wörnitz)
+Lone (Hürbe)
+Nuhne (Eder) #
+Preßnitz (Zschopau)
+Fichtenberger Rot (Kocher) #
+Selbitz (Sächsische Saale)
+Seemenbach (Nidder)
+Triebisch (Elbe)
+Ablach (Donau) #
+Ahse (Lippe) #
+Aiterach (Donau)
+Angerbach (Rhein)
+Düssel (Rhein) #
+Rote Weißeritz (linker Quellfluss der Weißeritz) #
+Steina (Wutach) #
+Wehre (Werra) #
+Buckau (Havel)
+Düte (Hase)
+Else (Werre)
+Haßlach (Rodach)
+Hornbach (Schwarzbach) #
+Lauter
+Linde (Tollense)
+Lethe (Hunte)
+Luhe (Naab) #
+Marka (Sagter Ems)
+Mittelradde (Hase)
+Nordradde (Ems)
+Orla (Saale)
+Ostpeene (Peene)
+Stederau (Ilmenau)
+Wipperau (Ilmenau)
+Sieber (Oder (Rhume))
+Apfelstädt (Gera)
+Auma (Weida)
+Axtbach (Ems)
+Elz
+Glatt (Neckar) #
+Gottleuba (Elbe)
+Hoppecke (Diemel) #
+Roda (Saale)
+Schleuse (Werra)
+Schlichem (Neckar) #
+Wohra (Ohm)
+Alte Oder (Oder)
+Elbe (Eder) #
+Ellebach (Rur) #
+Erms (Neckar)
+Fredersdorfer Mühlenfließ (Spree)
+Guldenbach (Nahe)
+Hache (Ochtum)
+Hönne (Ruhr)
+Ilme (Leine) #
+Kessel (Donau) #
+Leitzach (Mangfall) #
+Loquitz (Saale)
+Milz (Fränkische Saale)
+Ohrn (Kocher) #
+Ostrach (Donau)
+Schwartau (Trave) #
+Schwarze Pockau (Flöha) #
+Trieb (Weiße Elster)
+Wiehl (Agger) #
+Tanger (Elbe)
+Dörsbach (Lahn)
+Jossa (Sinn)
+Kahl (Main)
+Möhlin (Rhein)
+Pöhlbach (Zschopau)
+Radolfzeller Aach (Rhein)
+Schwarzbach (Falkensteinerbach)
+Weißach (Bregenzer Ach)
+Biese
+Bracht (Kinzig (HE)) #
+Ems (Eder)
+Eschach (Aitrach)
+Schondra (Fränkische Saale) #
+Schwarzbach (Main)
+Seseke (Lippe) #
+Sulz (Altmühl)
+Thulba (Fränkische Saale) #
+Wolf (Kinzig (Schwarzwald, BW)) #
+Alpe (Aller)
+Bina (Rott) #
+Aich (Neckar)
+Altefeld (auch Altfell genannt) (Schlitz)
+Andelsbach (Ablach) #
+Datze (Tollense)
+Dürnach (Westernach)
+Erlenbach (Nidda)
+Eschbach (Nidda) #
+Felda (Ohm)
+Gerdau (Ilmenau)
+Gramme (Unstrut)
+Gründau (Kinzig (HE))
+Heller (Sieg)
+Holzbach (Wied) #
+Hönne (Ruhr) #
+Ihle (Elbe-Havel-Kanal)
+Ketzerbach (Elbe)
+Kleine Paar (Donau) #
+Lauer (Fränkische Saale)
+Lauterach (Fluss) (Vils Naab) #
+Lumda (Lahn)
+Münstersche Aa (Ems) #
+Rodau (Main) #
+Salz (Kinzig (HE))
+Schiltach (Kinzig (Schwarzwald, BW)) #
+Sebnitz (Fluss) (Lachsbach) #
+Temnitz (Plane) #
+Usa (Wetter) #
+Vils (Lech) #
+Warme (Twiste) #
+Weihung (Iller)
+Wenne (Ruhr) #
+Wietze (Aller)
+Gutach
+Leda (Ems) #
+Lockwitzbach (Elbe)
+Steinhuder Meerbach (Weser)
+Murach (Schwarzach)
+Schwülme (Weser)
+Sormitz (Loquitz)
+Wetschaft (Lahn)
+Wietze (Örtze)
+Wisper (Rhein) #
+Wörpe (Wümme) #
+Würschnitz (Chemnitz)
+Blinde Rot (Kocher) #
+Brettach (Jagst) #
+Götzinger Achen (Salzach)
+Hahle (Rhume) #
+Kerkerbach (Lahn) #
+Lauter (Schlitz) #
+Losse (Fulda) #
+Merzbach (Rur)
+Nette (Niers)
+Olef (Urft)
+Rodenberger Aue (Deister Sünteltal)
+Ryck (Ostsee)
+Salzböde (Lahn)
+Salzwedeler Dumme (Jeetze)
+Schlücht (Rhein) #
+Schmale Sinn (Sinn)
+Schwarzbach (Elsenz) #
+Schwinge (Elbe) #
+Seckach (Jagst) #
+Traun (Alz) #
+Wilde Gutach
+Aland Abschnitt von „Milde
+Esse (Diemel) #
+Federbach ((Nordschwarzwälder) Alb)
+Gehle (Weser)
+Lein (Neckar)
+Panke (Spree) #
+Schwäbische Rezat (Rednitz)
+Schwarzbach (Rhein; im Bergischen Land)
+Schwarzbach (Elsenz)
+Sprotte (Pleiße) #
+Tegeler Fließ (Havel) #
+Wabe (Schunter) #
+Wilde Aa (Orke)
+Aa (Werre)
+Aschau mit Dallebach (Lachte #)
+Bära mit Unterer Bära (Donau)
+Brend (Fränkische Saale)
+Ecker (Oker)
+Elsava (Main)
+Erpe (Twiste)
+Exter (Weser)
+Glonn (Mangfall)
+Hasel (Werra) #
+Kall (Rur)
+Körsch (Neckar) #
+Kupfer (Kocher) #
+Lauter (Neckar)
+Lutter (Lachte)
+Niese (Emmer)
+Scherkonde (Unstrut) #
+Wehra
+Wilde Rodach (Rodach) #
+Wustrower Dumme (Jeetze)
+Altenau (Oker)
+Aschaff (Main) #
+Billbach (Mud)
+Brettenbach (Elz)
+Ellerbach (Altenau) #
+Ellerbach (Nahe) #
+Gelbach (Lahn) #
+Gimmlitz (Freiberger Mulde)
+Hafenlohr (Main)
+Hasel (Werra)
+Hühnerbach (Gennach)
+Kotitzer Wasser (Löbauer Wasser)
+Lutter (Ems)
+Mittlere Ebrach (Rauhe Ebrach)
+Oos (Landgraben)
+Ochtum (Weser) #
+Purnitz (Jeetze)
+Rödelbach (Zwickauer Mulde)
+Röthen (Itz)
+Rossel (Elbe)
+Saale (Leine)
+Schmalkalde (Werra)
+Schmiech (Donau)
+Schozach (Neckar)
+Seidewitz (Gottleuba)
+Sprotte (Pleiße)
+Steinlach (Neckar)
+Stobber (Alte Oder)
+Stockacher Aach (Rhein)
+Sulm (Neckar)
+Trierbach (Ahr) #
+Veerse (Wümme)
+Wahnbach (Sieg) #
+Waldach (Nagold) #
+Wieste (Wümme) #
+Bastau (Weser) #
+Bever (Ems) #
+Bever (Oste) #
+Dietzhölze (Dill)
+Fallbach (Kinzig)
+Fehntjer Tief (Emder Hafen)
+Ferndorfbach (Sieg)
+Garte (Leine) #
+Heimbach (Glatt)
+Kessach (Jagst) #
+Lenne (Weser) #
+Metter (Enz) #
+Mud (Mudau; Main)
+Prießnitz (Elbe)
+Rottum (Westernach)
+Radegast (Stepenitz) #
+Sagter Ems (Ems) #
+Schefflenz (Jagst) #
+Verse (Lenne) #
+Wesebach (Eder) #
+Wickerbach (Main)
+Wieseck (Lahn)
+Wieslauf (Rems)
+Ammer (Neckar)
+Ebrach (Attel)
+Echaz (Neckar)
+Elte (Werra)
+Erlenbach (Jagst) #
+Gerstenbach (Pleiße)
+Harle (Nordsee)
+Jachen (Isar)
+Lohr (Main)
+Maurine (Stepenitz) #
+Nassach (Main)
+Nüst (Haune) #
+Odenbach (Glan)
+Sauer (Altenau) #
+Sehma (Zschopau)
+Steinebach (Kinzig)
+Stillach (Iller)
+Kleine Striegis (linker Quellfluss der Striegis) #
+Suhl (Werra)
+Warme Bode (Saale)
+Wiedau (Wümme) #
+Altenau (Alme) #
+Attel (Inn) #
+Bomlitz (Böhme)
+Dickelsbach (Rhein)
+Elbbach (Sieg)
+Endert (Mosel)
+Geisbach bzw. Geis (Fulda)
+Grenff (Schwalm)
+Große Mittweida (Schwarzwasser)
+Holzape (Diemel) #
+Idarbach (Nahe)
+Jade (Jadebusen bzw. Nordsee)
+Jossa (Fulda) #
+Kander (Rhein)
+Kossau (Ostsee)
+Lehrde (Aller)
+Leibi (Donau)
+Nahe (Schleuse)
+Morre (Billbach)
+Notter (Unstrut)
+Odeborn (Eder) #
+Ostenau (Arlau)
+Pfieffe (Fulda)
+Schwarzwasser (Preßnitz)
+Siede (Große Aue)
+Wieda (Zorge) #
+Zaber (Neckar)
+Warne (Oker)
+Aa (Nethe)
+Ahne (Fulda)
+Aar (Dill)
+Beise (Fulda)
+Beke (Warnow)
+Bibers (Kocher) #
+Bode (Wipper) #
+Breitach (Iller)
+Deilbach (Ruhr)
+Emster (Havel) #
+Gilsa (Schwalm)
+Haller (Leine)
+Lamme (Innerste)
+Laugna (Zusam)
+Malefinkbach (Rur) #
+Nau (Donau)
+Nieste (Fulda) #
+Pöhlwasser (Große Mittweida)
+Prim (Neckar)
+Radau (Oker)
+Rauda (Weiße Elster) #
+Roth (Rednitz)
+Sall (Kocher) #
+Solz (Fulda)
+Steinach (Neckar, Neckarsteinach)
+Watter (Twiste) #
+Aalbach (Main) #
+Aitrach (Donau) #
+Asdorf (Sieg) #
+Aubach (Lohr)
+Barnitz (Beste)
+Dalke (Ems) #
+Gohbach (Aller)
+Hahnenbach (Nahe) #
+Halblech (Lech) #
+Hamel (Weser)
+Hehlenriede (Allerkanal)
+Henne (Ruhr) #
+Itter (Neckar)
+Itter (Rhein)
+Jeckenbach (Glan)
+Kleine Kinzig (Kinzig (Schwarzwald, BW)) #
+Lahe (Soeste)
+Mauch (Eger) #
+Memminger Ach (Iller)
+Murg (Rhein) #
+Oese (Menden)
+Ohra (Apfelstädt)
+Ostrach (Bayern) (Iller) #
+Perf (Lahn)
+Röhlinger Sechta (Jagst)
+Rotbach (Dreisam)
+Sontra (Wehre) #
+Sülze (Elbe) #
+Tarpenbek (Alster)
+Thyra (Helme)
+Umlach (Riß)
+Verlorenwasser (Buckau)
+Wölpe (Aller) #
+Ziese (Peenestrom)
+Allna (Lahn)
+Angel (Werse) #
+Aue (Leine)
+Erlenbach (Kinzig)
+Lauter (Baunach)
+Humme (Weser)
+Illach (Lech) #
+Nette (Hase) #
+Orpe (Diemel)
+Sorpe (Röhr)
+Warme Steinach (Roter Main) #
+Wilsterau / Wilster Au (Stör)
+Ahle (Schwülme)
+Armuthsbach (Ahr) #
+Aufseß (Wiesent) #
+Baarbach (Ruhr)
+Bahra (Gottleuba)
+Biela (Elbe)
+Dieße (Ilme)
+Eller mit Weilroder Eller (Rhume) #
+Fliede (Fulda) #
+Fretterbach (Lenne) #
+Gelster (Werra)
+Itter (Diemel) #
+Kleine Triebisch (Triebisch)
+Liese (Glenne) #
+Medem (Elbe) #
+Mehe (Oste) #
+Mettma (Schlücht) #
+Muglbach (Wondreb) #
+Münzbach (Freiberger Mulde) #
+Nohner Bach (Trierbach)
+Perlenbach (Rur)
+Königseer Rinne (Schwarza)
+Rohrbach (Fulda)
+„Gschwender“ Rot (Lein, Täferrot)
+Schneidheimer Sechta (Eger) #
+Schwarzbach (Wutach)
+Schweinitz (Flöha)
+Weiß (Sieg)
+Weißach (Mangfall)
+Wilisch (Zschopau)
+Wohlrose (Ilm)
+Augraben (Nebel)
+Bieber (Kinzig (HE))
+Bieber (Rodau) #
+Bottwar (Murr)
+Bruchgraben (Innerste)
+Bruchbach (Aller) #
+Effelder (Itz) #
+Epbach (Ohrn) #
+Fintau (Wümme)
+Kalte Bode (Saale)
+Lauter (Itz)
+Lichte (Schwarza)
+Ohmbach (Glan)
+Ramme (Oste) #
+Rodau (Wümme)
+Soholmer Au (Bongsieler Kanal) #
+Südradde (Hase)
+Wagensteigbach (Dreisam)
+Warnau (Böhme) #
+Wohlrose (Ilm) #
+Wilde (Eder)
+Ziegelbach (Main)
+Adenauer Bach (Ahr) #
+Bahre (Seidewitz)
+Beke (Lippe) #
+Bieber (Haune) #
+Buchenbach (Main)
+Chemnitzbach (Freiberger Mulde)
+Daade (Heller)
+Espolde (Leine) #
+Godesberger Bach (Rhein)
+Ihme (Leine)
+Jossa (Lüder) #
+Katzenbach (Neckar)
+Lauter (Fils)
+Lempe (Esse)
+Lütter (Fulda) #
+Marsbach (Billbach)
+Natzschung (Flöha)
+Partnach (Loisach) #
+Pfefferfließ (Nieplitz)
+Rankbach (Würm und Nagold)
+Reichenbach (Glan)
+Saidenbach (Flöha)
+Schwale (Stör)
+Seltenbach (Neckar)
+Twiste (Oste)
+Vesser (Nahe) #
+Wahlebach (Fulda) #
+Welzbach (Main)
+Wuhle (Spree) #
+Zarow (Stettiner Haff / Ostsee)
+Ahbach (Ahr) #
+Ahrenhorster Bach (Werse)
+Beste (Trave)
+Bramau (Stör) #
+Crinitzer Wasser (Rödelbach)
+Elta (Donau)
+Emmelke (Medem)
+Frieda (Werra)
+Gabelbach (Mud)
+Goldbach (Selz) #
+Große Lößnitz (Flöha)
+Grümpen (Itz)
+Hardtbach (Rhein) #
+Heder (Lippe) #
+Hergstbach (Jagst) #
+Kehlbach (Andelsbach)
+Kleine Aller (Aller)
+Kotitzer Wasser (Löbauer Wasser) #
+Liersbach (Ahr) #
+Lobbach (Lobbach) #
+Mohrbach (Glan)
+Morsbach (Wupper)
+Oelsabach (Rote Weißeritz)
+Pleisbach (Sieg) #
+Rechenberger Rot (Jagst) #
+Rhene (Diemel)
+Rohrbach (Saar)
+Sahrbach (Ahr) #
+Salzbach (Rhein)
+Schönach (Lech) #
+Schwarzbach (Weiße Elster)
+Strudelbach (Enz)
+Teinach (Nagold)
+Waldangelbach (Leimbach)
+Aabach (Afte)
+Aitrach (Iller)
+Aubach (Elsava)
+Untere Bära (Bära) #
+Blabbergraben
+Blau (Donau) #
+Bielabach (Flöha)
+Colmnitzbach (Bobritzsch)
+Erle (Nahe)
+Ette (Jagst) #
+Fischach (Bühler) #
+Görnitzbach (Weiße Elster)
+Große Bockau (Zwickauer Mulde)
+Hundem (Lenne) #
+Kesselinger Bach (Ahr) #
+Kieferbach / Thierseeer Ache (Inn)
+Buckauer Hauptgraben beziehungsweise Kobser Bach (Buckau) #
+Lauter (Murr) #
+Neerdar (Aar) #
+Ösper (Weser) #
+Rottach (Iller)
+Schmerach (Bühler #)
+Sindelbach (Jagst) #
+Talbach (Glan)
+Trettach (Iller)
+Wakenitz (Trave) #
+Weesener Bach (Örtze) #
+Weismain (Main) #
+Wierau (Hase)
+Aschbach (Wern)
+Beber (Ohre)
+Birkigsbach (Kinzig)
+Boye (Emscher) #
+Felderbach (Ruhr)
+Hanfbach (Sieg) #
+Hardenberger Bach (Ruhr)
+Herschbach (Kesselinger Bach) #
+Horne (Lippe)
+Kanzelbach (Neckar)
+Karbach (Main)
+Kleine Örtze (Örtze) #
+Lautenbach (Flöha)
+Mühlbach (Neckar, Sulz-Fischingen)
+Mülmisch (Fulda) #
+Ohrenbach (Mud)
+Öse (Nethe)
+Roth (Zusam)
+Schlierach (Mangfall)
+Schwarzbach (Emscher)
+Steinach (Neckar, Nürtingen)
+Steinalp (Glan)
+Ulfe (Sontra)
+Ulmbach (Kinzig)
+Walluf (Rhein) #
+Wedeler Au (Elbe)
+Werbe (Eder)
+Westaue (Leine)
+Wilde Sau (Elbe)
+Wilzsch (Zwickauer Mulde)
+Abzucht (Oker) #
+Biber (Schleuse)
+Brunnisach (Rhein)
+Eiderbach (Marsbach)
+Eschbach (Wupper)
+Eselsbach (Lauter)
+Grane (Innerste)
+Greifenbach (Zschopau)
+Halsbach (Alz) #
+Hachinger Bach (Hüllgraben) #
+Haselbach (Saidenbach)
+Itter (Eder) #
+Kämpfelbach (Pfinz)
+Kerspe (Wupper) #
+Knochenbach (Werre)
+Krebsbach (Thyra) #
+Kuhbach (Itter) #
+Lache (Kinzig)
+Lierbach (Rench)
+Maulach (Jagst) #
+Nesenbach (Neckar) #
+Plohnbach (Göltzsch)
+Pöbelbach (Rote Weißeritz)
+Rott (Amper) #
+Schlitz (Fulda)
+Schwarzbach (Große Mittweida)
+Schwarzenbach (Waldnaab)
+Schweizerbach (Rems, Beutelsbach)
+Tiefenbach (Neckar)
+Trebnitz (Müglitz)
+Weißeritz (Elbe)
+Wetzbach (Lahn)
+Wildebach (Heller)
+Wirftbach (Trierbach) #
+Würschnitzbach (Weiße Elster)
+Alfterer Bornheimer Bach (Rhein) #
+Autmut (Neckar)
+Bewer (Ilme)
+Drusel (Fulda)
+Endenicher Bach (Hardtbach, Rhein)
+Fulde (Böhme)
+Gablenzbach (Würschnitz)
+Gauchsbach (Schwarzach)
+Grimmbach (Kocher) #
+Große Pyra (Zwickauer Mulde)
+Großhartmannsdorfer Bach (Freiberger Mulde)
+Haldenbach (Rems, Endersbach)
+Laufach (Aschaff)
+Lohrbach (Aubach)
+Maade (Innenjade)
+Mehlemer Bach (Rhein) #
+Mühlenwasser (Erpe)
+Nebelbeeke (Warme)
+Orb (Kinzig)
+Rechtenbach (Main)
+Rohrbach (Dürnach)
+Rot (Lein, Voggenberger Sägmühle)
+Sandbach (Preßnitz)
+Schaafbach (Ahr) #
+Schweizerbach (Rems, Lorch)
+Sorbitz (Schwarza)
+Speltach (Jagst) #
+Sperrlutter (Oder)
+Striegis (Freiberger Mulde)
+Sulzbach (Main)
+Ulfe (Fulda)
+Vischelbach (Ahr) #
+Waldbach (Gabelbach)
+Walse (Werra)
+Weggentalbach (Neckar)
+Zimmerbach (Starzel)
+Zschampert (Luppe) #
+Aalenbach (Bühler) #
+Banfe (Lahn)
+Beberbach (Schunter)
+Belmer Bach (Hase)
+Berwanger Bach (Elsenz) #
+Bever (Weser) #
+Bever (Wupper)
+Brunau (Örtze) #
+Bühlertalbach (Neckar)
+Dammbach (Elsava)
+Dusebach (Mühlenwasser)
+Dreisbach (Ahr) #
+Fischbach (Gersprenz)
+Gelmke (Abzucht)
+Gronach (Jagst) #
+Heinrichsbach (Wachenbach)
+Hetzbach (Flöha)
+Kappelbach (Zorge)
+Lauter (Rems)
+Lößnitzbach (Zwickauer Mulde)
+Mooslauter (Lauter)
+Mordgrundbach (Bahra)
+Mühlbach (Selz) #
+Oelze (Schwarza)
+Olpe (Bigge)
+Reichenbach (Zahme Gera)
+Rißbach (Jagst) #
+Rötelbach (Jagst) #
+Rote Pockau (Schwarze Pockau)
+Schlema (Zwickauer Mulde)
+Schobse (Wohlrose)
+Sorpe (Lenne)
+Tonna (Unstrut)
+Waldbach (Landgraben) #
+Wublitz (Havel)
+Sims (Inn)
+Salza (Helme), Schüttung und Abfluss 0,2
+Pader (Lippe), Schüttung und Abfluss 3
+Weiße Lauter (Lauter) Schüttung und Abfluss 0,3 m3/s
+Breitenbrunner Bach (Rosenbach)
+Schwarze Lauter (Lauter) Schüttung und Abfluss bis zu 3 m3/s
+Mühlbach (Loisach) Schüttung und Abfluss über 1 m3/s
+Mühlbach (Altmühl) Schüttung und Abfluss bis zu 0,3 m3/s
+Biske (Ellerbach) Schüttung und Abfluss bis zu 0,1 m3/s
+Bründelgraben (Schutter) Schüttung und Abfluss 0,7 m3/s
+Braunsel (Donau) Schüttung und Abfluss bis zu 1,5 m3/s
+Laxbach (Neckar)
+Weihermühlbach (Altmühl) Schüttung und Abfluss bis zu 4,5 m3/s
+Kesselbach (Zwiefalter Aach) Schüttung und Abfluss 0,4
+Urspring (Ach) Schüttung und Abfluss 0,1
+Pfeffer (Brenz) Schüttung und Abfluss 0,1
+Deisinger Bach (Altmühl) Schüttung und Abfluss 0,55
+Bronnbach (Neckar) Schüttung und Abfluss bis zu 1,2 m3/s
+Kapellenbach (Altmühl), Schüttung und Abfluss bis zu 0,25 m3/s
+Hüttenbach (Altmühl), Schüttung und Abfluss bis zu 0,8 m3/s
+Springe (Schmiech), Schüttung und Abfluss 0,058
+Asbacher Bach (Laugna) (Laugna)
+Biest (Saar)
+Geeser Bach (Kyll)
+Grenzau (Arlau)
+Grießbach (Weser)
+Imme (Arlau)
+Jäglitz (Havel u. Dosse)
+Königsseeache (Salzach)
+Miele (Meldorfer Bucht / Nordsee)
+Olbe (Beber)
+Rone (Donau)
+Ruhlander Schwarzwasser (Schwarze Elster)
+Schwarzbach (Mulde)
+Schwarzbach (Rotbach)
+Schwarzbach (Jüchsen)
+Schwarzwasser (Aller)
+Spitter (Apfelstädt)
+Starzel (Prim)
+Struga (Spree)
+Trauchgauer Ach (Halblech)
+Veerde (???)
+Weißer Schöps (Schwarzer Schöps)
+Woblitz (Havel)
