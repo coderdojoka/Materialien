@@ -28,7 +28,7 @@ def aktualisiere(dt):
     # Ball berührt Brett => abprallen
     # Wir wollen nur abprallen wenn wir von oben kommen => bewegung > 0
     # Ansonsten tretten komische mehrfach abprall-effekte auf
-    if ball.beruehrt_objekt(brett) and ball.y_bewegung() > 0:
+    if ball.beruehrt_objekt(brett) and ball.y_geschwindigkeit() > 0:
         ball.y_bewegung_umkehren()
 
         # Zufällige Änderung  im Bereich von -1 bis 1, um es ein wenig spannender zu gestalten
@@ -96,9 +96,9 @@ def brett_bewegen(ges):
     # Fall der linke oder rechte Rand berührt wird setzen wir die Position
     # fest, damit wir nicht darüber hinaus fahren
     if brett.beruehrt_linken_rand():
-        brett.abstand_links = 0
+        brett.links = 0
     elif brett.beruehrt_rechten_rand():
-        brett.abstand_rechts = 0
+        brett.rechts = 0
 
 
 # Spiel initialisierne mit Größe, Titel und Aktualisierungs-Funktion
