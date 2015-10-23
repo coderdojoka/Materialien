@@ -4,8 +4,7 @@ __author__ = 'Mark Weinreuter'
 from py2cd import *
 from py2cd.farben import *
 
-# Der erste Schritt um ein Spiel zu starten ist immer,
-# der Initialisierungsfunktion init()
+# Der erste Schritt, um ein Spiel zu starten ist immer, init() aufzurufen
 Spiel.init(640, 480, "Mein Spiel")
 # Erstellt ein neues Fenster mit der gegebenen Größe von 640x480
 # und dem Titel 'Mein Spiel'
