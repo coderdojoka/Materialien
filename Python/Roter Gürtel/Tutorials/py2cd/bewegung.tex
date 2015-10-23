@@ -1,0 +1,122 @@
+% Die folgenden zwei Befehle binden die CoderDojo-Styles ein.
+		
+\newcommand*{\VorlagenPfad}{../../../../Vorlagen}	
+\documentclass{\VorlagenPfad/coderdojokatext}
+
+% Titel als Kommando für den Header/Footer definieren
+\newcommand{\Titel}{py2cd - Zeichnen mit Python Teil II}
+\usepackage{hyperref}
+
+\begin{document}
+
+% Titel anzeigen und um den Header/Footer zu generieren
+\begin{center}
+	{\huge \Titel}
+\end{center}
+
+\section{Vorbereitung}
+Um diese Tutorial erfolgreich abzuschließen, muss zuerst pygame und py2cd installiert sein. Eine Anleitung für Windows ist hier \url{https://github.com/coderdojoka/Materialien/raw/master/Installation/installation_pygame.pdf} zu finden.
+\\
+Außerdem sollte Teil I dieser Tutorial Serie verstanden sein.
+\section{Einleitung}
+
+\subsection{Animationen - Bilder pro Sekunde}
+Um Bilder zu flüssigen Animationen/Videos zusammenzufügen, werden mehrere Bilder schnell hintereinander angezeigt. Ein Film im Fernsehen wird mit ca. 24 Bilder pro Sekunde abgespielt und das Auge nimmt diese als Film war.
+\\In Computerspielen ist die sehr ähnlich. Der Spielinhalt wird mehrmals pro Sekunde neugezeichnet. Die Bildwiederholungsrate wird dabei als 'Frames per second' (fps) = 'Bilder pro Sekunde' (bps). Eine Bildwiederholungsrate von 30fps bedeutet als, das der Bildschirminhalt 30 mal pro Sekunde neugezeichnet wird!
+
+\subsection{Die Aktualisierungsschleife}
+Standartmäßig wird in \code{py2cd} der Bildinhalt mit 30fps neugezeichnet. Jedes Mal wenn dies geschieht, wird eine definierte Aktualisierungsfunktion ausgeführt.
+
+\inputminted[firstline=3]{python}{../../../Beispiele/py2cd/aktualisierungs_funktion.py}
+
+\begin{merkbox}
+Die Aktualisierungsfunktion ist wie der Name sagt eine Funktion. Diese hat genau einen Parameter:
+
+\inputminted[firstline=7, lastline=10]{python}{../../../Beispiele/py2cd/aktualisierungs_funktion.py}
+\label{erklaerung}Dieser Parameter kann zunächst einfach ignoriert werden. Eine Erklärung findet sich am Ende dieses Tutorials.
+
+\end{merkbox}
+
+Um nun die Aktualisierungsfunktion zu setzen gibt es 2 Möglichkeiten:
+\begin{pythoncode}
+# 1.) in Spiel.init(..., aktualisiere)
+# Initialisiert das Fenster mit Größe, Titel und Aktualisierungsfunktion
+Spiel.init(400, 400, "Steuere das Rechteck!", aktualisiere)
+
+# 2.) Mittels Spiel.setze_aktualisierung
+# So kann man die Aktualisierungsfunktion ändern
+Spiel.setze_aktualisierung(aktualisiere)
+\end{pythoncode}
+Diese wird nun automatisch von py2cd mit der gewünschten fps-Rate aufgerufen.
+
+\section{Bewegung}
+Es gibt verschiedene Möglichkeiten ein Objekt zu bewegen. Wie zuvor beschrieben ist jedes Objekt über eine x- und y-Koordinate im Raum verankert. Man kann ein Objekt, und damit dessen Koordinaten mit folgendne Funktionen bewegen:
+
+\subsection{Relative Änderung}
+\begin{pythoncode}
+box = Rechteck(10, 10, 50, 50, ROT)
+# Ändert die x- und y-Koordinate um 5 Pixel
+box.aendere_position(5, 5)
+\end{pythoncode}
+
+\subsection{Absolute Position setzen}
+\begin{pythoncode}
+box = Rechteck(10, 10, 50, 50, ROT)
+# Setzt die x- und y-Koordinate auf die gegebenen Werte
+box.setze_position(50, 50)
+\end{pythoncode}
+
+\subsection{Geschwindigkeit festlegen und bewegen}
+\begin{pythoncode}
+box = Rechteck(10, 10, 50, 50, ROT)
+# Die x- und y-Geschwindigkeit setzen
+box.setze_geschwindigkeit(6,6)
+# Bewegt die Box bei jedem Aufruf von bewege() um 6 Pixel
+box.bewege()
+\end{pythoncode}
+
+Diese Bewegungsmöglichkeiten sind ähnliche wie die in Scratch. \code{aendere\_position} verhält sich genau wie \code{'ändere x um ...'} und \code{'ändere y um ...'}.
+\\
+\code{setze\_position} verhält sich genau wie \code{'setze x auf ...'} und \code{'setze y auf ...'}.
+
+\begin{merkbox}
+\textbf{Erinnerung:} Der Koordinatenursprung \code{(0|0)} liegt in der linken oberen Ecke.
+Eine Änderung der x-Koordinate, die größer 0 ist, ist eine Bewegung nach rechts. Eine negative Änderung bedeutet eine Bewegung nach links.	
+\\
+Eine Änderung der y-Koordinate, die größer 0 ist, ist eine Bewegung nach \textbf{unten!}. Dies ist zunächst verwirrend, ist allerdings bei vielen Computerprogrammen so. Eine negative Änderung bedeutet demzufolge eine Bewegung nach oben!	
+\begin{pythoncode}
+# Ändert die x- und y-Koordinate um 5 Pixel
+box.aendere_position(5, 5)
+\end{pythoncode}
+Dies ist also eine Bewegung um jeweils 5 Pixel nach rechts unten!
+\end{merkbox}
+
+\subsection{Position abrufen}
+Man kann die x- und y-Koordinaten eines Objektes ganz einfach abfragen
+\begin{pythoncode}
+# Box an der Stelle 10x10
+box = Rechteck(10, 10, 50, 50, ROT)
+# x- und y-Koordinate abfragen und ausgeben
+print(box.x, box.y)
+\end{pythoncode}
+
+\section{Aufgaben}
+\begin{enumerate}
+\item Bewege ein Objekt mit den verschiedenen Funktionen über die Spielfläche. 
+Kannst du verhindern, dass ein Objekt die Spielfeldgrenzen verlässt.
+\\
+\textbf{Hinweis:} Kannst du dir eine if-Schleife ausdenken, die die Position des Objekts überprüft?
+\end{enumerate}
+\clearpage
+\section{Anhang}
+\subsection{Erklärung zum Delta-Parameter der Aktualisierungsfunktion (\ref{erklaerung})}
+
+Dieser Parameter gibt an, wieviel Zeit vergangen ist relativ zu der gewünschten fps-Rate. Z.B. Bei mit 30fps, wird das Bild 30mal pro Sekunde gezeichnet. Hat ein Zeichenvorgang genau 1/30 Sekunde gebraucht, so ist der Wert: \code{delta = 1}. Dauert der Zeichenvorgang länger als 1/30s so ist \code{delta > 1}. Dementsprechend ist \code{delta < 1}, falls der Zeichenvorgang schneller als 1/30 s war.
+\\ Die Aktualisierungfunktion wird nicht immer exakt mit der gewünschten Update-Rate ausgeführt. Um diesen Effekt entgegen zu wirken können Positionsänderungen mit diesem Wert multipliziert werden. Z.B: so:
+\begin{pythoncode}
+	box.aendere_position(1 * delta, 1 * delta)	
+	\end{pythoncode}
+	Dies ist allerdings ein sehr fortgeschrittenes Verfahren und kann ignoriert werden. Es wird nur der Vollständigkeit wegen erklärt. :)
+
+
+\end{document}
