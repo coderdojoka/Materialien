@@ -1,0 +1,121 @@
+% Die folgenden zwei Befehle binden die CoderDojo-Styles ein.
+		
+\newcommand*{\VorlagenPfad}{../../../../Vorlagen}	
+\documentclass{\VorlagenPfad/coderdojokatext}
+
+% Titel als Kommando für den Header/Footer definieren
+\newcommand{\Titel}{py2cd - Zeichnen mit Python Teil III}
+\usepackage{hyperref}
+
+\begin{document}
+
+% Titel anzeigen und um den Header/Footer zu generieren
+\begin{center}
+	{\huge \Titel}
+\end{center}
+
+\section{Vorbereitung}
+Um diese Tutorial erfolgreich abzuschließen, muss zuerst pygame und py2cd installiert sein. Eine Installationsanleitung ist unter \url{https://github.com/coderdojoka/py2cd/} zu finden.
+\\
+Desweiteren sollte Teil I und Teil II dieser Tutorial Serie verstanden sein.
+\section{Bewegung}
+
+\begin{merkbox}
+\textbf{Erinnerung:} Der Koordinatenursprung \code{(0|0)} liegt in der linken oberen Ecke.
+Eine Änderung der x-Koordinate, die größer 0 ist, ist eine Bewegung nach rechts. Eine negative Änderung bedeutet eine Bewegung nach links.	
+\\
+Eine Änderung der y-Koordinate, die größer 0 ist, ist eine Bewegung nach \textbf{unten!}. Dies ist zunächst verwirrend, ist allerdings bei vielen Computerprogrammen so. Eine negative Änderung bedeutet demzufolge eine Bewegung nach oben!	
+
+\begin{pythoncode}
+box = Rechteck(10, 10, 50, 50, ROT)
+# Ändert die x- und y-Koordinate um 5 Pixel
+box.aendere_position(5, 5)
+\end{pythoncode}
+
+Dies ist also eine Bewegung um jeweils 5 Pixel nach rechts unten!
+\end{merkbox}
+
+\subsection{Objekte positionieren}
+Es gibt verschiedene Arten Objekte, seien es Kreise, Rechtecke, Bilder, etc.. zu platzieren:
+
+\subsubsection{Mit links, rechts, oben, unten:}
+Bei der Definition wird meistens die x-, y-Koordinate mit angegeben. Diese aber auch noch leicht nachträglich geändert werden, indem der Abstand zum linken, rechten, oberen oder unteren Rand angegeben wird.
+
+\inputminted[firstline=10,lastline=24]{python}{../../../Beispiele/py2cd/objekte_positionieren.py}
+
+\subsubsection{Die Objekte-Mitte festlegen:}
+Man kann auch die Objektmitte direkt setzen:
+
+\inputminted[firstline=26,lastline=27]{python}{../../../Beispiele/py2cd/objekte_positionieren.py}
+
+\subsection{Die x-,y-Koordinaten ändern:}
+
+\subsubsection{Relative Änderung}
+Die Position um einen Wert ändern. \code{x_\neu = x_\alt + wert}.
+
+\begin{pythoncode}
+box = Rechteck(10, 10, 50, 50, ROT)
+# Ändert die x- und y-Koordinate um 5 Pixel
+box.aendere_position(5, 5)
+\end{pythoncode}
+
+\subsubsection{Absolute Position setzen}
+Die Position auf einen Wert setzen. \code{x\_neu = x\_alt}.
+
+\begin{pythoncode}
+box = Rechteck(10, 10, 50, 50, ROT)
+# Setzt die x- und y-Koordinate auf die gegebenen Werte
+box.setze_position(50, 50)
+\end{pythoncode}
+
+\paragraph{Hinweis:} Diese Bewegungsmöglichkeiten sind ähnliche wie die in Scratch. \code{aendere\_position} verhält sich genau wie \code{'ändere x um ...'} und \code{'ändere y um ...'}.
+\\
+\code{setze\_position} verhält sich genau wie \code{'setze x auf ...'} und \code{'setze y auf ...'}.
+
+\subsection{Objekte zentrieren:}
+Objekte können horizontal, vertikal oder in beide Richtungen zentriert werden.
+
+\inputminted[firstline=29,lastline=38]{python}{../../../Beispiele/py2cd/objekte_positionieren.py}
+
+\subsection{Geschwindigkeit festlegen und bewegen}
+Man kann Objekte auch mithilfe von \code{bewege()} bewegen. Dabei wird das Objekt um die mit \code{setze\_geschwindigkeit(6,6)} definierte Distanz (hier: 6 Pixel nach rechts und 6 Pixel nach unten).
+
+\begin{pythoncode}
+box = Rechteck(10, 10, 50, 50, ROT)
+# Die x- und y-Geschwindigkeit setzen
+box.setze_geschwindigkeit(6,6)
+# Bewegt die Box bei jedem Aufruf von bewege() um 6 Pixel
+box.bewege()
+\end{pythoncode}
+
+
+
+\subsection{Position abrufen}
+\subsubsection{x- und y-Koordinaten}
+Man kann die x- und y-Koordinaten eines Objektes ganz einfach abfragen
+\begin{pythoncode}
+# Box an der Stelle 10x10
+box = Rechteck(10, 10, 50, 50, ROT)
+# x- und y-Koordinate abfragen und ausgeben
+print(box.x, box.y)
+\end{pythoncode}
+
+\subsubsection{Abstand zum Rand}
+Genau wie man den Abstand zum linken, rechten, oberen  oder unteren Rand setzen kann, kann man ihn auch abfragen. Das Gleiche gilt auch für die Objektmitte.
+
+\inputminted[firstline=42,lastline=60]{python}{../../../Beispiele/py2cd/objekte_positionieren.py}
+
+\subsubsection{Größe des umgebenden Rechtecks}
+Wie zuvor beschrieben, ist jedes Objekt von einem unsichtbaren Rechteck eingegrenzt. Man kann auch dessen Breite und Höhe abfragen.
+
+\inputminted[firstline=62,lastline=68]{python}{../../../Beispiele/py2cd/objekte_positionieren.py}
+
+\section{Aufgaben}
+\begin{enumerate}
+\item Bewege ein Objekt mit den verschiedenen Funktionen über die Spielfläche. 
+\item Frage die Position von Objekten und derren Abstand zum Rand ab. Ändert sich die Postion wie erwartet, wenn du sie bewegst? Z.B. sollte sich die x-Koordinate um 20 ändern, wenn \code{aendere\_position(20, 0)} aufrufst.
+\end{enumerate}
+
+
+
+\end{document}

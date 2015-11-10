@@ -11,13 +11,12 @@ def aktualisiere(delta):
 
 
 # Initialisiert das Fenster
-Spiel.init(400, 400, "Steuere das Rechteck!", aktualisiere)
+Spiel.init(400, 400, "Bewegung", aktualisiere)
 
 # So kann man die Aktualisierungsfunktion ändern
 Spiel.setze_aktualisierung(aktualisiere)
 
 box = Rechteck(10, 10, 50, 50, ROT)
-print(box.x, box.y)
 
 # Das Spiel starten
 Spiel.starten()

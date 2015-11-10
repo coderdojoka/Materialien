@@ -15,14 +15,14 @@
 \end{center}
 
 \section{Vorbereitung}
-Um diese Tutorial erfolgreich abzuschließen, muss zuerst pygame und py2cd installiert sein. Eine Anleitung für Windows ist hier \url{https://github.com/coderdojoka/Materialien/raw/master/Installation/installation_pygame.pdf} zu finden.
+Um diese Tutorial erfolgreich abzuschließen, muss zuerst pygame und py2cd installiert sein. Eine Installationsanleitung ist unter \url{https://github.com/coderdojoka/py2cd/} zu finden.
 \\
-Außerdem sollte Teil I dieser Tutorial Serie verstanden sein.
+Desweiteren sollte Teil I dieser Tutorial Serie verstanden sein.
 \section{Einleitung}
 
 \subsection{Animationen - Bilder pro Sekunde}
 Um Bilder zu flüssigen Animationen/Videos zusammenzufügen, werden mehrere Bilder schnell hintereinander angezeigt. Ein Film im Fernsehen wird mit ca. 24 Bilder pro Sekunde abgespielt und das Auge nimmt diese als Film war.
-\\In Computerspielen ist die sehr ähnlich. Der Spielinhalt wird mehrmals pro Sekunde neugezeichnet. Die Bildwiederholungsrate wird dabei als 'Frames per second' (fps) = 'Bilder pro Sekunde' (bps). Eine Bildwiederholungsrate von 30fps bedeutet als, das der Bildschirminhalt 30 mal pro Sekunde neugezeichnet wird!
+\\In Computerspielen ist dies ähnlich. Der Spielinhalt wird mehrmals pro Sekunde neugezeichnet. Die Bildwiederholungsrate wird dabei als 'Frames per second' (fps) = 'Bilder pro Sekunde' (bps). Eine Bildwiederholungsrate von 30fps bedeutet also, dass der Bildschirminhalt 30 mal pro Sekunde neugezeichnet wird!
 
 \subsection{Die Aktualisierungsschleife}
 Standartmäßig wird in \code{py2cd} der Bildinhalt mit 30fps neugezeichnet. Jedes Mal wenn dies geschieht, wird eine definierte Aktualisierungsfunktion ausgeführt.
@@ -30,14 +30,14 @@ Standartmäßig wird in \code{py2cd} der Bildinhalt mit 30fps neugezeichnet. Jed
 \inputminted[firstline=3]{python}{../../../Beispiele/py2cd/aktualisierungs_funktion.py}
 
 \begin{merkbox}
-Die Aktualisierungsfunktion ist wie der Name sagt eine Funktion. Diese hat genau einen Parameter:
+Die Aktualisierungsfunktion ist wie der Name sagt eine Funktion. Diese benötigt genau einen Parameter:
 
 \inputminted[firstline=7, lastline=10]{python}{../../../Beispiele/py2cd/aktualisierungs_funktion.py}
 \label{erklaerung}Dieser Parameter kann zunächst einfach ignoriert werden. Eine Erklärung findet sich am Ende dieses Tutorials.
 
 \end{merkbox}
 
-Um nun die Aktualisierungsfunktion zu setzen gibt es 2 Möglichkeiten:
+Um die Aktualisierungsfunktion zu setzen gibt es 2 Möglichkeiten:
 \begin{pythoncode}
 # 1.) in Spiel.init(..., aktualisiere)
 # Initialisiert das Fenster mit Größe, Titel und Aktualisierungsfunktion
