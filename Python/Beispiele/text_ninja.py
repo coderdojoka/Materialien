@@ -1,5 +1,7 @@
 __author__ = 'Mark Weinreuter'
 
+# Programm zum Rätsel der Woche, mit dem der verschlüsselte Text erstellt wurde.
+
 zeichen_text = {
     "4-1": "a",
     "4-2": "b",

@@ -5,6 +5,7 @@ Python/*/.idea/
 Python/.idea/
 Lektionen/*/_minted-*/
 
+.idea/
 *.out
 *.log
 *.aux
