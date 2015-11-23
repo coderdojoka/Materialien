@@ -1,6 +1,3 @@
-# Python Beispiele
-Es gibt folgende Beispielprogramme:
-
 | Thema             | Python-Programm       | Beschreibung										|
 | :----             | :--------------       | :----------- 										|
 | Variablen         | [variablen.py][var]   | Variablen verwenden und damit rechnen.			|
@@ -9,7 +6,7 @@ Es gibt folgende Beispielprogramme:
 | Dateien einlesen  | [datei_lesen.py][dat] | Liest den Inhanlt der Datei _meine_datei.txt_ ein	|
 | Funktionen        | [funktion.py][funk]   | Funktionen erstellen und verwenden				|
 | Listen            | [listen.py][list]     | Listen erstellen, auslesen und verändern			|
-| Pi berechnen      | [pi_schleife.py][pi]  | Nähert die Zahl Pi an								|
+| Pi berechnen      | [schleife_pi.py][pi]  | Nähert die Zahl Pi an								|
 
 [var]: https://raw.githubusercontent.com/coderdojoka/Materialien/master/Python/Beispiele/variablen.py
 [eingabe]: https://raw.githubusercontent.com/coderdojoka/Materialien/master/Python/Beispiele/eingabe.py
@@ -17,4 +14,4 @@ Es gibt folgende Beispielprogramme:
 [dat]: https://raw.githubusercontent.com/coderdojoka/Materialien/master/Python/Beispiele/datei_lesen.py
 [funk]: https://raw.githubusercontent.com/coderdojoka/Materialien/master/Python/Beispiele/funktion.py
 [list]: https://raw.githubusercontent.com/coderdojoka/Materialien/master/Python/Beispiele/listen.py
-[pi]: https://raw.githubusercontent.com/coderdojoka/Materialien/master/Python/Beispiele/pi_schleife.py
+[pi]: https://raw.githubusercontent.com/coderdojoka/Materialien/master/Python/Beispiele/schleife_pi.py

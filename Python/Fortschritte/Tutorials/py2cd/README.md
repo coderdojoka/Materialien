@@ -1,13 +1,11 @@
-# py2cd-Tutorials
+| Tutorial                      | Beschreibung:
+| :-------                      | :------------
+| [Erste Schritte][tut1]        | Hier werden die wichtigsten Grundbegriffe erklärt.    
+| [Bewegung hinzufügen][tut2]   | In diesem Tutorial werden weitere Funktionen erklärt, um etwas Bewegung in das Ganze zu bringen :)      
+| [Wichtige Funktionen][tut3]   | Hier sind wichtige Funktionen zur Bewegung und Platzierung von Objekten aufgelistet.
 
-## Hinweis
-Um diese Tutorials zu absolvieren, muss zuerst py2cd installiert werden. Py2cd mitsamt Installationsanleitung ist in [diesem Github-Repo](https://github.com/coderdojoka/py2cd) zu finden.
 
-## Erste Schritte
-In [diesem](erste_schritte.pdf) Tutorial werden die wichtigsten Grundbegriffe erklärt.
-
-## Bewegung hinzufügen
-In [diesem](bewegung.pdf) Tutorial werde weitere Funktionen erklärt um etwas Bewegung in das Ganze zu bringen. 
-
-## Beispiel: Breakout
-Das Spiel Breakout ist im [Beispiele](https://raw.githubusercontent.com/coderdojoka/Materialien/master/Python/Beispiele/py2cd_blocks.py) Ordner zu finden
+[tut1]: https://raw.githubusercontent.com/coderdojoka/Materialien/master/Python/Fortschritte/py2cd/erste_schritte.pdf
+[tut2]: https://raw.githubusercontent.com/coderdojoka/Materialien/master/Python/Fortschritte/py2cd/bewegung.pdf
+[tut3]: https://raw.githubusercontent.com/coderdojoka/Materialien/master/Python/Fortschritte/py2cd/wichtige_funktionen.pdf
+[bsp]: https://raw.githubusercontent.com/coderdojoka/Materialien/master/Python/Beispiele/py2cd_blocks.py

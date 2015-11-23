@@ -2,13 +2,13 @@
 
 In dieser Stufe sollen die folgenden fünf Grundlagen gemeistert werden:
 
-| Thema 		            			| Aufgaben       										 | Links 			|	
-| :----		    	        			| :-------       										 | :---- 			|
-| Umgang mit [Variablen][vars]		  	| 						        						 | [hier][link_var]	|
-| Umgang mit [Text][text]				| 														 | 		 			|
-| Von der Konsole [einlesen][einlesen]	| 														 | 		 			|
-| Entscheidungen: [if-Abfragen][if]		| [Schere, Stein, Papier][ssp]      					 | 		 			|
-| for- und while- [Schleifen][while]	| [Fußball][fball], [Klopf Klopf][klopf], [3, 2, 1][321] | 		 			|
+| Thema 		            			| Aufgaben       										 | Externe Links                                        |	
+| :----		    	        			| :-------       										 | :------------ 			                            |
+| Umgang mit [Variablen][vars]		  	| 						        						 | [Intro][link_var], [Tutorial][var_tut]	            |
+| Umgang mit [Text][text]				| 														 | 		 			                                    |
+| Von der Konsole [einlesen][einlesen]	| 														 | [Tutorial][ein_tut]	                                |
+| Entscheidungen: [if-Abfragen][if]		| [Schere, Stein, Papier][ssp]      					 | [Tutorial][if_tut]		 			                |
+| for- und while- [Schleifen][while]	| [Fußball][fball], [Klopf Klopf][klopf], [3, 2, 1][321] | [for-Tutorial][for_tut], [while-Tutorial][while_tut] |
 
 
 #### Abschlussaufgabe
@@ -30,3 +30,8 @@ Als Abschluss solltest du in der Lage sein, möglichst eigenständig, das Spiel 
 [raten]: https://github.com/coderdojoka/Materialien/raw/master/Python/Grundlagen/Zahlenraten/zahlenraten.pdf
 
 [link_var]: http://cscircles.cemc.uwaterloo.ca/dev/1-de/
+[var_tut]: http://www.python-kurs.eu/python3_variablen.php
+[ein_tut]: http://www.python-kurs.eu/python3_eingabe.php
+[if_tut]: http://www.python-kurs.eu/python3_bedingte_anweisungen.php
+[while_tut]: http://www.python-kurs.eu/python3_schleifen.php
+[for_tut]: http://www.python-kurs.eu/python3_for-schleife.php
