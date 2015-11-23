@@ -1,6 +1,6 @@
 ### Grundlagen
 
-In dieser Stufe sollen die folgenden fünf Grundlagen gemeistert werden:
+Folgende Themengebiete stehen hier im Vordergrund:
 
 | Thema 		            			| Aufgaben       										 | Externe Links                                        |	
 | :----		    	        			| :-------       										 | :------------ 			                            |

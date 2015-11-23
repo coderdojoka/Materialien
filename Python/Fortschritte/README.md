@@ -1,6 +1,6 @@
 ### Fortschritte
 
-In dieser Stufe sollen die folgendende 5 Grundlagen gemeistert werden:
+Folgende Themengebiete stehen hier im Vordergrund:
 
 | Thema								| Aufgaben				| Externe Links		    |
 | :----								| :-------				| :------------		    |
@@ -15,7 +15,7 @@ In dieser Stufe sollen die folgendende 5 Grundlagen gemeistert werden:
 #### Abschlussaufgabe
 Als Abschluss soll der [Geldspeicher][gs] geknackt werden. Hierzu werden diese beiden Dateien benötigt:
 - [geldspeicher.py][gs_code] (Geldspeicher-Code)
-- [geldspeicher_test.py][gs_test] (Hier deinen Code einfügen)]
+- [geldspeicher_test.py][gs_test] (Hier deinen Code einfügen)
 
 
 [listen_1]: https://github.com/coderdojoka/Materialien/raw/master/Python/Fortschritte/Tutorials/Listen/Listen.pdf

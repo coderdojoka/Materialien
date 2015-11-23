@@ -1,8 +1,8 @@
-| Tutorial                      | Beschreibung:
-| :-------                      | :------------
-| [Erste Schritte][tut1]        | Hier werden die wichtigsten Grundbegriffe erklärt.    
-| [Bewegung hinzufügen][tut2]   | In diesem Tutorial werden weitere Funktionen erklärt, um etwas Bewegung in das Ganze zu bringen :)      
-| [Wichtige Funktionen][tut3]   | Hier sind wichtige Funktionen zur Bewegung und Platzierung von Objekten aufgelistet.
+| Tutorial                      | Beschreibung:																							|
+| :-------                      | :------------																							|
+| [Erste Schritte][tut1]        | Hier werden die wichtigsten Grundbegriffe erklärt.    												|
+| [Bewegung hinzufügen][tut2]   | In diesem Tutorial werden weitere Funktionen erklärt, um etwas Bewegung in das Ganze zu bringen :) 	|
+| [Wichtige Funktionen][tut3]   | Hier sind wichtige Funktionen zur Bewegung und Platzierung von Objekten aufgelistet.					|
 
 
 [tut1]: https://raw.githubusercontent.com/coderdojoka/Materialien/master/Python/Fortschritte/py2cd/erste_schritte.pdf
