@@ -36,6 +36,6 @@ Ein Aufgabe ist z.B. [Maler][maler].
 
 [python_install]: https://github.com/coderdojoka/Materialien/raw/master/Installation/installation_python.pdf
 [vorlagen]: https://github.com/coderdojoka/Materialien/raw/master/Vorlagen
-[bsp]: https://github.com/coderdojoka/Materialien/raw/master/Installation/Python/Beispiele
-[z_raten]: https://github.com/coderdojoka/Materialien/raw/master/Installation/Python/Grundlagen/Aufgaben/Zahlenraten/zahlenraten.pdf
-[maler]: https://github.com/coderdojoka/Materialien/raw/master/Installation/Python/Fortschritte/Aufgaben/maler.pdf
+[bsp]: https://github.com/coderdojoka/Materialien/raw/master/Python/Beispiele
+[z_raten]: https://github.com/coderdojoka/Materialien/raw/master//Python/Grundlagen/Aufgaben/Zahlenraten/zahlenraten.pdf
+[maler]: https://github.com/coderdojoka/Materialien/raw/master/Python/Fortschritte/Aufgaben/maler.pdf
