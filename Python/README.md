@@ -6,7 +6,7 @@ Eine [Übersicht][ref] über die grundlegenden Python-Befehle und Funktionen
 ## Grundlagen
 [Hier][grund] finden sich einige Tutorials und Aufgaben, um die Grundlagen, wie _if_, _while_, _for_, etc.
 
-## Fortschritte'
+## Fortschritte
 [Hier][fort] finden sich einige 'weitere' Tutorials und Aufgaben.
 
 
