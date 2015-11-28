@@ -14,6 +14,7 @@
 \usepackage{extramarks} % Required for headers and footers
 \usepackage{graphicx}
 \usepackage{courier} % Required for the courier font
+\usepackage{hyperref} % Required for links
 \usepackage[many]{tcolorbox}
 
 % Autor für die Kopfzeile
@@ -34,7 +35,7 @@
 
 \usepackage{csquotes}
 
-\usepackage{minted}
+\usepackage[cache=false]{minted}
 %Prior to version 2.0 minted cannot handle non-english characters
 %we apply a workaround if we detect an earlier version
 \@ifpackagelater{minted}{2015/01/31}

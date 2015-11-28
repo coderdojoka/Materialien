@@ -32,7 +32,9 @@ Ein Fenster auf dem Computerbildschirm hat eine bestimmte Größe. Diese Größe
 so sind Objekte, die Koordinaten zwischen \code{x: 0-640 px} und \code{y: 0-480} (zumindest teilweise) sichtbar.
 
 \subsection{Umgebendes Rechteck}
-In py2cd sind alle Objekte, also z.B. Kreise, Rechtecke, Bilder von einem 'unsichtbaren' Rechteck umgeben, das das Objekt so genau wie möglich darin einschließt. Dies ist wichtig, da jedes Objekt, auch ein Kreis, so eine Breite und Höhe hat. Diese beiden Werte beziehen sich IMMER auf das umgebende Rechteck. Bei manchen Positionsberechnungen und zur Kollisionserkennung wird dieses Rechteck verwendet. Aus diesem Grund können kleine Ungenauigkeiten auftreten. 
+In py2cd sind alle Objekte, also z.B. Kreise, Rechtecke, Bilder
+ von einem 'unsichtbaren' Rechteck umgeben, das das Objekt so genau wie möglich darin einschließt. Dies ist wichtig, da jedes Objekt, auch ein Kreis, so eine Breite und Höhe hat. Diese beiden Werte beziehen sich IMMER auf das umgebende Rechteck. Bei manchen Positionsberechnungen und zur Kollisionserkennung wird dieses Rechteck verwendet.
+  Aus diesem Grund können kleine Ungenauigkeiten auftreten.
 
 \pagebreak
 \section{Ein einfaches Beispiel}
@@ -77,7 +79,7 @@ b = BildSpeicher.gib_bild("scratch")
 b.setze_position(50, 20)
 \end{pythoncode}
 Bilder kann man über den Bildspeicher laden. Dafür müssen sie zuerst geladen werden und können danach über ihren Namen abgerufen werden. Die Postion des Bildes wird nachträglich mit der Funktion \code{setze\_position(x, y)} gesetzt. Diese Funktion steht auch bei anderen Objekten wie Rechtecken und Kreisen zur Verfügung.
-\textbf{Hinweis:} Das Bild muss im gleichen Ordner wie dein Programm liegen. Alternativ kannst du auch den Pfad \code{"scratch.png"} ändern.
+\textbf{Hinweis:} Das Bild muss im gleichen Ordner wie dein Programm liegen. Alternativ kannst du auch den Pfad \code{'scratch.png'} ändern.
 
 \subsection{Eigene Farben}
 Im Zusammenhang mit Computer und Farben spricht man oft von RGB Farben. RGB steht für Rot, Grün, Blau. Eine Farbe wird also aus 3 Komponenten aufgebaut: Einem Rotanteil, Grünanteil und einem Blauanteil. Die R-, G-, B-Werte dürfen dabei Werte zwischen 0 und 255 annehmen. Die Farbe Schwarz entspricht \code{(0, 0, 0)}, Weiß ist \code{(255, 255, 255)}. 
@@ -88,6 +90,7 @@ meineFarbe = (255, 0, 0) # Rot voll, Grün und Blau nichts => Rot
 r = Rechteck(10, 10, 50, 50, meineFarbe)
 \end{pythoncode}
 Eine Farbe wählst du dir am Besten in einem Bildbearbeitungsprogramm wie Paint, Gimp (oder online) aus. Merke dir die RGB-Werte und füge sie in dein Programm ein.
+
 \section{Aufgaben}
 \begin{enumerate}
 \item Male einen Apfelbaum, das ganze könnte ungefähr so aussehen:

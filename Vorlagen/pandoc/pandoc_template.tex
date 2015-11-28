@@ -1,0 +1,30 @@
+$if(minted_ausgabe)$\PassOptionsToPackage{outputdir=tmp_latex}{minted} %Minted Ausgabe-Verzeichnis anpassen, falls -output-dir genutzt wird. $endif$
+\newcommand*{\VorlagenPfad}{$if(vorlagen_pfad)$$vorlagen_pfad$}$else$pfad/zur/vorlage} % Anpassen! Muss zum Vorlagen-Ordner zeigen. $endif$
+\documentclass{\VorlagenPfad/coderdojokatext}
+
+\usepackage{longtable,booktabs}
+
+% Wir 'missverstehen' BlockQuotes als Merkboxen
+\renewenvironment{quote}{\begin{merkbox}}{\end{merkbox}}
+
+% Fuer Pandoc
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+$if(autor)$%Author: $author$
+$endif$$if(version)$%Version: $version$
+$endif$$if(datum)$%Date: $date$$endif$
+
+\begin{document}
+
+$if(titel)$
+% Titel anzeigen
+\begin{center}
+	{\huge $titel$}
+\end{center}
+$endif$
+
+$body$
+
+\end{document}
