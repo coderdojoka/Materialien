@@ -27,7 +27,7 @@ mkdir $output
 
 
 echo "Running: pandoc $in --filter ./minted.py -o $output/$out --template=$DIR/pandoc_template.tex --variable vorlagen_pfad=$DIR/.. -s --smart"
-pandoc $in --filter $DIR/minted.py -o $output/$out --template=$DIR/pandoc_template.tex --variable vorlagen_pfad=$DIR/.. -s --smart
+pandoc $in --filter $DIR/minted.py -o $output/$out --template=$DIR/pandoc_template.tex --variable vorlagen_pfad=$DIR/.. -s --smart 
 
 echo "Running: pdflatex -output-dir=$output -interaction=nonstopmode -shell-escape $output/$out > $output/compile.log"
 pdflatex -interaction=nonstopmode -output-dir=$output -shell-escape $output/$out > $output/compile.log

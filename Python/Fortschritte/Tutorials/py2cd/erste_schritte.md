@@ -2,7 +2,7 @@
 titel: py2cd - Zeichnen mit Python Teil I
 autor: Mark Weinreuter
 datum: 28.11.2015
-version: 0.2
+version: 0.2.1
 minted_ausgabe: tmp_latex
 ---
 
@@ -49,7 +49,7 @@ Das folgende Beispiel sollte relativ selbst erklärend sein.
 > Bevor gezeichnet werden kann muss zuerst py2cd initialisiert werden mit:
 >
 > ```
-> Spiel.init(640, 480, “Mein Spiel”)
+> Spiel.init(640, 480, 'Mein Spiel')
 > ```
 > Um das Fenster zu starten, muss dieser Code am Ende eingefügt werden:
 >
@@ -87,9 +87,9 @@ Man kann auch eigene Bilder zeichen lassen:
 
 ``` python
 # Das Bild in den BildSpeicher laden und ihm einen Namen geben: 'scratch' 
-BildSpeicher.lade_bild(“scratch”, “scratch.png”) 
+BildSpeicher.lade_bild('scratch', 'scratch.png') 
 # Das Bild über seinen Namen laden und anzeigen
-b = BildSpeicher.gib_bild(“scratch”)
+b = BildSpeicher.gib_bild('scratch')
 # Die Position setzen
 b.setze_position(50, 20)
 ```
@@ -108,7 +108,7 @@ Eigene Farben
 -------------
 
 Im Zusammenhang mit Computer und Farben spricht man oft von so genannten RGB-Farben.
-RGB steht für Rot, Grün, Blau. Eine Farbe wird also aus 3 Komponenten aufgebaut: Einem Rotanteil, Grünanteil und einem Blauanteil. Die R-, G-, B-Werte dürfen dabei Werte zwischen 0 und 255 annehmen. Die Farbe Schwarz `(0, 0, 0)`entspricht , Weiß ist `(255, 255, 255)`. Willst du nun eine eigene Farbe verwenden kannst du dies einfach als 3-Tupel angaben:
+RGB steht für Rot, Grün, Blau. Eine Farbe wird also aus 3 Komponenten aufgebaut: Einem Rotanteil, Grünanteil und einem Blauanteil. Die R-, G-, B-Werte dürfen dabei Werte zwischen 0 und 255 annehmen. Die Farbe Schwarz entspricht `(0, 0, 0)`, Weiß ist `(255, 255, 255)`. Willst du nun eine eigene Farbe verwenden kannst du dies einfach als 3-Tupel angaben:
 
 ``` python
 meineFarbe = (255, 0, 0) # Rot voll, Grün und Blau nichts => Rot
