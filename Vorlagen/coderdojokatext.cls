@@ -19,12 +19,19 @@
 
 % Autor für die Kopfzeile
 \newcommand{\Autor}{CoderDojo Karlsruhe}
+\newcommand{\Titel}{Renew Titel to change}
+
 
 % Header Konfiguration
 \pagestyle{fancy}
-\setcounter{chapter}{1}
+% other preamble stuff...
+\usepackage{etoolbox}
 
-%\chead{\Titel} % Top center head
+\def\NoBreakChapter#1{{\let\cleardoublepage\relax\chapter{#1}}}
+
+% rest of document ...
+
+\lhead{\Titel} % Top center head
 \rhead{\Autor} % Top left header
 %\rfoot{Seite\ \thepage\ von\ \protect\pageref{LastPage}} % Bottom right footer
 \renewcommand\headrulewidth{0.4pt} % Size of the header rule

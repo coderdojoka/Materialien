@@ -11,7 +11,7 @@ Warum Text?
 An vielen Stellen beim Programmieren hat man mit Text zu tun. Man muss
 Texte lesen, auf bestimmte Buchstaben untersuchen, etc...
 ``` {.python firstline=1 lastline=3 include=../../../Beispiele/text.py}
-will be replace
+will be replaced
 ```
 
 Textstücke erkennt man daran, dass sie in einfachen `'...'` oder doppelten `"..."`
@@ -23,18 +23,18 @@ Operatoren
 
 Man kann Textstücke kombinieren:
 ``` {.python firstline=5 lastline=7 include=../../../Beispiele/text.py}
-will be replace
+will be replaced
 ```
 
 Dies könnte man auch mit `print` direkt
 ausgeben, da mehrere Parameter übgergeben werden können:
 ``` {.python firstline=9, lastline=10 include=../../../Beispiele/text.py}
-will be replace
+will be replaced
 ```
 
 Analog zum Plus-Operator gibt es auch den Mal-Operator:
 ``` {.python firstline=12 lastline=13 include=../../../Beispiele/text.py}
-will be replace
+will be replaced
 ```
 
 Länge eines Textes
@@ -45,7 +45,7 @@ besteht. Wir nennen dies auch die Länge eines Textes. Um die Anzahl der
 Buchstaben, eines Textes zu ermitteln, benutzt man den Befehl `len(...)` (’length’
 ist Englisch für Länge) wie folgt:
 ``` {.python firstline=15 lastline=16 include=../../../Beispiele/text.py}
-will be replace
+will be replaced
 ```
 
 

@@ -14,6 +14,11 @@ $if(minted_ausgabe)$\PassOptionsToPackage{outputdir=tmp_latex}{minted} %Minted A
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+$if(titel)$
+% Der Dokumenttitel soll im Header links erscheinen
+\lhead{Test} % Top center head
+$endif$
+
 $if(autor)$%Author: $author$
 $endif$$if(version)$%Version: $version$
 $endif$$if(datum)$%Date: $date$$endif$
