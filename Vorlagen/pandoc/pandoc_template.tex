@@ -9,6 +9,16 @@ $if(minted_ausgabe)$\PassOptionsToPackage{outputdir=tmp_latex}{minted} %Minted A
 % Wir 'missverstehen' BlockQuotes als Merkboxen
 \renewenvironment{quote}{\begin{merkbox}}{\end{merkbox}}
 
+% Wir 'missverstehen' BlockQuotes als Merkboxen
+\let\oldsection\section
+\let\oldsubsection\subsection
+\let\oldsubsubsection\subsubsection
+\renewcommand{\subsubsection}{\oldsubsection}
+\renewcommand{\subsection}{\oldsection}
+\renewcommand{\section}{\chapter}
+
+\setcounter{chapter}{0}
+
 % Fuer Pandoc
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
