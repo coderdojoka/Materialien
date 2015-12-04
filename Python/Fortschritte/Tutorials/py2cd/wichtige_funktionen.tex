@@ -4,7 +4,7 @@
 \documentclass{\VorlagenPfad/coderdojokatext}
 
 % Titel als Kommando für den Header/Footer definieren
-\newcommand{\Titel}{py2cd - Zeichnen mit Python Teil III}
+\renewcommand{\Titel}{py2cd - Zeichnen mit Python Teil III}
 \usepackage{hyperref}
 
 \begin{document}
@@ -51,7 +51,7 @@ Man kann auch die Objektmitte direkt setzen:
 \subsection{Die x-,y-Koordinaten ändern:}
 
 \subsubsection{Relative Änderung}
-Die Position um einen Wert ändern. \code{x_\neu = x_\alt + wert}.
+Die Position um einen Wert ändern. \code{x\_neu = x\_alt + wert}.
 
 \begin{pythoncode}
 box = Rechteck(10, 10, 50, 50, ROT)

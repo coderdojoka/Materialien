@@ -9,15 +9,20 @@ $if(minted_ausgabe)$\PassOptionsToPackage{outputdir=tmp_latex}{minted} %Minted A
 % Wir 'missverstehen' BlockQuotes als Merkboxen
 \renewenvironment{quote}{\begin{merkbox}}{\end{merkbox}}
 
-% Wir 'missverstehen' BlockQuotes als Merkboxen
+
+$if(kapitel)$
+% Bei scrbook sollte # ein Chapters ein....
+\setcounter{chapter}{$kapitel$-1} % wird in der Vorlage auf 1 gesetzt
+\let\oldchapter\chapter
+\renewcommand{\chapter}{\let\cleardoublepage\relax\oldchapter}
+
 \let\oldsection\section
 \let\oldsubsection\subsection
 \let\oldsubsubsection\subsubsection
 \renewcommand{\subsubsection}{\oldsubsection}
 \renewcommand{\subsection}{\oldsection}
 \renewcommand{\section}{\chapter}
-
-\setcounter{chapter}{0}
+$endif$
 
 % Fuer Pandoc
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
@@ -26,7 +31,7 @@ $if(minted_ausgabe)$\PassOptionsToPackage{outputdir=tmp_latex}{minted} %Minted A
 
 $if(titel)$
 % Der Dokumenttitel soll im Header links erscheinen
-\lhead{Test} % Top center head
+\renewcommand{\Titel}{$titel$}
 $endif$
 
 $if(autor)$%Author: $author$

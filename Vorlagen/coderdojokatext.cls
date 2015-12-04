@@ -25,10 +25,11 @@
 % Header Konfiguration
 \pagestyle{fancy}
 % other preamble stuff...
-\usepackage{etoolbox}
+%\usepackage{etoolbox}
+%\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
 
-\def\NoBreakChapter#1{{\let\cleardoublepage\relax\chapter{#1}}}
-
+% wir verwenden keine chapter...
+\setcounter{chapter}{1}
 % rest of document ...
 
 \lhead{\Titel} % Top center head
