@@ -4,6 +4,7 @@ Python/py2cd/.idea/
 Python/*/.idea/
 Python/.idea/
 Lektionen/*/_minted-*/
+tmp_latex/
 
 .idea/
 *.out
