@@ -17,7 +17,6 @@ if [ $# -gt 1 ]; then
 fi
 
 # we save all the output here
-
 output=tmp_latex
 if [ $# -gt 2 ]; then
         output=$3
