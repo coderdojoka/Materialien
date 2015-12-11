@@ -1,8 +1,8 @@
 ---
-titel: Verschlüsselung mit Java
-autor: Lennart Hensler
-datum: 10.12.2015
-version: alpha
+titel: Verschlüsselung mit Java  
+autor: Lennart Hensler  
+datum: 10.12.2015  
+version: alpha  
 ---
 
 
@@ -26,10 +26,10 @@ Mit diesem Schlüssel ist es auch möglich einen Geheimtext wieder in den entspr
 
 Bei der Caesar-Verschlüsselung wird jeder Buchstabe des Klartextes um eine bestimmte **Anzahl** an Buchstaben verschoben. Soll zum Beispiel jeder Buchstabe um **3** Stellen verschoben werden, würde jedes *A* durch ein *D* ersetzt werden. Andere Buchstaben würden wie folgt ersetzt werden:
 
-|     Nummer     | 1 | 2 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 |
-| -------------- | - | - | - | - | - | - | - | - | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| **Klartext**   | a | b | c | d | e | f | g | h | i  | j  | k  | l  | m  | n  | o  | p  | q  | r  | s  | t  | u  | v  | w  | x  | y  | z  |
-| **Geheimtext** | D | E | F | G | H | I | J | K | L  | M  | N  | O  | P  | Q  | R  | S  | T  | U  | V  | W  | X  | Y  | Z  | A  | B  | C  |
+| Nummer         |  1  |  2  |  4  |  5  |  6  |  7  |  8  |  9  |  10  |  11  |  12  |  13  |  14  |  15  |  16  |  17  |  18  |  19  |  20  |  21  |  22  |  23  |  24  |  25  |  26  |  27  |
+| :------------: | --- | --- | --- | --- | --- | --- | --- | --- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| **Klartext**   |  a  |  b  |  c  |  d  |  e  |  f  |  g  |  h  |  i   |  j   |  k   |  l   |  m   |  n   |  o   |  p   |  q   |  r   |  s   |  t   |  u   |  v   |  w   |  x   |  y   |  z   |
+| **Geheimtext** |  D  |  E  |  F  |  G  |  H  |  I  |  J  |  K  |  L   |  M   |  N   |  O   |  P   |  Q   |  R   |  S   |  T   |  U   |  V   |  W   |  X   |  Y   |  Z   |  A   |  B   |  C   |
 
 Damit wird aus dem Klartext
 > Ich programmiere Java!
