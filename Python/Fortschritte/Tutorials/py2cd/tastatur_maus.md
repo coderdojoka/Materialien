@@ -3,6 +3,7 @@ titel: py2cd Teil IV - Maus und Tastatur
 autor: Mark Weinreuter
 datum: 3.12.15
 version: 0.1
+minted_ausgabe: tmp_latex
 ---
 
 
