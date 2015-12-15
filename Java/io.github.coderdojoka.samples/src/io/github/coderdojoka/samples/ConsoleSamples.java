@@ -1,4 +1,4 @@
-package io.github.coderdojoka.encryption.samples;
+package io.github.coderdojoka.samples;
 
 import java.io.BufferedReader;
 import java.io.IOError;
