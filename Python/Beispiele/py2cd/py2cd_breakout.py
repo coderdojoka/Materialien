@@ -18,7 +18,7 @@ def aktualisiere(dt):
     # 1.) BALL UND BODEN
 
     # Ball berührt Boden => GameOver
-    if ball.beruehrt_unternen_rand():
+    if ball.beruehrt_unteren_rand():
         gameOver()
         return
 
@@ -28,7 +28,7 @@ def aktualisiere(dt):
     # Ball berührt Brett => abprallen
     # Wir wollen nur abprallen wenn wir von oben kommen => bewegung > 0
     # Ansonsten tretten komische mehrfach abprall-effekte auf
-    if ball.beruehrt_objekt(brett) and ball.y_geschwindigkeit() > 0:
+    if ball.beruehrt_objekt(brett) and ball.y_geschwindigkeit > 0:
         ball.y_bewegung_umkehren()
 
         # Zufällige Änderung  im Bereich von -1 bis 1, um es ein wenig spannender zu gestalten

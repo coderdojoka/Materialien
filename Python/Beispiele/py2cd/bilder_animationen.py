@@ -7,7 +7,7 @@ Spiel.init(640, 480, "Mein Spiel")
 # Erstellt ein neues Fenster mit der gegebenen Größe von 640x480 und dem Titel "Mein Spiel"
 
 # Das Bild in den BildSpeicher laden und ihm einen Namen geben: ’scratch’
-BildSpeicher.lade_bild("scratch", "testimages/scratch.png")
+BildSpeicher.lade_bild("scratch", "bilder/scratch.png")
 
 # Das Bild über seinen Namen holen und anzeigen
 bild1 = BildSpeicher.gib_bild("scratch")
@@ -30,13 +30,13 @@ bild1.aendere_rotation_und_skalierung(90, 1.2)  # ändert Rotation und Skalierun
 # Bilder können über ihren BilderSpeicher-Namen geladen werden
 # oder über den Dateipfad!
 bilder_liste = [
-    "testimages/n1.png",  # über den Dateipfad laden
-    "testimages/n2.png",
-    "testimages/n3.png",
-    "testimages/n4.png",
-    "testimages/n5.png",
-    "testimages/n6.png",
-    "testimages/n7.png"
+    "bilder/n1.png",  # über den Dateipfad laden
+    "bilder/n2.png",
+    "bilder/n3.png",
+    "bilder/n4.png",
+    "bilder/n5.png",
+    "bilder/n6.png",
+    "bilder/n7.png"
 ]
 
 # Eine neue Animation mit unseren Bilder, die endlos wiederholt wird
@@ -48,14 +48,16 @@ animation.unten = 20
 # Die Animation starten
 animation.start()
 
+# ein bestimmtes Bild, hier das 3.te (wir zählen ab 0!) anzeigen
+# Hält die Animation an! Wie .stop(), zeigt das ausgewählte Bild an
+animation.zeige_bild(2)
+
+
 # Steuerbefehle, wie bei einem Musikspiler mit:
 animation.pause()  # pausieren, .start() macht an der aktuellen Stelle weiter
 animation.stop()  # komplett anhalten und verstecken, .start() beginnt von vorne.
 animation.start()  # neustarten oder fortsezten
 
-# ein bestimmtes Bild, hier das 3.te (wir zählen ab 0!) anzeigen
-# Hält die Animation an! Wie .stop(), zeigt das ausgewählte Bild an
-animation.zeige_bild(2)
 
 # Hilfsgitter einblenden
 Spiel.zeichne_gitter()
