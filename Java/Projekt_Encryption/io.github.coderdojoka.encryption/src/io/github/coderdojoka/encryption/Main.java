@@ -20,7 +20,7 @@ public class Main {
 	
 	//Das Alphabet ist die Menge von Zeichen, die verschlüsselt werden. In diesem Fall
 	//die Buchstaben a-z, A-Z und die Zahlen 0-1. Alles andere wird ignoriert und als
-	//Klartext an den Geheimtext angehängt.
+	//Klartext in den Geheimtext übernommen.
 	private static final char[] alphabet = {
 			'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
 			'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
