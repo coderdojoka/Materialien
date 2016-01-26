@@ -66,6 +66,10 @@ def minted(key, value, format, meta):
     """
     if format == 'latex':
 
+        if key == 'Header':
+            if value[2][0]["c"] == "PAGE_BREAK":
+                return [RawBlock(format, "\pagebreak")]
+
         if key == 'CodeBlock':
             body, language, params, source_file = unpack(value, meta)
             if language is None:
