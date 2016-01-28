@@ -57,6 +57,23 @@ $if(kapitel)$
 \renewcommand{\section}{\chapter}
 $endif$
 
+$if(keine_nummern)$
+\renewcommand*\chapterformat{}
+\renewcommand*\sectionformat{}
+\renewcommand*\subsectionformat{}
+$endif$
+
+$if(keine_kapitel_nummern)$
+\renewcommand*\chapterformat{}
+$endif$
+
+$if(keine_sektions_nummern)$
+\renewcommand*\sectionformat{}
+\renewcommand*\subsectionformat{}
+$endif$
+
+
+
 
 % Fuer Pandoc
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
@@ -73,6 +90,20 @@ $endif$$if(version)$%Version: $version$
 $endif$$if(datum)$%Date: $date$$endif$
 
 \begin{document}
+
+% Inhaltsverzeichnis
+$if(inhaltsverzeichnis)$
+{
+$if(colorlinks)$
+\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
+$endif$
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+\pagebreak
+}
+$endif$
+
+
 
 $if(titel)$
 % Titel anzeigen

@@ -3,7 +3,9 @@ autor: Mark Weinreuter
 version: 0.5
 datum: 23.01.16
 minted_ausgabe: tmp_latex  
-kapitel: 1  
+kapitel: 1
+inhaltsverzeichnis: ja
+keine_sektions_nummern: ja  
 titel: Python - Befehlsübersicht
 ---
 
