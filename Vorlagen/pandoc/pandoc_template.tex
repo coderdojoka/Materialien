@@ -91,6 +91,14 @@ $endif$$if(datum)$%Date: $date$$endif$
 
 \begin{document}
 
+
+$if(titel)$
+% Titel anzeigen
+\begin{center}
+	{\huge $titel$}
+\end{center}
+$endif$
+
 % Inhaltsverzeichnis
 $if(inhaltsverzeichnis)$
 {
@@ -105,12 +113,6 @@ $endif$
 
 
 
-$if(titel)$
-% Titel anzeigen
-\begin{center}
-	{\huge $titel$}
-\end{center}
-$endif$
 
 $body$
 
