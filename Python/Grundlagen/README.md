@@ -4,7 +4,7 @@ Folgende Themengebiete stehen hier im Vordergrund:
 
 | Thema 		            			| Aufgaben       										 | Externe Links                                        |	
 | :----		    	        			| :-------       										 | :------------ 			                            |
-| Umgang mit [Variablen][vars]		  	| 						        						 | [Intro][link_var], [Tutorial][var_tut]	            |
+| Umgang mit [Variablen][vars]		  	| [Übung][ueb]						        						 | [Intro][link_var], [Tutorial][var_tut]	            |
 | Umgang mit [Text][text]				| 														 | 		 			                                    |
 | Von der Konsole [einlesen][einlesen]	| 														 | [Tutorial][ein_tut]	                                |
 | Entscheidungen: [if-Abfragen][if]		| [Schere, Stein, Papier][ssp]      					 | [Tutorial][if_tut]		 			                |
@@ -16,6 +16,7 @@ Folgende Themengebiete stehen hier im Vordergrund:
 Als Abschluss solltest du in der Lage sein, möglichst eigenständig, das Spiel [Zahlenraten][raten] zu programmieren.
 
 
+[ueb]: https://github.com/coderdojoka/Materialien/raw/master/Python/Grundlagen/Aufgaben/ausgabe_variablen.pdf
 [vars]: https://github.com/coderdojoka/Materialien/raw/master/Python/Grundlagen/Tutorials/Variablen/Variablen.pdf
 [text]: https://github.com/coderdojoka/Materialien/raw/master/Python/Grundlagen/Tutorials/Text/Text.pdf
 [einlesen]: https://github.com/coderdojoka/Materialien/raw/master/Python/Grundlagen/Tutorials/Eingabe/Eingabe.pdf
