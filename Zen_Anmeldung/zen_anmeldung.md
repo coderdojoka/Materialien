@@ -9,11 +9,12 @@ version: 1.0
 
 # Anmelden
 
-Um sich selbst oder ein(en) Kind/Jugendlicher zum CoderDojo anzumelden, muss zuerst ein Benutzeraccount angelegt werden.
+Um sich selbst oder ein(en) Kind/Jugendlichen zum CoderDojo anzumelden, muss zuerst ein Benutzeraccount angelegt werden.
 Gehe dafür auf die Website [zen.coderdojo.com](https://zen.coderdojo.com) und klicke im Menü auf "Registrieren".  
 
-![Registrieren](registrieren.png)
+![Einen neuen Account anlegen](registrieren.png)
  
+ **Hinweis:** Die CoderDojo-Zen Webseite befindet sich immer noch im Aufbau und die Beschriftungen sind teilweise noch auf Englisch und werden im Laufe der Zeit übersetzt/geändert werden.
 
 ## Registrieren für Eltern
 
@@ -21,18 +22,18 @@ Kinder, die 12 oder jünger sind, können sich nicht selbst für ein Dojo anmeld
 Danach muss das Profil noch vervollständigt werden, indem Geburtsdatum, sowie Land und Stadt angegeben und gespeichert werden (blauer "Speichern"-Button). 
 Erst im nächsten Schritt, können Kinder/Jugendliche hinzugefügt werden. Dabei können Kinder jedes Alters hinzugefügt werden. Es können also auch ältere Kinder über den "Eltern-Account" angemeldet werden.  
 
-![Profil speichern](profil.png)
+![Das Profil vervollständigen und speichern](profil.png)
 
 ## Registrieren für Jugendliche ab 13 Jahren
 
 Für Jugendliche, die schon 13 oder älter sind, kann ein eigener Account erstellt werden. Dafür müssen die Felder aus Sicht des Jugendlichen ausgfüllt werden und als Benutzertyp "Youth Over 13" ausgewählt werden. Durch Klicken auf den blauen "Registrieren"-Button wird ein Benutzerprofil erstellt. Danach muss das Profil noch vervollständigt werden, indem Geburtsdatum und sowie Land und Stadt angegeben und gespeichert werden (blauer "Speichern"-Button). Der nächste Punkt "Jugendlicher hinzufügen" muss in diesem Fall nicht befolgt werden.
 
 
-# Jugendlicher hinzufügen (nur für Eltern)
+# Einen Jugendlichen hinzufügen (nur für Eltern)
 
-![Jugendlicher hinzufügen](hinzufuegen.png)
+![Einen Jugendlichen hinzufügen](hinzufuegen.png)
 
-Wenn das Eltern-Profil erfolgreich gespeichert wurde, können Kinder/Jugendliche hinzugefügt werden. Dazu gibt es zwei Knöpfe: "Jugendlicher jünger unter 13" und "Jugendlicher jünger über 13". Durch Klicken auf den entsprechenden Knopf kann ein Kind hinzugefügt werden. Dazu müssen erneut Name sowie Geburtsdatum, Land und Stadt eingegeben werden.
+Wenn das Eltern-Profil erfolgreich gespeichert wurde, können Kinder/Jugendliche hinzugefügt werden. Dazu gibt es zwei Knöpfe: "Jugendlicher unter 13" und "Jugendlicher über 13". Durch einen Klick auf den entsprechenden Knopf kann ein Kind hinzugefügt werden. Dazu müssen erneut Name sowie Geburtsdatum, Land und Stadt eingegeben werden.
 
 
 # Dojo beitreten
