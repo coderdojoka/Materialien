@@ -4,6 +4,8 @@ import subprocess
 import time
 from http.server import BaseHTTPRequestHandler, HTTPServer, urllib
 
+import sys
+
 aktuelle_millisekunden = lambda: int(round(time.time() * 1000))
 
 
@@ -41,7 +43,8 @@ class MyHandler(BaseHTTPRequestHandler):
         schreibe_datei(script_name, code[0].decode())
 
         ausgabe = open("hochgeladen/%d.out" % id, "w")
-        process = subprocess.Popen(["python3", script_name], stdout=ausgabe, preexec_fn=os.setsid)
+        # -u = unbuffered => Ausgabe wird ungebuffert in die Datei geschrieben.
+        process = subprocess.Popen(["python3", "-u", script_name], stdout=ausgabe,stderr=ausgabe, preexec_fn=os.setsid)
 
         schreibe_datei("hochgeladen/%d.pid" % id, str(process.pid))
         self.umleiten('monitor?id=%d' % id)
@@ -118,7 +121,10 @@ class MyHandler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    server_address = ('localhost', 8081)
+    if len(sys.argv) > 1:
+        server_address = ('localhost', int(sys.argv[1]))
+    else:
+        server_address = ('localhost', 8081)
     httpd = HTTPServer(server_address, MyHandler)
-    print("Server läuft: http://localhost:8081/")
+    print("Server läuft: http://localhost:%d/" % server_address[1])
     httpd.serve_forever()
