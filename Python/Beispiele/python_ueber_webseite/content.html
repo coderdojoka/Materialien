@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <title>RPi Python</title>
+</head>
+<body>
+
+<a href="/">Zurück</a>
+
+<h3>Schreibe ein Programm und führe es aus!</h3>
+
+<form method="post" action="/">
+    <label for="code">Trage hier deinen Code ein</label>
+    <textarea id="code" name="code"></textarea>
+    <button type="submit">Ausführen</button>
+</form>
+
+<script src="jquery-1.12.1.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+
+        $(document).delegate('#code', 'keydown', function (e) {
+            var keyCode = e.keyCode || e.which;
+
+            if (keyCode == 9) {
+                e.preventDefault();
+                var start = this.selectionStart;
+                var end = this.selectionEnd;
+
+                // set textarea value to: text before caret + tab + text after caret
+                this.value = this.value.substring(0, start) + "    " + this.value.substring(end);
+                this.selectionStart = this.selectionEnd = start + 4;
+            }
+        });
+
+
+        var code = localStorage.getItem("code") || "# Schreibe hier dein Programm\n\nprint('Hallo Welt')\n";
+        $("#code").val(code);
+
+        window.onbeforeunload = function () {
+
+            localStorage.setItem("code", $("#code").val());
+        };
+    });
+</script>
+
+</body>
+</html>

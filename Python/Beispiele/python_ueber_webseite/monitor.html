@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <title>RPi Python</title>
+</head>
+<body>
+
+<a href="/">Zurück</a>
+
+<h3>Die Ausgabe deines Programmes</h3>
+
+<pre id="output">
+$$CONTENT$$
+</pre>
+<button onclick="kill()" >Beenden</button>
+
+<script src="jquery-1.12.1.min.js"></script>
+<script>
+
+    function kill() {
+        $.ajax({
+            url: "kill?id=$$ID$$",
+            async: false
+        }).done(function (data) {
+            console.log(data);
+        });
+    }
+
+    function loadOutput() {
+        $.get("hochgeladen/$$ID$$.out").done(function (data) {
+            $('#output').text(data);
+        }).fail(function (e) {
+            console.log(e);
+        });
+
+        setTimeout(loadOutput, 1000);
+    }
+
+
+    $(document).ready(function () {
+
+
+        setTimeout(loadOutput, 1000);
+
+        window.onbeforeunload = function () {
+            kill();
+        };
+    });
+</script>
+
+</body>
+</html>
