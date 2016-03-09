@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet">
+    <link href="web/style.css" rel="stylesheet">
     <title>RPi Python</title>
 </head>
 <body>
@@ -16,7 +16,7 @@ $$CONTENT$$
 </pre>
 <button onclick="kill()" >Beenden</button>
 
-<script src="jquery-1.12.1.min.js"></script>
+<script src="web/jquery-1.12.1.min.js"></script>
 <script>
 
     function kill() {
@@ -41,9 +41,9 @@ $$CONTENT$$
 
     $(document).ready(function () {
 
-
         setTimeout(loadOutput, 1000);
 
+        // sicherstellen, dass das Programm auch beendet wrd!
         window.onbeforeunload = function () {
             kill();
         };

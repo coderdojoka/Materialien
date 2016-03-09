@@ -74,7 +74,7 @@ class MyHandler(BaseHTTPRequestHandler):
             self.statische_datei()
 
     def index(self):
-        self.positive_antwort(lese_datei("content.html"))
+        self.positive_antwort(lese_datei("web/content.html"))
 
     def positive_antwort(self, content):
         self.send_response(200)
@@ -97,7 +97,7 @@ class MyHandler(BaseHTTPRequestHandler):
             self.wfile.write(bytes("No such file", "utf8"))
 
     def ueberwachen(self, id):
-        inhalt = lese_datei("monitor.html")
+        inhalt = lese_datei("web/monitor.html")
         ausgabe = lese_datei("hochgeladen/" + id + ".out")
         inhalt = inhalt.replace("$$CONTENT$$", ausgabe)
         inhalt = inhalt.replace("$$ID$$", id)
@@ -122,9 +122,9 @@ class MyHandler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        server_address = ('localhost', int(sys.argv[1]))
+        server_address = ('', int(sys.argv[1]))
     else:
-        server_address = ('localhost', 8081)
+        server_address = ('', 8081)
     httpd = HTTPServer(server_address, MyHandler)
     print("Server läuft: http://localhost:%d/" % server_address[1])
     httpd.serve_forever()
