@@ -6,6 +6,8 @@ from py2cd.farben import *
 import random
 import time
 
+#das ist eine Liste mit Farben: mit farbe[4] bekommst du z.B. die Farbe Gruen
+farbe = [WEISS,SCHWARZ,ROT,GRUEN,GELB,BLAU,HELL_GELB,HELL_GRUEN,ORANGE]
 
 # So wird das Fenster fuer dein Spiel erstellt:
 Spiel.init(400, 400, "Klickspiel")
@@ -15,10 +17,20 @@ Spiel.init(400, 400, "Klickspiel")
 
 # Ab hier gehts mit der Uebung los:
 
+#male viele Kreise in verschiedenen Größen und Farben an zufaellige Positionen
+for zahl in range(1000):
+
+#Tipps:
+# verwende Kreis(x,y,Radius,Farbe)
+# fuer x und y nimmst du am besten Zufallszahlen mitrandom.randint(0,400)
+# auch der Radius kann mit einer Zufallszahl (z.B. zwischen 5 und 30) gesetzt werden
+# die verschiedenen Farben erhaelst du indem du schreibst farbe[random.randint(0,8)]
+
+
 #male mehrere Kreise in einer Reihe:
 
 for spalte in range(8):#Schleife mit 8 Wiederhohlungen
-    
+
     # male hier die Kreise mit Kreis(x,y,Radius,Farbe)
     # wie schaffst du es, das jeder Kreis an einer anderen Stelle ist?
 

@@ -6,7 +6,7 @@ from py2cd.farben import *
 import random
 import time
 
-
+farbe = [WEISS,SCHWARZ,ROT,GRUEN,GELB,BLAU,HELL_GELB,HELL_GRUEN,ORANGE]
 # So wird das Fenster fuer dein Spiel erstellt:
 Spiel.init(400, 400, "Klickspiel")
 # Die ersten beiden Zahlen sind für die Breite und Höhe des Fensters,
@@ -15,6 +15,9 @@ Spiel.init(400, 400, "Klickspiel")
 
 # Ab hier gehts mit der Uebung los:
 
+for i in range(1000):
+    Kreis(random.randint(0,400), random.randint(0,400), random.randint(5,30), farbe[random.randint(0,8)])
+"""
 #male mehrere Kreise in einer Reihe:
 
 for i in range(8):
@@ -41,7 +44,7 @@ for i in range(8):
 
 #erstelle ein Schachbrettmuster
 
-farbe = [WEISS,SCHWARZ]
+
 for i in range(8):
     for j in range(8):
         g = (i+j)%2
@@ -49,7 +52,7 @@ for i in range(8):
 
 
 
-
+"""
 
 # Dan kannst du das Spiel starten:
 Spiel.starten()
