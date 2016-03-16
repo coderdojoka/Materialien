@@ -3,6 +3,9 @@ $if(minted_ausgabe)$\PassOptionsToPackage{outputdir=tmp_latex}{minted} %Minted A
 \newcommand*{\VorlagenPfad}{$if(vorlagen_pfad)$$vorlagen_pfad$}$else$pfad/zur/vorlage} % Anpassen! Muss zum Vorlagen-Ordner zeigen. $endif$
 \documentclass{\VorlagenPfad/coderdojokatext}
 
+% URLs umbrechen
+\def\UrlBreaks{\do\/\do-}
+
 
 %Table stuff
 \setlength{\tabcolsep}{2pt}
