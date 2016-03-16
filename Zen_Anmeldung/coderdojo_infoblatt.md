@@ -1,7 +1,8 @@
 ---
-autor: Mark 
+autor: Mark  
 datum: 15.03.16  
-
+version: 1.0  
+keine_nummern: ja  
 titel: CoderDojo - Infoblatt
 ---
 
@@ -10,8 +11,6 @@ Wir verschicken Informationen zu den Treffen (ca. alle 2 Wochen) über unsere Ma
 
 
 [https://www.lists.kit.edu/wws/subscribe/coderdojoka-info](https://www.lists.kit.edu/wws/subscribe/coderdojoka-info)
-
-
 
 # Anmeldung zu den Treffen
 Um an den CoderDojo-Treffen teilnehmen zu können, muss man sich für **jedes** Treffen erneut anmelden. Es ist für uns wichtig im Voraus zu wissen, wie viele Teilnehmer kommen, um genügend Mentoren zu stellen.  
@@ -22,10 +21,9 @@ Die Anmeldung zu unseren Treffen läuft über die CoderDojo Zen-Seite auf der al
 [https://zen.coderdojo.com/dojo/de/baden-wurttemberg/karlsruher-institut-fur-technologie-kit-fakultat-fur-informatik-gebaude-5034-am-fasanengarten-5-76131-karlsruhe/karlsruhe-1](https://zen.coderdojo.com/dojo/de/baden-wurttemberg/karlsruher-institut-fur-technologie-kit-fakultat-fur-informatik-gebaude-5034-am-fasanengarten-5-76131-karlsruhe/karlsruhe-1)
 
 ## Anleitung zur Benutzung der Zen-Seite
-Die Zen-Seite ist noch relativ neu und befindet sich noch im Aufbau. Es ab und zu kleine Probleme und die Seite ist auch noch nicht komplett auf Deutsch übersetzt. Eine Anleitung, die bei der Benutzung der Zen-Seite hilft, kann man hier finden:  
+Die Zen-Seite ist relativ neu und befindet sich noch im Aufbau. Deshalb macht die Seite ab und zu Probleme und ist nicht komplett auf Deutsch übersetzt. Eine Anleitung, die bei der Benutzung der Zen-Seite hilft, kann man hier finden:  
 
 [https://github.com/coderdojoka/Materialien/raw/master/Zen_Anmeldung/zen_anmeldung.pdf](https://github.com/coderdojoka/Materialien/raw/master/Zen_Anmeldung/zen_anmeldung.pdf)
-
 
 
 # Online-Materialien:
