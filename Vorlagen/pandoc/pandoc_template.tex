@@ -44,6 +44,9 @@ $endif$
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=.9\maxwidth,height=\maxheight,keepaspectratio}
 
+\usepackage[figurename=Abb.]{caption}
+\usepackage{capt-of}
+
 
 % Sections/Chapters
 $if(kapitel)$
@@ -89,19 +92,26 @@ $if(titel)$
 $endif$
 
 $if(autor)$%Author: $author$
-$endif$$if(version)$%Version: $version$
-$endif$$if(datum)$%Date: $date$$endif$
+$endif$
+$if(version)$%Version: $version$
+\rfoot{erstellt von \textbf{$autor$} ($datum$ v$version$)}
+$endif$
+
+
+$if(datum)$%Date: $date$$endif$
 
 \begin{document}
 
-
+$if(kein_titel)$
+%kein Titel
+$else$
 $if(titel)$
 % Titel anzeigen
 \begin{center}
 	{\huge $titel$}
 \end{center}
 $endif$
-
+$endif$
 % Inhaltsverzeichnis
 $if(inhaltsverzeichnis)$
 {

@@ -11,7 +11,9 @@ if [ $# -lt 1 ]; then
 fi
 
 # The output tex file
-out=out.tex
+filename=${in##*/}
+filename=${filename%.*}
+out=$filename.tex
 if [ $# -gt 1 ]; then
         out=$2
 fi
@@ -25,14 +27,18 @@ fi
 mkdir $output
 
 
-echo "Running: pandoc $in --filter ./minted.py -o $output/$out --template=$DIR/pandoc_template.tex --variable vorlagen_pfad=$DIR/.. -s --smart"
-pandoc $in --filter $DIR/minted.py -o $output/$out --template=$DIR/pandoc_template.tex --variable vorlagen_pfad=$DIR/.. -s --smart
+echo "Running: pandoc $in --filter $DIR/magic_headers.py --filter $DIR/minted.py -o $output/$out --template=$DIR/pandoc_template.tex --variable vorlagen_pfad=$DIR/.. -s --smart"
+pandoc $in --filter $DIR/magic_headers.py --filter $DIR/minted.py -o $output/$out --template=$DIR/pandoc_template.tex --variable vorlagen_pfad=$DIR/.. -s --smart
 
 echo "Running: pdflatex -output-dir=$output -interaction=nonstopmode -shell-escape $output/$out > $output/compile.log"
 pdflatex -interaction=nonstopmode -output-dir=$output -shell-escape $output/$out > $output/compile.log
 
+
+
 # Get the pdfs from the output dir
-mv $output/*.pdf .
+mv $output/$filename.pdf .
 
 echo ""
 echo "Done. Your temp files have been written to: $output"
+
+# evince $filename.pdf & > /dev/null

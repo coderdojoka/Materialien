@@ -1,6 +1,6 @@
 ---
 autor: Mark  
-datum: 15.03.16  
+datum: 15.03.2016  
 version: 1.0  
 keine_nummern: ja  
 titel: CoderDojo - Infoblatt
@@ -10,7 +10,7 @@ titel: CoderDojo - Infoblatt
 Wir verschicken Informationen zu den Treffen (ca. alle 2 Wochen) über unsere Mailingliste. Man kann sich unter folgendem Link dafür eintragen:  
 
 
-[https://www.lists.kit.edu/wws/subscribe/coderdojoka-info](https://www.lists.kit.edu/wws/subscribe/coderdojoka-info)
+[https://lists.www.kit.edu/wws/subscribe/coderdojoka-info](https://www.lists.kit.edu/wws/subscribe/coderdojoka-info)
 
 # Anmeldung zu den Treffen
 Um an den CoderDojo-Treffen teilnehmen zu können, muss man sich für **jedes** Treffen erneut anmelden. Es ist für uns wichtig im Voraus zu wissen, wie viele Teilnehmer kommen, um genügend Mentoren zu stellen.  

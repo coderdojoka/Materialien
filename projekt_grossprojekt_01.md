@@ -1,8 +1,10 @@
 ---
-titel: Projekt - Großprojekt
-autor: Ricarda
-datum: 04.12.15
-kapitel: 1
+titel: Projekt - Großprojekt  
+autor: Ricarda  
+datum: 04.12.15  
+kein_titel: ja  
+keine_kapitel_nummern: ja  
+keine_sektions_nummern: ja
 version: 1.0
 ---
 
