@@ -25,10 +25,13 @@
                         <b>Allgemeine Funktionen</b>
                     </li>
                     <li>
-                        <a class="block" id="wait" href="#" data-value="warte(?)">warte()</a>
+                        <a class="block" id="wait" href="#" data-value="warte(?$CURSOR$)\n">warte()</a>
                     </li>
                     <li>
-                        <a class="block" id="print" href="#" data-value="sage(?)">sage()</a>
+                        <a class="block" id="print" href="#" data-value="sage(?$CURSOR$)\n">sage()</a>
+                    </li>
+                    <li>
+                        <a class="block" id="loopForever" href="#" data-value="while True:\n    # Achtung: mit 4 Leerzeichen einrücken\n    $CURSOR$">wiederhole fortlaufend</a>
                     </li>
                     <li>
                         <hr>
@@ -37,25 +40,25 @@
                         <b>GPIO-Funktionen</b>
                     </li>
                     <li>
-                        <a class="block" id="input" href="#" data-value="eingang(?)">eingang()</a>
+                        <a class="block" id="input" href="#" data-value="eingang(?$CURSOR$)\n">eingang()</a>
                     </li>
                     <li>
-                        <a class="block" id="output" href="#" data-value="ausgang(?)">ausgang()</a>
+                        <a class="block" id="output" href="#" data-value="ausgang(?$CURSOR$)\n">ausgang()</a>
                     </li>
                     <li>
-                        <a class="block" id="in" href="#" data-value="pin_ein(?)">pin_ein()</a>
+                        <a class="block" id="in" href="#" data-value="pin_ein(?$CURSOR$)\n">pin_ein()</a>
                     </li>
                     <li>
-                        <a class="block" id="out" href="#" data-value="pin_aus(?)">pin_aus()</a>
+                        <a class="block" id="out" href="#" data-value="pin_aus(?$CURSOR$)\n">pin_aus()</a>
                     </li>
-                     <li>
+                    <li>
                         <hr>
                     </li>
                     <li>
                         <b>Temparatur-Funktionen</b>
                     </li>
                     <li>
-                        <a class="block" id="temp" href="#" data-value="temp = temparatur()">temparatur()</a>
+                        <a class="block" id="temp" href="#" data-value="temp = temparatur()\n$CURSOR$">temparatur()</a>
                     </li>
                 </ul>
 
@@ -73,10 +76,14 @@
             var txt = $('#code')[0];
             var start = txt.selectionStart;
             var end = txt.selectionEnd;
+            offset = (offset == -1) ? content.length : offset;
 
             // set textarea value to: text before caret + tab + text after caret
-            txt.value = txt.value.substring(0, start) + content + txt.value.substring(end);
+            var before = txt.value.substring(0, start);
+            var after = txt.value.substring(end);
+            txt.value = before + content + after;
             txt.selectionStart = txt.selectionEnd = start + offset;
+            txt.focus();
         }
 
         $(document).delegate('#code', 'keydown', function (e) {
@@ -89,13 +96,23 @@
         });
 
 
-        var code = localStorage.getItem("code") || "from codoGPIO import *\n\n# Schreibe hier dein Programm\nsage('Hallo')\n";
+        var initialCode =
+                "from codoGPIO import *\n\n" +
+                "# Schreibe hier einmalige Definitionen\n" +
+                "nachricht = 'Hallo'\n\n" +
+                "# Schreibe hier dein Programm\n" +
+                "sage(nachricht)\n";
+
+
+        var code = localStorage.getItem("code") || initialCode;
         $("#code").val(code);
 
 
         $('#elements').find('a').click(function () {
-            var content = $(this).data("value") + "\n";
-            insert(content, content.length);
+            var content = $(this).data("value").replace(/\\n/g, "\n");
+            var cursor = content.indexOf("$CURSOR$");
+            content =content.replace(/\$CURSOR\$/g, "");
+            insert(content, cursor);
         });
 
 

@@ -34,13 +34,15 @@ class MyHandler(BaseHTTPRequestHandler):
     def do_POST(self):
 
         length = int(self.get_header_value('Content-Length'))
-        postvars = urllib.parse.parse_qs(self.rfile.read(length), keep_blank_values=1)
-        code = postvars[b"code"]
+        body = self.rfile.read(length).decode()
+        #body = urllib.parse.unquote(body)
+        postvars = urllib.parse.parse_qs(body, keep_blank_values=1)
+        code = postvars["code"]
 
         print(postvars, code)
         id = aktuelle_millisekunden()
         script_name = "hochgeladen/%d.py" % id
-        schreibe_datei(script_name, code[0].decode())
+        schreibe_datei(script_name, code[0])
 
         ausgabe = open("hochgeladen/%d.out" % id, "w")
         # -u = unbuffered => Ausgabe wird ungebuffert in die Datei geschrieben.

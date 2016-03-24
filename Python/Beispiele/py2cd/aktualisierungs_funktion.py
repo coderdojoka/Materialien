@@ -16,7 +16,7 @@ Spiel.init(400, 400, "Bewegung", aktualisiere)
 # So kann man die Aktualisierungsfunktion ändern
 Spiel.setze_aktualisierung(aktualisiere)
 
-box = Rechteck(10, 10, 50, 50, ROT)
+box = Rechteck(10, 10, 50, 50, NEON_GRUEN)
 
 # Das Spiel starten
 Spiel.starten()
