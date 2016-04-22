@@ -53,7 +53,7 @@
 {
 	\newcommand{\minted@write@detok}[1]{%
 	  \immediate\write\FV@OutFile{\detokenize{#1}}}%
-	
+
 	\newcommand{\minted@FVB@VerbatimOut}[1]{%
 	  \@bsphack
 	  \begingroup
@@ -70,7 +70,7 @@
 	%% DG/SR modification end
 	    \FV@Scan}
 	    \let\FVB@VerbatimOut\minted@FVB@VerbatimOut
-	
+
 	\renewcommand\minted@savecode[1]{
 	  \immediate\openout\minted@code\jobname.pyg
 	  \immediate\write\minted@code{\expandafter\detokenize\expandafter{#1}}%
@@ -117,28 +117,28 @@
   colframe=white,
   overlay unbroken and first={
   \draw[red!75!black,line width=3pt]
-    ([xshift=5pt]frame.north west) -- 
-    (frame.north west) -- 
+    ([xshift=5pt]frame.north west) --
+    (frame.north west) --
     (frame.south west);
   \draw[red!75!black,line width=3pt]
-    ([xshift=-5pt]frame.north east) -- 
-    (frame.north east) -- 
+    ([xshift=-5pt]frame.north east) --
+    (frame.north east) --
     (frame.south east);
   },
   overlay unbroken app={
   \draw[red!75!black,line width=3pt,line cap=rect]
-    (frame.south west) -- 
+    (frame.south west) --
     ([xshift=5pt]frame.south west);
   \draw[red!75!black,line width=3pt,line cap=rect]
-    (frame.south east) -- 
+    (frame.south east) --
     ([xshift=-5pt]frame.south east);
   },
   overlay middle and last={
   \draw[red!75!black,line width=3pt]
-    (frame.north west) -- 
+    (frame.north west) --
     (frame.south west);
   \draw[red!75!black,line width=3pt]
-    (frame.north east) -- 
+    (frame.north east) --
     (frame.south east);
   },
   overlay last app={

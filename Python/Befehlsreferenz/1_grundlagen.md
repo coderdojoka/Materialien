@@ -1,9 +1,8 @@
 ---
-autor: Mark Weinreuter
-version: 0.5
-datum: 23.01.16
+autor: Mark
+version: 0.6
+datum: 22.04.16
 minted_ausgabe: tmp_latex  
-kapitel: 1
 inhaltsverzeichnis: ja
 keine_sektions_nummern: ja  
 titel: Python - Befehlsübersicht
@@ -18,25 +17,33 @@ Kommentare gehören nicht zum eigentlichen Programm, sondern sind als Hilfe für
 # Ein Kommentar, der bis ans Zeilenende geht
 
 """ Ein Kommentar, der
-über mehrere Zeilen geht. 
+über mehrere Zeilen geht.
 """
 ```
 
 Variablen
 ---------
 Variablen sind Wertespeicher. Man kann darin einen Wert ablegen und diesen wieder abfragen.
-Sie sind wie eine kleine Box, die einen Namen hat und einen Wert enthält.
-Um einer Variablen einen Wert zuzuweisen, muss sie links von einem `=`-Zeichen stehen.
+Sie sind wie eine kleine Schublade, die einen Namen hat und einen Wert enthält.
+Um einer Variablen einen Wert zuzuweisen, muss sie links von einem `=` -Zeichen stehen.
 ```python
 # Eine neue Variable Zahl mit dem Namen ’meineZahl’ und Wert 42
 meineZahl = 42
 
+# Den Wert um 5 erhöhen
+meineZahl = meineZahl + 5
+
 # Eine Text-Variable. Texte stehen in "..".
 meinText = "Hallo Welt"
 ```
+![Eine Variable ist wie eine kleine Schublade](schublade.png){w=.4}
+
+Du darfst deinen Variablen beliebige Namen geben, verwende aber am besten sinnvolle Namen. `a1` ist ein schlechter Name, `zaehler` ist ein besserer Name! Mögliche Zeichen sind u.a. Buchstaben und Zahlen, allerdigs keine Umlaute, z.B `ä` oder Leerzeichen.
+
 
 Ausgabe
 -------
+Mit der `print(..)`-Funktion kann man Text und/oder Variablen ausgeben.
 
 ```python
 # Gibt einen Text aus
@@ -68,21 +75,21 @@ Eingabe durch den Benutzer
 --------------------------
 
 ### input - Text einlesen
-Die Funktion `input(..)` fordert den Benutzer auf einen Text einzugeben.
-```python
+Die Funktion `input(..)` fordert den Benutzer auf einen Text einzugeben. Die `input(..)`-Funktion wartet solange, bis der Benutzer etwas eingetippt und mit der Enter-Taste bestätigt hat. Die Eingabe wird dann als Text zurückgegeben und in der Variablen `eingabeText` gespeichert.
 
+```python
 eingabeText = input("Bitte Text eingeben: ")
 print(eingabeText) # gibt den eingelesenen Text aus
 ```
 
 ### input - Eine Zahl einlesen
-Eine Zahl, die als Text vorliegt (in Anführungszeichen) konvertieren wir mittels `int(..)` in eine Zahl:
+Will man einen Zahl einlesen, so muss man diese konvertieren! Die `input(..)`-Funktion gibt immer einen Text zurück.  
+Eine Zahl, die als Text vorliegt, konvertieren wir mittels `int(..)` in eine ganze Zahl oder mittels `float(..)` in eine Kommazahl:
 ```python
 eingabeText = input("Bitte eine Zahl eingeben: ");
 
-eingabeZahl = int(eingabeText) 
+eingabeZahl = int(eingabeText)
 # ACHTUNG: wird keine Zahl eingeben, so stürzt das Programm ab!
 
 print(eingabeZahl)
 ```
-

@@ -1,23 +1,19 @@
----
-autor: Mark Weinreuter
-version: 0.5
-datum: 23.01.16
-minted_ausgabe: tmp_latex
-titel: Python - Befehlsübersicht
----
 
 # Listen
+Eine Liste ist ein Container für verschiedene Werte oder Variablen. Du kannst dir einen Liste wie einen Schubladenschrank vorstellen. Die Schubladen sind durchnummeriert und du kannst in jede Schublade einen Wert legen oder daraus lesen.
 
 ## Eine Liste erstellen
+
 ```python
 # Eine leere Liste erstellen
 liste = []
 
-# eine Liste mit Einträgen erstellen 
+# eine Liste mit Einträgen erstellen
 liste = [1, 2, 3, 4, 5]
 ```
 
 ## Einen Eintrag aus der Liste lesen
+
 Ein Wert aus der Liste wird über seinen Index, seine Position in der Liste, abgefragt.
 ```python
 liste = ["hallo", "test", "welt"]
@@ -66,13 +62,13 @@ Gibt die Anzahl der Elemente und deren Werte aus.
 
 ```python
 def liste_ausgeben(liste):
-    print("Liste mit", len(liste), "Einträgen") 
-    
+    print("Liste mit", len(liste), "Einträgen")
+
     # die Elemente ausgeben
-    for element in liste: 
+    for element in liste:
         print(element)
 
-# Diese ruft man so auf 
+# Diese ruft man so auf
 liste = [1, 2, "Haus", "Katze"]
 liste_ausgeben(liste)
 ```

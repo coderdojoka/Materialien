@@ -1,8 +1,9 @@
 ---
 minted_ausgabe: tmp_latex  
 autor: Mark  
-version: 1.0  
-datum: 19.04.16  
+version: 1.1  
+datum: 22.04.16  
+keine_sektions_nummern: ja  
 titel: CodeBytes - Wie alt bist du?  
 ---
 
@@ -12,6 +13,10 @@ titel: CodeBytes - Wie alt bist du?
 
 # Aufgabe:
 Schreibe ein Programm, dass dich auffordert dein Geburtsdatum einzugeben. Rechne anhand des Datums aus, wieviele Jahre du alt du bist.
+
+# Vorüberlegung
+- Wenn du das heutige Datum weißt und das Geburtsdatum einer Person, wie kannst du ausrechnen wie alt die Person ist?
+- Macht es einen Unterschied ob die Person dieses Jahr schon Geburtstag hatte oder nicht?
 
 # Beispielablauf:
 
@@ -38,9 +43,8 @@ heute = datetime.datetime.now()
 
 jahr = heute.year
 monat = heute.month
-day = heute.day
+tag = heute.day
 ```  
-
 - Beachte, das `input(..)` einen Text liefert, konvertiere ihn mittels `int(..)` in eine Zahl
 - Lies dein Geburtsdatum als drei einzelne Zahlen ein: Jahr, Monat, Tag
 - Unterscheide zwei Fälle: Du hattest dieses Jahr schon Geburtstag oder du hattest dieses Jahr noch nicht Geburtstag.

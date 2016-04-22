@@ -1,5 +1,6 @@
 
 # Funktionen
+Eine Funktion ist ein Block Code, der vom Haupt-Programm getrennt definiert wird. Die Funktion wird erst dann ausgeführt, wenn man sie über ihren Namen aufruft. Dafür kann man einen Funktion so oft mal will verwenden. Variablen, die innerhalb einer Funktion definiert sind, sind **nur** innerhalb der Funktion verwendbar!
 
 ## Eine einfache Funktion
 Funktionen bestehen aus einem Block von eingerückten Code-Zeilen.
@@ -17,12 +18,12 @@ sageHallo()
 Funktion können Parameter (Variablen, die nur innerhalb der Funktion existieren) haben.
 Diese *müssen* beim Aufrufen mitübergeben werden.
 ```python
-# Funktion definieren 
+# Funktion definieren
 def sageHallo(name, alter):
     print("Hallo", name)
     print("Du bist", alter, "Jahre alt")
 
-# Funktion aufrufen 
+# Funktion aufrufen
 sageHallo("Mark", 22)
 ```
 
@@ -35,7 +36,7 @@ def addiere(zahl1, zahl2):
     summe = zahl1 + zahl2
     return summe
 
-# Funktion aufrufen 
+# Funktion aufrufen
 ergebnis = addiere(12, 22)
 print(ergebnis)
 ```

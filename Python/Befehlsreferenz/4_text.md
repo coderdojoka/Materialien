@@ -1,10 +1,3 @@
----
-autor: Mark Weinreuter
-version: 0.5
-datum: 23.01.16
-minted_ausgabe: tmp_latex
-titel: Python - Befehlsübersicht
----
 
 # Text
 
@@ -13,8 +6,9 @@ Man kann daher Listenfunktionen wir `len(..)`, den Zugriff auf Element
 mittels `text[1]` verwenden oder einen Text Buchstabenweiße mit einer `for`-Schleife durchlaufen. Mehr dazu in der Sektion über Listen.
 
 ## Texte kombinieren
-Texte kann man ’+’ aneinander anfügen.
-```python 
+Texte kann man mit dem ’+’-Operator aneinander anfügen.
+
+```python
 begruessung = "Hallo "
 text = begruessung + "Mark" # "Hallo Mark"
 print(text)
@@ -25,7 +19,8 @@ print(text)
 ```
 
 ## Länge eines Texts
-Die Funktion `len(..)` ermittelt die Länge von Texten, Listen, etc.
+Die Funktion `len(..)` ermittelt die Länge von Texten, d.h. die Anzahl an Buchstaben/Zeichen aus denen der Text besteht.
+
 ```python
 text = "Hallo Welt"
 laenge = len(text) # = 10
@@ -38,6 +33,9 @@ Einen Buchstaben kann man über seine Position im Text abfragen:
 text = "Hallo Welt"
 buchstabe = text[1]
 print(buchstabe) # = 'a'
+
+buchstabe = text[6]
+print(buchstabe) # = 'W'
 ```
 **ACHTUNG:** Wir beginnen bei 0 zu zählen, die 1 beschreibt also den zweiten Buchstaben!
 

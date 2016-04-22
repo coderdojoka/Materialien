@@ -1,8 +1,8 @@
 ---
 minted_ausgabe: tmp_latex
 autor: Mark
-version: 1.0
-datum: 19.04.16
+version: 1.1
+datum: 22.04.16
 titel: CodeBytes - Sekunden-Rechner
 ---
 
@@ -13,6 +13,10 @@ titel: CodeBytes - Sekunden-Rechner
 # Aufgabe:
 Schreibe ein Programm, dass dazu auffordert eine Zeit in Stunden und Minuten einzugeben.
 Das Programm rechnet dann die Stunden- und Minutenangabe in Sekunden um.
+
+# Vorüberlegung
+- Stell dir vor, dass man dir die Anzahl an Stunden und Minuten nennt. Wie kannst du sie in Sekunden umrechnen?
+- Übersezte das Vorgehen in ein Programm, dass mittels `input(..)` zwei Zahlen einliest
 
 # Beispielablauf:
 ```

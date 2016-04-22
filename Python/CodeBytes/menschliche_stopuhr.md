@@ -1,20 +1,24 @@
 ---
 minted_ausgabe: tmp_latex
 autor: Mark
-version: 1.0
-datum: 19.04.16
+version: 1.1
+datum: 22.04.16  
+keine_sektions_nummern: ja  
 titel: CodeBytes - Menschliche Stopuhr
 ---
 
 # Themen:
 - Eingabe über die Konsole. Siehe dazu das Tutorial XY
-- Zufallszahlen. Siehe XY
+- Zufallszahlen. Siehe dazu XY
 - Ggf. auch `if`-Abfragen. Siehe dazu das Tutorial XY
 
 # Aufgabe:
 Schreibe ein Programm, dass sich eine zufällige Zeit zwischen 10 und 30 Sekunden ausdenkt. Wenn die ENTER-Taste gedrückt wird, soll die Startzeit gemessen werden (s. Tipps).
 Beim erneuten Drücken der ENTER-Taste, soll eine zweite Zeit gemessen werden. Aus der Start- und Stopzeit kannst du den Zeitunterschied errechnen, mit der gewünschten Zeit vergleichen und eine Meldung ausgeben, wie gut die Schätzung ist.
 
+# Vorüberlegung:
+- Stell dir vor, du hast eine Uhr in der Hand und jemand sagt dir wann du anfangen und  aufhören sollst du messen. Anschließend sollst du sagen können, wie viele Sekunden du gemessen hast. Welche Werte musst du dir dafür merken
+- Überlege dir, was was eine akzeptable Abweichung von der Messzeit wäre. Z.B. eine Abweichung von 2 Sekunden ist ok. Für den Anfang kannst du diesen Teil aber erstmal weglassen
 
 # Beispielablauf:
 ```
@@ -29,8 +33,9 @@ Stoppe: 42 Sekunden.
 <ENTER>
 
 Du hast 36.7 Sekunden gestoppt.
-
+Das könnte besser sein :)
 ```
+
 **Hinweis:** `<ENTER>...<ENTER>` stellt hier nur die Benutzereingabe und Wartezeit dar.
 
 

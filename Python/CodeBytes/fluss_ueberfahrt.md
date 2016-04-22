@@ -1,8 +1,9 @@
 ---
 minted_ausgabe: tmp_latex
-autor: Mark
-version: 1.0
-datum: 19.04.16
+autor: Mark  
+version: 1.1  
+datum: 22.04.16  
+keine_sektions_nummern: ja  
 titel: CodeBytes - Flussüberfahrt
 ---
 
@@ -21,9 +22,7 @@ Schreibe ein Programm, indem du folgendes Problem lösen musst:
 
 > Wie kannst du alles auf die rechts Seite bringen?
 
-# Aufbau:
-
-## Darstellung
+# Darstellung
 
 Um die Situation darzustellen, gib ein kleines Bild auf der Konsole aus:
 
@@ -38,12 +37,12 @@ linken Seite des Flusses stehen.
 ```
 Nach einer Überfahrt ändert sich die Situation: Du und der Wolf sind nun auf der rechten Seite. Allerdings ist die Ziege mit dem Futter alleine auf der linken Seite => Die Ziege frisst das Futter!
 
-### Darstellung erzeugen
+## Darstellung erzeugen
 
 Am Besten erzeugst du die Ausgabe, indem du einen Text mit dem Mittelteil, dem Fluss hast. Dann fügst du jede nach Postion der einzelnen Figuren diese entweder am
 Anfang des Textes, also auf der linken Flusseite, oder am Ende, auf der rechten Seite, an.
 
-## Programm-Gerüst
+# Programm-Gerüst
 1. du benötigst 4 Variablen, um zu speichern, ob die Figuren links oder rechts des Flusses stehen. Verwenden dafür die `True` (auf der linken Seite), `False` (auf der rechten Seite)
 2. lasse das Programm in einer Endlosschleife laufen
 3. Gib die aktuelle Situation aus

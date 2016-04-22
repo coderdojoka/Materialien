@@ -42,9 +42,9 @@ MAGIC_OPTIONS = {
     "minipageNext": minipage_next
 }
 
-center_template = r"""\centering
+center_template = r"""{\centering
 \includegraphics[width=\maxwidth{%.2f\textwidth}]{%s}"""
-caption_template = r"""\captionof{figure}{%s}"""
+caption_template = r"""\captionof{figure}{%s}}"""
 
 
 def center_image(image_path, caption, width):
