@@ -1,0 +1,84 @@
+
+No more Zero
+Description:
+
+Numbers ending with zeros are boring.
+
+They might be fun in your world, but not here.
+
+Get rid of them. Only the ending ones.
+
+1450 -> 145
+960000 -> 96
+1050 -> 105
+-1050 -> -105
+Zero alone is fine, don't worry about it. Poor guy anyway
+
+
+Description:
+
+Input: Array of elements
+
+["h","o","l","a"]
+
+Output: String with comma delimited elements of the array in th same order.
+
+"h,o,l,a"
+FundamentalsArrays
+Suggest kata description edits
+
+Test Cases:
+
+Test.describe("Basic Tests")
+data = [2]
+Test.assert_equals(print_array(data),"2")
+
+data = [2,4,5,2]
+Test.assert_equals(print_array(data),"2,4,5,2")
+
+data = [2,4,5,2]
+Test.assert_equals(print_array(data),"2,4,5,2")
+
+data = [2.0,4.2,5.1,2.2]
+Test.assert_equals(print_array(data),"2.0,4.2,5.1,2.2")
+
+data = ["2","4","5","2"]
+Test.assert_equals(print_array(data),"2,4,5,2")
+
+data = [True,False,False]
+Test.assert_equals(print_array(data),"True,False,False")
+
+array1 = ["hello", "this", "is", "an", "array!"]
+array2 = ["a", "b", "c", "d", "e!"]
+data = array1+array2
+Test.assert_equals(print_array(data),"hello,this,is,an,array!,a,b,c,d,e!")
+
+array1 = ["hello", "this", "is", "an", "array!"]
+array2 = [1, 2, 3, 4, 5]
+data = [array1,array2]
+Test.assert_equals(print_array(data),"['hello', 'this', 'is', 'an', 'array!'],[1, 2, 3, 4, 5]")
+
+Test.describe("Random Tests")
+from random import randint
+sol=lambda arr: ",".join(map(str,arr))
+base=["pippi","test","code","wars"]
+gen=lambda n: randint(0,10**randint(1,9)) if n==0 else base[randint(0,len(base)-1)] if n==1 else randint(1,10**randint(1,9))/10.0**randint(1,9) if n==2 else gen(randint(1,9))
+
+for _ in xrange(40):
+    arr=[gen(randint(0,3)) for q in xrange(randint(1,9))]
+    Test.it("Testing for %s" %arr)
+    Test.assert_equals(print_array(arr),sol(arr),"It should work for random inputs too")
+
+
+
+
+
+
+    Description:
+
+    Write a function that rearranges an interger into its largest possible value.
+
+    super_size(123456) # 654321
+    super_size(105)    # 510
+    super_size(12)     # 21
+    If the argument passed through is single digits or already the maximum possible integer, your function should simply return it.
