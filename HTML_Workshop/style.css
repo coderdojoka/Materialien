@@ -1,5 +1,5 @@
 nav{
-    background-color: green;
+    background-color: #79c753;
     color: white;
     padding: 2px 20px;
 }
@@ -14,4 +14,32 @@ footer{
     color: gray;
     margin-top: 300px;
     text-align: center;
+}
+
+.rot{
+	color: #dd4132;
+}
+
+.blau{
+	color: #034f84;
+}
+
+.gelb{
+	color: #fae03c
+}
+
+.braun{
+	color: #b18f6a;
+}
+
+.hellblau{
+	color: #91A8d0;
+}
+
+.rosa{
+	color: #f7cac9;
+}
+
+.gruen{
+	color: #79c753;
 }

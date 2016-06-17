@@ -1,4 +1,4 @@
-__author__ = 'Mark Weinreuter'
+__author__ = 'Ricarda Trumpf'
 
 # Diese zwei Zeilen werden immer benötigt, um py2cd zu importieren
 from py2cd import *
