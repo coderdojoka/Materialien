@@ -15,7 +15,7 @@ Verschiebe beide Fenster so, dass du sie nebeneinander auf deinem Laptop sehen k
 Ändere den Text im Editor so, dass er über dich geht anstelle von "Ricarda". Speichere die Datei und lade die Seite im Browser neu und schaue dir an was sich geändert hat.
 
 1. Warum sind einige Teile des Textes größer als andere oder fett gedruckt?  
-Schreibe die verschiedenen dazu verwendeten Element (`<...> und <\/...>`) hier auf:
+Schreibe die verschiedenen dazu verwendeten Elemente (`<...>`) hier auf:
 
 - 
 - 

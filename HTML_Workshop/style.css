@@ -1,0 +1,17 @@
+nav{
+    background-color: green;
+    color: white;
+    padding: 2px 20px;
+}
+
+#inhalt{
+    width: 800px;
+    margin: 50px auto;
+
+}
+
+footer{
+    color: gray;
+    margin-top: 300px;
+    text-align: center;
+}
