@@ -1,16 +1,11 @@
 #!/usr/bin/env python
 """
-A pandoc filter that has the LaTeX writer use minted for typesetting code.
-Based on: https://github.com/nick-ulle/pandoc-minted
-Original license: https://github.com/nick-ulle/pandoc-minted/blob/master/LICENSE
-
 Usage:
     pandoc --filter ./minted.py -o myfile.tex myfile.md
 """
-from sys import stdin
+import os
 
-import sys
-from pandocfilters import toJSONFilter, RawBlock, RawInline, Link
+from pandocfilters import toJSONFilter, RawBlock, RawInline
 
 
 def unpack(value, meta):
@@ -24,9 +19,8 @@ def unpack(value, meta):
 
     # default options
     params = {
-        'breaklines': 'true',        
-        'stepnumber': '1',
-        'tabsize': '4'
+        'breaklines': 'true',
+        'linenumbers': 'true'
     }
     # if we want to load code from an external source file
     source = None
@@ -58,8 +52,7 @@ def unpack(value, meta):
     return body, language, params, source
 
 
-def minted(key, value, format, meta):
-    #print(key, value)
+def prism(key, value, format, meta):
     """ Use minted for code in LaTeX.
 
     Args:
@@ -69,34 +62,16 @@ def minted(key, value, format, meta):
         meta:    document metadata
     """
 
-    if format == 'latex':
+    if format == "html":
+        if key == 'Image':
+            import base64
+            path = value[2][0]
+            if not os.path.exists(path):
+                print("No such image: " + path)
+            encoded = "data:image/png;base64," + base64.b64encode(open(path, "rb").read()).decode()
+            html = '<img alt="" src="%s">' % (encoded)
+            return [RawInline(format, html)]
 
-        if key == 'CodeBlock':
-            body, language, params, source_file = unpack(value, meta)
-            if language is None:
-                return
-
-            if source_file is None:
-                begin = r'\begin{' + language + 'code*}{' + params + '}\n'
-                end = '\n' + r'\end{' + language + 'code*}'
-                return [RawBlock(format, begin + body + end)]
-
-            else:
-                content = r'\inputminted[' + params + ']{' + language + '}{' + source_file + '}'
-                return [RawBlock(format, content)]
-
-        elif key == 'Code':
-            body, language, params, source_file = unpack(value, meta)
-
-            if language is None:
-                return
-
-            begin = r'\mintinline[' + params + ']{' + language + '}{'
-            end = '}'
-
-            return [RawInline(format, begin + body + end)]
-
-    elif format == "html":
         if key == 'CodeBlock':
             body, language, params, source_file = unpack(value, meta)
             if language is None:
@@ -119,6 +94,10 @@ def minted(key, value, format, meta):
             html = '<code class="language-%s">%s</code>' % (language, body)
             return [RawInline(format, html)]
 
+
 if __name__ == '__main__':
+    import sys
+
+    #sys.stdout = open("bubber.html", "w")
     #sys.stdin = open("test.json")
-    toJSONFilter(minted)
+    toJSONFilter(prism)

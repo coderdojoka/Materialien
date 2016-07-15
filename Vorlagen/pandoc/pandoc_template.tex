@@ -19,6 +19,9 @@ $if(block_zu_merkbox)$
 \renewenvironment{quote}{\begin{merkbox}}{\end{merkbox}}
 $else$
 
+\usepackage{enumitem}
+\setenumerate{label=\setlength{\fboxsep}{7.5pt}\colorbox{blue!80}{\textbf{\large\ttfamily\color{white}\theenumi}}}
+
 %\let\oldquote=\quote
 %\let\endoldquote=\endquote
 

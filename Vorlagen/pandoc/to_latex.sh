@@ -3,11 +3,11 @@
 # Containing directory of this file
 DIR=$( dirname ${BASH_SOURCE[0]})
 
-# Input markdwon
+# Input markdown
 in=$1
 if [ $# -lt 1 ]; then
         echo "You need pass the source markdown file."
-        read -p "Enter markdown file: " in
+        read -p "Enter markdown file: "
 fi
 
 # The output tex file

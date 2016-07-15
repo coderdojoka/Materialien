@@ -3,10 +3,15 @@
 %\NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{coderdojokatext}[2015/04/26 v. 1.0 Coderdojo Karlsruhe documentclass for text]
 
-\LoadClass[xcolor=svgnames, oneside, a4letter]{scrbook}
+\LoadClass[xcolor=svgnames, oneside, a4paper]{article}
+\usepackage[right=1in, left=1in, a4paper]{geometry}
 
 \usepackage[utf8]{inputenc}
+\usepackage[rm]{roboto}
 \usepackage[T1]{fontenc}
+
+
+
 \usepackage[ngerman]{babel}
 
 \usepackage{fancyhdr} % Required for custom headers
@@ -29,7 +34,7 @@
 %\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
 
 % wir verwenden keine chapter...
-\setcounter{chapter}{1}
+%\setcounter{chapter}{1}
 % rest of document ...
 
 \lhead{\Titel} % Top center head
@@ -93,12 +98,13 @@
     {\VerbatimEnvironment\begin{minted}[#3,##1]{#2}}
     {\end{minted}}}
 
-\newminted{python}{linenos, stepnumber=1, tabsize=4}
-\newminted[pseudocode]{php}{linenos, stepnumber=1, tabsize=4}
+\newminted{python}{linenos=true, frame=single, stepnumber=1, tabsize=4, breaklines=true
+	frame=single,	framerule=1pt,	framesep=10pt}
+\newminted{php}{linenos=false, stepnumber=1, tabsize=4, breaklines=true}
 
 \AtBeginEnvironment{merkbox}{
-\renewminted{python}{linenos=false, stepnumber=1, tabsize=4}
-\renewminted[pseudocode]{php}{linenos=false, stepnumber=1, tabsize=4}
+\renewminted{python}{linenos=false, stepnumber=1, tabsize=4, breaklines}
+\renewminted{php}{linenos=false, stepnumber=1, tabsize=4, breaklines}
 }
 
 
