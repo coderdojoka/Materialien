@@ -6,9 +6,9 @@ datum: 13.07.16
 titel: TicTacToe  
 ---
 
-Hier wirst du Schritt für Schritt lernen wie man TicTacToe progrmmiert. Ein Spiel, dass man zu zweit
+Hier wirst du Schritt für Schritt lernen wie man TicTacToe programmiert. Ein Spiel, dass man zu zweit
 in der Konsole spielen kann. An manchen Stellen werden in den Codestücken `??` stehen.
-Diese Fragezeichen musst du durch korrekte Wert ersetzen. Damit du am Ende ein fertiges
+Diese Fragezeichen musst du durch korrekte Werte ersetzen. Damit du am Ende ein fertiges
 Programm hast, musst du die einzelnen Teile mitschreiben und richtig zusammenfügen.
 
 # Vorbereitung
@@ -21,7 +21,7 @@ I.  Das Ganze wird ein Zweispieler-Spiel. Als Erstes fragen wir also nach den Na
     ```
     Spieler 1 und Spieler 2 können nun ihren Namen eintippen. Die Namen werden in den Variablen `s1` und `s2` gespeichert.
 
-    **Deine Aufgabe:** Vervollständige die zweite Zeile.
+    **Deine Aufgabe:** Vervollständige die zweite Zeile, um den Namen des zweiten Spielers abzufragen.
 
 II.  Um die beiden Spieler auf dem Spielfeld unterscheiden zu können, benötigt jeder Spieler ein Zeichen, z.B. 'X' und 'O'.
     Dieses Zeichen wird später auf dem Spielfeld angezeigt.
@@ -31,7 +31,7 @@ II.  Um die beiden Spieler auf dem Spielfeld unterscheiden zu können, benötigt
     z2 = ??
     ```
 
-    **Deine Aufgabe:** Vervollständige die zweite Zeile, um den Namen des zweiten Spielers abzufragen.
+    **Deine Aufgabe:** Vervollständige die zweite Zeile, um das Zeichen des zweiten Spielers abzufragen.
 
 
 III. Damit die Spieler Bescheid wissen, wir mitspielt und wer welches Zeichen hat sollten wir die Infos
