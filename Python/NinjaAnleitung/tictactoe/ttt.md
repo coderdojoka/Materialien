@@ -6,14 +6,14 @@ datum: 13.07.16
 titel: TicTacToe  
 ---
 
-Hier wirst du Schritt für Schritt lernen wie man TicTacToe progrmmiert zu zweit
-in der Konsole spielen spielen kann. An manchen Stellen werden in den Codestücken `??` stehen.
-Diese Fragezeichen musst du durch den korrekten Wert ersetzten. Damit du am Ende ein fertiges
+Hier wirst du Schritt für Schritt lernen wie man TicTacToe progrmmiert. Ein Spiel, dass man zu zweit
+in der Konsole spielen kann. An manchen Stellen werden in den Codestücken `??` stehen.
+Diese Fragezeichen musst du durch korrekte Wert ersetzen. Damit du am Ende ein fertiges
 Programm hast, musst du die einzelnen Teile mitschreiben und richtig zusammenfügen.
 
 # Vorbereitung
 
-I.  Das Ganze wird ein zwei Spieler-Spiel. Als Erstes fragen wir also nach den Namen der Spieler.
+I.  Das Ganze wird ein Zweispieler-Spiel. Als Erstes fragen wir also nach den Namen der Spieler.
 
     ```python
     s1 = input("Spieler 1, wie heißt du? ")
@@ -23,7 +23,7 @@ I.  Das Ganze wird ein zwei Spieler-Spiel. Als Erstes fragen wir also nach den N
 
     **Deine Aufgabe:** Vervollständige die zweite Zeile.
 
-II.  Um die beiden Spieler auf dem Spielfeld unterscheiden, benötigt jeder Spieler ein Zeichen, z.B. 'X' und 'O'.
+II.  Um die beiden Spieler auf dem Spielfeld unterscheiden zu können, benötigt jeder Spieler ein Zeichen, z.B. 'X' und 'O'.
     Dieses Zeichen wird später auf dem Spielfeld angezeigt.
 
     ```python
@@ -31,7 +31,7 @@ II.  Um die beiden Spieler auf dem Spielfeld unterscheiden, benötigt jeder Spie
     z2 = ??
     ```
 
-    **Deine Aufgabe:** Vervollständige die zweite Zeile.
+    **Deine Aufgabe:** Vervollständige die zweite Zeile, um den Namen des zweiten Spielers abzufragen.
 
 
 III. Damit die Spieler Bescheid wissen, wir mitspielt und wer welches Zeichen hat sollten wir die Infos
@@ -46,11 +46,10 @@ III. Damit die Spieler Bescheid wissen, wir mitspielt und wer welches Zeichen ha
     ```python
     print(??)
     ```
-    Bubber
 
 # Das Spielfeld
 
-I.  Das Spielfeld besteht aus 3 auf 3 Kästchen. Nummeriern wir diese reihenweise durch erhalten wir folgendes Spielfeld.
+I.  Das Spielfeld besteht aus 3 auf 3 Kästchen. Nummeriern wir diese von 0 beginnend reihenweise durch erhalten wir folgendes Spielfeld.
 
     ```php
     0 | 1 | 2
@@ -66,14 +65,14 @@ I.  Das Spielfeld besteht aus 3 auf 3 Kästchen. Nummeriern wir diese reihenweis
               0, 0, 0]
     ```
 
-II.  Hat z.B. Mark das Feld 4 belegt und Ricarda Feld 9:
+II.  Hat z.B. Mark das Feld 4 belegt und Ricarda Feld 9 steht in unserer Liste:
 
     ```python
     0 | 1 | 2   entspricht: felder =  [0 , 0,  0,
     M | 4 | 5                         'M', 0,  0,
     6 | 7 | R                          0 , 0, 'R']
     ```
-    Dir ist hoffentlich aufgefallen, dass `'M'` bzw. `'R'` ein Text ist und in Anführungzeichen steht, die 0 hingegen nicht, diese ist eine Zahl. Dies ist eine Absicherung, damit kein kleverer Spieler die 0 als sein Zeichen angibt und damit sofort gewinnt. Wird die 0 als Zeichen gewählt so es der Text `'0'` und nicht die Zahl! Dies macht für den Computer einen Unterschied.
+    Dir ist hoffentlich aufgefallen, dass `'M'` bzw. `'R'` ein Text ist und in Anführungzeichen steht, die 0 hingegen nicht, diese ist eine Zahl. Das ist eine Absicherung, damit kein kleverer Spieler die 0 als sein Zeichen angibt und damit sofort gewinnt. Wird die 0 als Zeichen gewählt so es der Text `'0'` und nicht die Zahl! Dies macht für den Computer einen Unterschied.
 
 III.  Wir müssen nun das Spielfeld anzeigen, indem wir es auf der Konsole mit `print(..)` ausgeben.
     Dafür schreiben wir eine Funktion! Eine Funktion sammelt einfach eine Reihe von Anweisungen, die in
@@ -99,7 +98,8 @@ III.  Wir müssen nun das Spielfeld anzeigen, indem wir es auf der Konsole mit `
         if zahl % 3 == 2:
           print("")
     ```
-    Unsere Liste hat 9 Elemente, wir beginnen bei 0 zu zählen. **Wichtig:** Wir beginnen beim Programmieren immer bei 0 zu zählen. Danach geben wir entweder die Feldnummer aus, falls ein Feld unbesetzt ist, ansonsten das Zeichen des Spielers. Die Ausgabe ist etwas komplizierter. Wir wollen immer 3 Zeichen in einer Reihe anzeigen. D.h. wir müssen verhindern, dass `print(..)` automatisch einen Zeilenumbruch einfügt. Diesen müssen wir selbst bei jeder dritten Zahl erzeugen.
+    Unsere Liste hat 9 Elemente, wir beginnen bei 0 zu zählen. **Wichtig:** Wir beginnen beim Programmieren immer bei 0 zu zählen.   Danach geben wir entweder die Nummer des Felds aus, falls das Feld unbesetzt ist. Ansonsten wird das Zeichen des Spielers ausgegeben.  
+    Die Ausgabe ist etwas komplizierter. Wir wollen immer 3 Zeichen in einer Reihe darstellen. D.h. wir müssen verhindern, dass `print(..)` automatisch einen Zeilenumbruch einfügt. Diesen müssen wir selbst nach jedem dritten Zeichen erzeugen.
 
 IV.  Eine Funktion wird erst ausgeführt, wenn man sie über ihren Namen aufruft. Wir können das Spielfeld also jederzeit so ausgeben lassen:
 
@@ -119,7 +119,7 @@ I.  **Aktiver Spieler:** Während des Spiels ist immer ein Spieler aktiv und dar
 
 II. **Die Spielschleife:** Das Spiel geht solange, bis ein Spieler gewonnen hat oder alle Felder belegt sind und das Spiel mit Unentschieden endet.
 
-    **Frage:** Wieviele mögliche Züge gibt es?  
+    **Frage:** Wieviele mögliche Züge gibt es maximal?  
 
     ```python
     zuege = 0
@@ -130,7 +130,7 @@ II. **Die Spielschleife:** Das Spiel geht solange, bis ein Spieler gewonnen hat 
       zuege = zuege + 1
     ```
 
-III.  **Einen Zug machen:** Da die Felder praktischerweise in einer durchnummerierten Liste stehen, können wir die Nummerierung ausnutzen. Um also anzugeben, dass man das Feld 5 besetzen will, muss der Spieler einen 5 eingeben.
+III.  **Einen Zug machen:** Da die Felder praktischerweise in einer durchnummerierten Liste stehen, können wir die Nummerierung ausnutzen. Um also anzugeben, dass man das Feld 5 besetzen will, muss der Spieler eine 5 eingeben.
 
     ```python
     print("Du bist dran", aktiver_spieler)
@@ -141,7 +141,8 @@ III.  **Einen Zug machen:** Da die Felder praktischerweise in einer durchnummeri
 
     **Wichtig:** Der Code aus diesem und den nächsten Schritten muss innerhalb der Spielschleife stehen.
 
-III.  **Korrekter Zug:** Überlege dir kurz, bevor du weiter liest, wann ein Zug erlaubt ist und welche Werte der Benutzer eingeben darf?
+III.  **Korrekter Zug:** Überlege dir kurz, bevor du weiter liest, wann ein Zug erlaubt ist und welche Werte der Benutzer eingeben darf?  
+
     Ein Zug ist erlaubt, wenn das Feld frei ist. Der Benutzer muss eine Zahl zwischen 0-8 eingegeben und das Feld,
     also der Eintrag in der Liste an dieser Stelle, muss noch unbesetzt sein.
 
@@ -179,6 +180,7 @@ I.  Zunächst müssen wir uns überlegen auf wie viele Arten ein Spieler gewinne
       # erste Reihe überprüfen
       if felder[0] == aktives_zeichen and felder[1] == aktives_zeichen and felder[1] == aktives_zeichen:
         return True
+
       # Weitere Zeilen ...
 
       # Erste Spalte überprüfen
@@ -191,7 +193,7 @@ I.  Zunächst müssen wir uns überlegen auf wie viele Arten ein Spieler gewinne
       if felder[0] == aktives_zeichen and felder[4] == aktives_zeichen and felder[8] == aktives_zeichen:
         return True  
 
-      # Weitere Diagonalen ...
+      # Weitere Diagonale ...
 
       # Falls nicht gewonnen => False
       return False
@@ -217,9 +219,9 @@ II. Nun müssen wir nur noch in der Spielschleife überprüfen, ob der aktive Sp
     ```
 
 # Was ist mit Unentschieden?
-Wir haben nun die Spiellogik und Spielschleife progrmmiert, wenn der aktive Spieler gewinnt, wird dies erkannt.
+Wir haben nun die Spiellogik und Spielschleife programmiert, wenn der aktive Spieler gewinnt, wird dies erkannt.
 Allerdings könnte es vorkommen, dass das Spiel Unentschieden ausgeht.  
-Wann ist die Spielschleife zu Ende? Nachdem alle möglichen Felder besetzt sind. In diesem Fall ist es ein unentschieden.
+Wann ist die Spielschleife zu Ende? Nachdem alle möglichen Felder besetzt sind. In diesem Fall ist es ein Unentschieden.
 Folglich müssen wir nur nach der Spielschleife abfragen, wieviele Züge vergangen sind.
 
 ```python
@@ -228,4 +230,4 @@ if zuege == ??:
 ```
 
 # Das wars!
-Du solltest jetzt, wenn du alle Teile richtig zusammenfügst ein fertiges TicTacToespiel haben.
+Du solltest jetzt, wenn du alle Teile richtig zusammenfügst ein fertiges TicTacToe-Spiel haben.
