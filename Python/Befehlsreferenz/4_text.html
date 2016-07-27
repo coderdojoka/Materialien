@@ -1,0 +1,30 @@
+
+<h1 id="text">Text</h1>
+<p>Ein Text ist im Prinzip nur eine Liste von Buchstaben und Zeichen. Man kann daher Listenfunktionen wir <code>len(..)</code>, den Zugriff auf Element mittels <code>text[1]</code> verwenden oder einen Text Buchstabenweiße mit einer <code>for</code>-Schleife durchlaufen. Mehr dazu in der Sektion über Listen.</p>
+<h2 id="texte-kombinieren">Texte kombinieren</h2>
+<p>Texte kann man mit dem ’+’-Operator aneinander anfügen.</p>
+<pre><code class="language-python">begruessung = "Hallo "
+text = begruessung + "Mark" # "Hallo Mark"
+print(text)
+
+# Texte kann man auch multiplizieren/wiederholen
+text = "Ha" * 3 # HaHaHa
+print(text)</code></pre>
+<h2 id="länge-eines-texts">Länge eines Texts</h2>
+<p>Die Funktion <code>len(..)</code> ermittelt die Länge von Texten, d.h. die Anzahl an Buchstaben/Zeichen aus denen der Text besteht.</p>
+<pre><code class="language-python">text = "Hallo Welt"
+laenge = len(text) # = 10
+print(laenge)</code></pre>
+<h2 id="einen-einzelnen-buchstaben-abfragen">Einen einzelnen Buchstaben abfragen</h2>
+<p>Einen Buchstaben kann man über seine Position im Text abfragen:</p>
+<pre><code class="language-python">text = "Hallo Welt"
+buchstabe = text[1]
+print(buchstabe) # = 'a'
+
+buchstabe = text[6]
+print(buchstabe) # = 'W'</code></pre>
+<p><strong>ACHTUNG:</strong> Wir beginnen bei 0 zu zählen, die 1 beschreibt also den zweiten Buchstaben!</p>
+<h2 id="texte-sind-unveränderlich">Texte sind unveränderlich</h2>
+<p>Man kann in einen Text nicht ohne weiteres verändern:</p>
+<pre><code class="language-python">text = "Hallo Welt"
+text[1] = "o" # Erzeugt einen Fehler!</code></pre>

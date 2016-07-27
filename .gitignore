@@ -1,9 +1,9 @@
-Python/*/*/__pycache__
-Python/*/__pycache__
+__pycache__
 Python/py2cd/.idea/
 Python/*/.idea/
 Python/*/tmp_latex/
 Python/.idea/
+Python/webseite/
 Lektionen/*/_minted-*/
 tmp_latex/
 

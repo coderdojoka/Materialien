@@ -1,0 +1,72 @@
+
+<h1 id="listen">Listen</h1>
+<p>Eine Liste ist ein Container für verschiedene Werte oder Variablen. Du kannst dir einen Liste wie einen Schubladenschrank vorstellen. Die Schubladen sind durchnummeriert und du kannst in jede Schublade einen Wert legen oder daraus lesen.</p>
+<h2 id="eine-liste-erstellen">Eine Liste erstellen</h2>
+<pre><code class="language-python"># Eine leere Liste erstellen
+liste = []
+
+# eine Liste mit Einträgen erstellen
+liste = [1, 2, 3, 4, 5]</code></pre>
+<h2 id="einen-eintrag-aus-der-liste-lesen">Einen Eintrag aus der Liste lesen</h2>
+<p>Ein Wert aus der Liste wird über seinen Index, seine Position in der Liste, abgefragt.</p>
+<pre><code class="language-python">liste = ["hallo", "test", "welt"]
+
+ersterEintrag = liste[0] # = "hallo".</code></pre>
+<p><strong>Achtung:</strong> Wir beginnen bei 0 zu zählen! Das erste Element hat den Index 0.</p>
+<h2 id="einen-eintrag-von-ende-der-liste-lesen">Einen Eintrag von Ende der Liste lesen</h2>
+<pre><code class="language-python"># Negative Indices beginnen am Ende zu zählen
+letzterEintrag = liste[-1] # = "welt".
+
+print(ersterEintrag, letzterEintrag) # => "Hallo Welt"</code></pre>
+<p><strong>Achtung:</strong> wir beginnen hinten bei -1 zu zählen! Das letzte Element hat den Index -1.</p>
+<h2 id="länge-einer-liste-ermitteln">Länge einer Liste ermitteln</h2>
+<pre><code class="language-python">liste = [1, 2, 3]
+
+# Die Länge einer Liste (die Anzahl der Elemente) abfragen:
+laenge = len(liste) # = 3
+print(laenge)</code></pre>
+<h2 id="einen-eintrag-hinzufügen">Einen Eintrag hinzufügen</h2>
+<p>Die <code>.append(..)</code>-Funktion fügt einen Eintrag ans Ende der Liste an.</p>
+<pre><code class="language-python">liste = [1, 2]
+
+# einen Eintrag anfügen
+liste.append(3)</code></pre>
+<h2 id="eine-liste-mit-einer-for-schleife-durchlaufen">Eine Liste mit einer <code>for</code>-Schleife durchlaufen</h2>
+<p>Die einzelnen Elemente der Liste werden mittels einer <code>for</code>-Schleife durchlaufen.</p>
+<pre><code class="language-python">
+for element in liste:
+    print(element)</code></pre>
+<h3 id="hilfsfunktion-für-das-ausgeben-einer-liste">Hilfsfunktion für das Ausgeben einer Liste</h3>
+<p>Gibt die Anzahl der Elemente und deren Werte aus.</p>
+<pre><code class="language-python">def liste_ausgeben(liste):
+    print("Liste mit", len(liste), "Einträgen")
+
+    # die Elemente ausgeben
+    for element in liste:
+        print(element)
+
+# Diese ruft man so auf
+liste = [1, 2, "Haus", "Katze"]
+liste_ausgeben(liste)</code></pre>
+<h2 id="überprüfen-ob-ein-eintrag-vorhanden-ist">Überprüfen, ob ein Eintrag vorhanden ist</h2>
+<p>Mittles <code>x in liste</code> wird überprüft ob der Wert von <code>x</code>, z.B. 1 in der Liste vorhanden ist</p>
+<pre><code class="language-python">liste = [1, 2, "hallo", "welt"]
+
+if 1 in liste:
+    print("Enthalten")
+else:
+    print("Nicht entalten")</code></pre>
+<h2 id="einen-eintrag-entfernen">Einen Eintrag entfernen</h2>
+<p>Die <code>.remove(..)</code>-Funktion sucht den ersten Eintrag mit diesem Wert und entfernt ihn.</p>
+<pre><code class="language-python">
+liste = [1, 2, 6]
+liste.remove(6) # = [1, 2]
+
+liste_ausgeben(liste)</code></pre>
+<p><strong>Achtung:</strong> Hat es keinen solchen Wert, wird ein Fehler erzeugt!</p>
+<h2 id="zwei-listen-kombinieren">Zwei Listen kombinieren</h2>
+<p>Wie bei Texten kann man mit <code>+</code> zwei Listen kombinieren.</p>
+<pre><code class="language-python">liste = [1, 2, 3, 4, 5, 6]
+liste = liste + [7, 8, 9] # = [1, 2.., 9]
+
+liste_ausgeben(liste)</code></pre>

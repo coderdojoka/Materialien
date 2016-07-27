@@ -1,0 +1,28 @@
+
+<h1 id="nützliche-module">Nützliche Module</h1>
+<h2 id="zufallszahlen">Zufallszahlen</h2>
+<p>Will man eine Zufallszahl erzeugen, kann man dies mit dem Modul <code>random</code> tun.</p>
+<pre><code class="language-python"># das random Modul muss (einmal) importiert werden um die Funktion random.randint() verwenden zu können
+import random
+
+# generiert eine Zufallszahl zwischen 1 und 100
+zufallsZahl = random.randint(1,100)
+print(zufallsZahl)</code></pre>
+<h2 id="aktuelles-datum">Aktuelles Datum</h2>
+<p>Über das Modul <code>datetime</code> kann man das aktuelle Datum abfragen.</p>
+<pre><code class="language-python"># Das Paket datetime einmal importieren
+import datetime
+
+# aktuelles Datum abfragen
+heute = datetime.datetime.now()
+
+jahr = heute.year
+monat = heute.month
+tag = heute.day</code></pre>
+<h2 id="die-aktuelle-zeit-in-sekunden">Die aktuelle Zeit in Sekunden</h2>
+<p>Du kannst die aktuelle Zeit in Sekunden mithilfe des Moduls <code>time</code> ermitteln:</p>
+<pre><code class="language-python"># Das Paket time einmal importieren
+import time
+
+# aktuelle Zeit in Sekunden
+sekunden = time.time()</code></pre>

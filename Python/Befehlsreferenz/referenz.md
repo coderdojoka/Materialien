@@ -430,7 +430,6 @@ def addiere(zahl1, zahl2):
 ergebnis = addiere(12, 22)
 print(ergebnis)
 ```
-
 # Nützliche Module
 
 ## Zufallszahlen

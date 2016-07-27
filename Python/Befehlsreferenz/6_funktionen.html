@@ -1,0 +1,30 @@
+
+<h1 id="funktionen">Funktionen</h1>
+<p>Eine Funktion ist ein Block Code, der vom Haupt-Programm getrennt definiert wird. Die Funktion wird erst dann ausgeführt, wenn man sie über ihren Namen aufruft. Dafür kann man einen Funktion so oft mal will verwenden. Variablen, die innerhalb einer Funktion definiert sind, sind <strong>nur</strong> innerhalb der Funktion verwendbar!</p>
+<h2 id="eine-einfache-funktion">Eine einfache Funktion</h2>
+<p>Funktionen bestehen aus einem Block von eingerückten Code-Zeilen. Diese werden erst ausgeführt, wenn die Funktion aufgerufen wird.</p>
+<pre><code class="language-python"># Neue Funktion mit dem Namen 'sageHallo' definieren
+def sageHallo():
+    print("Hallo Welt") # Einrückung!
+
+# Funktion aufrufen (keine Einrückung)
+sageHallo()</code></pre>
+<h2 id="funktion-mit-übergabeparametern">Funktion mit Übergabeparametern</h2>
+<p>Funktion können Parameter (Variablen, die nur innerhalb der Funktion existieren) haben. Diese <em>müssen</em> beim Aufrufen mitübergeben werden.</p>
+<pre><code class="language-python"># Funktion definieren
+def sageHallo(name, alter):
+    print("Hallo", name)
+    print("Du bist", alter, "Jahre alt")
+
+# Funktion aufrufen
+sageHallo("Mark", 22)</code></pre>
+<h2 id="funktion-mit-rückgabewerten">Funktion mit Rückgabewerten</h2>
+<p>Funktion können einen Wert zurückgeben, müssen aber nicht. Wenn nichts zurückgeben wird, wird automatisch <code>None</code> zurückgeben.</p>
+<pre><code class="language-python"># Funktion definieren
+def addiere(zahl1, zahl2):
+    summe = zahl1 + zahl2
+    return summe
+
+# Funktion aufrufen
+ergebnis = addiere(12, 22)
+print(ergebnis)</code></pre>

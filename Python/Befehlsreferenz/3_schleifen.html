@@ -1,0 +1,39 @@
+
+<h1 id="schleifen">Schleifen</h1>
+<h2 id="while-schleife">while-Schleife</h2>
+<p>Eine <code>while</code>-Schleife führt den eingerückten Code aus, solange die Bedingung erfüllt ist.</p>
+<pre><code class="language-python">
+zahl = 1
+while zahl < 10: # solange die Bedingung wahr ist...
+    # ...wird dieser eingerückte Code wird wiederholt
+    print("Zahl:", zahl)
+    zahl = zahl + 1 # Zähler erhöhen
+
+# Hier gehts normal weiter (Achtung: nicht eingerückt)</code></pre>
+<p><strong>Achtung:</strong> Ist die Bedingung immer wahr läuft das Programm in einer Endlosschleife.</p>
+<h2 id="for-schleife">for-Schleife</h2>
+<p>Eine <code>for</code>-Schleife wird verwendet um eine Liste, Text (ein Text ist nur eine Liste von Buchstaben), o.ä. zu durchzulaufen. Der eingerückte Code wird für jedes Listenelment einmal ausgeführt.</p>
+<h3 id="eine-liste-durchlaufen">Eine Liste durchlaufen:</h3>
+<pre><code class="language-python">liste = [1, 2, 3, 4]
+
+for zahl in liste:    
+    print("Zahl:", zahl)
+
+# Hier gehts normal weiter (ACHTUNG: nicht eingerückt)</code></pre>
+<h3 id="einen-text-buchstabenweiße-durchlaufen">Einen Text buchstabenweiße durchlaufen:</h3>
+<pre><code class="language-python">text = "abcdefghijklmnopqrstuvwxyz"
+
+for buchstabe in text:    
+    print("Buchstabe:", buchstabe)
+</code></pre>
+<h2 id="geschachtelte-schleifen">Geschachtelte Schleifen</h2>
+<p>Bei geschachtelten Schleifen befindet sich eine Schleife innerhalb einer anderen Schleife! D.h. die innere Schleife und somit der Code innerhalb der inneren Schleife wird mehrmals ausgeführt!</p>
+<p>In diesem Beispiel wird die äußere <code>for</code>-Schleife 9 mal ausgeführt. Die innere <code>for</code>-Schleife 4 mal. Der Code in der inneren Schleife wird also: <code>9 * 4 = 36</code> mal ausführt!</p>
+<pre><code class="language-python">
+for zahlAussen in range(1, 10): # nimmt Werte 1-9 an
+    # Achtung Einrückung!
+
+    for zahlInnen in range(1, 5): # nimmt Werte 1-4 an
+        # Achtung nochmal einrücken!
+        print("Außen:", zahlAussen, "Innen:", zahlInnen)</code></pre>
+<p><strong>Hinweis:</strong> <code>range(untergrenze, obergrenze)</code> erzeugt eine Liste der Zahlen von der Untergrenze bis zur Obergrenze. Die Obergrenze ist allerdigs nicht enthalten.</p>

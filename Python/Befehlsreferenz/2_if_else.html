@@ -1,0 +1,52 @@
+
+<h1 id="bedingungen-und-if-abfragen">Bedingungen und if-Abfragen</h1>
+<h2 id="bedingung">Bedingung</h2>
+<p>Eine Bedingung ist entweder Wahr (True) oder Falsch (False).</p>
+<pre><code class="language-python">bedingung = 10 > 20 # False
+print("Die Bedingung ist:", bedingung)</code></pre>
+<h2 id="eine-bedingung-negieren">Eine Bedingung negieren</h2>
+<p>Wollen wir einen Bedingung umdrehen (ins Gegenteil kehren ) verwenden wir den <code>not</code>-Operator. Dieser macht <code>True</code> zu <code>False</code> und umgekehrt.</p>
+<pre><code class="language-python">bedingung = 10 > 20 # False
+gegenteil = not bedingung
+print("Die Bedingung ist nicht:", gegenteil)</code></pre>
+<h2 id="if-abfragen">if-Abfragen</h2>
+<p>Eine if-Abfrage überprüft ob eine Bedingung Wahr oder Falsch ist. Alles was nach dem <code>if</code>-Abfrage mit 4 Leerzeichen oder einem Tab eingerückt gehört zum Körper der <code>if</code>-Abfrage und wird nur ausgeführt, wenn die Bedingung war ist!</p>
+<pre><code class="language-python">wert = 10 # Eine Variable mit einem beliebigen Wert (hier 10)
+
+if wert > 20: # wird NUR ausgeführt wenn die Bedingung wahr ist
+    print("Der Wert ist größer als 20") # (ACHTUNG: Einrückung)
+
+# Hier gehts weiter (ACHUTUNG: Nicht eingerückt)</code></pre>
+<h2 id="if-else-abfragen">if-else-Abfragen</h2>
+<p>Mit einer if-else Abfrage kann man auch auf eine nicht erfüllte Bedingung mit dem ’else’-Zweig reagieren. Es wird immer <em>entweder</em> der <code>if</code>-Zweig oder der <code>else</code>-Zweig ausgeführt.</p>
+<pre><code class="language-python">if wert > 20: # wird NUR ausgeführt wenn die Bedingung erfüllt ist
+    print("Der Wert ist größer als 20")
+
+else: # wird NUR ausgeführt wenn die Bedingung nicht erfüllt ist
+    print("Wert ist kleiner oder gleich 20.")
+
+# Hier gehts weiter (nicht eingerückt)</code></pre>
+<h2 id="vergleichsoperationen">Vergleichsoperationen:</h2>
+<p>Alle Vergleichsoperationen liefern entweder Wahr oder Falsch. Diese können als Bedingung in einer <code>if</code>-Abfrage verwendet werden.</p>
+<h3 id="standardvergleichsoperationen">Standardvergleichsoperationen</h3>
+<pre><code class="language-python">a = 10
+b = 20
+
+a == b # Gleichheit => False
+a != b # Ungleichheit => True
+a > b  # = False
+a >= b # = False
+a < b  # = True
+a <= b # = True</code></pre>
+<h3 id="überprüfen-ob-ein-textstück-in-einem-text-enthalten-ist">Überprüfen, ob ein Textstück in einem Text enthalten ist</h3>
+<p>Mit dem <code>in</code> Operator kann man überprüfen, ob ein Textstück in einem Text enthalten ist:</p>
+<pre><code class="language-python">a = "Hallo Welt"
+
+"allo" in a # = True
+"oo" in a   # = False</code></pre>
+<h3 id="überprüfung-auf-none">Überprüfung auf None</h3>
+<p><code>None</code> ist ein Spezialwert, der soviel ausdrückt wie Nichts. Diesen Wert verwendet man als Platzhaltere. Mit dem <code>is</code> Operator kann man testen ob eine Variable gleich <code>None</code> ist.</p>
+<pre><code class="language-python">a = "Hallo Welt"
+
+a is None # = False
+a is not None # = True</code></pre>
