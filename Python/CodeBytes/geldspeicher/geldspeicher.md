@@ -39,8 +39,8 @@ Umsetzung
 Kombination eingeben kannst.
 Um die Aufgabe zu lösen benötigst du die Dateien `geldspeicher.py` und `geldspeicher_test.py`.
 Hier der Inhalt von `geldspeicher_test.py`:
-    
-```{.python include="geldspeicher_test.py"}
+
+```{.python include="geldspeicher_test.py" firstline=1 lastline=2}
 Inhalt wird eingefügt.
 ```
 

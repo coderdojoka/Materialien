@@ -4,8 +4,11 @@ Usage:
     pandoc --filter ./minted.py -o myfile.tex myfile.md
 """
 import os
+import sys
 
 from pandocfilters import toJSONFilter, RawBlock, RawInline
+
+ENDINGS = {"py": "python", "html": "html", "css": "css", "js": "javascript"}
 
 
 def unpack(value, meta):
@@ -36,12 +39,6 @@ def unpack(value, meta):
             else:
                 params[key] = value
 
-        # convert our parameters to minted options
-        options = []
-        for key in params:
-            options.append("%s=%s" % (key, params[key]))
-
-        params = ", ".join(options)
 
     except ValueError:
         # Use default language, or don't highlight.
@@ -82,8 +79,26 @@ def prism(key, value, format, meta):
                 return [RawBlock(format, html)]
 
             else:
-                content = r'\inputminted[' + params + ']{' + language + '}{' + source_file + '}'
-                return [RawBlock(format, content)]
+                with open(source_file, 'r') as file:
+                    code = file.readlines()
+                lastline = len(code)
+                firstline = 0
+                if 'lastline' in params:
+                    lastline = min(lastline, int(params['lastline']) +1)
+                if 'firstline' in params:
+                    firstline = max(firstline, min(lastline, int(params['firstline'])))
+
+                body = "".join(code[firstline: lastline])
+
+                # determine language by ending
+                dot_index = source_file.index(".")
+                ending = source_file[dot_index + 1:]
+                if ending not in ENDINGS:
+                    raise AttributeError("Unknown ending: " + ending)
+                language = ENDINGS[ending]
+
+                html = '<pre><code class="language-%s">%s</code><pre>' % (language, body)
+                return [RawBlock(format, html)]
 
         elif key == 'Code':
             body, language, params, source_file = unpack(value, meta)
@@ -96,8 +111,6 @@ def prism(key, value, format, meta):
 
 
 if __name__ == '__main__':
-    import sys
-
-    #sys.stdout = open("bubber.html", "w")
+    # sys.stdout = open("bubber.html", "w")
     #sys.stdin = open("test.json")
     toJSONFilter(prism)
