@@ -80,61 +80,73 @@ die eckigen Klammern schreiben müssen.
 
 Die Einträge in unsere Liste haben also folgende Indices.
 
-<span>lllll</span> & & & &\
-
-Index: & & & &\
+| liste1 = | "Montag" | "Dienstag" | "Mittwoch" | "Donnerstag" |
+|----------|----------|------------|------------|--------------|
+| Index: | 0 | 1 | 2 | 3 |
 
 Geben wir das dritte Element nun aus:
 
 ```
-print (liste1[2])  
-# das dritte Element unserer Liste anzeigen
-
+print (liste1[2])  # das dritte Element unserer Liste anzeigen
+```
+  
 erhalten wir:
 
+```   
 Mittwoch
+```  
 
 Listen von hinten lesen
 =======================
 
 Man kann Listen auch vom rechts nach links lesen.
 
-Hierfür werden *negative Indices* beginnend beim Element mit benutzt:
+Hierfür werden *negative Indices* beginnend beim *letzten* Element mit `-1`benutzt:
 
-<span>lllll</span> & & & &\
-
-Index: & & & &\
+| liste1 = | "Montag" | "Dienstag" | "Mittwoch" | "Donnerstag" |
+|----------|----------|------------|------------|--------------|
+| Index: |  -4 | -3 | -2 | -1 |
 
 ein anderes Beispiel:
 
-<span>lllll</span> & & &\
-
-Index: & & &\
-neg. Index: & & &\
+| liste = | "Hallo" | "Test" | "Welt" |
+|----------|----------|------------|------------|
+| Index: |  0 | 1| 2 |
+| neg. Index: | -3 | -2 | -1 |
 
 Verwenden wir nun unser Wissen können wir das erste und letzte Element
 ganz einfach ausgeben:
 
-\# Ein Eintrag kann so gelesen werden: ersterEintrag = liste[0] \# =
-“Hallo”. Achtung wir beginnen bei 0 !
+```  
+# Ein Eintrag kann so gelesen werden:   
+ersterEintrag = liste[0] # = “Hallo”. Achtung wir beginnen bei 0 !
 
-\# Negative Indices beginnen am Ende zu zählen letzterEintrag =
-liste[-1] \# = “Welt”. Wir beginnen bei -1 !
+# Negative Indices beginnen am Ende zu zählen  
+letzterEintrag = liste[-1] # = “Welt”. Wir beginnen bei -1 !
 
-print(ersterEintrag, letzterEintrag) \# =\> “Hallo Welt”
+print(ersterEintrag, letzterEintrag) # => “Hallo Welt”
+```  
 
 Einen Eintrag ans Ende der Liste einfügen
 =========================================
 
-Wollen wir jetzt den Freitag zur hinzufügen, kann das mit der -Funktion
-geschehen.\
-Wir sagen, wo wir etwas hinzufügen ( engl. für ’ans Ende anfügen’)
-wollen: an das Ende der . Was wir hinzufügen wollen (Freitag), schreiben
+Wollen wir jetzt den Freitag zur `liste1` hinzufügen, kann das mit der `.append(...)`-Funktion
+geschehen.  
+Wir sagen, wo wir etwas hinzufügen ( `append` engl. für ’ans Ende anfügen’)
+wollen: an das Ende der `liste1`. Was wir hinzufügen wollen (Freitag), schreiben
 wir in runde Klammern:
 
+```
 liste1.append(“Freitag”)
+```
 
-Geben wir nun die Liste wie oben beschrieben mithilfe ein -Schleife aus,
+Geben wir nun die Liste wie oben beschrieben mithilfe ein `for`-Schleife aus,
 so erhalten wir:
 
-Montag Dienstag Mittwoch Donnerstag Freitag
+```
+Montag  
+Dienstag  
+Mittwoch  
+Donnerstag  
+Freitag  
+```  
