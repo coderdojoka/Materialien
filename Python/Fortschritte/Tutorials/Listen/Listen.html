@@ -12,7 +12,10 @@
 <pre><code>for eintrag in liste1:  
     print (eintrag)  </code></pre>
 <p>erzeugt folgende Ausgabe:</p>
-<p>Montag<br />Dienstag<br />Mittwoch<br />Donnerstag</p>
+<p>Montag<br />
+Dienstag<br />
+Mittwoch<br />
+Donnerstag</p>
 <h1 id="anzahl-der-elemente-mit-len-ermitteln">Anzahl der Elemente mit len() ermitteln</h1>
 <p>Um herauszufinden, wieviele Einträge die Liste enthält, können wir die bereits bekannte Funktion <code>len()</code> einsetzen. Wir schreiben die Anzahl der Elemente in die Variable anzahl und geben diese anschließend aus</p>
 <pre><code>anzahl = len(liste1)  
@@ -20,7 +23,9 @@ print (anzahl)  </code></pre>
 <p>Dies gibt 4 aus, d.h. es sind 4 Elemente in unserer Liste enthalten.</p>
 <h1 id="einen-eintrag-z.b.-den-dritten-aus-einer-liste-lesen">Einen Eintrag (z.B. den dritten) aus einer Liste lesen</h1>
 <p>Wie wir oben mit der <code>len</code>-Funktion gesehen haben, enthält unsere Liste 4 Einträge</p>
-<p>Jedem Wert in unserer Liste ist ein Index (Plural: Indices) zugeordnet. D.h. jeder Eintrag hat eine Zählnummer, anhand derer wir einzelne Einträge heraussuchen können. Der Index wird in [eckige Klammern gesetzt].<br />Wir wollen das dritte Element aus unserer liste1 anzeigen.<br />Wir erinnern uns:</p>
+<p>Jedem Wert in unserer Liste ist ein Index (Plural: Indices) zugeordnet. D.h. jeder Eintrag hat eine Zählnummer, anhand derer wir einzelne Einträge heraussuchen können. Der Index wird in [eckige Klammern gesetzt].<br />
+Wir wollen das dritte Element aus unserer liste1 anzeigen.<br />
+Wir erinnern uns:</p>
 <pre><code>**Achtung:** Beim Programmieren fangen wir oft bei 0 mit dem Zählen an.
 D.h., dass wir um das dritte Element zu erfahren nicht 3 , sondern 2 in
 die eckigen Klammern schreiben müssen.</code></pre>
@@ -28,20 +33,20 @@ die eckigen Klammern schreiben müssen.</code></pre>
 <table>
 <thead>
 <tr class="header">
-<th align="left">liste1 =</th>
-<th align="left">“Montag”</th>
-<th align="left">“Dienstag”</th>
-<th align="left">“Mittwoch”</th>
-<th align="left">“Donnerstag”</th>
+<th>liste1 =</th>
+<th>“Montag”</th>
+<th>“Dienstag”</th>
+<th>“Mittwoch”</th>
+<th>“Donnerstag”</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Index:</td>
-<td align="left">0</td>
-<td align="left">1</td>
-<td align="left">2</td>
-<td align="left">3</td>
+<td>Index:</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
 </tr>
 </tbody>
 </table>
@@ -55,20 +60,20 @@ die eckigen Klammern schreiben müssen.</code></pre>
 <table>
 <thead>
 <tr class="header">
-<th align="left">liste1 =</th>
-<th align="left">“Montag”</th>
-<th align="left">“Dienstag”</th>
-<th align="left">“Mittwoch”</th>
-<th align="left">“Donnerstag”</th>
+<th>liste1 =</th>
+<th>“Montag”</th>
+<th>“Dienstag”</th>
+<th>“Mittwoch”</th>
+<th>“Donnerstag”</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Index:</td>
-<td align="left">-4</td>
-<td align="left">-3</td>
-<td align="left">-2</td>
-<td align="left">-1</td>
+<td>Index:</td>
+<td>-4</td>
+<td>-3</td>
+<td>-2</td>
+<td>-1</td>
 </tr>
 </tbody>
 </table>
@@ -76,24 +81,24 @@ die eckigen Klammern schreiben müssen.</code></pre>
 <table>
 <thead>
 <tr class="header">
-<th align="left">liste =</th>
-<th align="left">“Hallo”</th>
-<th align="left">“Test”</th>
-<th align="left">“Welt”</th>
+<th>liste =</th>
+<th>“Hallo”</th>
+<th>“Test”</th>
+<th>“Welt”</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Index:</td>
-<td align="left">0</td>
-<td align="left">1</td>
-<td align="left">2</td>
+<td>Index:</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
 </tr>
 <tr class="even">
-<td align="left">neg. Index:</td>
-<td align="left">-3</td>
-<td align="left">-2</td>
-<td align="left">-1</td>
+<td>neg. Index:</td>
+<td>-3</td>
+<td>-2</td>
+<td>-1</td>
 </tr>
 </tbody>
 </table>
@@ -106,7 +111,8 @@ letzterEintrag = liste[-1] # = “Welt”. Wir beginnen bei -1 !
 
 print(ersterEintrag, letzterEintrag) # =&gt; “Hallo Welt”</code></pre>
 <h1 id="einen-eintrag-ans-ende-der-liste-einfügen">Einen Eintrag ans Ende der Liste einfügen</h1>
-<p>Wollen wir jetzt den Freitag zur <code>liste1</code> hinzufügen, kann das mit der <code>.append(...)</code>-Funktion geschehen.<br />Wir sagen, wo wir etwas hinzufügen ( <code>append</code> engl. für ’ans Ende anfügen’) wollen: an das Ende der <code>liste1</code>. Was wir hinzufügen wollen (Freitag), schreiben wir in runde Klammern:</p>
+<p>Wollen wir jetzt den Freitag zur <code>liste1</code> hinzufügen, kann das mit der <code>.append(...)</code>-Funktion geschehen.<br />
+Wir sagen, wo wir etwas hinzufügen ( <code>append</code> engl. für ’ans Ende anfügen’) wollen: an das Ende der <code>liste1</code>. Was wir hinzufügen wollen (Freitag), schreiben wir in runde Klammern:</p>
 <pre><code>liste1.append(“Freitag”)</code></pre>
 <p>Geben wir nun die Liste wie oben beschrieben mithilfe ein <code>for</code>-Schleife aus, so erhalten wir:</p>
 <pre><code>Montag  
