@@ -18,7 +18,7 @@ Hausaufgaben machen und für Klassenarbeiten lernen müsst. Aber du kannst
 aus deinem Zimmer den Fernseher hören! Du bekommst also immer mit, wenn
 eine Mannschaft ein Tor schießt.
 
-![Tor!!!](Fussball_Bild.jpg)
+![Tor!!!](Fussball_Bild.png){w=.45}
 
 Schreibe ein Programm, dass:
 

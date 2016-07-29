@@ -1,0 +1,39 @@
+
+<h1 id="themen">Themen:</h1>
+<ul>
+<li>Eingabe über die Konsole. Siehe dazu das Tutorial XY</li>
+<li>Zufallszahlen. Siehe dazu XY</li>
+<li>Ggf. auch <code>if</code>-Abfragen. Siehe dazu das Tutorial XY</li>
+</ul>
+<h1 id="aufgabe">Aufgabe:</h1>
+<p>Schreibe ein Programm, dass sich eine zufällige Zeit zwischen 10 und 30 Sekunden ausdenkt. Wenn die ENTER-Taste gedrückt wird, soll die Startzeit gemessen werden (s. Tipps). Beim erneuten Drücken der ENTER-Taste, soll eine zweite Zeit gemessen werden. Aus der Start- und Stopzeit kannst du den Zeitunterschied errechnen, mit der gewünschten Zeit vergleichen und eine Meldung ausgeben, wie gut die Schätzung ist.</p>
+<h1 id="vorüberlegung">Vorüberlegung:</h1>
+<ul>
+<li>Stell dir vor, du hast eine Uhr in der Hand und jemand sagt dir wann du anfangen und aufhören sollst du messen. Anschließend sollst du sagen können, wie viele Sekunden du gemessen hast. Welche Werte musst du dir dafür merken</li>
+<li>Überlege dir, was was eine akzeptable Abweichung von der Messzeit wäre. Z.B. eine Abweichung von 2 Sekunden ist ok. Für den Anfang kannst du diesen Teil aber erstmal weglassen</li>
+</ul>
+<h1 id="beispielablauf">Beispielablauf:</h1>
+<pre><code>Versuche so gut wie möglich abzuschätzen, wann die unten gezeigte Zeit  
+abgelaufen ist.  
+Wenn du bereit bist drücke ENTER, um die Stopuhr zu starten.  
+Drücke erneut ENTER, wenn du glaubst, dass die Zeit abgelaufen ist.
+
+Stoppe: 42 Sekunden.
+&lt;ENTER&gt;
+...
+&lt;ENTER&gt;
+
+Du hast 36.7 Sekunden gestoppt.
+Das könnte besser sein :)</code></pre>
+<p><strong>Hinweis:</strong> <code>&lt;ENTER&gt;...&lt;ENTER&gt;</code> stellt hier nur die Benutzereingabe und Wartezeit dar.</p>
+<h1 id="tipps">Tipps:</h1>
+<p>Du kannst die aktuelle Zeit in Sekunden so ermitteln:</p>
+<pre><code class="language-python"># Das Paket time einmal importieren
+import time
+
+# aktuelle Zeit in Sekunden
+sekunden = time.time()</code></pre>
+<p>Dies liefert dir das aktuelle Zeit in Sekunden als Kommazahl mit vielen Nachkommastellen. Hier siehst du, wie man nur eine Nachkommastelle anzeigen kann:</p>
+<pre><code class="language-python">meineZeit = 36.72345
+print("Du hast %.1f Sekunden gestoppt." % meineZeit) # 36.7</code></pre>
+<p>Um Zahlen formatiert auszugeben, nutzt man Platzhalter: <code>%f</code> für Kommazahlen, <code>%d</code> für ganze Zahlen, innerhalb eines Textes. Mittels <code>%.1f</code> gibt man an, dass man genau eine Nachkommastelle will. Hinter dem Text gibt man mit <code>% meineZeit</code> an, welcher Wert formatiert eingefügt werden soll.</p>

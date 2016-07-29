@@ -1,0 +1,37 @@
+
+<h1 id="themen">Themen:</h1>
+<ul>
+<li>Eingabe über die Konsole. Siehe dazu das Tutorial XY</li>
+<li><code>if</code>-Abfragen. Siehe dazu das Tutorial XY</li>
+</ul>
+<h1 id="aufgabe">Aufgabe:</h1>
+<p>Schreibe ein Programm, dass dich auffordert dein Geburtsdatum einzugeben. Rechne anhand des Datums aus, wieviele Jahre du alt du bist.</p>
+<h1 id="vorüberlegung">Vorüberlegung</h1>
+<ul>
+<li>Wenn du das heutige Datum weißt und das Geburtsdatum einer Person, wie kannst du ausrechnen wie alt die Person ist?</li>
+<li>Macht es einen Unterschied ob die Person dieses Jahr schon Geburtstag hatte oder nicht?</li>
+</ul>
+<h1 id="beispielablauf">Beispielablauf:</h1>
+<pre><code>Wann bist du geboren?
+Geburtsjahr: 1993
+Geburtsmonat: 2
+Geburtstag: 16
+
+Du bist 23 Jahre alt.</code></pre>
+<p><strong>Hinweis:</strong> Die Zahlen <code>1993</code>, <code>2</code> und <code>16</code> sind hier die Benutzereingabe.</p>
+<h1 id="tipps">Tipps:</h1>
+<p>Das heutige Datum bekommst du so:</p>
+<pre><code class="language-python"># Das Paket datetime einmal importieren
+import datetime
+
+# aktuelles Datum abfragen
+heute = datetime.datetime.now()
+
+jahr = heute.year
+monat = heute.month
+tag = heute.day</code></pre>
+<ul>
+<li>Beachte, das <code>input(..)</code> einen Text liefert, konvertiere ihn mittels <code>int(..)</code> in eine Zahl</li>
+<li>Lies dein Geburtsdatum als drei einzelne Zahlen ein: Jahr, Monat, Tag</li>
+<li>Unterscheide zwei Fälle: Du hattest dieses Jahr schon Geburtstag oder du hattest dieses Jahr noch nicht Geburtstag.</li>
+</ul>

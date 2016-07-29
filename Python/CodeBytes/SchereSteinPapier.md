@@ -19,7 +19,7 @@ ist es eigentlich peinlich, weil er sich einfach nicht merken kann,
 womit man Schere, Stein oder Papier schlagen kann. Falls du es auch
 vergessen hast, hier ist ein erklärendes Bild:
 
-![Schere-Stein-Papier-Regeln](Schere_Stein_Papier.jpg)
+![Schere-Stein-Papier-Regeln](Schere_Stein_Papier.png){w=.8}
 
 Deine Aufgabe, schreibe ein Programm, dass:
 
