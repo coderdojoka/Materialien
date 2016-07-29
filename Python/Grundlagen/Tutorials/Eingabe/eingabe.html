@@ -2,13 +2,19 @@
 <h1 id="eingaben">Eingaben</h1>
 <p>Ein Program, in den der Benutzer nichts eingeben kann ist meinstens langweilig. Deswegen ist es praktisch, dass wir relativ einfach die Eingaben einlesen können.</p>
 <p>Dies funktioniert mithilfe von <code>input()</code>.</p>
-\inputminted[breaklines=true, firstline=1,, lastline=2,, linenumbers=true]{python}{../../../Beispiele/eingabe.py}
-<p>Was in den Klammern bei <code>input()</code> steht wird zuerst auf der Konsole ausgeben, dann wird auf einen Eingabe des Benutzers gewartet.<br /><strong>Wichtig:</strong> das Programm wartet solange bis der Benutzer etwas auf der Konsole eingetippt und mit ’Enter’ bestätigt hat!</p>
-\inputminted[breaklines=true, firstline=2,, lastline=2,, linenumbers=true]{python}{../../../Beispiele/eingabe.py}
+<pre><code class="language-python"># Liest einen Text von der Konsole ein
+name = input("Wie heißt du?: ")	
+</code><pre>
+<p>Was in den Klammern bei <code>input()</code> steht wird zuerst auf der Konsole ausgeben, dann wird auf einen Eingabe des Benutzers gewartet.<br />
+<strong>Wichtig:</strong> das Programm wartet solange bis der Benutzer etwas auf der Konsole eingetippt und mit ’Enter’ bestätigt hat!</p>
+<pre><code class="language-python">name = input("Wie heißt du?: ")	
+</code><pre>
 <p>Wie in dem Tutorial zu Variablen schon erklärt wurde, ist <code>name</code> eine Variable. Dieser Variable wird der Wert zugewiesen, den der Benutzer eintippt und mittels <code>input()</code> gelesen wird.</p>
 <h1 id="zahlen-einlesen">Zahlen einlesen</h1>
 <p>Mittles <code>input()</code> kann nur Text eingelesen werden! Auch wenn der Benutzer <code>12</code> eintippt, so wird dies als Text <code>&quot;12&quot;</code> interpretiert. Wir können mit Text allerdings nicht rechnen. Aus diesem Grund müssen wir den eingelesenen Text mithilfe von <code>int(...)</code> in eine ganze Zahl konvertieren.</p>
-\inputminted[breaklines=true, firstline=4,, lastline=5,, linenumbers=true]{python}{../../../Beispiele/eingabe.py}
+<pre><code class="language-python">alter = input("Wie alt bist du?: ") # Alter als Text einlesen
+alter = int(alter) # Text in eine Zahl konvertieren
+</code><pre>
 <p>Hier wird nun zuerst das Alter als Text eingelesen und dann in eine Zahl umgewandelt. Die Variable <code>alter</code> enthält zunächst also einen Text und danach die Zahl, die dieser Text darstellt.</p>
 <h1 id="aufgaben">Aufgaben</h1>
 <ul>

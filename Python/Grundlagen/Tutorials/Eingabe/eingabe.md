@@ -12,7 +12,7 @@ Eingaben einlesen können.
 
 Dies funktioniert mithilfe von `input()`.
 
-```{.python firstline=1, lastline=2, include="../../../Beispiele/eingabe.py"}
+```{.python firstline=1 lastline=2 include="../../../Beispiele/eingabe.py"}
 bubber
 ```
 
@@ -21,7 +21,7 @@ wird auf einen Eingabe des Benutzers gewartet.\
 **Wichtig:** das Programm wartet solange bis der Benutzer etwas auf der
 Konsole eingetippt und mit ’Enter’ bestätigt hat!
 
-```{.python firstline=2, lastline=2, include="../../../Beispiele/eingabe.py"}
+```{.python firstline=2 lastline=2 include="../../../Beispiele/eingabe.py"}
 bubber
 ```
 
@@ -37,7 +37,7 @@ eintippt, so wird dies als Text `"12"` interpretiert. Wir können mit Text
 allerdings nicht rechnen. Aus diesem Grund müssen wir den eingelesenen
 Text mithilfe von `int(...)` in eine ganze Zahl konvertieren.
 
-```{.python firstline=4, lastline=5, include="../../../Beispiele/eingabe.py"}
+```{.python firstline=4 lastline=5 include="../../../Beispiele/eingabe.py"}
 bubber
 ```
 

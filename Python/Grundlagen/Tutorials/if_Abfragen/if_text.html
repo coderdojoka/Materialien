@@ -1,0 +1,129 @@
+
+<h1 id="entscheidungen-und-bedingungen">Entscheidungen und Bedingungen</h1>
+<p>An vielen Stellen im täglichen Leben, sowie auch beim Programmieren müssen Entscheidungen getroffen werden: ’Soll ich früher aufstehen, um ihn Ruhe zu früchstücken oder lass ich das Frühstück ausfallen, damit ich länger schlafen kann?’</p>
+<p>Um nun abends den Wecker zu stellen muss man sich Folgendes überlegen und ausführen:</p>
+<pre><code>Falls &lt;Will ich frühstücken?&gt;:  
+    stelle_wecker(6)  
+Ansonsten:  
+    stelle_wecker(7)  </code></pre>
+<p>Die Weckzeit ist also abhängig von der Bedingung: ’Will ich frühstücken?’.</p>
+<h4 id="bedingung">Bedingung</h4>
+<p>Eine Bedingung beim Programmieren ist eine Aussage oder ein Ausdruck, die mit ’Ja’ oder ’Nein’ zu beantworten ist. Komplizierte Antworten gibt es nicht! Eine Antwort muss immer ’Ja’ oder ’Nein’ sein, ’Vielleicht’ oder ’Morgen’ sind nicht erlaubt.<br />
+Um genau zu sein heißen diese Werte beim Programmieren meistens <code>True</code> (engl. für ’Wahr’) und <code>False</code> (engl. für ’Falsch’).<br />
+Vielleicht stellst Du Dir jetzt die Frage, wie eine Bedingung zu formulieren ist, da ’Will ich frühstücken?’ für Menschen einfach zu verstehen ist, für einen Computer allerdings nicht.</p>
+<h4 id="die-einfachste-bedinung">Die einfachste Bedinung</h4>
+<p><code>True</code> ist (’Wahr’) oder <code>False</code> (’Falsch’) zu schreiben.</p>
+<pre><code>Falls &lt;Wahr&gt;:
+    sage(“Die Bedingung ist wahr”)</code></pre>
+<p>Zugebenermaßen ist dies nicht sinnvoll, da man in dem obigen Beispiel die Bedingung einfach weglassen kann.</p>
+<h4 id="vergleichsoperationen">Vergleichsoperationen</h4>
+<p>sind eine Möglichkeit um Bedingungen zu beschreiben. Wie in der Schule können z.B. Operationen wie ´&gt;´ (größer), <code>&lt;</code> (kleiner), <code>&gt;=</code> (größer gleich), <code>&lt;=</code> (kleiner gleich) verwendet werden um Zahlen zu vergleichen.</p>
+<p>Ein Ausdruck wie <code>30 &gt; 20</code> ergibt <code>True</code> und <code>30 &lt; 20</code> ergibt <code>False</code> Diese können also als Bedingung verwendet werden kann.</p>
+<pre><code># alter ist eine zuvor definierte Variable  
+Falls alter &gt; 10:  
+    sage(“Du bist älter als 10”)  </code></pre>
+<table>
+<caption>Vorhandene Vergleichsoperationen</caption>
+<thead>
+<tr class="header">
+<th align="left">Operation</th>
+<th align="left">Befehl</th>
+<th align="left">Beispiel</th>
+<th align="left">Ausgabe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Größer</td>
+<td align="left">&gt; 2</td>
+<td align="left">0 &gt;20 Fa</td>
+<td align="left">lsch</td>
+</tr>
+<tr class="even">
+<td align="left">Größer Gleich</td>
+<td align="left">&gt;= 2</td>
+<td align="left">0 &gt;= 20 Wa</td>
+<td align="left">hr</td>
+</tr>
+<tr class="odd">
+<td align="left">Kleiner</td>
+<td align="left">&lt; 1</td>
+<td align="left">0 &lt;30 Wa</td>
+<td align="left">hr</td>
+</tr>
+<tr class="even">
+<td align="left">Kleiner Gleich</td>
+<td align="left">&lt;= 1</td>
+<td align="left">0 &lt;= 25 Wa</td>
+<td align="left">hr</td>
+</tr>
+<tr class="odd">
+<td align="left">Gleichheit</td>
+<td align="left">==</td>
+<td align="left">10 == 10</td>
+<td align="left">Wahr</td>
+</tr>
+<tr class="even">
+<td align="left">Ungleichheit</td>
+<td align="left">!=</td>
+<td align="left">10 != 10</td>
+<td align="left">Falsch</td>
+</tr>
+</tbody>
+</table>
+<h1 id="aufgaben">Aufgaben</h1>
+<ul>
+<li><p>Was (<code>True</code> oder <code>False</code>) ergeben die folgenden Ausdrücke jeweils:</p>
+<ul>
+<li><p>10 &lt; 12:</p></li>
+<li><p>12 &lt; 10</p></li>
+<li><p>15 != 15</p></li>
+<li><p>20 &gt;= 15</p></li>
+<li><p>12 == 12</p></li>
+</ul></li>
+<li><p>In der Variablen <code>Schuhgröße</code> steht die Schuhgröße einer Person.<br />
+Schreibe eine Falls-Ansonsten-Abfrage, die ausgibt (benutze ’sage’), ob diese Person große Füße hat oder nicht. Große Füße bedeutet, dass die Schuhgröße größer als 42 ist.</p></li>
+</ul>
+<h1 id="if-abfrage-falls-abfrage">if-Abfrage (Falls-Abfrage)</h1>
+<p>Bisher haben wir in den Beispielen keinen ’echten’ Code verwendet. Dies wollen wir jetzt ändern. Eine ’Falls’-Abfrage sieht in Python so aus:</p>
+<pre><code># wert ist eine zuvor definierte beliebige Zahl-Varible  
+if wert &lt; 10:  
+    print(“Kleiner 10.”)  
+
+print(“Nach if-Abfrage.”)  </code></pre>
+<p>Dazu schreibt man <code>if</code> (engl. für ’falls), dann die Bedingung gefolgt von einem Doppelpunkt ’:’. Darunter eine oder mehrere eingerückte Zeilen. Die Einrückung (mit 4 Leerzeichen oder Tabulator-Taste) bedeutet, dass alles was eingerückt ist <strong>genau dann</strong> ausgeführt wird, wenn die Bedingung wahr ist.</p>
+<p>Führt man dies nun aus mit den Werten <code>wert = 5</code> und <code>wert = 15</code> aus, verhält sich die Ausgabe unterschiedlich:</p>
+<pre><code># wert = 5
+Kleiner 10.  
+Nach if-Abfrage.   </code></pre>
+<pre><code># wert = 15  
+Nach if-Abfrage.  </code></pre>
+<p>Man sieht an den Beispielen, dass ’Kleiner 10.’ nur dann ausgegeben wird, wenn der Wert kleiner als 10 ist. Die nichteingerückte Zeile darunter wird in beiden Fällen ausgeführt und dies führt dazu, dass ’Nach if-Abfrage.’ immer ausgeben wird.</p>
+<h4 id="falls-ansonsten-abfrage-if-else-abfrage">Falls-Ansonsten-Abfrage (if-else-Abfrage)</h4>
+<p>Ist die Bedingung in der ’Falls’-Abfrage falsch, so kann eine ’Ansonsten’-Abfrage (engl. ’else’) hinzugefügt werden, die <strong>genau dann</strong> ausgeführt wird, wenn die Bedingung falsch ist.</p>
+<pre><code># wert ist eine zuvor definierte beliebige Zahl-Variable  
+if wert &lt; 10:  
+    print(“Kleiner 10.”)  
+else:  
+    print(“Größer oder gleich 10.”)  
+
+print(“Nach if-Abfrage.”)  </code></pre>
+<p>Führt man dies nun mit den Werten <code>wert = 5</code> und <code>wert = 15</code> aus, verhält sich die Ausgabe wie folgt:</p>
+<pre><code># wert = 5  
+Kleiner 10.  
+Nach if-Abfrage.  </code></pre>
+<pre><code># wert = 15  
+Größer oder gleich 10.  
+Nach if-Abfrage.  </code></pre>
+<h4 id="in-scratch">In Scratch</h4>
+<p>würde das obige Beispiel dann so aussehen:</p>
+<p><img alt="" src="data:image/png;base64,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"></p>
+<p>Man sieht hier sehr schön die Einrückungen der ’sage’-Blöcke, während der grüne spitze Block die Bedingung darstellt.</p>
+<h1 id="aufgaben-1">Aufgaben</h1>
+<ul>
+<li><p>Um das Ganze spannender zu gestalten führen wir hier noch Zufallszahlen ein.<br />
+Dein Computer kann zufällige Zahlen in einem angegeben Bereich für dich erzeugen. Dazu musst du nur folgende zwei Zeilen Code einfügen:</p>
+<pre><code>import random  
+zufall = random.randint(1, 100)  </code></pre>
+<p>Schreibe eine if-else Abfrage die bestimmt, ob der Wert der Zufallsvariablen größer oder gleich 50 ist. Gib dies dann mithilfe von print() aus.</p></li>
+</ul>

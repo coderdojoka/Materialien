@@ -41,7 +41,7 @@ verstehen ist, für einen Computer allerdings nicht.
 `True` ist (’Wahr’) oder `False` (’Falsch’) zu schreiben.
 
 ```  
-Falls <Wahr>: 
+Falls <Wahr>:
 	sage(“Die Bedingung ist wahr”)
 ```  
 
@@ -53,7 +53,7 @@ die Bedingung einfach weglassen kann.
 sind eine Möglichkeit um Bedingungen zu beschreiben. Wie in der Schule
 können z.B. Operationen wie ´>´ (größer), `<` (kleiner), `>=` (größer gleich), `<=`
 (kleiner gleich) verwendet werden um Zahlen zu vergleichen.  
-  
+
 Ein Ausdruck wie `30 > 20` ergibt `True` und `30 < 20` ergibt `False` Diese können also als Bedingung
 verwendet werden kann.
 
@@ -104,7 +104,7 @@ wollen wir jetzt ändern. Eine ’Falls’-Abfrage sieht in Python so aus:
 # wert ist eine zuvor definierte beliebige Zahl-Varible  
 if wert < 10:  
 	print(“Kleiner 10.”)  
-  
+
 print(“Nach if-Abfrage.”)  
 ```  
 
@@ -113,12 +113,12 @@ einem Doppelpunkt ’:’. Darunter eine oder mehrere eingerückte Zeilen.
 Die Einrückung (mit 4 Leerzeichen oder Tabulator-Taste) bedeutet, dass
 alles was eingerückt ist **genau dann** ausgeführt wird, wenn die
 Bedingung wahr ist.  
-  
+
 Führt man dies nun aus mit den Werten `wert = 5` und `wert = 15` aus, verhält sich die Ausgabe
 unterschiedlich:
 
 ```  
-# wert = 5 
+# wert = 5
 Kleiner 10.  
 Nach if-Abfrage.   
 ```  
@@ -145,7 +145,7 @@ if wert < 10:
 	print(“Kleiner 10.”)  
 else:  
 	print(“Größer oder gleich 10.”)  
-  
+
 print(“Nach if-Abfrage.”)  
 ```  
 
@@ -168,7 +168,7 @@ Nach if-Abfrage.
 
 würde das obige Beispiel dann so aussehen:  
 
-![image](scratch_if_else)  
+![image](scratch_if_else.png)  
 
 Man sieht hier sehr schön die Einrückungen der ’sage’-Blöcke, während
 der grüne spitze Block die Bedingung darstellt.
@@ -185,9 +185,7 @@ Aufgaben
     import random  
     zufall = random.randint(1, 100)  
     ```
-  
+
     Schreibe eine if-else Abfrage die bestimmt, ob der Wert der
     Zufallsvariablen größer oder gleich 50 ist. Gib dies dann mithilfe
     von print() aus.
-
-

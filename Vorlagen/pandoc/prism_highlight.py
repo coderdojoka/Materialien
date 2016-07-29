@@ -84,14 +84,14 @@ def prism(key, value, format, meta):
                 lastline = len(code)
                 firstline = 0
                 if 'lastline' in params:
-                    lastline = min(lastline, int(params['lastline']) +1)
+                    lastline = min(lastline, int(params['lastline']))
                 if 'firstline' in params:
-                    firstline = max(firstline, min(lastline, int(params['firstline'])))
+                    firstline = max(firstline, min(lastline, int(params['firstline'])-1))
 
                 body = "".join(code[firstline: lastline])
 
                 # determine language by ending
-                dot_index = source_file.index(".")
+                dot_index = source_file.rindex(".")
                 ending = source_file[dot_index + 1:]
                 if ending not in ENDINGS:
                     raise AttributeError("Unknown ending: " + ending)
