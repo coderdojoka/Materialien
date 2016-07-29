@@ -20,10 +20,9 @@ fi
 
 filters="--filter $DIR/prism_highlight.py"
 
-echo "Running: pandoc $in -o $out $filters --template=$DIR/html/simple.html -s --smart"
+echo "Running: pandoc $in -o $out $filters --template=$DIR/simple.html -s --smart"
 pandoc $in -o $out --filter $DIR/prism_highlight.py --filter $DIR/magic_headers.py --template=$DIR/html/simple.html -s --smart
 
 echo ""
 echo "All Done. HTML file written to: $out"
 
-chromium $out
