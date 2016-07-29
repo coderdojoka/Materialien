@@ -31,7 +31,7 @@ Auf der linken Seite des '='-Zeichens steht der Name der Variablen, die erstellt
 Auf der rechten Seite steht der Wert, der ihr zugewiesen wird. Mithilfe
 des `print`-Befehls, kann der Wert einer Variablen ausgegeben werden.
 
-``` {.python firstline=7, lastline=8 include=../../../Beispiele/variablen.py}
+``` {.python firstline=7 lastline=8 include=../../../Beispiele/variablen.py}
 will be replaced
 ```
 
@@ -44,7 +44,7 @@ Rechnen mit Variablen
 Man kann Zahlen in Variablen speichern, warum also nicht auch mit ihnen
 rechnen.
 
-``` {.python firstline=11, lastline=15 include=../../../Beispiele/variablen.py}
+``` {.python firstline=11 lastline=15 include=../../../Beispiele/variablen.py}
 will be replaced
 ```
 

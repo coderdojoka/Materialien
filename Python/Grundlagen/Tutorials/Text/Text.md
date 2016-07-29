@@ -28,7 +28,7 @@ will be replaced
 
 Dies könnte man auch mit `print` direkt
 ausgeben, da mehrere Parameter übgergeben werden können:
-``` {.python firstline=9, lastline=10 include=../../../Beispiele/text.py}
+``` {.python firstline=9 lastline=10 include=../../../Beispiele/text.py}
 will be replaced
 ```
 
@@ -54,7 +54,7 @@ Texte als Buchstabenketten
 
 Im Rechner intern, werden Texte als ein Kette von einzelnen Buchstaben
 gespeichert. Dies können wir uns zu Nutzen machen.
-\inputminted[firstline=18, lastline=21]{python}{../../../Beispiele/text.py}
+```{.python firstline=1 lastline=21 include="../../../Beispiele/text.py"}
 
 Mit den eckigen Klammern am Ende der Text-Variablen `meinText[2]` deuten wir an, dass
 wir den Buchstaben wissen wollen, der an der in Klammern geschrieben
