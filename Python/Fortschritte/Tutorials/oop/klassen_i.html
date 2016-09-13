@@ -1,0 +1,49 @@
+
+<p>Ein sehr nützliches Konzept sind Klassen. Diese stellen eine Art Bauplan dar, nachdem man beliebig viele Dinge erzeugen kann, die jeweils einen definierte Eigenschaften und Funktionen haben. Jedes Ding, auch Objekt oder Instanz einer Klasse genannt, hat die gleichen Eigenschaften (Größe, Farbe), diese können allerdings unterschiedliche Werte haben.</p>
+<blockquote>
+<p>Gummibärchen haben alle die gleiche Form, es gibt sie jedoch in verschiedenen Farben, Größen und Geschmacksrichtungen.</p>
+</blockquote>
+<p>Eine Klasse beschreibt das ‘Aussehen’ und Verhalten eines Dinges, aus der Sicht dieses Dinges. Das hört sich jetzt vielleicht etwas komisch an…</p>
+<blockquote>
+<p>Stell dir vor, du bist das Gummibärchen, du weißt welche Farbe du hast und wonach du schmeckst.</p>
+</blockquote>
+<p>Eine Klasse für ein Gummibärchen könnte also so aussehen:</p>
+<pre><code class="language-python">class Gummibaerchen:
+
+  def __init(self, farbe, geschack):
+    self.farbe = farbe
+    self.geschack = geschmack
+</code></pre>
+<h1 id="die-__init__-methode---konstruktor">Die <code>__init__()</code>-Methode - Konstruktor</h1>
+<p>Die wichtigste Methode jeder Klasse ist die <code>__init__()</code>-Methode. Diese wird genau einmal aufgefufen, wenn ein neues Ding erstellt wird. Hier werden alle Eigenschaften, die ein Ding hat angelegt.</p>
+<p>Um zu kennzeichnen, dass eine Eigenschaft/Variable zu einer Klasse gehört und nicht nur eine normale Variable ist müssen diese mit <code>self.mein_variable</code> erstellt werden. Diese bedeuet, dass die Variable zu diesem Ding gehört und jederzeit abgefragt werden kann!</p>
+<h1 id="dingeinstanzen-erstellen">Dinge/Instanzen erstellen</h1>
+<p>Eine Klasse an sich tut noch nichts, sie gibt nur vor, wie sich Instanzen dieser Klasse verhalten. Hat man eine Klasse kann man verschiedene Instanzen erstellen. Dazu verwendet man den Namen der Klasse (hier <code>Gummibaerchen</code>) und übergibt in Klammern alle von <code>__init__()</code> geforderten Parameter. Wie bereits beschrieben, wird beim Erstellen die <code>__init__()</code>-Methode aufgerufen und so werden die Parameter an diese übergeben.</p>
+<pre><code class="language-python"># Erstellt zwei Instanzen
+baer1 = Gummibaerchen("rot", "Erdbeere")
+baer2 = Gummibaerchen("gruen", "Apfel")
+
+# Die Eigenschaften abfragen:
+
+print(baer1.farbe) # rot
+print(baer1.geschmack) # Apfel</code></pre>
+<p>In diesem Beispiel sieht man wie man Instanzen erstellt und Werte abfragt. Jede Instanz hat die in der Klasse definierten Variablen <code>farbe</code> und <code>geschmack</code>. Diese haben verschiedene Werte und können über den Namen der Instanz abgefragt <code>baer1.farbe</code> und sogar geändert werden <code>baer1.farbe = 'blau'</code>.</p>
+<h1 id="sichtweise-von-innen-vs.von-außen">Sichtweise: Von Innen vs. von Außen</h1>
+<p>In der Klassendefinition werden Eigenschaften mit <code>self.farbe</code> abgefragt, bzw. gesetzt. Wir befinden uns innerhalb der Klasse, sind als quasi das Gummibaerchen selber (engl. <em>self</em>). Was wir hier programmieren, wird sich auf alle <code>Gummibaerchen</code>-Instanzen auswirken, wenn dieser Code für die jeweilige Instanz aufgefufen wird.<br />
+Haben wir eine Instanz erstellt, müssen wir angeben auf welcher Instanz wir arbeiten wollen. Hier ist <code>self</code> nicht eindeutig, weil wir z.B. <code>baer1</code> und <code>baer2</code> haben. Aus diesem Grund verwenden wir den Namen der Instanz und geben dann an, welche Eigenschaft wir abfragen/verändern wollen.</p>
+<h2 id="klassenmethoden">Klassenmethoden</h2>
+<p>Zusätzlich zu Eigenschaften können Klassen bzw. Instanzen davon natürlich auch Funktionen haben. Bisher haben wir nur die Spezialmethode <code>init()</code> gesehen. Eine Funktion wird innerhalb der Klasse (eingerückt) ganz normal definiert. Einzige Ausnahme ist, dass der erste Parameter <strong>IMMER</strong> <code>self</code> sein muss!</p>
+<pre><code class="language-python">class Gummibaerchen:
+
+  def __init(self, farbe, geschack):
+    # ...
+
+  def info(self):
+    print("Gummibaerchen in ", self.farbe, " mit Geschmack", self.geschmack)</code></pre>
+<p>Eine einfache Methode, die Information über unser Gummibärchen ausgibt. Da wir uns innerhalb der Klasse (des Gummibaerchen) befinden, können wir die Farbe über <code>self.farbe</code> abfragen. Zu diesem Zeitpunkt gibt es ja noch keine konkreten Bärchen! Wir fügen lediglich jedem Bär die Funktion <code>info()</code> hinzu. Diese steht ab sofort jedem <code>Gummibaerchen</code> zur Verfügung:</p>
+<pre><code class="language-python">baer1 = Gummibaerchen("rot", "Erdbeere")
+baer2 = Gummibaerchen("gruen", "Apfel")
+
+baer1.info() # Gummibaerchen in rot mit Geschmack Erdbeere
+baer2.info() # Gummibaerchen in gruen mit Geschmack Apfel</code></pre>
+<p>Wichtig, beim Aufrufen muss man <code>self</code> nicht mit übergeben, obwohl es in der Methodendefinition eigentlich gefordert wird! Dies ist eine Art Trick, damit in der Methode <code>self</code> immer zur Verfügung steht. Bei einem Aufruf einer Klassenmethode über eine Instanz wird <code>self</code> immer auf die aktuell aufrufende Instanz (<code>baer1</code> in <code>baer1.info()</code>).</p>

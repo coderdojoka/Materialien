@@ -1,6 +1,8 @@
 __author__ = 'Rouven'
 
 '''
+Deine Aufgabe:
+
 1. Schreibe ein Programm das dich
    1x1-Aufgaben abfragt.
 
@@ -29,7 +31,7 @@ while weiter == "Ja":
     if eingabe == zahl * zahl2:
         print("Richtig")
     else:
-        print("Leider falsch!!!Das richtige Ergebnis ist " + str(zahl * zahl2))
+        print("Leider falsch!!! Das richtige Ergebnis ist " + str(zahl * zahl2))
 
     weiter = input("Weiter (Ja/Nein): ")
 
