@@ -6,7 +6,7 @@ import time
 Deine Aufgabe:
 
 1. Programmiere ein Programm das die Zeit stoppt.
-   Zum Starten und Stopen kann man return drücken
+   Zum Starten und Stopen kann man Enter drücken
    und dann gibt es die Zeit aus.
 
    Tipp: Um die aktuelle Zeit zu erhalten muss man

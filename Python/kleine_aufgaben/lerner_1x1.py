@@ -7,10 +7,11 @@ Deine Aufgabe:
    1x1-Aufgaben abfragt.
 
 2. Mache am Ende eine Abfrage ob man
-   nochmal möchte, wenn ja von vorne
-   wenn nein beenden.
+   nochmal möchte:
+   - ja: von vorne
+   - nein: beenden.
 
-3. Lass den Benutzer denn Zahlenraum festlegen.
+3. Lass den Benutzer den Zahlenraum festlegen.
 '''
 
 from random import randint
