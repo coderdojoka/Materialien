@@ -1,4 +1,5 @@
-import time
+import time, sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), "algos"))
 
 from arena import Arena, SPIELFELD_BREITE, SPIELFELD_HOEHE
 
