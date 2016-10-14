@@ -6,7 +6,7 @@ __author__ = 'Mark Weinreuter'
 LIMIT_ZUEGE = 10000
 SPIELFELD_BREITE = 100
 SPIELFELD_HOEHE = 100
-BOX_GROESSE = 4
+BOX_GROESSE = 6
 
 FREI = 1
 RAND = 2
@@ -97,6 +97,8 @@ class Arena:
 
         if self.algo1.is_alive():
             self.algo1.join()
+
+        return True
 
     def versuche_bewegung(self, x, y, algo_index):
         with self.zuege_sperre:

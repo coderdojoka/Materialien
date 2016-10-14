@@ -29,7 +29,7 @@ class Algorithmus(threading.Thread):
 
         time.sleep(.2)
         random.seed()
-        self.y = random.randint(0, SPIELFELD_HOEHE)
+        self.y = SPIELFELD_HOEHE - random.randint(0, SPIELFELD_HOEHE)
 
         self.arena = None
         self.gegner_index = -1
@@ -48,11 +48,18 @@ class Algorithmus(threading.Thread):
         # logging.basicConfig(level=logging.DEBUG, format='(%(threadName)-10s) %(message)s', )
         # logging.debug("Starte %s in %d, %d" % (self.name, self.x, self.y))
 
+
+    def richtung_hor(self, richtung):
+        return richtung == LINKS or richtung == RECHTS
+
     def richtung_horizontal(self):
         return self.richtung == LINKS or self.richtung == RECHTS
 
     def richtung_vertikal(self):
         return self.richtung == OBEN or self.richtung == UNTEN
+
+    def richtung_ver(self, richtung):
+        return richtung == OBEN or richtung == UNTEN
 
     def drehe_horizontal(self):
         if self.richtung == LINKS:
@@ -65,6 +72,18 @@ class Algorithmus(threading.Thread):
             self.richtung = UNTEN
         else:
             self.richtung = OBEN
+
+    def drehe_ver(self, richtung):
+        if richtung == OBEN:
+            return UNTEN
+        else:
+            return OBEN
+
+    def drehe_hor(self, richtung):
+        if richtung == LINKS:
+            return RECHTS
+        else:
+            return LINKS
 
     def __str__(self):
         return "%s: %d, %d" % (self.name, self.x, self.y)
@@ -93,7 +112,7 @@ class Algorithmus(threading.Thread):
         self.gegner_index = gegner_index
         self.index = index
 
-        self.setName(self.name + "_" + str(index))
+        self.setName(self.name)
 
     def abstand_links(self):
         return self.x
