@@ -101,6 +101,7 @@ for runde in range(0, runden):
     if arena.punkte[0] > arena.punkte[1]:
         print(a1["name"], "gewinnt!")
         a1["siege"] += 1
+
     else:
         print(a2["name"], "gewinnt!")
         a2["siege"] += 1
@@ -114,7 +115,6 @@ for runde in range(0, runden):
 if img_support:
     background.save('imgs/runden_blend.png')
 
-if algo1_stats["siege"] > algo2_stats["siege"]:
-    print("\n\n", algo1_stats["name"], "gewinnt")
-else:
-    print("\n\n", algo2_stats["name"], "gewinnt")
+print("\n\nZusammenfassung: %s gewinnt" % (algo1_stats["name"] if algo1_stats["siege"] > algo2_stats["siege"] else algo2_stats["name"]))
+print("%s %d:%d %s" % (algo1_stats["name"], algo1_stats["siege"], algo2_stats["siege"], algo2_stats["name"]))
+
