@@ -20,7 +20,7 @@ else:
 if len(a1) < 3:
     a1 = "liner.Liner"
 if len(a2) < 3:
-    a2 = "zufall.Zufall1"
+    a2 = "d3stRoy3r.D3strRoy3r"
 
 m1, n1 = a1.split(".")
 m2, n2 = a2.split(".")
@@ -32,7 +32,7 @@ fenster = Fenster(W, H, "dotWars")
 Algorithmus.SCHLAF_ZEIT = .001
 delta = 0
 
-INTRO_ENDE = 2000
+INTRO_ENDE = 20
 spielfeld = None
 
 

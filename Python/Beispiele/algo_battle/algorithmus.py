@@ -25,11 +25,11 @@ class Algorithmus(threading.Thread):
         # For some more randomness :)
         time.sleep(.2)
         random.seed()
-        self.x = random.randint(0, SPIELFELD_BREITE)
+        self.x = random.randint(0, SPIELFELD_BREITE-1)
 
         time.sleep(.2)
         random.seed()
-        self.y = SPIELFELD_HOEHE - random.randint(0, SPIELFELD_HOEHE)
+        self.y = SPIELFELD_HOEHE - random.randint(0, SPIELFELD_HOEHE-1)
 
         self.arena = None
         self.gegner_index = -1
