@@ -1,11 +1,11 @@
 ---
 layout: example
-title: Eingaben von der Konsole einlesen
+title: Blocks - Ein kleines Spiel
 file: pyenguin_blocks.py
 type: example
-folder: basics
+folder: pyenguin
 date: 2016-02-20
-tags: []
+tags: [t_pyenguin]
 ---
 
 Ein Spiel, bei dem du versuchen musst die Blöcke mit dem Ball zu treffen.
