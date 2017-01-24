@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="exercise">
+  <h1 class="exercise-title"><a href="{{ "/python/beispiele.html" | absolute_url }}">Beispiele</a> - {{ page.title }}</h1>
+  {% include created_by.html %}
+  {% include gen_tags.html %}
+
+  {{ content }}
+
+  <a href="{{ page.file }}">Datei herunterladen</a>
+</div>
+
+<div class="related">
+  {% if page.related_files %}
+  <h2>Dateien</h2>
+  <ul class="related-files">
+    {% for post in page.related_files %}
+      <li>
+          <a href="{{ post }}">
+            {{ post | split: "/" | last }}
+          </a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if page.related_files %}
+  <h2>Ähnliche Aufgaben</h2>
+  <ul class="related-exercises">
+    {% for rel in page.related_exercises %}
+      {% for ex in site.python %}
+        {% if ex.uid == rel %}
+          <li>
+              <a href="{{ ex.url }}">
+                {{ ex.title }}
+              </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>

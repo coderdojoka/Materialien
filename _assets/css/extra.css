@@ -1,0 +1,116 @@
+img{
+  padding: 2px;
+  box-shadow: 0px 0px 2px silver;
+}
+
+.date-line{
+}
+
+.related-files, .related-exercises, .related-examples{
+  margin-bottom: 2em;
+  font-size: 1.2em;
+}
+
+.tags-container{
+  margin-top: .5em;
+  margin-bottom: 4em;
+}
+
+.tags-container > .tag{
+  padding: 5px 10px 5px 0;
+  vertical-align: middle;
+  border-radius: 40px;
+  background-color: rgb(211, 231, 228);
+  display: inline-block;
+  box-shadow: 2px 2px 2px silver;
+  margin-right: .2em;
+  text-decoration: none;
+}
+
+.tags-container > .tag:hover {
+  box-shadow: 2px 2px 2px gray;
+  background-color: rgb(200, 230, 210);
+}
+
+.tags-container > .tag > .circle{
+  display: inline-block;
+  margin: 0px 5px 0 10px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+}
+
+.tags-container > .tag a{
+  scolor: black !important;
+}
+
+.btn-container{
+  margin: 2em 0;
+}
+
+.btn-back{
+  text-align: left;
+}
+
+.btn-forward{
+  text-align: right;
+}
+
+.btn-back a, .btn-forward a{
+  display: inline-block;
+  background-color: rgb(211, 231, 228);
+  box-shadow: 2px 2px 2px silver;
+  padding: .2em .5em;
+  margin: 0 .5em;
+  word-break: normal;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: middle;
+  font-size: 1.2rem;
+}
+.btn-back a:hover, .btn-forward a:hover{
+  box-shadow: 2px 2px 2px gray;
+  background-color: rgb(200, 230, 210);
+}
+
+.float-container:after {
+  content: ' ';
+  height: 0px;
+  display: block;
+  clear: both;
+}
+
+.float-container .splitLeft{
+  width: 50%;
+  float: left;
+}
+
+.float-container .splitRight{
+  width: 50%;
+  float: right;
+}
+
+
+.float-container .right{
+  float: right;
+}
+
+.float-container .col50{
+  width: 100%;
+  float: none;
+}
+
+@media (min-width: 48em) {
+  .float-container .col50{
+    width: 50%;
+    float: left;
+  }
+}
+
+
+.img-50w{
+ width: 50%;
+  margin: 1rem auto;
+}

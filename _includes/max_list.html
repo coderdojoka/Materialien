@@ -1,0 +1,9 @@
+<ul class="items">
+{% assign items = include.data | sort: date | reverse %}
+{% for item in  items | limit: include.max %}
+  <li>
+      <a class="item" href="{{ item.url }}">{{ item.title }}</a>
+  </li>
+{% endfor %}
+<li>...</li>
+</ul>

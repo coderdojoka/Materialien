@@ -21,4 +21,3 @@ print(buchstabe)  # Gibt 'l' aus
 
 # Dies erzeugt einen Fehler! Texte sind nicht veränderlich
 meinText[3] = 'b'
-

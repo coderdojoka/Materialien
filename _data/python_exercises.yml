@@ -1,0 +1,8 @@
+- name: einfach
+  title: Einfache Aufgaben
+- name: mittel
+  title: Mittelschwere Aufgaben
+- name: schwer
+  title: Schwere Aufgaben
+- name: pyenguin
+  title: Aufgaben rund um pyenguin

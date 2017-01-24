@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+{% if page.next_tut != null or page.prev_tut != null %}
+{% assign tuts = site.python | where_exp: "item","item.type=='tutorial'" %}
+{% for tut in tuts %}
+  {% if tut.uid == page.prev_tut %}
+    {% assign tutPrev = tut %}
+  {% elsif tut.uid == page.next_tut %}
+    {% assign tutNext = tut %}
+  {% endif %}
+{% endfor %}
+{% endif %}
+
+
+<div class="tutorial">
+  <h1 class="tutorial-title"><a href="{{ '/python/tutorials.html' | absolute_url }}">Tutorials</a> - {{ page.title }}</h1>
+  {% include created_by.html %}
+
+  {% include gen_tags.html %}
+
+  {{ content }}
+
+  {% if tutNext != null or tutPrev != null %}
+  <div class="float-container btn-container">
+    <div class="splitLeft btn-back">
+      {% if tutPrev != null %}
+      <a href="{{ tutPrev.url }}">{{ tutPrev.title }}</a>
+      {% endif %}
+    </div>
+
+    <div class="splitRight btn-forward">
+      {% if tutNext != null %}
+      <a href="{{ tutNext.url }}">{{ tutNext.title }}</a>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+<div class="related">
+  {% if page.related_files %}
+  <h2>Dateien</h2>
+  <ul class="related-files">
+    {% for post in page.related_files %}
+      <li>
+          <a href="{{ post }}">
+            {{ post | split: "/" | last }}
+          </a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if page.related_exercises %}
+  <h2>Passende Aufgaben</h2>
+  <ul class="related-exercises">
+    {% for rel in page.related_exercises %}
+      {% for ex in site.python %}
+        {% if ex.uid == rel %}
+          <li>
+              <a href="{{ ex.url }}">
+                {{ ex.title }}
+              </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>

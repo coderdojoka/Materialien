@@ -6,6 +6,7 @@ Python/.idea/
 Python/webseite/
 Lektionen/*/_minted-*/
 tmp_latex/
+_site/
 
 .idea/
 *.out

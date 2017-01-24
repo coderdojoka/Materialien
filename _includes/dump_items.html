@@ -1,0 +1,9 @@
+<ul class="items">
+{% for item in include.data %}
+  {% if item.title != null and item.url != null %}
+  <li>
+      <a class="item" href="{{ item.url }}">{{ item.title }}</a>
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>

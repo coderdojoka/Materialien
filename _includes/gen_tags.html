@@ -1,0 +1,11 @@
+<div class="tags-container">
+  {% assign tags = site.python | where_exp: "item","item.type=='tag'" %}
+  {% for t_uid in page.tags %}
+    {% for t in tags %}
+      {% if t.uid == t_uid %}
+        <a href="{{ t.url }}" class="tag"><span class="circle"></span>{{ t.title
+        }}</a>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</div>

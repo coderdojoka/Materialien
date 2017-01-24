@@ -1,0 +1,2 @@
+{% assign item = site.python | where_exp:"item","item.uid==include.uid" | last %}
+{% if item != null %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}<strong>uid {{ include.uid }} nicht gefunden!!</strong>{% endif %}

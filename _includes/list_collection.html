@@ -1,0 +1,10 @@
+<ul class="items">
+{% assign examples = site.[page.collection_name] | where_exp:"item","item.folder == page.filter_by" %}
+{% for example in examples %}
+  {% if example.title != null %}
+  <li>
+      <a class="item" href="{{ example.url }}">{{ example.title }}</a>
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>

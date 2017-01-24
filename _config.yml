@@ -1,0 +1,36 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+# Permalinks
+permalink:        none
+
+# Setup
+title:            "Materialien"
+description:  'Materialiensammlung des Coderdojo Karlsruhe. Hier findest du Anleitungen, Aufgaben und Beispiele zu Scratch, Python und HTML.'
+tagline:      'Materialiensammlung des Coderdojo Karlsruhe'
+url:              http://coderdojoka.github.io/Materialien
+baseurl:          /
+exclude: [Java, Vorlagen, LICENSE.md, .gitignore, README.md, Gemfile, Gemfile.lock]
+include:  [_assets]
+
+author:
+  name:           'Mark Weinreuter'
+#  url:            https://twitter.com/mdo
+
+kramdown:
+  input: GFM
+
+# Custom vars
+version:          0.1.0
+
+collections:
+  python:
+    output: true
+    permalink: /:collection/:path.html
+  scratch:
+    output: true
+    permalink: /:collection/:path.html
+  html:
+    output: true
+    permalink: /:collection/:path.html
