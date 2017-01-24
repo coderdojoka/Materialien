@@ -3,6 +3,10 @@ img{
   box-shadow: 0px 0px 2px silver;
 }
 
+.sidebar-nav-item{
+  font-size: 1.1rem;
+}
+
 .date-line{
 }
 

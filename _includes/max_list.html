@@ -2,7 +2,7 @@
 {% assign items = include.data | sort: date | reverse %}
 {% for item in  items | limit: include.max %}
   <li>
-      <a class="item" href="{{ item.url }}">{{ item.title }}</a>
+      <a class="item" href="{{ item.url | absolute_url }}">{{ item.title }}</a>
   </li>
 {% endfor %}
 <li>...</li>
