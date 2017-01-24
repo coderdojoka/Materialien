@@ -35,7 +35,7 @@ Bsp.:  `<b>Der Text zwischen den beiden tags wird fett angezeigt </b>`
 Der Kopf enthält:
 
 * Seitentitel: `<title>HTML / CSS Tutorial</title>`
-![Seitentitel]({{ site.baseurl }}public/imgs/html/intro/title.png)
+![Seitentitel]({{ site.url }}/assets/imgs/html/intro/title.png)
 
 * Seiteninformationen: Beschreibung der Seite `<meta name="description" content="Beschreibung (160 Zeichen)">`
 
@@ -222,12 +222,12 @@ In unserem Beispiel liegt das Logo im Verzeichnis Bilder, das ein Unterverzeichn
 `<img src="Bilder/coderdojo.png">`
 
 <div class="message">
-  <img src="{{ site.baseurl }}/public/imgs/html/intro/coderdojo.png">
+  <img src="{{ site.url }}/assets/imgs/html/intro/coderdojo.png">
 </div>
 
 Wenn man die paar Informationen zu HTML (es gibt noch einige mehr) als Webseite anzeigen lässt, sieht es so aus:
 
- ![Webseite]({{ site.baseurl }}public/imgs/html/intro/site.png)
+ ![Webseite]({{ site.url }}/assets/imgs/html/intro/site.png)
 
 
 Man sieht sofort:   
