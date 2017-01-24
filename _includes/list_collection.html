@@ -3,7 +3,7 @@
 {% for example in examples %}
   {% if example.title != null %}
   <li>
-      <a class="item" href="{{ example.url }}">{{ example.title }}</a>
+      <a class="item" href="{{ example.url | absolute_url }}">{{ example.title }}</a>
   </li>
   {% endif %}
 {% endfor %}

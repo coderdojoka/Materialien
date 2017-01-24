@@ -17,7 +17,7 @@
       {% endcomment %}
 
       {% for node in site.data.sidebar %}
-        <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ site.url }}{{ node.url }}">{{ node.name }}</a>
+        <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ site.url }}/{{ node.url }}">{{ node.name }}</a>
       {% endfor %}
 
     <!--  <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>

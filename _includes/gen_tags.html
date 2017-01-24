@@ -3,7 +3,7 @@
   {% for t_uid in page.tags %}
     {% for t in tags %}
       {% if t.uid == t_uid %}
-        <a href="{{ t.url }}" class="tag"><span class="circle"></span>{{ t.title
+        <a href="{{ t.url | absolute_url }}" class="tag"><span class="circle"></span>{{ t.title
         }}</a>
       {% endif %}
     {% endfor %}
