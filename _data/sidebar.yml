@@ -1,8 +1,8 @@
 - name: Python
-  url: python
+  url: python.html
 
 - name: Scratch
-  url: scratch
+  url: scratch.html
 
 - name: HTML
-  url: html
+  url: html.html

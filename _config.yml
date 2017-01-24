@@ -11,7 +11,7 @@ description:  'Materialiensammlung des Coderdojo Karlsruhe. Hier findest du Anle
 tagline:      'Materialiensammlung des Coderdojo Karlsruhe'
 url:              http://coderdojoka.github.io/Materialien
 baseurl:          /
-exclude: [Java, Vorlagen, LICENSE.md, .gitignore, README.md, Gemfile, Gemfile.lock]
+exclude: [Java, Python, Scratch, Vorlagen, LICENSE.md, .gitignore, README.md, Gemfile, Gemfile.lock]
 include:  [_assets]
 
 author:
@@ -27,10 +27,10 @@ version:          0.1.0
 collections:
   python:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:title.html
   scratch:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:title.html
   html:
     output: true
-    permalink: /:collection/:path.html
+    permalink: /:collection/:title.html

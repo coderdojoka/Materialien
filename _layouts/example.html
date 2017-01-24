@@ -3,43 +3,69 @@ layout: default
 ---
 
 <div class="exercise">
-  <h1 class="exercise-title"><a href="{{ "/python/beispiele.html" | absolute_url }}">Beispiele</a> - {{ page.title }}</h1>
-  {% include created_by.html %}
-  {% include gen_tags.html %}
+    <h1 class="exercise-title"><a href="{{ "/python/beispiele.html" | absolute_url }}">Beispiele</a> - {{ page.title }}
+    </h1>
+    {% include created_by.html %}
+    {% include gen_tags.html %}
 
-  {{ content }}
+    {{ content }}
 
-  <a href="{{ page.file }}">Datei herunterladen</a>
+    <script id="code" type="text/plain">{% include_relative  {{ page.file }}  %}</script>
+
+
+    <a href="#" id="download">Datei herunterladen</a>
 </div>
 
 <div class="related">
-  {% if page.related_files %}
-  <h2>Dateien</h2>
-  <ul class="related-files">
-    {% for post in page.related_files %}
-      <li>
-          <a href="{{ post }}">
-            {{ post | split: "/" | last }}
-          </a>
-      </li>
-    {% endfor %}
-  </ul>
-  {% endif %}
+    {% if page.related_files %}
+    <h2>Dateien</h2>
+    <ul class="related-files">
+        {% for post in page.related_files %}
+        <li>
+            <a href="{{ post }}">
+                {{ post | split: "/" | last }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
 
-  {% if page.related_files %}
-  <h2>Ähnliche Aufgaben</h2>
-  <ul class="related-exercises">
-    {% for rel in page.related_exercises %}
-      {% for ex in site.python %}
+    {% if page.related_files %}
+    <h2>Ähnliche Aufgaben</h2>
+    <ul class="related-exercises">
+        {% for rel in page.related_exercises %}
+        {% for ex in site.python %}
         {% if ex.uid == rel %}
-          <li>
-              <a href="{{ ex.url }}">
+        <li>
+            <a href="{{ ex.url }}">
                 {{ ex.title }}
-              </a>
-          </li>
+            </a>
+        </li>
         {% endif %}
-      {% endfor %}
-    {% endfor %}
-  </ul>
-  {% endif %}
+        {% endfor %}
+        {% endfor %}
+    </ul>
+    {% endif %}
 </div>
+
+<script>
+    var textFile = null,
+        makeTextFile = function (text) {
+            var data = new Blob([text], {type: 'text/plain'});
+
+            // If we are replacing a previously generated file we need to
+            // manually revoke the object URL to avoid memory leaks.
+            if (textFile !== null) {
+                window.URL.revokeObjectURL(textFile);
+            }
+
+            textFile = window.URL.createObjectURL(data);
+
+            return textFile;
+        };
+
+
+    var link = document.getElementById('download'),
+        code = document.getElementById('code').innerHTML;
+    link.href = makeTextFile(code);
+</script>

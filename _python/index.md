@@ -1,6 +1,6 @@
 ---
 title: Python - Tutorials und Aufgaben
-permalink: python/
+permalink: python.html
 layout: page
 ---
 

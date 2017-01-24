@@ -149,9 +149,13 @@ text.verstecke()
 
 # Tasten registrieren
 registriere_taste_unten(T_LINKS, links_gedrueckt)
-registriere_taste_unten(T_RECHTS, rechts_gedrueckt)
-registriere_taste_unten(T_b, links_gedrueckt)
-registriere_taste_unten(T_d, rechts_gedrueckt)
 registriere_taste_oben(T_LINKS, links_losgelassen)
+registriere_taste_unten(T_RECHTS, rechts_gedrueckt)
 registriere_taste_oben(T_RECHTS, rechts_losgelassen)
+
+registriere_taste_unten(T_a, links_gedrueckt)
+registriere_taste_oben(T_a, links_losgelassen)
+registriere_taste_unten(T_d, rechts_gedrueckt)
+registriere_taste_oben(T_d, links_losgelassen)
+
 fenster.starten()

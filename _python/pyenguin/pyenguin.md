@@ -7,7 +7,7 @@ permalink: python/pyenguin.html
 
 Du willst Spiele in Python entwickeln? Dann bist du hier genau richtig!
 
-![Ein kleines Spiel in pyenguin](blocks.png)
+![Ein kleines Spiel in pyenguin]({{ site.page_url}}/_assets/imgs/blocks.png)
 
 ## Installation
 
