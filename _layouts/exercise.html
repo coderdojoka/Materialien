@@ -7,7 +7,6 @@ layout: default
   {% include created_by.html %}
   {% include gen_tags.html %}
 
-
   {{ content }}
 </div>
 
@@ -32,7 +31,7 @@ layout: default
       {% for ex in site.python %}
         {% if ex.uid == rel %}
           <li>
-              <a href="{{ ex.url }}">
+              <a href="{{ ex.url | absolute_url}}">
                 {{ ex.title }}
               </a>
           </li>
