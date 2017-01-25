@@ -41,3 +41,14 @@ layout: default
   </ul>
   {% endif %}
 </div>
+
+<script>
+  var eles = document.getElementsByClassName("show_solution");
+  for (var i = 0; i < eles.length; i++) {
+    var ele = eles[i];
+    ele.onclick = function () {
+        var parts = this.href.split("#");
+        document.getElementById(parts[1]).style.display = "block";
+    }
+  }
+</script>

@@ -1,0 +1,5 @@
+eingabe = int(input("Gib ein wieviel Geld du hast(in €): "))
+print("Du kanst dir " + str(eingabe / 0.10) + " Lackritzschnecken kaufen")
+print("Du kanst dir " + str(eingabe / 0.05) + " Gummibärchen kaufen")
+print("Du kanst dir " + str(eingabe / 0.07) + " Bonbons kaufen")
+print("Du kanst dir " + str(eingabe / 0.12) + " Kaugummis kaufen")

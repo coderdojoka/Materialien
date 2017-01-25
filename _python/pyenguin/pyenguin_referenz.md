@@ -6,28 +6,25 @@ type: tutorial
 folder: pyenguin
 layout: tutorial
 uid: ref_pyenguin
----
+tags: [t_pyenguin]
 
-# ACHTUNG: Nicht vertrauen, dies ist die alte py2cd-Referenz und muss erst noch überarbeitet werden!!!
+---
 
 ## Grundgerüst
 Jedes pyenguin-Program muss folgendes Grundgerüst haben:
 
 ``` python
-# Dies Modul muss immer importiert werden
+# Importiert alle wichtigen pyenguin Befehle
 from pyenguin import *
-# Für vordefinierte Farben wird dieses Modul benötigt
-from pyenguin.farben import *
 
-# Das Spiel muss zuerst initialisiert werden!
-Spiel.init(640, 480, "Mein Spiel") # Breite, Höhe, Titel
+# Fenster mit Größe und Titel erstellen
+fenster = Fenster(640, 480, "Hallo Fenster")
 
+# Dein Code hier
 
-# RESTLICHES PROGRAMM STEHT HIER
+# Das Fenster anzeigen
+fenster.starten()
 
-
-# Startet das Spiel. Anweisungen danach werden NICHT ausgeführt
-Spiel.starten()
 ```
 
 > **Hinweis:** Alle folgenden Beispiele benötigen dieses Grundgerüst.
@@ -44,7 +41,9 @@ Diese können auf dem Spielfeld platziert werden, wobei sich die Position dieser
 
 Jedes Objekt von einem unsichtbaren Rechteckt, dem *umgebenden Rechteck* begrenzt. Falls weiter unten sich auf die Breite
 oder Höhe von Obejekten bezogen wird, ist dies immer gleichbedeutend mit der Breite/Höhe des umgebenden Rechtecks.
-**TODO: Bild**
+
+![Ein Kreis mit umgebenden Rechteck](position.png){: .img-50w }
+Hier ist der schwarze Rahmen das umgebende Rechteck und das rote Kreuz gibt die Position an.
 
 ## Farben
 Eine Farbe wird  aus 3 Komponenten aufgebaut: Rot, Grün, Blau.
@@ -58,6 +57,29 @@ r = Rechteck(10, 10, 50, 50, meineFarbe)
 ```
 **Hinweis**: Einige wichtige Farben sind bereits vordefiniert. 
 
+## Die Zeichen-Fläche
+Im Grunde gibt es nur eine Art von Objekten in pyenguin, nämlich Flächen.
+Diese Flächen können bemalt werden und Bilder anzeigen.
+
+```python
+# Eine leere Fläche der Größe 100x100
+f = Flaeche(100, 100)
+# Fläche in Blau einfärben
+f.fuelle(BLAU)
+# Ein Rechteck an der Stelle 10x10 (links oben) mit Größe 50x50
+f.rechteck(10, 10, 50, 50, ROT)
+# Ein Rechteck an der Stelle 10x10 (links oben) mit Radius 25
+f.kreis(10, 10, 25, GELB)
+Ein Text an der Stelle 10x10 (links oben)
+f.text("Hallo", 10, 70, Schrift(20), HELL_GRUEN)
+Ein Linie vom Punkt (75, 10) nach (75, 90)
+f.linie(75, 10, 75, 90, ROT)
+# Ein Rechteck an der Stelle 15x10 (links oben) mit Radii 20 und 10
+f.oval(15, 20, 20, 10, HELL_GRUEN)
+Ein Vieleck bestehend aus den angegenen Punkten
+f.vieleck([(80, 80), (90, 80), (85, 90)], HELL_ROT)
+```
+
 ## Vorhandene Objekte
 
 ### Rechtecke
@@ -67,7 +89,7 @@ Benötigte Werte: `x`, `y` (linke obere Ecke), `breite`,  `hoehe` und `farbe`.
 r1 = Rechteck(270, 200, 100, 100, GELB)
 ```
 
-## Kreise
+### Kreise
 Benötigte Werte: `x`, `y` (linke obere Ecke), `radius` und `farbe`.
 
 ``` python
@@ -75,53 +97,54 @@ k1 = Kreis(390, 110, 70, MATT_GRUEN)
 ```
 
 
-## Linie
+### Linie
 Benötigte Werte: `start`- und `end`-Punkt, jeweils `x`- und `y`-Koordinate in einem Tupel z.B. `(100, 140)`, `farbe`,  `dicke` (optional).
 
 ```python
 l1 = Linie((100, 300), (540, 300), ROT, 2)
 ```
 
-## Ovale
+### Ovale
 Benötigte Werte: x, y (linke obere Ecke), Breite-Radius, Höhe-Radius und Farbe.
 
 ``` python
 o1 = Oval(100, 50, 20, 30, GELB)
 ```
 
-## Text
-Benötigte Werte: Der Text, x, y (linke obere Ecke). Optional: Schrift und Farbe.
+### Text
+Benötigte Werte: Der Text. Optional: Schrift und Farbe.
 
 ``` python
-t1 = Text('Hallo', 100, 200, schrift=Schrift(30, "Arial"), farbe=SCHWARZ)
+t1 = Text('Hallo', schrift=Schrift(30, "Arial"), farbe=SCHWARZ)
 ```
 
-## Polygone (Vielecke)
+### Vielecke (Polygone)
 Benötigte Werte: Liste aller Eckpunkte, jeweils x- und y-Koordinate in einem Tupel z.B. `(100, 140)`.
 
 ``` python
 ecken_liste = [(190, 242), (195, 238), (200, 242)]
-p1 = Polygon(ecken_liste, BLAU)
+p1 = Vieleck(ecken_liste, BLAU)
 ```
 
-## Bilder
+### Bilder
 Bilder werden über den `BilderSpeicher` verwaltet, müssen einmal geladen werden und können dann beliebig oft angezeigt werden.  
 Benötigte Werte: Interne Name für das Bild (frei wählbar), der Pfad/Dateiname des Bildes auf dem Computer.
 
 ``` python
 # Das Bild EINMAL in Speicher laden.
 # Das Bild liegt in dem Order 'bilder' und heißt 'scratch.png'
-BildSpeicher.lade_bild("scratch", "bilder/scratch.png")
+BildSpeicher.lade("scratch", "bilder/scratch.png")
 
-# Das Bild zweimal an verschiedenen Stellen anzeigen
-bild1 = BildSpeicher.gib_bild("scratch", 100, 100)
-bild2 = BildSpeicher.gib_bild("scratch", 300, 250)
+# Das Bild zweimal anzeigen
+bild1 = BildSpeicher.gib("scratch")
+bild2 = BildSpeicher.gib("scratch")
+# Bilder positionieren...
 ```
 
-## Mitgelieferte Bilder
+### Mitgelieferte Bilder
 Mit pyenguin kommmen beriets einige Bilder coole Grafiken und Bilder mit.
 
-## Animationen
+### Animationen
 Animation sind einfach ein Liste von Bildern, die schnell hintereinander angezeigt werden.
 
 ``` python
@@ -135,14 +158,15 @@ a1.stop() # Animation stoppen
 
 a1.setze_wiederhole(True) # Animation endlos wiederholen
 ```
+
 **Hinweis:** Die Bildernamen können ENTWEDER, der interne Name im Bildspeicher (z.B. oben 'scratch') 
 ODER der Dateipfad/Dateiname des Bildes sein.
 
 
-# Objekte bewegen
+## Objekte bewegen
 Sämtliche oben aufgeführten Objekte besitzen die hier genannten Funktionen. Man ruft diese Funktionen über den Namen der Variablen in der das Objekt gespeichert ist auf. Z.B.: `r1.aendere_position(20, 20)`. 
 
-## Position setzen
+### Position setzen
 **Setzt** die Position eines Objektes **auf** einen bestimmten Wert.  
 Benötigte Werte: x-, y-Wert.
 
@@ -151,7 +175,7 @@ r1 = Rechteck(20, 20, 100, 100, GELB)
 r1.setze_position(100, 100)
 ```
 
-## Position ändern
+### Position ändern
 **Ändert** die Position eines Objektes **um** einen bestimmten Wert.
 Benötigte Werte: x-, y-Wert
 
@@ -160,17 +184,7 @@ r1 = Rechteck(20, 20, 100, 100, GELB)
 r1.aendere_position(100, 100)
 ```
 
-## Position abfragen
-Benötigte Werte: Keine.  
-Gibt zurück: Ein Tupel (x-, y-Wert)
-
-``` python
-r1 = Rechteck(20, 20, 100, 100, GELB)
-pos = r1.position() # = (20, 20)
-```
-
-
-## x- und y-Koordinaten direkt setzen
+### x- und y-Koordinaten direkt setzen
 Man kann die x- und y-Koordinaten eines Objektes auch direkt festlegen.
 
 ```python
@@ -181,7 +195,7 @@ box.x = 100
 box.y = 200
 ```
 
-## x- und y-Koordinaten abfragen
+### x- und y-Koordinaten abfragen
 Man kann die x- und y-Koordinaten eines Objektes ganz einfach abfragen
 
 ```python
@@ -192,27 +206,7 @@ print(box.x, box.y)
 ```
 
 
-
-## Mitte eines Objektes setzen
-Setzt die Mitte eines Objektes, **NICHT** seine linke obere Ecke. Nützlich bei z.B. Kreisen.  
-Benötigte Werte: x-, y-Wert.
-
-``` python
-k1 = Kreis(450, 150, 10, ROT)
-k11.mitte = (455, 155)
-```
-
-## Mitte eines Objektes abfragen
-Fragt die Mitte eines Objektes ab, NICHT seine linke obere Ecke.  
-Benötigte Werte: Keine.  
-Gibt zurück: Ein Tupel (x-, y-Wert)
-
-``` python
-k1 = Kreis(450, 150, 10, ROT)
-mitte = k11.mitte # = (455, 155)
-```
-
-## Abstand zum Rand setzen
+### Abstand zum Rand setzen
 Man kann auch direkt den Abstand zum jeweiligen Rand setzen. Dies geht für oben, unten, rechts und links.  
 Benötigte Werte: Abstand
 
@@ -220,21 +214,21 @@ Benötigte Werte: Abstand
 k1 = Kreis(450, 150, 10, ROT)
 
 # Abstand zum linken Rand: 20
-k1.links = 20
+k1.abstand_links = 20
 
 # Abstand zum rechten Rand: 30
-k1.rechts = 30
+k1.abstand_rechts = 30
 
 # Abstand zum oberen Rand: 40
-k1.oben = 40
+k1.abstand_oben = 40
 
 # Abstand zum unteren Rand: 50
-k1.unten = 50
+k1.abstand_unten = 50
 ```
 **Achtung:** Der Abstand zum Rand geht immer von der dem Rand am nächsten gelegenen Seite aus!
 Setzt man zwei konfligierende Anweisungen: `k1.rechts` und `k1.links`, so zählt natürlich nur die zuletzt ausgeführte Anweisung. 
 
-## Abstand zum Rand abfragen
+### Abstand zum Rand abfragen
 Wie man den Abstand zum Rand setzen kann, kann man ihn auch abfragen.  
 Benötigte Werte: Keine
 Gibt zurück: Abstand
@@ -243,20 +237,20 @@ Gibt zurück: Abstand
 k1 = Kreis(450, 150, 10, ROT)
 
 # Abstand zum linken Rand
-links = k1.links
+links = k1.abstand_links
 
 # Abstand zum rechten Rand
-rechts = k1.rechts
+rechts = k1.abstand_rechts
 
 # Abstand zum oberen Rand
-oben k1.oben
+oben = k1.abstand_oben
 
 # Abstand zum unteren Rand
-unten = k1.unten
+unten = k1.abstand_unten
 ```
 
 
-## Objekte zentrieren
+### Objekte zentrieren
 Man kann Objekte auch mittig auf dem Spielfeld darstellen. Entweder nur horizontal, vertikal oder in beide Richtungen zentriert.  
 Benötigte Werte: Keine
 
@@ -265,56 +259,49 @@ Benötigte Werte: Keine
 bild.zentriere()
 
 # Nur horizontal zentrieren
-bild.zentriere_horizontal()
+bild.zentriere_breite()
 
 # Nur horizontal zentrieren
-bild.zentriere_vertikal()
+bild.zentriere_hoehe()
 ```
 
 
 
+## Fenster - Die zentrale Steuerung
 
-# Spiel - Die zentrale Steuerung
-
-## Das Spiel initialisieren
-Das Spiel muss **IMMER** zuerst initialisiert werden, bevor irgendetwas getan werden kann.  
+### Das Fenster initialisieren
+Das `Fenster` muss **IMMER** zuerst initialisiert werden, bevor irgendetwas getan werden kann.
 Benötigte Werte: Breite, Höhe, Titel
 
 ``` python
-Spiel.init(640, 480, "Mein Spiel") 
+fenster = Fenster(640, 480, "Mein Spiel")
 ```
 
-## Das Spiel starten
-Startet das Spiel und zeigt das Fenster an. Anweisungen danach werden **NICHT** ausgeführt:  
+### Das Fenster anzeigen
+Startet das Spiel und zeigt das Fenster an. Anweisungen danach werden **NICHT** ausgeführt:
 Benötigte Werte: Keine
 
 ``` python
-Spiel.starten()
+fenster.starten()
 ```
 
-## Das Spiel beenden
+### Das Fenser beenden
 Beendet das Spiel und schließt das Fenster.  
 Benötigte Werte: Keine
 
 ``` python
-Spiel.beenden()
+fenster.beenden()
 ```
 
-## Den Fenstertitel setzen
+### Den Fenstertitel setzen
 Benötigte Werte: Titel
 
 ```python
-Spiel.setze_fenster_titel("Mein Fenster")
+fenster.setze_fenster_titel("Mein Fenster")
 ```
 
-## Die Fensterhintergrundfarbe ändern
-Benötigte Werte: Die Farbe
 
-```python
-Spiel.setze_hintergrund_farbe(BLAU)
-```
-
-## Hilfsgitter einblenden
+### Hilfsgitter einblenden
 Zeichnet Gitterlinien und ein Koordinatensystem ein, um die Positionierung von Objekten zu vereinfachen.  
 Benötigte Werte: Keine
 
@@ -324,7 +311,7 @@ Spiel.zeichne_gitter()
 **Hinweis:** das Gitter ist auch nur ein Objekt und kann deshalb von anderen Objekten verdeckt werden.
 
 
-## Aktualisierungsfunktion
+### Aktualisierungsfunktion
 Das Fenster wird kontinuierlich neu gezeichnet (ca. 30mal pro Sekunde). Will man Animationen darstellen oder Figuren bewegen,
 kann man die Aktualisierungsfunktion verwenden, die aufgerufen wird, jedes Mal, wenn die Oberfläche neugezeichnet wird.
  
@@ -332,64 +319,60 @@ kann man die Aktualisierungsfunktion verwenden, die aufgerufen wird, jedes Mal, 
 
 ```python
 # Zeichenrate abfragen
-fps = Spiel.fps 
+fps = fenster.fps
 
 # Zeichenrate setzen
-Spiel.fps = 60
+fenster.fps = 60
 ```
   
 ### Aktualisierungsfunktion setzen
 
-``` python
+```python
 
 # Diese Funtion wird wiederholt aufgerufen
 def aktualisiere(dt):
     print("aktualisiere")
 
 # Aktualisierungsfunktion bekannt machen
-Spiel.setze_aktualisierung(aktualisere)
-
+registriere_aktualisiere(aktualisiere)
 ``` 
 
 ### Aktualisierungsfunktion entfernen
 
 ``` python
-Spiel.entferne_aktualisierung()
+entferne_aktualisiere(aktualisiere)
 ``` 
 
 ## Tastatureingaben
-Es gibt zwei verschiedene Arten auf Tastatur eingaben zu reagieren. Beide Arten binden eine Rückruf-Funktion (Callback) an eine bestimmte Taste.
-Diese Rückruf-Funktion wird aufgerufen, wenn diese Taste gedrückt wird.
-
-### Solange eine Taste gedrückt wird
-Die Funktion `Spiel.registriere_solange_taste_unten(taste, rueckruf_funktion)` bindet die gewünschte Taste an die gewünschte Rückruf-Funktion.
-Diese Funktion wird **wiederholt** aufgerufen, solange die Taste gedrückt ist.
-```python
-# Rückruf-Funktion 
-def solange_links(dt):
-    print("Taste gedrückt")
-    
-# Linke Pfeiltaste 'T_LINKS', an die Rückruffunktion binden    
-Spiel.registriere_solange_taste_unten(T_LINKS, solange_links)
-```
-**Hinweis:** Die Rückruffunktion benötigt genau **einen** Übergabeparameter.
-    
+Es gibt zwei verschiedene Arten auf Tastatur eingaben zu reagieren.
+Beide Arten binden eine Rückruf-Funktion (Callback) an eine bestimmte Taste.
+Diese Rückruf-Funktion wird aufgerufen, wenn diese Taste gedrückt bzw. losgelassen wird.
 
 ### Wenn eine Taste gedrückt wird
-Die Funktion `Spiel.registriere_taste_gedrueckt(taste, rueckruf_funktion)` bindet die gewünschte Taste an die gewünschte Rückruf-Funktion.
-Diese Funktion wird **genau zweimal** aufgerufen. Einmal beim Drücken der Taste (`unten = True`) und einmal beim Loslassen (`unten = False`).
+Die Funktion `registriere_taste_unten(taste, rueckruf_funktion)` bindet die gewünschte Taste an die gewünschte Rückruf-Funktion.
+Diese Funktion wird **genau einmal** aufgerufen, wenn die Taste nach unten gedrückt wird.
 
 ```python
-def leer_gedrueckt(unten, pyg_ereignis):
-    if unten:
-        print("Leertaste gedrückt.")
-    else:
-        print("Leertaste losgelassen.")
-    
-# Leertaste 'T_LEER', an die Rückruffunktion binden    
-Spiel.registriere_taste_gedrueckt(T_LEER, leer_gedrueckt)
+def leer_gedrueckt(taste):
+    print("Leertaste gedrückt.")
+
+# Leertaste 'T_LEER', an die Rückruffunktion binden
+registriere_taste_unten(T_LEER, leer_gedrueckt)
 ```
-**Hinweis:** Die Rückruffunktion benötigt genau **zwei** Übergabeparameter.
+**Hinweis:** Die Rückruffunktion benötigt genau **einen** Übergabeparameter.
+
+### Wenn eine Taste losgelassen wird
+Die Funktion `registriere_taste_oben(taste, rueckruf_funktion)` bindet die gewünschte Taste an die gewünschte Rückruf-Funktion.
+Diese Funktion wird **genau einmal** aufgerufen, wenn die Taste gedrückt war und losgelassen wird.
+
+```python
+def leer_losgelassen(taste):
+    print("Leertaste losgelassen.")
+
+# Leertaste 'T_LEER', an die Rückruffunktion binden
+registriere_taste_oben(T_LEER, leer_losgelassen)
+```
+**Hinweis:** Die Rückruffunktion benötigt genau **einen** Übergabeparameter.
 
 
 ## Mausklicks und Bewegung abfragen

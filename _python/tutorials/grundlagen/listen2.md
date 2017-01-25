@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 title: Listen • Teil 2
-author: [Mark, Norbert]
+author: Mark, Norbert
 date: 2016-08-04
 uid: list2
 folder: basics
@@ -40,7 +40,7 @@ listeNeu = liste1 + liste2 + [100,500]
 
 ## Aus einer Liste ein Element herauslöschen
 
-Wir haben eine Liste mit Farben: ` farben = ['rot','gelb','grün','rot','blau']`. Wie man sieht, ist der Eintrag `'rot'` doppelt enthalten. Den vierten Eintrag müssen wir also entfernen.
+Wir haben eine Liste mit Farben: `farben = ['rot','gelb','grün','rot','blau']`. Wie man sieht, ist der Eintrag `'rot'` doppelt enthalten. Den vierten Eintrag müssen wir also entfernen.
 
 ### Die .pop()- Funktion
 

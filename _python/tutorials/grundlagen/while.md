@@ -1,7 +1,7 @@
 ---
 layout: tutorial  
 title: Schleifen • Teil 2
-autor: Mark Weinreuter
+autor: Mark, Norbert
 date: 2015-12-01
 version: 0.2
 uid: while

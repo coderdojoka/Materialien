@@ -1,8 +1,8 @@
 ---
 layout: tag
 type: tag
-title: while-Schleife
-uid: t_while
+title: Eingaben einlesen
+uid: t_input
 ---
 
 {% include dump_tag.md %}
