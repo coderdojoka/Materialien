@@ -1,12 +1,12 @@
 ---
-author: mark
+author: Mark
 date: 2016-04-22
 title: Referenz • Listen
 layout: tutorial
 type: tutorial
 folder: referenz
 uid: ref5
-tags: [t_function]
+tags: [t_list]
 next_tut: ref6
 prev_tut: ref4
 ---

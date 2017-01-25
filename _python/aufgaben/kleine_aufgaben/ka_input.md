@@ -1,16 +1,18 @@
 ---
 date: 2016-09-16
 author: Rouven, Mark
-version: 1.0
-uid: k_aufg
+uid: ka_input
 type: exercise
 layout: exercise
 folder: einfach
-title: Kleine Aufgaben
+title: Kleine Aufgaben • Eingaben
 tags: [t_input]
+related_exercises: [ka_if, ka_for]
 ---
 
-Hier findest du ein paar kleiner Aufgaben, die du programmieren sollst. Sie werden immer komplizierter! Falls du nicht mehr weiter weißt, kannst du dir die Lösung ansehen, nachprogrammieren und verstehen.
+Hier findest du ein paar kleiner Aufgaben, die du programmieren sollst.
+Sie werden immer komplizierter! Falls du nicht mehr weiter weißt,
+kannst du dir die Lösung ansehen, nachprogrammieren und verstehen.
 
 ## Durchschnitt ausrechnen
 - Lies zwei Zahlen ein
@@ -20,7 +22,7 @@ Hier findest du ein paar kleiner Aufgaben, die du programmieren sollst. Sie werd
 
 [Lösung](#code1){:.show_solution}
 {% highlight python %}
-{% include_relative Durchschnitt.py %}
+{% include_relative code/Durchschnitt.py %}
 {% endhighlight %}{: .hidden #code1 }
 
 <hr>
@@ -34,7 +36,7 @@ Hier findest du ein paar kleiner Aufgaben, die du programmieren sollst. Sie werd
 
 [Lösung](#code2){:.show_solution}
 {% highlight python %}
-{% include_relative Rueckgeldrechner.py %}
+{% include_relative code/Rueckgeldrechner.py %}
 {% endhighlight %}{: .hidden #code2 }
 
 <hr>
@@ -47,7 +49,7 @@ Hier findest du ein paar kleiner Aufgaben, die du programmieren sollst. Sie werd
 
 [Lösung](#code3){:.show_solution}
 {% highlight python %}
-{% include_relative Im_Jahre_2050.py %}
+{% include_relative code/Im_Jahre_2050.py %}
 {% endhighlight %}{: .hidden #code3 }
 
 <hr>
@@ -61,7 +63,7 @@ Hier findest du ein paar kleiner Aufgaben, die du programmieren sollst. Sie werd
 
 [Lösung](#code4){:.show_solution}
 {% highlight python %}
-{% include_relative Einkaufen.py %}
+{% include_relative code/Einkaufen.py %}
 {% endhighlight %}{: .hidden #code4 }
 
 <hr>
@@ -74,7 +76,7 @@ Hier findest du ein paar kleiner Aufgaben, die du programmieren sollst. Sie werd
 
 [Lösung](#code5){:.show_solution}
 {% highlight python %}
-{% include_relative Stundenumrechner.py %}
+{% include_relative code/Stundenumrechner.py %}
 {% endhighlight %}{: .hidden #code5 }
 
 <hr>
@@ -95,7 +97,7 @@ Hier findest du ein paar kleiner Aufgaben, die du programmieren sollst. Sie werd
 
 [Lösung](#code6){:.show_solution}
 {% highlight python %}
-{% include_relative Geldrechner.py %}
+{% include_relative code/Geldrechner.py %}
 {% endhighlight %}{: .hidden #code6 }
 
 <hr>
@@ -109,7 +111,7 @@ Hier findest du ein paar kleiner Aufgaben, die du programmieren sollst. Sie werd
 
 [Lösung](#code7){:.show_solution}
 {% highlight python %}
-{% include_relative Streckenrechner.py %}
+{% include_relative code/Streckenrechner.py %}
 {% endhighlight %}{: .hidden #code7 }
 
 <hr>
@@ -122,7 +124,7 @@ Hier findest du ein paar kleiner Aufgaben, die du programmieren sollst. Sie werd
 
 [Lösung](#code8){:.show_solution}
 {% highlight python %}
-{% include_relative Wann_bist_du_100.py %}
+{% include_relative code/Wann_bist_du_100.py %}
 {% endhighlight %}{: .hidden #code8 }
 
 <hr>
@@ -142,7 +144,7 @@ aktuelle_zeit = time.time()
 
 [Lösung](#code9){:.show_solution}
 {% highlight python %}
-{% include_relative stopuhr.py %}
+{% include_relative code/stopuhr.py %}
 {% endhighlight %}{: .hidden #code9 }
 
 <hr>
@@ -160,7 +162,7 @@ aktuelle_zeit = time.time()
 
 [Lösung](#code10){:.show_solution}
 {% highlight python %}
-{% include_relative Schaltjahr.py %}
+{% include_relative code/Schaltjahr.py %}
 {% endhighlight %}{: .hidden #code10 }
 
 <hr>
@@ -178,5 +180,5 @@ aktuelle_zeit = time.time()
 
 [Lösung](#code11){:.show_solution}
 {% highlight python %}
-{% include_relative lerner_1x1.py %}
+{% include_relative code/lerner_1x1.py %}
 {% endhighlight %}{: .hidden #code11 }
