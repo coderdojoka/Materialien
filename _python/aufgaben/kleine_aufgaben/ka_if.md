@@ -6,7 +6,7 @@ uid: ka_if
 type: exercise
 layout: exercise
 folder: einfach
-title: Kleine Aufgaben •- if-Abfragen
+title: Kleine Aufgaben • if-Abfragen
 tags: [t_input, t_if]
 related_exercises: [ka_input, ka_for]
 ---

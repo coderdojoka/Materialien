@@ -1,8 +1,6 @@
 ---
 autor: Mark  
-date: 2016-03-15  
-version: 1.0  
-keine_kapitel_nummern: ja  
+date: 2016-03-15
 title: Halbierter Tannenbaum
 layout: exercise
 type: exercise

@@ -1,13 +1,15 @@
 ---
 autor: Mark  
-datum: 09.12.2016  
-minted_ausgabe: tmp_latex  
-version: 1.0  
-keine_sektions_nummern: ja  
-titel: Caesar Verschlüsselung
+date: 2016-12-09
+title: Caesar Verschlüsselung
+layout: exercise
+type: exercise
+folder: mittel
+uid: a_caesar
+tags: [t_for]
 ---
 
-# Erinnerung: Python Grundlagen
+## Erinnerung: Python Grundlagen
 
 ```python
 # Buchstabe in seine Ascii-Zahl umwandeln
@@ -21,15 +23,15 @@ for buchstabe in "hallo": # = 'h', 'a', 'l', 'l', 'o'
     print(buchstabe)    
 ```
 
-# Buchstaben schieben
+## Buchstaben schieben
 
 Die Verschlüsselung basiert darauf, einen Buchstaben im Alphabet zu verschieben.
-Zum Beispiel wird um 3 Buchstaben geschoben, d.h. aus `a -> d`.
+Zum Beispiel wird um 3 Buchstaben geschoben, d.h. aus `a -> d`, `b -> e`, ...
 
 Du kannst die Verschiebung programmieren, indem du einen Buchstaben in seine Ascii-Zahl konvertierst,
 dann die Verschiebung dazu addierst, und die neue Ascii-Zahl wieder in einen Buchstaben konvertierst.
 
-# Aufgabe
+## Aufgabe
 - Lies einen Text ein, diesen Text wollen wir verschlüsseln
 - Lies eine Zahl ein, diese Zahl ist der Verschiebeschlüssel
 - Verschlüssle den Text indem du jeden Buchstaben um den Verschiebeschlüssel weiter schiebst

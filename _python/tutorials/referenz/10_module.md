@@ -22,6 +22,19 @@ zufallsZahl = random.randint(1,100)
 print(zufallsZahl)
 ```
 
+## Das Programm kurz anhalten
+
+Um das ganze Programm komplett anzuhalten, kannst du die `time.sleep(..)`-Funktion verwenden.
+**ACHTUNG:** Das ganze Programm wird angehalten!
+
+```python
+# Das Paket time einmal importieren
+import time
+
+# Hält das Programm für so viele Millisekunden an
+time.sleep(1000)
+```
+
 ## Aktuelles Datum
 Über das Modul `datetime` kann man das aktuelle Datum abfragen.
 
