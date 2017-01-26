@@ -1,10 +1,10 @@
 ---
-titel: Python - Ausgabe und Umgang mit Variablen
-autor: Ricarda
-datum: 29.01.15
-minted_ausgabe: tmp_latex
-keine_sektions_nummern: ja
-version: 1.0
+title: Ausgabe und Umgang mit Variablen
+author: Ricarda
+date: 2015-01-29
+layout: exercise
+type: exercise
+folder: einfach
 ---
 
 # Aufgabe 1 

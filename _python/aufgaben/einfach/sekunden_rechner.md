@@ -1,6 +1,6 @@
 ---
 autor: Mark
-datum: 2016-04-22
+date: 2016-04-22
 title: Sekunden-Rechner
 layout: exercise
 type: exercise

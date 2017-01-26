@@ -3,7 +3,6 @@ layout: tutorial
 title: Schleifen • Teil 1
 author: Mark
 date: 2015-12-01
-version: 0.2
 uid: for
 folder: basics
 type: tutorial
