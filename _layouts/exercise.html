@@ -1,9 +1,11 @@
 ---
 layout: default
 ---
+{% assign coll = site.collections | where_exp:"item","item.label==page.collection" | first %}
+{% assign ex_link = page.collection | append: '/aufgaben.html' %}
 
 <div class="exercise">
-  <h1 class="exercise-title"><a href="{{ '/python/aufgaben.html' | absolute_url }}">Aufgaben</a> - {{ page.title }}</h1>
+  <h1 class="exercise-title"><a href="{{ ex_link | absolute_url }}">Aufgaben</a> - {{ page.title }}</h1>
   {% include created_by.html %}
   {% include gen_tags.html %}
 
@@ -28,7 +30,7 @@ layout: default
   <h2>Ähnliche Aufgaben</h2>
   <ul class="related-exercises">
     {% for rel in page.related_exercises %}
-      {% for ex in site.python %}
+      {% for ex in coll.docs %}
         {% if ex.uid == rel %}
           <li>
               <a href="{{ ex.url | absolute_url}}">

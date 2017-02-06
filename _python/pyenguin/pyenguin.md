@@ -2,6 +2,7 @@
 title: pyenguin - Spiele und Zeichenbiblothek
 layout: page
 date: 2017-01-24
+author: Mark
 permalink: python/pyenguin.html
 ---
 
@@ -11,4 +12,4 @@ Du willst Spiele in Python entwickeln? Dann bist du hier genau richtig!
 
 ## Installation
 
-Pyenguin bassiert auf [pygame](http://www.pygame.org).
+Eine Anleitung findest unter {% include gen_link.html uid="pg_install" %}. 

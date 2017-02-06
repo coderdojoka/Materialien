@@ -6,6 +6,7 @@ minted_ausgabe: tmp_latex
 inhaltsverzeichnis: ja
 keine_sektions_nummern: ja  
 titel: Python - Befehlsübersicht
+uid: referenz
 ---
 
 # Grundlagen

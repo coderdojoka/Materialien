@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        #content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: .5em;
+        }
+
+        .anti-float:after {
+            content: "";
+            height: 0px;
+            display: block;
+            clear: both;
+        }
+
+        .w50 {
+            max-width: 48%;
+        }
+
+        #content img {
+            padding: .5em;
+            box-shadow: 2px 2px 2px 2px silver;
+            max-width: 100%;
+            margin: 1em auto;
+            display: block;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        @media (max-width: 860px) {
+            .left{
+                float: none;
+            }
+            
+            .right{
+                float: none;
+            }
+            
+            .w50{
+                max-width: 100%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+<div id="content">
+
+    <h1>Sciene journal - Entry 2017-02-02</h1>
+    <section class="anti-float">
+
+        <div class="left w50">
+            <h3>Meine Überschrift <3</h3>
+            Bassus mortems ducunt ad fermium. Nunquam quaestio orexis. Cum magister peregrinatione, omnes dominaes
+            aperto
+            peritus, altus eleateses.Ubi est domesticus mineralis? Cur uria accelerare? A falsis, lapsus talis
+            xiphias.Vae,
+            vox!
+            Adelphiss favere in placidus cirpi! Nunquam transferre gluten.
+
+
+            Velox orexis tandem amors habitio est.Castors congregabo!
+            Musas sunt poetas de primus era.Absolutio salvus bubo est. Vita congregabos, tanquam raptus fides.Sunt
+            habitioes
+            anhelare regius, altus terrores.Sunt sagaes vitare dexter, emeritis rationees. A falsis, tata ferox
+            cedrium.Competitions nocere in cubiculum!
+            
+        </div>
+        <div class="right w50">
+            <img src="../_site/python/blocks.png" class="right">
+        </div>
+        
+    </section>
+
+
+    <h2>Bubberfisch?</h2>
+
+    <section class="anti-float">
+       
+        <div class="right w50">
+            <h3>Meine Überschrift <3</h3>
+            Audax lixa acceleratrix examinares coordinatae est. Alter cacula foris examinares secula est.Ubi est
+            camerarius gabalium? Ire unus ducunt ad brevis calcaria. Ubi est albus danista? Salvus cannabiss ducunt
+            ad consilium. Camerarius, domesticus indexs unus reperire de gratis, teres homo. Heuretes lotus torus
+            est. Ubi est salvus scutum?
+        </div>
+
+        <div class="left w50">
+            <img src="../_site/python/blocks.png" class="right">
+        </div>
+        
+    </section>
+
+</div>
+
+</body>
+</html>
