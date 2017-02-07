@@ -57,7 +57,8 @@ img {
 }
 
 .tags-container > .tag a {
-    scolor: black !important;
+    color: black !important;
+    line-height: 1;
 }
 
 .btn-container {

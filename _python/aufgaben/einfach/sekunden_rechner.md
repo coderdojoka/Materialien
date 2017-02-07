@@ -5,6 +5,7 @@ title: Sekunden-Rechner
 layout: exercise
 type: exercise
 level: l1
+uid: aufg_sekrech
 tags: [t_input]
 ---
 
