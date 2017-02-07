@@ -1,0 +1,12 @@
+{% assign items = include.data | where_exp:"item","item.level != null" | sort: "level" %}
+
+{% for item in items %}
+  {% if item.title != null and item.url != null %}
+  <div class="color_item {{ item.level }}">
+      <a  href="{{ item.url | absolute_url}}">{{ item.title }}</a>
+      <img class="check_me" title="Wenn du die Aufgabe gelöst hast, kannst du sie hier abhaken." id="check_{{ item.uid }}" src="{{ "/_assets/imgs/check.png" | absolute_url}}">
+      {% include gen_tags.html tags=item.tags classes="small" %}
+      <hr>
+  </div>
+  {% endif %}
+{% endfor %}

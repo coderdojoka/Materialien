@@ -1,10 +1,9 @@
-- name: einfach
+- name: 1
   title: Einfache Aufgaben
-- name: mittel
+  color: purple
+- name: 2
+  color: blue
   title: Mittelschwere Aufgaben
-- name: schwer
+- name: 3
   title: Schwere Aufgaben
-- name: pyenguin
-  title: Aufgaben rund um pyenguin
-- name: blackbox
-  title: Blackbox Aufgaben
+  color: red

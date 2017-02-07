@@ -4,7 +4,7 @@ date: 2016-04-22
 title: Sekunden-Rechner
 layout: exercise
 type: exercise
-folder: einfach
+level: l1
 tags: [t_input]
 ---
 

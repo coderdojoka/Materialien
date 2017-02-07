@@ -9,7 +9,7 @@ layout: default
     <h1 class="exercise-title"><a href="{{ ex_link | absolute_url }}">Beispiele</a> - {{ page.title }}
     </h1>
     {% include created_by.html %}
-    {% include gen_tags.html %}
+    {% include gen_tags.html tags=page.tags %}
 
     {{ content }}
 

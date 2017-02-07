@@ -4,7 +4,7 @@ version: 1.0
 date: 2016-07-29
 title: Der Geldspeicher  
 layout: exercise
-folder: mittel
+level: l4
 type: exercise
 related_files: [code/geldspeicher.py, code/geldspeicher_test.py]
 tags: [t_for, t_if]

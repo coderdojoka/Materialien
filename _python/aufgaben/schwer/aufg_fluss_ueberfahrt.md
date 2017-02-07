@@ -5,9 +5,9 @@ version: 1.1
 date: 2016-04-22  
 keine_sektions_nummern: ja  
 title: Flussüberfahrt
-folder: schwer
-layout: exercise
+level: l8
 type: exercise
+layout: exercise
 tags: [t_if, t_while, t_text]
 ---
 

@@ -5,7 +5,9 @@ title: TicTacToe
 folder: mittel
 type: exercise
 layout: exercise
+level: l6
 uid: ttt
+tags: [t_input, t_for, t_function]
 ---
 
 Hier wirst du Schritt für Schritt lernen wie man TicTacToe programmiert. Ein Spiel, dass man zu zweit

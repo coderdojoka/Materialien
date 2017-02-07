@@ -4,7 +4,7 @@ author: Mark
 version: 1.0
 uid: ka_if
 type: exercise
-folder: einfach
+level: l1
 layout: exercise
 title: Kleine Aufgaben • if-Abfragen
 tags: [t_input, t_if]

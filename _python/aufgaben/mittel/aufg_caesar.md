@@ -4,7 +4,7 @@ date: 2016-12-09
 title: Caesar Verschlüsselung
 layout: exercise
 type: exercise
-folder: mittel
+level: l4
 uid: a_caesar
 tags: [t_for]
 ---
