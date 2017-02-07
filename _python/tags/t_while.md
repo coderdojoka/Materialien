@@ -1,7 +1,7 @@
 ---
 layout: tag
 type: tag
-title: while
+title: while-Schleife
 uid: t_while
 ---
 

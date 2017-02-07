@@ -1,8 +1,8 @@
 ---
 layout: tag
 type: tag
-title: If-Abfrage
-uid: t_if
+title: Text-Ops
+uid: t_text
 ---
 
 {% include dump_tag.md %}

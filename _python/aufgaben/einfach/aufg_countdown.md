@@ -4,9 +4,8 @@ date: 2016-03-15
 title: Countdown
 layout: exercise
 type: exercise
-folder: einfach
-level: l1
-uid: ht
+level: l2
+uid: aufg_countdown
 tags: [t_input, t_while]
 ---
 
