@@ -4,9 +4,10 @@ title: Listen • Teil 2
 author: Mark, Norbert
 date: 2016-08-04
 uid: list2
-folder: basics
+topic: basics
 type: tutorial
 tags: [t_list]
+level: l3
 prev_tut: list1
 next_tut: list3
 ---

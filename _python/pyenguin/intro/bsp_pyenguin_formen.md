@@ -2,8 +2,9 @@
 author: Mark
 date: 2017-02-06
 title: Vorhandene Formen
-folder: pyenguin
+topic: pyenguin
 layout: example
+level: l3
 uid: bsp_pg_formen
 file: code/hallo_formen.py
 tags: [t_pyenguin]

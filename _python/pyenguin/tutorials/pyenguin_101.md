@@ -1,13 +1,12 @@
 ---
 author: Mark  
 date: 2016-01-29
-title: pyenguin - Übersicht
-type: tutorial
-folder: pyenguin
+title: pyenguin 101
+topic: pyenguin
 layout: tutorial
+level: l4
 uid: ref_pyenguin
 tags: [t_pyenguin]
-
 ---
 
 ## Grundgerüst
@@ -81,6 +80,8 @@ f.vieleck([(80, 80), (90, 80), (85, 90)], HELL_ROT)
 ```
 
 ## Vorhandene Objekte
+Dennoch gibt es der Einfachheit halber ein paar vordefinierte Objekte, 
+um nicht jedes Mal eine neue Fläche erstellen zu müssen.
 
 ### Rechtecke
 Benötigte Werte: `x`, `y` (linke obere Ecke), `breite`,  `hoehe` und `farbe`.

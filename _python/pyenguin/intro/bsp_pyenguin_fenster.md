@@ -2,7 +2,8 @@
 author: Mark
 date: 2017-02-06
 title: Dein erstes Fenster
-folder: pyenguin
+topic: pyenguin
+level: l3
 layout: example
 uid: bsp_pg_fenster
 file: code/hallo_fenster.py

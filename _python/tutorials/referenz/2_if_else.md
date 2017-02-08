@@ -1,10 +1,9 @@
 ---
 author: mark
 date: 2016-04-22
-title: Referenz • if-Abfragen
-layout: tutorial
-type: tutorial
-folder: referenz
+title: if-Abfragen
+layout: referenz
+topic: py_ref
 uid: ref2
 tags: [t_if]
 next_tut: ref3

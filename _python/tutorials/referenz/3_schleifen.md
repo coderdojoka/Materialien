@@ -1,17 +1,14 @@
 ---
 author: mark
 date: 2016-04-22
-title: Referenz • Schleifen
-layout: tutorial
-type: tutorial
-folder: referenz
+title: Schleifen
+layout: referenz
+topic: py_ref
 uid: ref3
 tags: [t_while, t_for]
 next_tut: ref4
 prev_tut: ref2
 ---
-
-# Schleifen
 
 ## while-Schleife
 Eine `while`-Schleife führt den eingerückten Code aus, solange die Bedingung erfüllt ist.

@@ -1,12 +1,13 @@
 ---
 layout: tutorial
 title: Listen • Lösungen
-author: [Mark, Norbert]
+author: Mark, Norbert
 date: 2016-08-04
 uid: list3
-folder: basics
+topic: basics
 type: tutorial
 tags: [t_list]
+level: l3
 prev_tut: list2
 ---
 

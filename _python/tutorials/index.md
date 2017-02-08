@@ -4,13 +4,15 @@ title: Tutorial-Übersicht
 permalink: python/tutorials.html
 ---
 
-{% assign data = site.python | where_exp:"item","item.type == 'tutorial'" %}
+{% assign data = site.python | where_exp:"item","item.layout == 'tutorial'" %}
 
 {% for cats in site.data.python_tut_cats %}
 
-{% assign items = data | where_exp:"item","item.folder == cats.name" %}
+{% assign items = data | where_exp:"item","item.topic == cats.name" %}
 {% if items.size > 0 %}
 ## {{ cats.title }}
-{% include dump_items.html data=items %}
+
+{% include color_items.html no_tags=true data=items %}
+
 {% endif %}
 {% endfor %}

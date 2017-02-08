@@ -1,12 +1,11 @@
 ---
 layout: tutorial
-title: Text
-autor: Mark
+title: Text Operationen
+author: Mark
 date: 2015-12-01
-version: 0.2
 uid: tut_text
-folder: basics
-type: tutorial
+topic: basics
+level: l2
 tags: [t_text]
 ---
 

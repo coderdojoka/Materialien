@@ -2,9 +2,10 @@
 layout: example
 title: Blocks - Ein kleines Spiel
 file: pyenguin_blocks.py
-type: example
-folder: pyenguin
+topic: pyenguin
 date: 2016-02-20
+uid: bsp_pyg_blocks
+level: l5
 tags: [t_pyenguin]
 ---
 

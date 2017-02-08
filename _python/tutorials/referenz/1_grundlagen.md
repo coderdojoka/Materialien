@@ -1,10 +1,9 @@
 ---
 author: mark
 date: 2016-04-22
-title: Referenz • Grundlagen
-layout: tutorial
-type: tutorial
-folder: referenz
+title: Grundlagen
+layout: referenz
+topic: py_ref
 tags: [t_input]
 uid: ref1
 next_tut: ref2

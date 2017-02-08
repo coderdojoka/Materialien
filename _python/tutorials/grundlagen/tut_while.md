@@ -5,9 +5,10 @@ autor: Mark, Norbert
 date: 2015-12-01
 version: 0.2
 uid: while
-folder: basics
+topic: basics
 type: tutorial
 tags: [t_while]
+level: l3
 prev_tut: for
 ---
 
