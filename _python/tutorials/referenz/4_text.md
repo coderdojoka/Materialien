@@ -1,17 +1,14 @@
 ---
 author: mark
 date: 2016-04-22
-title: Referenz • Text
-layout: tutorial
-type: tutorial
-folder: referenz
+title: Text
+layout: referenz
+topic: py_ref
 uid: ref4
 tags: [t_text]
 next_tut: ref5
 prev_tut: ref3
 ---
-
-# Text
 
 Ein Text ist im Prinzip nur eine Liste von Buchstaben und Zeichen.
 Man kann daher Listenfunktionen wir `len(..)`, den Zugriff auf Element

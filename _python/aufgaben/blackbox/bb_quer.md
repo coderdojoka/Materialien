@@ -5,7 +5,9 @@ title: Blackbox I
 type: exercise
 layout: exercise
 uid: bb1
-folder: blackbox
+level: l3
+group: blackbox
+tags: [t_if, t_calc]
 ---
 
 Du hast folgendes Programm gefunden und willst wissen was es tut.

@@ -5,7 +5,7 @@ version: 1.0
 uid: ka_for
 type: exercise
 layout: exercise
-folder: einfach
+level: l3
 title: Kleine Aufgaben • Schleifen
 tags: [t_for, t_while]
 related_exercises: [ka_input, ka_if]

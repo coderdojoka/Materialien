@@ -1,0 +1,82 @@
+---
+layout: default
+---
+{% assign coll = site.collections | where_exp:"item","item.label==page.collection" | first %}
+{% assign ex_link = page.collection | append: '/aufgaben.html' %}
+
+{% assign num = page.uid | split: '_' | last | plus: 0 %}
+{% assign nId = num | plus: 1 %}
+{% assign pId = num | minus: 1 %}
+{% assign nUID = page.folder | append: '_'  | append: nId %}
+{% assign pUID = page.folder | append: '_'  | append: pId %}
+
+{% assign items = coll.docs | where_exp: "item","item.folder==page.folder" | where_exp: "item","item.type==page.type" %}
+
+{% for item in items %}
+{% if item.uid ==  pUID %}
+{% assign prev = item %}
+{% elsif item.uid == nUID %}
+{% assign next = item %}
+{% endif %}
+{% endfor %}
+
+
+<div class="exercise">
+    <h1 class="exercise-title"><a href="{{ ex_link | absolute_url }}">Kleine Aufgaben</a> • {{ num }}. {{ page.title }}</h1>
+    {% include created_by.html %}
+    {% include gen_tags.html tags=page.tags %}
+    <h2>Deine Aufgabe:</h2>
+    {{ content }}
+
+    {% capture my_include %}{% include gen_solution.md id=page.uid file=page.solution %}{% endcapture %}
+    {{ my_include | markdownify }}
+
+
+    {% if next != null or prev != null %}
+    <div class="float-container btn-container">
+        <div class="splitLeft btn-back">
+            {% if prev != null %}
+            <a href="{{ prev.url | absolute_url }}">{{pId}}. {{ prev.title }}</a>
+            {% endif %}
+        </div>
+
+        <div class="splitRight btn-forward">
+            {% if next != null %}
+            <a href="{{ next.url | absolute_url }}">{{nId}}. {{ next.title }}</a>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+
+<div class="related">
+    {% if page.related_files %}
+    <h2>Dateien</h2>
+    <ul class="related-files">
+        {% for post in page.related_files %}
+        <li>
+            <a href="{{ post }}">
+                {{ post | split: "/" | last }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+
+<script>
+    var eles = document.getElementsByClassName("show_solution");
+    for (var i = 0; i < eles.length; i++) {
+        var ele = eles[i];
+        ele.onclick = function () {
+            var parts = this.href.split("#");
+            var e = document.getElementById(parts[1]);
+            if (e.classList.contains("hidden")) {
+                e.classList.remove("hidden");
+            } else {
+                e.classList.add("hidden");
+            }
+        }
+    }
+</script>

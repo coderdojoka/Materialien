@@ -1,10 +1,9 @@
 ---
 author: Mark
 date: 2016-04-22
-title: Referenz • Listen
-layout: tutorial
-type: tutorial
-folder: referenz
+title: Listen
+layout: referenz
+topic: py_ref
 uid: ref5
 tags: [t_list]
 next_tut: ref6

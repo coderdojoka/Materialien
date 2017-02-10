@@ -1,7 +1,7 @@
 ---
 layout: tag
 type: tag
-title: Eingaben einlesen
+title: Eingaben
 uid: t_input
 ---
 

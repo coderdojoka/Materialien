@@ -1,16 +1,15 @@
 ---
 layout: page
 title: Aufgaben Übersicht
+uid:  python_aufg
 permalink: python/aufgaben.html
 ---
 
-{% assign data = site.python | where_exp:"item","item.type == 'exercise'" %}
+Hier findest du Aufgaben rund um Python. Die Aufgaben sind farblich nach Schwierigkeit sortiert.
+Wenn du eine Aufgabe gelöst hast, kannst du sie abhaken! Aber erst wenn du sie wirklich gelöst hast!
 
-{% for cats in site.data.python_exercises %}
+**Tipp:** Bearbeite die Aufgaben auf deinem Computer und speichere sie einzeln in verschiedenen Dateienen ab.
+Du kannst sie dann einen Mentor zeigen und auf Korrektheit überprüfen lassen
 
-{% assign items = data | where_exp:"item","item.folder == cats.name" %}
-{% if items.size > 0 %}
-## {{ cats.title }}
-{% include dump_items.html data=items %}
-{% endif %}
-{% endfor %}
+{% assign data = site.python | where_exp:"item","item.layout == 'exercise'" %}
+{% include color_items.html data=data %}

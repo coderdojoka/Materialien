@@ -4,8 +4,9 @@ date: 2016-03-15
 title: Halbierter Tannenbaum
 layout: exercise
 type: exercise
-folder: einfach
+level: l2
 uid: ht
+tags: [t_for]
 ---
 
 ## Vorwissen

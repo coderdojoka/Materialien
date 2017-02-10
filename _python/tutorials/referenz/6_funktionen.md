@@ -1,10 +1,9 @@
 ---
 author: mark
 date: 2016-04-22
-title: Referenz • Funktionen I
-layout: tutorial
-type: tutorial
-folder: referenz
+title: Funktionen I
+layout: referenz
+topic: py_ref
 uid: ref6
 tags: [t_function]
 next_tut: ref10

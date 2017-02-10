@@ -20,6 +20,16 @@ img {
     margin-bottom: 4em;
 }
 
+.tags-container.small {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.tags-container.small > .tag {
+    padding: 1px 10px 1px 0;
+    font-size: .8em;
+}
+
 .tags-container > .tag {
     padding: 5px 10px 5px 0;
     vertical-align: middle;
@@ -47,7 +57,8 @@ img {
 }
 
 .tags-container > .tag a {
-    scolor: black !important;
+    color: black !important;
+    line-height: 1;
 }
 
 .btn-container {
@@ -71,7 +82,7 @@ img {
     word-break: normal;
     cursor: pointer;
     text-decoration: none;
-    text-align: middle;
+    text-align: center;
     font-size: 1.2rem;
 }
 
@@ -120,4 +131,95 @@ img {
 
 .hidden {
     display: none;
+}
+
+.color_item {
+    position: relative;
+    padding: .3em 1em;
+    border-left-style: solid;
+    border-left-width: 8px;
+    border-left-color: white;
+}
+.color_item > a {
+    font-size: 1.2em;
+    display: inline-block;
+    max-width: 90%;
+    line-height: 1.1;
+}
+
+.color_item > img {
+    position: absolute;
+    right: 0;
+    width: 10%;
+    max-width: 1.8em;
+    border: none;
+    box-shadow: none;
+    display: inline-block;
+    margin: 0;
+    padding: .2em;
+    opacity: .1;
+}
+
+.color_item > img:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+.color_item > img.checked {
+    opacity: 1;
+}
+
+.color_item > img.checked:hover {
+    opacity: .6;
+}
+
+.color_item > hr {
+    margin: .5em 0 0 0;
+}
+
+
+.color_item.l1 {
+    border-left-color: hsl(54, 100%, 91%);
+}
+
+.color_item.l2 {
+    border-left-color: #fafa96;
+}
+
+.color_item.l3 {
+    border-left-color: #faed6c;
+}
+
+.color_item.l4 {
+    border-left-color: #ffd800;
+}
+
+.color_item.l5 {
+    border-left-color: #ffa919;
+}
+
+.color_item.l6 {
+    border-left-color: red;
+}
+
+.color_item.l7 {
+    border-left-color: #E80C7A;
+}
+
+.color_item.l8 {
+    border-left-color: #c598ff;
+}
+
+.color_item.l9 {
+    border-left-color: #717aff;
+}
+
+.color_item.l10 {
+    border-left-color: #0037d3;
+}
+
+@media (max-width: 48em) {
+    .color_item {
+        padding: .1em .5em;
+    }
 }

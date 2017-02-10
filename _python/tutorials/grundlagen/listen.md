@@ -5,8 +5,9 @@ author: [Mark, Norbert]
 date: 2015-12-01
 version: 0.2
 uid: list1
-folder: basics
+topic: basics
 type: tutorial
+level: l2
 tags: [t_list]
 next_tut: list2
 ---

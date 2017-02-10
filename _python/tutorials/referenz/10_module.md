@@ -1,10 +1,9 @@
 ---
 author: mark
 date: 2016-04-22
-title: Referenz • Nützliches
-layout: tutorial
-type: tutorial
-folder: referenz
+title: Nützliches
+layout: referenz
+topic: py_ref
 uid: ref10
 tags: [t_random, t_datetime, t_time]
 prev_tut: ref6

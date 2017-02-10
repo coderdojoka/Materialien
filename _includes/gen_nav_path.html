@@ -1,0 +1,4 @@
+{% assign lang = site.data.labels[page.collection] %}
+{% assign topic = site.data.labels[page.topic][page.collection] %}
+{% assign what = site.data.labels[page.layout][page.collection] %}
+{% include title_url.html item=lang %}{% if what != null %} • {% include title_url.html item=what %}{% endif %}{% if topic != null %} • {% include title_url.html item=topic %}{% endif %}:  {{ page.title }}

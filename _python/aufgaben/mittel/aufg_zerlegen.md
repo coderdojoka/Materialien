@@ -5,6 +5,8 @@ title: Zahlen zerlegen
 layout: exercise
 type: exercise
 folder: mittel
+level: l3
+tags: [t_text]
 ---
 
 ## Aufwärmen: Einer- und Zehnerstellen

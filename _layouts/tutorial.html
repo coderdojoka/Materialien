@@ -1,9 +1,12 @@
 ---
 layout: default
 ---
+{% assign coll = site.collections | where_exp:"item","item.label==page.collection" | first %}
+{% assign tut_link = page.collection | append: '/tutorials.html' %}
 
 {% if page.next_tut != null or page.prev_tut != null %}
-{% assign tuts = site.python | where_exp: "item","item.type=='tutorial'" %}
+{% assign tuts = coll.docs | where_exp: "item","item.type=='tutorial'" %}
+
 {% for tut in tuts %}
   {% if tut.uid == page.prev_tut %}
     {% assign tutPrev = tut %}
@@ -15,10 +18,10 @@ layout: default
 
 
 <div class="tutorial">
-  <h1 class="tutorial-title"><a href="{{ '/python/tutorials.html' | absolute_url }}">Tutorials</a> - {{ page.title }}</h1>
+  <h1 class="tutorial-title">{% include gen_nav_path.html %}</h1>
   {% include created_by.html %}
 
-  {% include gen_tags.html %}
+  {% include gen_tags.html tags=page.tags %}
 
   {{ content }}
 
@@ -57,7 +60,7 @@ layout: default
   <h2>Passende Aufgaben</h2>
   <ul class="related-exercises">
     {% for rel in page.related_exercises %}
-      {% for ex in site.python %}
+      {% for ex in coll.docs %}
         {% if ex.uid == rel %}
           <li>
               <a href="{{ ex.url | absolute_url }}">

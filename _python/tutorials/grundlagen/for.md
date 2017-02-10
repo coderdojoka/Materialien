@@ -4,9 +4,10 @@ title: Schleifen • Teil 1
 author: Mark
 date: 2015-12-01
 uid: for
-folder: basics
+topic: basics
 type: tutorial
-tags: [t_while, t_for]
+tags: [t_for]
+level: l3
 next_tut: while
 ---
 

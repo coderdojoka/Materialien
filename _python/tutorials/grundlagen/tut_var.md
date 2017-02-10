@@ -4,9 +4,10 @@ title: Variablen
 author: Mark
 date: 2015-12-01
 uid: tut_var
-folder: basics
+level: l1
+topic: basics
 type: tutorial
-tags: []
+tags: [t_input]
 ---
 
 

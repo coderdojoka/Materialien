@@ -4,7 +4,9 @@ author: Ricarda
 date: 2015-01-29
 layout: exercise
 type: exercise
-folder: einfach
+level: l1
+uid: aufg_vars
+tags: [t_input]
 ---
 
 # Aufgabe 1 
