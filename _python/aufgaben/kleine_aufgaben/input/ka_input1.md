@@ -2,7 +2,6 @@
 date: 2016-09-16
 author: Rouven, Mark
 uid: ka_input_1
-type: exercise_ka
 layout: exercise_ka
 folder: ka_input
 title: Durchschnitt ausrechnen

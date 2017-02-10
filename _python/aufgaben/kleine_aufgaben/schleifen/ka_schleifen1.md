@@ -1,13 +1,16 @@
+---
+date: 2017-01-25
+author: Mark
+uid: ka_schleifen_1
+layout: exercise_ka
+folder: ka_schleifen
+solution: code/quadrate20.py
+title:  Quadrate der Zahlen von 0 bis 20
+tags: [t_for, t_while]
+related_exercises: [ka_input, ka_if]
+---
 
-## Einmaleins-Rechner
+- gib die Quadrate von 0 bis 20 aus, also: `0, 1, 2, ...`
+- das Quadrat einer Zahl `z` ist das Produkt der Zahl mit sich selbst `quadrat = z * z`
 
-- Schreibe ein Programm das dich 1x1-Aufgaben abfragt.
-- Lass den Benutzer den Zahlenraum festlegen.
-- Stelle dem Benutzer eine zufällige 1x1-Aufgabe aus dem gewünschten Zahlenraum
-- Fordere ihn auf das Ergebnis einzugeben
-- Vergleiche das Ergebnis mit dem berechneten korrekten Ergebnis und gib aus, ob der Benutzer recht hat
-- Frage den Benutzer ob er eine neue Aufgabe lösen will und stelle und wiederhole ab Schritt 3
-
-**Tipp:** `input(..)`, `while` und `if`
-
- code/lerner_1x1.py
+**Tipp:** `range(..)`

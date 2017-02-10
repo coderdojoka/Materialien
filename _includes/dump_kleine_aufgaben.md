@@ -3,5 +3,7 @@
 {% for item in items %}
 ## [{{ item.title }}]( {{ item.url }}) 
 {{ item.content }}
-<hr>
+{% if forloop.last == false %}
+  <hr>
+{% endif %}
 {% endfor %}

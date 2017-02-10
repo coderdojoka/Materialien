@@ -5,7 +5,7 @@ file: code/eingabe.py
 type: example
 folder: basics
 date: 2016-02-20
-tags: []
+tags: [t_input]
 ---
 
 Ein kleines Beispiel, das zeigt, wie man Text bzw. Zahlen von der Konsole einliest.
