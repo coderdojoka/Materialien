@@ -54,6 +54,20 @@ kannst du dir die Lösung ansehen, nachprogrammieren und verstehen.
 
 <hr>
 
+## Multiplikationstabelle
+- gib das kleine 1x1 aus
+- in der ersten Zeile sollen alle vielfachen von Eins stehen (bis 10x1)
+- in der zweiten Zeile alle vielfachen von Zwei usw.
+- bis zur 10. Zeile und 10x10
+
+**Tipp:** `range(..)`,geschachtelte for-Schleife
+
+[Lösung](#code3){:.show_solution}
+{% highlight python %}
+{% include_relative code/multiplikation.py %}
+{% endhighlight %}{: .hidden #code3 }
+
+<hr>
 
 
 TODO: add more
