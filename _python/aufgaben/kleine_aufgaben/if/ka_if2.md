@@ -2,7 +2,6 @@
 date: 2017-01-25
 author: Rouven, Mark
 uid: ka_if_2
-type: exercise_ka
 layout: exercise_ka
 folder: ka_if
 title: Schaltjahrrechner
