@@ -69,7 +69,7 @@ import os
 os.rmdir("mein_neuer_ordner")
 ```
 
-Allerdings gibt es dafür einen Befehl:
+Allerdings gibt es einen Befehl um einen Ordner und alle Dateien darin zu löschen:
 
 ```python
 # Alle Dateien innerhalb eines Ordner und dann den Ordner löschen
@@ -82,6 +82,14 @@ Kopiert den Ordner `mein_ordner` und alle Dateien darin in den neuen Ordner `kop
 
 ```python
 shutil.copytree('mein_ordner', 'kopie')
+```
+
+## Einen Ordner oder Datei umbennen
+Bennennt eine Datei/Ordner von `alter_name` zu `neuer_name` um.
+```
+import shutil
+
+shutil.move("alter_name", "neuer_name")
 ```
 
 ## Startordnerpfad
