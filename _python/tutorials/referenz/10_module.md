@@ -60,3 +60,41 @@ import time
 # aktuelle Zeit in Sekunden
 sekunden = time.time()
 ```
+
+## Zip-Archive erstellen und entpacken
+Will man ein Zip-Archiv erstellen, muss man jede Datei einzeln hinzufügen!
+Auch Dateien in einem Ordner müssen einzeln hinzugefügt werden!!
+
+```python
+# Ein neues Zip-Archiv erstellen
+zip_archiv = zipfile.ZipFile('mein_zip.zip', 'w', zipfile.ZIP_DEFLATED)
+# Alle zu zippenden Dateien hinzufügen
+zip_archiv.write("datei1.txt")
+# Einen Ordner hinzufügen
+zip_archiv.write("ordner1")
+# Die Dateien im Ordner müssen einzeln! hinzugefügt werden
+zip_archiv.write("ordner1/datei2.txt")
+# ...
+zip_archiv.close()
+```
+
+Will man nur einen ganzen Ordner zippen, geht das auch einfacher:
+
+```python
+import shutil
+# Einen ganzen Ordner zippen
+shutil.make_archive("mein_zip", 'zip', "pfad/zum/ordner")
+```
+
+Ein Zip-Archiv kann man ganz einfach entpacken:
+
+```python
+# Archiv zum Lesen öffnen
+zip_archiv = zipfile.ZipFile("mein_zip.zip", "r")
+
+# Alles in einen neuen Ordner entpacken
+zip_archiv.extractall("test")
+
+# Alles im aktuellen Verzeichnis entpacken
+zip_archiv.extractall()
+```
