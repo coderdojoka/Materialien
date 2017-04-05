@@ -46,6 +46,33 @@ datei.close()
 print(inhalt)
 ```
 
+Man kann auch eine Liste von Zeilen in eine Textdatei schreiben,
+bzw. eine Textdatei auch als eine Liste von Zeilen lesen.
+
+```python
+
+datei = open("meine_datei.txt","r")
+# Liest die Zeilen als Liste ein.
+# ACHTUNG: Das Zeilenumbruchzeichen am Ende wird nicht automatisch entfernt!
+zeilen = datei.readlines()
+datei.close()
+print(zeilen)
+
+# Alternativ kann man eine Datei auch direkt mit einer for-Schleife durchlaufen
+datei = open("text_test.py","r")
+for zeile in datei:
+    print(zeile)
+datei.close()
+
+# Eine Liste in eine Datei schreiben. 
+datei = open("zeilen_test.txt", "w")
+zeilen = ["hallo welt\n", "schöner tag heute\n"]
+# ACHTUNG: Das Zeilenumbruchzeichen muss von Hand hinzugefügt werden
+datei.writelines(zeilen)
+datei.close()
+```
+
+
 ## Eine Datei löschen
 ```python
 import os
@@ -81,14 +108,14 @@ shutil.rmtree('mein_ordner')
 Kopiert den Ordner `mein_ordner` und alle Dateien darin in den neuen Ordner `kopie`.
 
 ```python
+import shutil
 shutil.copytree('mein_ordner', 'kopie')
 ```
 
 ## Einen Ordner oder Datei umbennen
 Bennennt eine Datei/Ordner von `alter_name` zu `neuer_name` um.
-```
+```python
 import shutil
-
 shutil.move("alter_name", "neuer_name")
 ```
 
@@ -96,6 +123,7 @@ shutil.move("alter_name", "neuer_name")
 Relative Pfadangaben benutzen den Startordnerpfad um eine Datei zu finden.
 
 ```python
+import os
 ordnerpfad = os.getcwd()
 print(ordnerpfad)
 ```
@@ -103,6 +131,7 @@ print(ordnerpfad)
 ## Dateien in einem Ordner auflisten
 
 ```python
+import os
 for datei_name in os.listdir("mein_ordner"):
     print(datei_name)
 ```
@@ -110,6 +139,8 @@ for datei_name in os.listdir("mein_ordner"):
 ## Überprüfen ob eine Datei/Ordner exisitiert
 
 ```python
+import os
+
 # Überprüfen ob einen Datei/Ordner existiert
 if os.path.exists("mein_ordner"):
     print("Ordner exisitiert")

@@ -50,6 +50,25 @@ print(buchstabe) # = 'W'
 
 **ACHTUNG:** Wir beginnen bei `0` zu zählen, die `1` beschreibt also den zweiten Buchstaben!
 
+## Texte aufspalten
+Einen Text kann man an einem Trennzeichen oder sogar einem Wort aufspalten.
+
+```python
+text = "hallo#welt#test"
+teile = text.split("#")
+print(teile)
+```
+
+## Texte zusammenfügen
+Eine Liste von Textstücken kann man wieder zu einem Text zusammenfügen:
+
+```python
+teile = ["hallo", "welt", "test"]
+text = " ".join(teile) # klebt die Teile mit Leerzeichen dazwischen zusammen
+print(teile)
+```
+
+
 ## Texte sind unveränderlich
 Man kann in einen Text nicht ohne weiteres verändern:
 
