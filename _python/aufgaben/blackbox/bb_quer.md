@@ -21,7 +21,6 @@ Schreibe **NICHT** einfach das ganze Programm ab.
 {% include_relative quer.py %}
 {% endhighlight %}
 
-
 ### Aufgabe 1
 Was wird ausgeben, wenn folgende Dinge eingegeben werden?
 

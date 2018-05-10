@@ -33,7 +33,6 @@ Ein Tutorial ist z.B. das Spiel [Zahlenraten](z_raten).
 
 Ein Aufgabe ist z.B. [Maler][maler].
 
-
 [python_install]: https://github.com/coderdojoka/Materialien/raw/master/Installation/installation_python.pdf
 [vorlagen]: https://github.com/coderdojoka/Materialien/raw/master/Vorlagen
 [bsp]: https://github.com/coderdojoka/Materialien/raw/master/Python/Beispiele
