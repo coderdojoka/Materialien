@@ -1,6 +1,8 @@
 ---
 titel: if-Abfragen  
 author: Mark
+layout: page
+group: ersteschritte
 ---
 
 Entscheidungen und Bedingungen

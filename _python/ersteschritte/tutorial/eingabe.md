@@ -2,6 +2,7 @@
 titel: Eingaben einlesen
 autor: Mark  
 layout: page
+group: ersteschritte
 ---
 
 Eingaben

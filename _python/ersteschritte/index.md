@@ -7,6 +7,6 @@ author: Mark
 ---
 
 
-{% assign tuts = site.python | where_exp:"item","item.parent == 'ersteschritte'" %}
+{% assign tuts = site.python | where_exp:"item","item.group == 'ersteschritte'" %}
 
 {% include max_list.html data=tuts max=3 %}

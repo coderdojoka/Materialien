@@ -3,6 +3,7 @@ titel: Variablen
 autor: Mark Weinreuter
 datum: 1.12.2015
 layout: page
+group: ersteschritte
 version: 0.2
 ---
 
