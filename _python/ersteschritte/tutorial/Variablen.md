@@ -24,7 +24,7 @@ Variablen in Python
 In Python sieht das Ganze so aus:
 
 
-{% include read_lines.md rel_file="variablen.py" %}
+{% include read_lines.md rel_file="code/variablen.py" %}
 {% highlight python %}{% include select_lines.md lines=lines offset=2 limit=2 %}{% endhighlight %}
 
 Auf der linken Seite des `=`-Zeichens steht der Name der Variablen, die erstellt wird.
