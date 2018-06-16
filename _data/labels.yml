@@ -1,18 +1,18 @@
 python: 
   title: Python
-  url: python.html
+  url: python
 html:
   title: HTML
-  url: html.html
+  url: html
 scratch: 
   title: Scratch
-  url: scratch.html
+  url: scratch
 tutorial:
   python:
     title: Tutorials
-    url: python/tutorials.html
+    url: python/tutorials
 referenz:
   python:
     title: Referenz
-    url: python/referenz.html
+    url: python/referenz
 

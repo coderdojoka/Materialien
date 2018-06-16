@@ -8,6 +8,8 @@ Lektionen/*/_minted-*/
 tmp_latex/
 _site/
 
+.jekyll-metadata
+
 .idea/
 *.out
 *.log

@@ -1,0 +1,68 @@
+
+Einstieg:
+
+Ball mit Paddle + Blocks
+
+Rating: 1-10 wie schwer?
+30min       2h      5h (1Tag)        2T     5T (1 Woche)    2 W     4 W (1 Monat)   2 M     4 M     6M
+
+Ratings vergleich: Min-Max raussuchen -> reden
+Kann man auf abschätzung vertrauen? -> wie oft schon programmiert? (Teilnehmer mit größter Erfahrung fragen)
+
+
+Was muss ich alles wissen um X zu programmieren:
+- Teile Und (Be-)Herrsche
+
+Inkscape Paddle Game mit Figuren nachspielen? -> Dumm stellen!!!
+- Kinder müssen vorgeben wie was passiert:
+
+### Gegenstände:
+- allgemein: Wie speichern (ein Ding?), in Listen?
+- Paddle:
+    - Rechteck
+- Blocks
+    - Rechteck
+- Ball
+    - Kreis
+
+
+### Bewegung:
+- Allgemein: Wie sind Objekte positionniert? Wo ist 0,0? Wie wird Bewegung festgestellt
+    - Paddle:
+        - mit Pfeiltasten
+        - in welche Richtung? +-X wie viele
+        - Wann bewegen (gedrückt halten, Nur einmal bei Druck?) -> Wie macht man das (abhängig von Framework)
+    - Ball:
+        - wann bewegen? Immer => in Spielschleife
+        - welche Richtung? in Startrichtung/Richtung speichern und dahin bewegen
+    - Blöcke:
+        - feste Position im Gitter
+
+### Kollision:
+- Allgemein: Wie wird die Kollision festgestellt, was bedeutet das?
+
+    - Ball + Rand (nicht Boden)
+        - prallt ab? -> Wie ändert sich die Richtung
+        - Wo/Wann überprüfen? -> Nach jeder Positionsänderung
+
+    - Ball + Boden:
+        - Game Over! -> Was passiert hier? Z.B. Anzeige, nochmal spielen?
+        - Wo/Wann überprüfen
+        
+    - Ball + Paddle
+        - Ball prallt ab? -> Wie ändert sich die Richtung
+        - Kann man die Abprall richtung ändern? oder Zufall
+        - (Sonderfall: Ball ist im Paddle => Dauerkollision)
+
+    - Ball + Block
+        - Kollision mit jedem Block testen?
+        - prallt ab? -> Wie ändert sich die Richtung
+        - Block verschiwndet? Wie ist Block gespeichert? -> Muss man was tun?
+
+### Gewonnen/Punktestand
+- Wann gibt es einen Punkt?
+- Wann hat man gewonnen
+- Wann wird die anzeige aktualisiert? Wie wird überprüft ob man gewonnen hat?
+
+
+=> Spiel live nach vorgaben programmieren!!

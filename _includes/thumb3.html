@@ -1,0 +1,50 @@
+
+<div class="thumbs-3">
+
+<div class="img-thumb">
+    <div class="img">
+        <a href="{{ include.link0 | absolute_url0 }}">
+        <img src="{{ site.url }}/_assets/imgs/{{ include.img0 }}" alt="{{ include.title0 }}">
+        </a>
+        {% if include.author0 %}
+        <span class="img-info">Quelle: {{ include.author0 }}</span>
+        {% endif %}
+    </div>
+    <div class="text">
+        <div><a href="{{ include.link0 | absolute_url }}">{{ include.title0 }}</a></div>        
+    </div>
+</div>
+<div class="img-thumb">
+    <div class="img">
+        <a href="{{ include.link1 | absolute_url }}">
+            <img src="{{ site.url }}/_assets/imgs/{{ include.img1 }}" alt="{{ include.title1 }}">
+        </a>
+        {% if include.author1 %}
+        <span class="img-info">Quelle: {{ include.author1 }}</span>
+        {% endif %}
+    </div>
+    <div class="text">
+        <div>
+            <a href="{{ include.link1 | absolute_url }}">{{ include.title1 }}</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="img-thumb">
+        <div class="img">
+            <a href="{{ include.link2 | absolute_url }}">
+            <img src="{{ site.url }}/_assets/imgs/{{ include.img2 }}" alt="{{ include.title2 }}">
+            </a>
+            {% if include.author2 %}
+            <span class="img-info">Quelle: {{ include.author2 }}</span>
+            {% endif %}
+        </div>
+        <div class="text">
+            <div><a href="{{ include.link2 | absolute_url }}">{{ include.title2 }}</a></div>        
+        </div>
+    </div>
+
+
+
+</div>

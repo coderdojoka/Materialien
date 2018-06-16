@@ -1,40 +1,45 @@
 ---
-title: Tutorials und Aufgaben
-permalink: python.html
+title: Python
+permalink: /python/
 layout: page
 ---
 
-
-{% assign allowed = ['example', 'exercise'] %}
 {% assign exs = site.python | where_exp:"item","item.type == 'exercise'" %}
 {% assign tuts = site.python | where_exp:"item","item.type == 'tutorial'" %}
 {% assign exps = site.python | where_exp:"item","item.type == 'example'" %}
 
 
-## [Befehlsübersicht]({{ "python/referenz.html" | absolute_url }})
+## Aufgaben, Tutorials und Beispiele
 
-Hier findest du eine Übersicht über die wichtigsten Python Befehle und Konzepte.
+Hier findest du eine Reihe von Anleitungen und Beispielen, die nach Komplexität geordnet sind.
 
-## [Tutorials]({{ "python/tutorials.html" | absolute_url }})
+{% include thumb3.html img0="python_beginner.svg" link0="/python/ersteschritte/" title0="Erste Schritte" 
+img1="python_intermediate.svg" link1="/python/fortgeschritten/" title1="Fortgeschritten"
+img2="python_master.svg" link2="/python/meister/" title2="Meister" %}
 
-{% include max_list.html data=tuts max=3 %}
-Alle Tutorials findest du [hier]({{ "/python/tutorials.html" | absolute_url }})
+Oder verwende die [Such-Funktion](/python/suche/), um alle vorhanden Anleitungen, Beispiele und Aufgaben zu durchsuchen!
 
-## [Aufgaben]({{ "python/aufgaben.html" | absolute_url }})
+-----
 
-{% include max_list.html data=exs max=3 %}
-Alle Aufgaben findest du [hier]({{ "/python/aufgaben.html" | absolute_url }})
+{% capture referenz %}
+Hier findest du eine Übersicht über die wichtigsten Python Befehle und Konzepte. Wenn du z.B. herausfinden willst, welche Funktionen es für Listen gibt, wirst du hier fündig.
+{% endcapture %}
 
-## [Beispiele]({{ "python/beispiele.html" | absolute_url }})
+{% capture projekte %}
+Hier findest du eine Sammlung von Projekten, die im CoderDojo von Teilnehmern erstellt wurden. Lass dich inspierieren und finde heraus was man alles Tolles mit Python programmieren kann.
+{% endcapture %}
 
-{% include max_list.html data=exps max=3 %}
-Alle Beispiele findest du [hier]({{ "/python/beispiele.html" | absolute_url }})
+{% capture links %}
+Hier haben wir eine Liste mit hilfreichen Links zu externen Seiten rum ums Programmieren mit Python gesammelt, wie z.B:
 
-## [Pyenguin]({{ "python/pyenguin.html" | absolute_url }})
-Ein Framework um Spiele und grafische Oberflächen in Python zu entwickeln.
-
-## Nützliche Links
-
-* Eine sehr schöne interaktive Seite zum Python lernen: [http://cscircles.cemc.uwaterloo.ca/de/](http://cscircles.cemc.uwaterloo.ca/de/)
+* Eine sehr schöne, interaktive Seite zum Python lernen: [http://cscircles.cemc.uwaterloo.ca/de/](http://cscircles.cemc.uwaterloo.ca/de/)
 
 * Python Online Dokumentation: [https://py-tutorial-de.readthedocs.io/de/python-3.3/](https://py-tutorial-de.readthedocs.io/de/python-3.3/)
+
+{% endcapture %}
+
+{% include  img_n_text.html img="notebook.svg" title='Befehlsreferenz' link="python/referenz"  description=referenz  %}
+
+{% include  img_n_text.html img="gears.svg" title='Eigene Projekte' link="python/projekte" class_extra="img-right"  description=projekte  %}
+
+{% include  img_n_text.html img="folder.svg" title='Weiterführende Links' link="python/links" description=links  %}
