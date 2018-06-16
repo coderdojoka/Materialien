@@ -6,6 +6,7 @@ layout: referenz
 topic: py_ref
 uid: ref5
 tags: [t_list]
+order: 5
 next_tut: ref6
 prev_tut: ref4
 ---
@@ -24,7 +25,7 @@ liste = [1, 2, 3, 4, 5]
 
 ## Einen Eintrag aus der Liste lesen
 
-Ein Wert aus der Liste wird über seinen Index, seine Position in der Liste, abgefragt.
+Ein Wert aus der Liste wird über seinen Index (die Position in der Liste) abgefragt.
 
 ```python
 liste = ["hallo", "test", "welt"]
@@ -34,10 +35,10 @@ ersterEintrag = liste[0] # = "hallo".
 
 **Achtung:** Wir beginnen bei 0 zu zählen! Das erste Element hat den Index 0.
 
-## Einen Eintrag von Ende der Liste lesen
+## Einen Eintrag vom Ende der Liste lesen
 
 ```python
-# Negative Indices beginnen am Ende zu zählen
+# Negative Indizes beginnen am Ende zu zählen
 letzterEintrag = liste[-1] # = "welt".
 
 print(ersterEintrag, letzterEintrag) # => "Hallo Welt"
@@ -72,7 +73,7 @@ for element in liste:
     print(element)
 ```
 
-### Hilfsfunktion für das Ausgeben einer Liste
+## **Beispiel:** Hilfsfunktion für das Ausgeben einer Liste
 Gibt die Anzahl der Elemente und deren Werte aus.
 
 ```python
@@ -83,7 +84,7 @@ def liste_ausgeben(liste):
     for element in liste:
         print(element)
 
-# Diese ruft man so auf
+# Diese Funktion ruft man so auf
 liste = [1, 2, "Haus", "Katze"]
 liste_ausgeben(liste)
 ```
@@ -102,7 +103,7 @@ else:
 ```
 
 ## Einen Eintrag entfernen
-Die `.remove(..)`-Funktion sucht den ersten Eintrag mit diesem Wert und entfernt ihn.
+Die `.remove(..)`-Funktion sucht den **ersten** Eintrag mit diesem Wert und entfernt ihn.
 
 ```python
 liste = [1, 2, 6]
@@ -111,14 +112,35 @@ liste.remove(6) # = [1, 2]
 liste_ausgeben(liste)
 ```
 
+## Einen Eintrag löschen
+Die `.pop(..)`-Funktion löscht den Eintrag an der *gegeben Stelle* und gibt diesen Wert zurück.
+
+```python
+liste = [100, 200, 300]
+liste.pop(1) # = 2
+
+liste_ausgeben(liste) # [100, 300]
+```
+
+
 **Achtung:** Hat es keinen solchen Wert, wird ein Fehler erzeugt!
 
-## Zwei Listen kombinieren
-Wie bei Texten kann man mit `+` zwei Listen kombinieren.
+## Eine Liste erweitern
+**Erweitert** (verändert!) die erste liste um die zweite Liste.
 
 ```python
 liste = [1, 2, 3, 4, 5, 6]
-liste = liste + [7, 8, 9] # = [1, 2.., 9]
+liste.extend([7, 8, 9]) # = [1, 2.., 9]
 
 liste_ausgeben(liste)
+```
+
+## Zwei Listen kombinieren
+Erstellt eine **neue** Liste aus den beiden angegeben Listen!
+
+```python
+liste = [1, 2, 3, 4, 5, 6]
+neue_liste = liste + [7, 8, 9] # = [1, 2.., 9]
+
+liste_ausgeben(neue_liste)
 ```

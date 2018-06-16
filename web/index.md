@@ -24,7 +24,7 @@ Eine für Einsteiger hevorrangend geeignetet [Programmiersprache](https://python
 
 {% include  img_n_text.html img="python.svg" title='Python' link="python/"  description=python  %}
 
-{% include img_n_text.html img="scratch.svg" title='Scratch' link="scratch/"  description=scratch %}
+{% include img_n_text.html img="scratch.svg" title='Scratch' link="scratch/" class_extra="img-right"  description=scratch %}
 
 {% include img_n_text.html img="arduino.png" title='Arduino'  link="arduino/"  description=arduino author="https://openclipart.org/detail/278039/arduino-fixed" %}
 

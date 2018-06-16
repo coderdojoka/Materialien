@@ -8,5 +8,5 @@ uid: py_ref
 ---
 
 {% assign data = site.python | where_exp:"item","item.layout == 'referenz'" %}
-{% assign items = data | where_exp:"item","item.topic == 'py_ref'" %}
+{% assign items = data | where_exp:"item","item.topic == 'py_ref'"  | sort: 'order' %}
 {% include color_items.html no_tags=true data=items %}

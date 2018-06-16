@@ -7,13 +7,30 @@ topic: py_ref
 uid: ref10
 tags: [t_random, t_datetime, t_time]
 prev_tut: ref6
+order: 10
 ---
 
+
+## Module
+
+Es kommen schon sehr viele nützliche Funktionen mit Python mit. Diese sind in sogenannte "Module" ausgelagert und müssen importiert werden, um sie verwenden zu können.
+
+```python
+# importiert das random-Modul. Verwendung: random.randint(..)
+import random 
+
+# import NUR die randint-Funktion: Verwendung randint(..)
+from random import randint 
+```
+
+Import-Anweisungen sollten in der Regel ganz am Anfang der Code-Datei stehen. Danach können die importierten Module/Funktionen in der gesamten Datei verwendet werden.
+
 ## Zufallszahlen
+
 Will man eine Zufallszahl erzeugen, kann man dies mit dem Modul `random` tun.
 
 ```python
-# das random Modul muss (einmal) importiert werden um die Funktion random.randint() verwenden zu können
+# das random Modul muss importiert werden
 import random
 
 # generiert eine Zufallszahl zwischen 1 und 100
@@ -24,7 +41,7 @@ print(zufallsZahl)
 ## Das Programm kurz anhalten
 
 Um das ganze Programm komplett anzuhalten, kannst du die `time.sleep(..)`-Funktion verwenden.
-**ACHTUNG:** Das ganze Programm wird angehalten!
+**ACHTUNG:** Das gesamte Programm friert für die angegebene Zeit ein!
 
 ```python
 # Das Paket time einmal importieren
@@ -35,6 +52,7 @@ time.sleep(1000)
 ```
 
 ## Aktuelles Datum
+
 Über das Modul `datetime` kann man das aktuelle Datum abfragen.
 
 ```python
@@ -62,10 +80,13 @@ sekunden = time.time()
 ```
 
 ## Zip-Archive erstellen und entpacken
+
 Will man ein Zip-Archiv erstellen, muss man jede Datei einzeln hinzufügen!
 Auch Dateien in einem Ordner müssen einzeln hinzugefügt werden!!
 
 ```python
+import zipfile
+
 # Ein neues Zip-Archiv erstellen
 zip_archiv = zipfile.ZipFile('mein_zip.zip', 'w', zipfile.ZIP_DEFLATED)
 # Alle zu zippenden Dateien hinzufügen
