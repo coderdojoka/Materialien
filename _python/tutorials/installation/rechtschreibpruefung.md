@@ -3,7 +3,7 @@ author: Mark
 date: 2017-02-16  
 layout: tutorial
 topic: pycharm
-title: Rechtschreibprüfung
+title: Pycharm - Rechtschreibprüfung
 uid: pycharm_spelling
 ---
 
