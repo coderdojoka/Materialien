@@ -7,7 +7,7 @@ topic: pyenguin
 uid: fenster
 author: mark
 tags: [t_pyenguin]
-level: l4
+level: 4
 ---
 
 ## Mein erstes Fenster

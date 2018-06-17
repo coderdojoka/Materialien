@@ -7,8 +7,8 @@ topic: py_ref
 uid: ref5
 tags: [t_list]
 order: 5
-next_tut: ref6
-prev_tut: ref4
+next: ref6
+prev: ref4
 ---
 
 Eine Liste ist ein Container für verschiedene Werte oder Variablen. Du kannst dir einen Liste wie einen Schubladenschrank vorstellen. Die Schubladen sind durchnummeriert und du kannst in jede Schublade einen Wert legen oder daraus lesen.

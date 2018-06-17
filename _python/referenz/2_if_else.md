@@ -7,8 +7,8 @@ topic: py_ref
 uid: ref2
 tags: [t_if]
 order: 2
-next_tut: ref3
-prev_tut: ref1
+next: ref3
+prev: ref1
 ---
 
 

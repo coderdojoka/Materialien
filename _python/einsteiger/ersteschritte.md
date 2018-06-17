@@ -2,6 +2,7 @@
 title: Erste Schritte
 permalink: /python/ersteschritte
 layout: page
+uid: ersteschritte
 date: 2018-06-15
 author: Mark
 ---

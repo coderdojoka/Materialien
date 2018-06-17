@@ -4,7 +4,7 @@ date: 2017-02-06
 title: Alles (das meiste) aus pyenguin
 topic: pyenguin
 layout: example
-level: l4
+level: 4
 uid: bsp_pg_formen
 file: code/hallo_alles.py
 tags: [t_pyenguin]

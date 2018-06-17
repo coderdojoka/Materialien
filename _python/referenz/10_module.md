@@ -6,7 +6,7 @@ layout: referenz
 topic: py_ref
 uid: ref10
 tags: [t_random, t_datetime, t_time]
-prev_tut: ref6
+prev: ref6
 order: 10
 ---
 

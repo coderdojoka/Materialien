@@ -4,7 +4,7 @@ date: 2016-03-15
 title: Countdown
 layout: exercise
 type: exercise
-level: l2
+level: 2
 uid: aufg_countdown
 tags: [t_input, t_while]
 ---

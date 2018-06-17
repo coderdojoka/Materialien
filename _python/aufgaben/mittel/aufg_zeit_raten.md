@@ -4,7 +4,7 @@ datum: 2016-22-04
 title: Menschliche Stopuhr
 layout: exercise
 type: exercise
-level: l2
+level: 2
 tags: [t_input, t_if]
 ---
 

@@ -7,8 +7,8 @@ topic: py_ref
 uid: ref6
 tags: [t_function]
 order: 6
-next_tut: ref10
-prev_tut: ref6
+next: ref10
+prev: ref6
 ---
 
 ## Was ist eine Funktion?

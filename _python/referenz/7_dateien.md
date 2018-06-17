@@ -7,8 +7,8 @@ topic: py_ref
 uid: ref7
 tags: [t_io]
 order: 7
-next_tut: ref10
-prev_tut: ref6
+next: ref10
+prev: ref6
 ---
 
 Ein Computer speichert Informationen in Dateien. Dateien sind in Ordnern gruppiert.

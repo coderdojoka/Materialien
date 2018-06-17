@@ -1,2 +1,2 @@
 {% assign item = site.python | where_exp:"item","item.uid==include.uid" | last %}
-{% if item != null %}[{{ item.title }}]({{ item.url | absolute_url }}){% else %}**UID {{ include.uid }} nicht gefunden!!**{% endif %}
+{% if item != null %}[{{ item.title }}]({{ item.url | absolute_url }}){% else %}**Link(`{{ include.uid }}`) nicht gefunden!!**{% endif %}

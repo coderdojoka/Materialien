@@ -1,9 +1,11 @@
 <ul class="items">
-{% assign items = include.data | sort: date | reverse %}
-{% for item in  items | limit: include.max %}
+{% assign items = include.data %}
+{% for item in  items |  limit: include.max %}
   <li>
       <a class="item" href="{{ item.url | absolute_url }}">{{ item.title }}</a>
   </li>
 {% endfor %}
-<li>...</li>
 </ul>
+{% if include.max > 0 %}
+<a href="{{ include.more }}">Alle anzeigen...</a>
+{% endif %}

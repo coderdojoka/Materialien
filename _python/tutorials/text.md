@@ -5,7 +5,7 @@ author: Mark
 date: 2015-12-01
 uid: tut_text
 topic: basics
-level: l2
+level: 2
 tags: [t_text]
 ---
 

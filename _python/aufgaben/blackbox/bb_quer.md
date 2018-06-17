@@ -5,7 +5,7 @@ title: Blackbox I
 type: exercise
 layout: exercise
 uid: bb1
-level: l3
+level: 3
 group: blackbox
 tags: [t_if, t_calc]
 ---

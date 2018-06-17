@@ -4,7 +4,7 @@ author: Rouven, Mark
 uid: ka_input
 type: exercise
 layout: exercise
-level: l1
+level: 1
 title: Kleine Aufgaben • Eingaben
 tags: [t_input]
 related_exercises: [ka_if, ka_for]

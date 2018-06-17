@@ -1,26 +1,21 @@
 ---
-titel: Eingaben einlesen
-autor: Mark  
-layout: page
+title: Eingaben einlesen
+author: Mark  
+layout: tutorial
 group: ersteschritte
 ---
 
-Eingaben
-========
+# Eingaben
 
-Ein Program, in den der Benutzer nichts eingeben kann ist meinstens
-langweilig. Deswegen ist es praktisch, dass wir relativ einfach die
-Eingaben einlesen können.
+Ein Program, in den der Benutzer nichts eingeben kann ist meinstens langweilig. Deswegen ist es praktisch, dass wir relativ einfach die Eingaben einlesen können.
 
 Dies funktioniert mithilfe von `input()`.
 
 {% include read_lines.md rel_file="code/eingabe.py" %}
 {% highlight python %}{% include select_lines.md lines=lines offset=2 limit=2 %}{% endhighlight %}
 
-Was in den Klammern bei `input()` steht wird zuerst auf der Konsole ausgeben, dann
-wird auf einen Eingabe des Benutzers gewartet.
-**Wichtig:** das Programm wartet solange bis der Benutzer etwas auf der
-Konsole eingetippt und mit ’Enter’ bestätigt hat!
+Was in den Klammern bei `input()` steht wird zuerst auf der Konsole ausgeben, dann wird auf einen Eingabe des Benutzers gewartet.
+**Wichtig:** das Programm wartet solange bis der Benutzer etwas auf der Konsole eingetippt und mit ’Enter’ bestätigt hat!
 
 {% highlight python %}{% include select_lines.md lines=lines offset=2 limit=2 %}{% endhighlight %}
 

@@ -4,7 +4,7 @@ date: 2016-01-29
 title: pyenguin 101
 topic: pyenguin
 layout: tutorial
-level: l4
+level: 4
 uid: ref_pyenguin
 tags: [t_pyenguin]
 ---

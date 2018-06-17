@@ -7,9 +7,10 @@ version: 0.2
 uid: list1
 topic: basics
 type: tutorial
-level: l2
+level: 2
+order: 1
 tags: [t_list]
-next_tut: list2
+next: list2
 ---
 
 # Was sind Listen?

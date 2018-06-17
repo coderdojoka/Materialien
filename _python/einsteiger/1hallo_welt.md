@@ -1,103 +1,105 @@
 ---
-layout: tutorial  
-title: Python 101
+date: 2018-06-15
 author: Mark
-date: 2018-04-02
-uid: filesystem
-topic: advanced
-type: tutorial
-tags: [t_os]
-level: l5
+parent: ersteschritte
+layout: exercise
+title: Erste Schritte - Grundlagen
+tags: [t_input]
+related_exercises: [ka_input, ka_for]
 ---
 
-## Hallo Python
+# Lernziele
 
-testssdjf sdj f
+Du lernst, wie man:
 
-### Lernziele
-
-- Wie man Variablen erstellt, verwendet und ändert
-- Texte, Zahlen und was die Unterschiede sind
-- Operatoren: `+`, `*`, um mit Zahlen und Texte zu rechnen
-- Neue Funktionen:
+- Variablen erstellt, verwendet und ändert
+- Texte und Zahlen verwendet und was die Unterschiede sind
+- die Operatoren: `+`, `*`, auf Zahlen und Texte anwendet
+- folgende Funktionen verwendet:
   - `print(..)` und `input(..)` zur Ausgabe, bzw. Eingabe
   - `int(..)` und `str(..)` zur Konvertierung in Zahlen, bzw. Texten.
-{:.info}
 
-### Ein Python-Programm schreiben. Was ist das und was muss ich beachten?
+## Ein Python-Programm schreiben. Was ist das und was muss ich beachten?
 
-- Korrekte Schreibweise **SEHR** wichtig
+Ein Pythonprogramm ist im Grunde nur eine Textdatei. Allerdings ist diese in solch einer Weise geschrieben, dass der Computer sie lesen kann und die Anweisungen darin ausführt. Folgende Regeln sind dabei zu beachten:
+
+- Die korrekte Schreibweise ist **SEHR** wichtig
 - Eine Anweisung pro Zeile
-- Kommentare: Was in einer Zeile hinter einem `#`-Zeichen steht wird von Python ignoriert und nicht ausgeführt. Das ist nützlich für Notizen und um Code 'auszukommentieren', d.h. der Code wird nicht mehr ausgeführt, aber du musst ihn nicht löschen und kannst in jeder Zeit wieder einkommentieren.
 - Anweisungen werden von oben nach unten ausgeführt
-- Ausführung einer Zeile kann dauern (z.B. `input(...)` wartet auf Benutzereingabe s.u.) alle weiteren Anweisungen werden erst nach Abarbeitung der aktuellen Anweisung ausgeführt
+- Die Ausführung einer Zeile kann dauern (z.B. `input(...)` wartet auf Benutzereingabe s.u.). alle weiteren Anweisungen werden  erst nach Abarbeitung der aktuellen Anweisung ausgeführt
+- Es gibt auch Kommentare. Diese werden vom Computer einfach ignoriert
+
 
 ### Programm #1 hallo.py:  `Hallo Welt` ausgeben
 
-- `print("Hallo Welt")` Zeichen für Zeichen abschreiben und ausführen, was passiert?
+Erstelle dein erstes Python-Program
 
-### Wie funktioniert die `print(...)`-Funktion?
+```python
+print("Hallo Welt")
+```
 
+Schreibe obigen Code Zeichen für Zeichen ab. Führe ihn aus, was passiert?
+
+## Wie funktioniert die `print(...)`-Funktion?
+
+Ein Funktionsaufruf erkennt man im Allgemeinen an den runden Klammern `()` hinter einem Bezeichner wie z.B. `print`.
 - Allg. Aufbau von Funktionsaufrufen: NAME(Parameter1)
 - Texte in Anführungszeichen: `"`
 - Was passiert ohne Anführungszeichen?
 
-### Variablen ertsellen und ausgeben
+## Kommentare
+Was in einer Zeile hinter einem `#`-Zeichen steht wird von Python ignoriert und nicht ausgeführt. Das ist nützlich für Notizen und um Code 'auszukommentieren', d.h. der Code wird nicht mehr ausgeführt, aber du musst ihn nicht löschen und kannst in jeder Zeit wieder einkommentieren.
 
+## Variablen erstellen und ausgeben
 - Was sind Variablen
 - Allg. Aufbau beim Erstellen von Variablen NAME = WERT
 - print(meineVariable)
 
 ### Anführungszeichen - Wann und wann nicht?
-
 - Python erkennt Texte an Anführungzeichen. Alles was nicht in Anführungszeichen steht muss eine Variable, Befehl, o. ä. sein.
 - **Wichtig**: Variablen ohne Anführungszeichen, Texte mit Anführungszeichen!
 
-### `Hallo Python` einlesen
 
+### `Hallo Python` einlesen
 - `input("Schreib mir etwas: ")` schreiben, ausführen und *Hallo Python* eingeben `ENTER`-Taste drücken, was passiert?
 - Was wird ausgegeben? was nicht?
 
-> **Programm #2: echo.py**
->
-> - Funktionen wie `input(..)` haben Rückgabewerte
-> - Rückgabe von `input(..)` in einer Variable speichern und mit `print(..)` ausgeben
-{:.program}
+
+### Programm #2: echo.py
+- Funktionen wie `input(..)` haben Rückgabewerte
+- Rückgabe von `input(..)` in einer Variable speichern und mit `print(..)` ausgeben
+
 
 ### Texte kombinieren
-
 - Plus-Operator/**Kombination** : `+` fügt zwei Text-Stücke zusammen: `text = "Hallo " + "Welt"`
 - Mal-Operator/**Wiederholung**: `*` wiederholt den Text: `text = "Ha" * 10`
 - Ausprobieren
 
-> **Programm #3: wellen.py**
->
-> - Male mit Hilfe von `print(..)` und den Text-Operatoren ein Meer aus Wellen
-> - Verwende verschiedene Wellen-Zeichen, z.B: `^` und `~`
-> - **Beispiel**: So könnte die Ausgabe deines Programms aussehen:
-> - Wie sieht dein Meer aus? Versuche mit möglichst wenig Zeichen ein möglichst großes Meer zu erzeugen.
->
->   ```python
->   ~~~~~~~~~~
->   ^^^^^^^^^^
->   ^~^~^~^~^~
->   ~~~~~~~~~~
->   ```
+
+### Programm #3: wellen.py
+- Male mit Hilfe von `print(..)` und den Text-Operatoren ein Meer aus Wellen
+- Verwende verschiedene Wellen-Zeichen, z.B: `^` und `~`
+- **Beispiel**: So könnte die Ausgabe deines Programms aussehen:
+```
+~~~~~~~~~~
+^^^^^^^^^^
+^~^~^~^~^~
+~~~~~~~~~~
+```
+- Wie sieht dein Meer aus? Versuche mit möglichst wenig Zeichen ein möglichst großes Meer zu erzeugen.
 
 ---
 
-::: program
-### Programm #4: werbistdu.py
 
+### Programm #4: werbistdu.py
 - Frage den Nutzer mithilfe von `input(..)` nach seinem Namen, Alter, etc.
 - Nachdem du die Eingaben eingelsen und in Variablen gespeichert hast, gib sie in einer schönen Form aus, z.B:
-
-    ```none
-    Hallo Mark!
-    Du bist 24 Jahre alt.
-    ```
+```
+Hallo Mark!
+Du bist 24 Jahre alt.
+```
 - Frage weitere Dinge ab und gib sie aus.
-:::
+
 
 ### Datentypen: Texte `str` und Zahlen `int`
 - Python unterscheidet was für einen Datentyp Werte/Variablen haben.
@@ -136,22 +138,22 @@ Was sind folgende Ausdrücke: Variablen oder Werte und welchen Typ haben die Wer
 - `str(12345)` erzeugt aus einer Zahl einen Text, der diese Zahl darstellt
 - Was passiert, wenn `int(..)` einen Text übergeben wird, der keine gültige Zahl ist?
 
-::: program
+
 
 ### Programm #5: zahlensalat.py
 - lies 2 zahlen ein
 - gib als Zahlen addiert und als string addiert aus
 - gib als zahlen multipliziert und als text mit zahl multipliziert aus
-:::
+
 
 ---
 
-::: program
+
 ### Programm #6: wiealt.py
 - lies das Geburtsjahr ein
 - bereichne mit dem aktuellen Jahr wie alt der Nutzer ist
 - Ist das Ergebnis immer richtig? Warum nicht?
-:::
+
 
 ### Rechnen mit Python
 Python unterstüzt alle Grundrechenarten und noch viel mehr! Grundrechenarten:
@@ -160,58 +162,45 @@ Python unterstüzt alle Grundrechenarten und noch viel mehr! Grundrechenarten:
 - `zahl3 = 22 * 20`
 - `zahl4 = 22 / 20` 
 
-::: think
+
 Kann man diese Operationen auch für Texte verwenden?
-:::
+
 
 Besonderheiten der Division:
 - `zahl = 18 / 4`
 - `zahl1 = 18 // 4` 
 - `zahl2 = 18 % 20`
 
-::: think 
-Was tun diese drei verschiedenen Operationen? 
-:::
+Was tun diese drei verschiedenen Operationen?
 
-::: program
 ### Programm #7: grundrechenarten.py
 - Lies 2 Zahlen ein
 - Berechne das Ergebnis der sieben oben aufgeführten Berechnungen und gib jeweils die Rechnung mit Ergebnis aus.
-:::
 
---- 
 
-::: program
 ### Programm #8: rechenmeister.py
 - Lies 2 Zahlen ein
 - Fordere jemand (dich selbst) auf die beiden Zahlen im Kopf zu multiplizeren 
 - Lass dir das Ergebnis ausgeben, wenn du `ENTER` drückst (einen beliebigen Text einliest)
-:::
 
----
-
-::: program
 ### Programm #9 Alle meine Fehler
 - Schreibe ein Programm, das abstürzt (einen Fehler erzeugt)
 - Wie viele verschiedene Fehlermeldungen kannst du erzeugen?
-::: 
 
----
-
-::: program
 ### Programm #10 Ein eigenes Programm
 - Denke dir ein eigenes kleines Programm aus, dass die neuen Befehle verwendet, die du gelernt hast
 - 
-:::
+
 
 ### Abschluss
+
 - Du solltest 10 Programme erstellt haben, toll!
 - Kommentiere alle Programme die du erstellt hast! Schreibe zu jeder (wichtigen) Zeile einen Kommentar-Hinweis, was die entsprechende Zeile bewirkt
 - Halte dein Cheat-Sheet aktuell! Hast du alle Befehle und Operationen eingetragen?!
 
 
-:::info
-## Du solltest folgende Dinge/Funktionen jezt kennen (und nie wieder vergessen :)
+
+## Du solltest folgende Dinge/Funktionen jetzt kennen (und nie wieder vergessen :)
 
 - Die `print`-Funktion, um etwas auf der Konsole auszugeben
 - Die `input`-Funktion, um Texte einzulesen
@@ -230,4 +219,3 @@ Was tun diese drei verschiedenen Operationen?
     - Was bewirken die Operatoren für Texte und was für Zahlen?
 - Die `int(..)`-Funktion, um Texte in Zahlen umzuwandeln
 - Die `str(..)`-Funktion, um Zahlen in Texte umzuwandeln
-:::

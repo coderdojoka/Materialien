@@ -8,8 +8,8 @@ uid: while
 topic: basics
 type: tutorial
 tags: [t_while]
-level: l3
-prev_tut: for
+level: 3
+prev: for
 ---
 
 ## Die while-Schleife

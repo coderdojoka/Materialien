@@ -4,7 +4,7 @@ author: Ricarda
 date: 2015-01-29
 layout: exercise
 type: exercise
-level: l1
+level: 1
 uid: aufg_vars
 tags: [t_input]
 ---

@@ -4,7 +4,7 @@ date: 2016-04-22
 title: Sekunden-Rechner
 layout: exercise
 type: exercise
-level: l1
+level: 1
 uid: aufg_sekrech
 tags: [t_input]
 ---

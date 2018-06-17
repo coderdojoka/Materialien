@@ -7,8 +7,8 @@ uid: for
 topic: basics
 type: tutorial
 tags: [t_for]
-level: l3
-next_tut: while
+level: 3
+next: while
 ---
 
 ## Einstieg

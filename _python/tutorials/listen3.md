@@ -7,8 +7,8 @@ uid: list3
 topic: basics
 type: tutorial
 tags: [t_list]
-level: l3
-prev_tut: list2
+level: 3
+prev: list2
 ---
 
 # Schaue dir die Lösungen erst an, wenn du die Aufgaben selbständig gelöst hast!

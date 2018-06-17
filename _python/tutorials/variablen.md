@@ -4,7 +4,7 @@ title: Variablen
 author: Mark
 date: 2015-12-01
 uid: tut_var
-level: l1
+level: 1
 topic: basics
 type: tutorial
 tags: [t_input]

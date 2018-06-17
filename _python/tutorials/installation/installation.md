@@ -3,8 +3,9 @@ author: Mark
 date: 2017-02-16  
 layout: tutorial
 topic: install
-title: Python und Code-Edcitor installieren
-uid: pycharm_spelling
+title: Python und Code-Editor installieren
+uid: python_install
+permalink: /python/installation/
 ---
 
 ## 1. Python installieren

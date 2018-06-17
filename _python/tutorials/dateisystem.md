@@ -7,7 +7,7 @@ uid: filesystem
 topic: advanced
 type: tutorial
 tags: [t_os]
-level: l5
+level: 5
 ---
 
 Ein Computer speichert Informationen in Dateien. Dateien sind in Ordnern gruppiert.

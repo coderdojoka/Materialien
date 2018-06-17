@@ -7,8 +7,8 @@ topic: py_ref
 uid: ref3
 tags: [t_while, t_for]
 order: 3
-next_tut: ref4
-prev_tut: ref2
+next: ref4
+prev: ref2
 ---
 
 ## while-Schleife

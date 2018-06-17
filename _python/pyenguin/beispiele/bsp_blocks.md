@@ -5,7 +5,7 @@ file: pyenguin_blocks.py
 topic: pyenguin
 date: 2016-02-20
 uid: bsp_pyg_blocks
-level: l5
+level: 5
 tags: [t_pyenguin]
 ---
 

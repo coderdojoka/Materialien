@@ -3,7 +3,7 @@ autor: Rafael, Mark
 date: 2016-05-14
 layout: exercise
 type: exercise
-level: l2
+level: 2
 uid: aufg_sss
 title: CodeBytes - Schere Stein Papier
 tags: [t_input, t_if]

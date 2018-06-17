@@ -7,9 +7,10 @@ uid: list2
 topic: basics
 type: tutorial
 tags: [t_list]
-level: l3
-prev_tut: list1
-next_tut: list3
+level: 3
+order: 2
+prev: list1
+next: list3
 ---
 
 # Zwei Listen zusammenfügen
