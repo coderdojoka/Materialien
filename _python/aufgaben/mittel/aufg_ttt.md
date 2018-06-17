@@ -17,109 +17,105 @@ Programm hast, musst du die einzelnen Teile mitschreiben und richtig zusammenfü
 
 ## Vorbereitung
 
-1.  Das Ganze wird ein Zweispieler-Spiel. Als Erstes fragen wir also nach den Namen der Spieler.
+1. Das Ganze wird ein Zweispieler-Spiel. Als Erstes fragen wir also nach den Namen der Spieler.
 
-    ```python
-    s1 = input("Spieler 1, wie heißt du? ")
-    s2 = ??
-    ```
-    Spieler 1 und Spieler 2 können nun ihren Namen eintippen. Die Namen werden in den Variablen `s1` und `s2` gespeichert.
+   ```python
+   s1 = input("Spieler 1, wie heißt du? ")
+   s2 = ??
+   ```
 
-    **Deine Aufgabe:** Vervollständige die zweite Zeile, um den Namen des zweiten Spielers abzufragen.
+   Spieler 1 und Spieler 2 können nun ihren Namen eintippen. Die Namen werden in den Variablen `s1` und `s2` gespeichert.
 
-2.  Um die beiden Spieler auf dem Spielfeld unterscheiden zu können, benötigt jeder Spieler ein Zeichen, z.B. 'X' und 'O'.
-    Dieses Zeichen wird später auf dem Spielfeld angezeigt.
+   **Deine Aufgabe:** Vervollständige die zweite Zeile, um den Namen des zweiten Spielers abzufragen.
 
-    ```python
-    z1 = input("Spieler 1, gib bitte dein Zeichen (Buchstabe) ein? ")
-    z2 = ??
-    ```
+2. Um die beiden Spieler auf dem Spielfeld unterscheiden zu können, benötigt jeder Spieler ein Zeichen, z.B. 'X' und 'O'.
+   Dieses Zeichen wird später auf dem Spielfeld angezeigt.
 
-    **Deine Aufgabe:** Vervollständige die zweite Zeile, um das Zeichen des zweiten Spielers abzufragen.
+   ```python
+   z1 = input("Spieler 1, gib bitte dein Zeichen (Buchstabe) ein? ")
+   z2 = ??
+   ```
 
+   **Deine Aufgabe:** Vervollständige die zweite Zeile, um das Zeichen des zweiten Spielers abzufragen.
 
-3. Damit die Spieler Bescheid wissen, wir mitspielt und wer welches Zeichen hat sollten wir die Infos
-    nochmal zusammengefasst ausgeben! Z.B.:
+3. Damit die Spieler Bescheid wissen, wir mitspielt und wer welches Zeichen hat sollten wir die Infos nochmal zusammengefasst ausgeben! Z.B.:
 
-    ```
-    Es spielen Mark: M und Ricarda: R. Mark beginnt.
-    ```
+   ```test
+   Es spielen Mark: M und Ricarda: R. Mark beginnt.
+   ```
 
-    **Deine Aufgabe:** Erzeuge diese Ausgabe.
+   **Deine Aufgabe:** Erzeuge diese Ausgabe.
 
 ## Das Spielfeld
 
-1.  Das Spielfeld besteht aus 3 auf 3 Kästchen. Nummeriern wir diese von 0 beginnend reihenweise durch erhalten wir folgendes Spielfeld.
+1. Das Spielfeld besteht aus 3 auf 3 Kästchen. Nummeriern wir diese von 0 beginnend reihenweise durch erhalten wir folgendes Spielfeld.
 
-    ```php
-    0 | 1 | 2
-    3 | 4 | 5
-    6 | 7 | 8
-    ```
-    Wir müssen speichern, welcher Spieler welches Feld markiert hat. Dafür werden wir eine Liste verwenden.
+   ```text
+   0 | 1 | 2
+   3 | 4 | 5
+   6 | 7 | 8
+   ```
 
-    Unsere Liste hat also 9 Einträge. Die Einträge sind am Anfang 0 und werden nach und nach durch die Zeichen der Spieler ersetzt! Du kannst dir die Liste so vorstellen, dass dort die drei Zeilen des Spielfelds gespeichert werden.
+   Wir müssen speichern, welcher Spieler welches Feld markiert hat. Dafür werden wir eine Liste verwenden.
 
-    ```python
-    felder = [0, 0, 0,
-              0, 0, 0,
-              0, 0, 0]
-    ```
-     Wenn du dir die Darstellung der Liste anschaust, wird dir hoffentlich klar wie das Ganze aussieht.
+   Unsere Liste hat also 9 Einträge. Die Einträge sind am Anfang 0 und werden nach und nach durch die Zeichen der Spieler ersetzt! Du kannst dir die Liste so vorstellen, dass dort die drei Zeilen des Spielfelds gespeichert werden.
 
-2.  Hat z.B. Mark das Feld 4 belegt und Ricarda Feld 9 steht in unserer Liste:
+   ```python
+   felder = [0, 0, 0,
+             0, 0, 0,
+             0, 0, 0]
+   ```
 
-    ```python
-    0 | 1 | 2   entspricht: felder =  [0 , 0,  0,
-    M | 4 | 5                         'M', 0,  0,
-    6 | 7 | R                          0 , 0, 'R']
-    ```
+   Wenn du dir die Darstellung der Liste anschaust, wird dir hoffentlich klar wie das Ganze aussieht.
 
-    Dir ist hoffentlich aufgefallen, dass `'M'` bzw. `'R'` ein Text ist und in Anführungzeichen steht, die 0 hingegen nicht, diese ist eine Zahl. Das ist eine Absicherung, damit kein kleverer Spieler die 0 als sein Zeichen angibt und damit sofort gewinnt. Wird die 0 als Zeichen gewählt so es der Text `'0'` und nicht die Zahl! Dies macht für den Computer einen Unterschied.
+2. Hat z.B. Mark das Feld 4 belegt und Ricarda Feld 9 steht in unserer Liste:
 
-3.  Wir müssen nun das Spielfeld anzeigen, indem wir es auf der Konsole mit `print(..)` ausgeben.
-    Dafür schreiben wir eine Funktion! Eine Funktion sammelt einfach eine Reihe von Anweisungen, die in
-    einem Block zusammengefasst werden. Dieser Block kann beliebig oft ausgeführt werden.
-    Funktionen sind also sehr praktisch, wenn man Dinge wiederholt tun will.
+   ```python
+   0 | 1 | 2   entspricht: felder =  [0 , 0,  0,
+   M | 4 | 5                         'M', 0,  0,
+   6 | 7 | R                          0 , 0, 'R']
+   ```
 
-    ```python
-    def spielfeld_anzeigen():
+   Dir ist hoffentlich aufgefallen, dass `'M'` bzw. `'R'` ein Text ist und in Anführungzeichen steht, die 0 hingegen nicht,diese ist eine Zahl. Das ist eine Absicherung, damit kein kleverer Spieler die 0 als sein Zeichen angibt und damit sofortgewinnt. Wird die 0 als Zeichen gewählt so es der Text `'0'` und nicht die Zahl! Dies macht für den Computer einen Unterschied.
 
-      for zahl in range(0, 9):
-        # Das Zeichen kann 0, z1 oder z2 sein
-        zeichen = felder[zahl]
+3. Wir müssen nun das Spielfeld anzeigen, indem wir es auf der Konsole mit `print(..)` ausgeben.
+   Dafür schreiben wir eine Funktion! Eine Funktion sammelt einfach eine Reihe von Anweisungen, die in einem Block zusammengefasst werden. Dieser Block kann beliebig oft ausgeführt werden. Funktionen sind also sehr praktisch, wenn man Dinge wiederholt tun will.
 
-        # Entweder die Feldnummer, oder das Zeichen ausgeben
-        if zeichen == 0:
-          print(zahl, end=" ")
-        else:
-          print(zeichen, end=" ")
+  ```python
+  def spielfeld_anzeigen():
+    for zahl in range(0, 9):
+      # Das Zeichen kann 0, z1 oder z2 sein
+      zeichen = felder[zahl]
+      # Entweder die Feldnummer, oder das Zeichen ausgeben
+      if zeichen == 0:
+        print(zahl, end=" ")
+      else:
+        print(zeichen, end=" ")
+      # print erzeugt normalerweise einen Zeilenumbruch
+      # mit , end=" " haben wir dies verhindert.
+      # Wir wollen nur nach jedem dritten Zeichen einen Umbruch
+      if zahl % 3 == 2:
+        print("")
+  ```
 
-        # print erzeugt normalerweise einen Zeilenumbruch
-        # mit , end=" " haben wir dies verhindert.
-        # Wir wollen nur nach jedem dritten Zeichen einen Umbruch
-        if zahl % 3 == 2:
-          print("")
-    ```
+   Unsere Liste hat 9 Elemente, wir beginnen bei 0 zu zählen. **Wichtig:** Wir beginnen beim Programmieren immer bei 0 zu zählen.   Danach geben wir entweder die Nummer des Felds aus, falls das Feld unbesetzt ist. Ansonsten wird das Zeichen des Spielers ausgegeben.  
+   Die Ausgabe ist etwas komplizierter. Wir wollen immer 3 Zeichen in einer Reihe darstellen. D.h. wir müssen verhindern, dass `print(..)` automatisch einen Zeilenumbruch einfügt. Diesen müssen wir selbst nach jedem dritten Zeichen erzeugen.
 
-    Unsere Liste hat 9 Elemente, wir beginnen bei 0 zu zählen. **Wichtig:** Wir beginnen beim Programmieren immer bei 0 zu zählen.   Danach geben wir entweder die Nummer des Felds aus, falls das Feld unbesetzt ist. Ansonsten wird das Zeichen des Spielers ausgegeben.  
-    Die Ausgabe ist etwas komplizierter. Wir wollen immer 3 Zeichen in einer Reihe darstellen. D.h. wir müssen verhindern, dass `print(..)` automatisch einen Zeilenumbruch einfügt. Diesen müssen wir selbst nach jedem dritten Zeichen erzeugen.
+4. Eine Funktion wird erst ausgeführt, wenn man sie über ihren Namen aufruft. Wir können das Spielfeld also jederzeit so ausgeben lassen:
 
-4.  Eine Funktion wird erst ausgeführt, wenn man sie über ihren Namen aufruft. Wir können das Spielfeld also jederzeit so ausgeben lassen:
-
-    ```python
-    spielfeld_anzeigen()
-    ```
+   ```python
+   spielfeld_anzeigen()
+   ```
 
 ## Spiellogik
 
-1.  **Aktiver Spieler:** Während des Spiels ist immer ein Spieler aktiv und darf einen Zug machen. Nachdem der Zug abgeschlossen ist, wird der andere Spieler der aktive Spieler. Wir benötigen also Variablen um den aktiven Spieler und desssen Zeichen zu speichern.
+1. **Aktiver Spieler:** Während des Spiels ist immer ein Spieler aktiv und darf einen Zug machen. Nachdem der Zug abgeschlossen ist, wird der andere Spieler der aktive Spieler. Wir benötigen also Variablen um den aktiven Spieler und desssen Zeichen zu speichern.
 
-    ```python
-    # Spieler 1 darf beginnen
-    aktiver_spieler = ??
-    aktives_zeichen = ??
-    ```
+   ```python
+   # Spieler 1 darf beginnen
+   aktiver_spieler = ??
+   aktives_zeichen = ??
+   ```
 
 2. **Die Spielschleife:** Das Spiel geht solange, bis ein Spieler gewonnen hat oder alle Felder belegt sind und das Spiel mit Unentschieden endet.
 
@@ -171,6 +167,7 @@ Programm hast, musst du die einzelnen Teile mitschreiben und richtig zusammenfü
     ```
 
 ## Gewonnen?
+
 Wir benötigen nun eine Funktion um feststellen zu können, ob ein Spieler (der aktive Spieler) durch seinen letzten Zug gewonnen hat.
 
 1.  Zunächst müssen wir uns überlegen auf wie viele Arten ein Spieler gewinnen kann.
@@ -219,10 +216,11 @@ Wir benötigen nun eine Funktion um feststellen zu können, ob ein Spieler (der 
       aktives_zeichen = z2
     else:
       aktiver_spieler = s1
-      aktives_zeichen = z1    
+      aktives_zeichen = z1
     ```
 
 ## Was ist mit Unentschieden?
+
 Wir haben nun die Spiellogik und Spielschleife programmiert, wenn der aktive Spieler gewinnt, wird dies erkannt.
 Allerdings könnte es vorkommen, dass das Spiel Unentschieden ausgeht.  
 Wann ist die Spielschleife zu Ende? Nachdem alle möglichen Felder besetzt sind. In diesem Fall ist es ein Unentschieden.
@@ -234,4 +232,5 @@ if zuege == ??:
 ```
 
 ## Das wars!
+
 Du solltest jetzt, wenn du alle Teile richtig zusammenfügst ein fertiges TicTacToe-Spiel haben.

@@ -20,9 +20,8 @@ Hilf dem zerstreuten Daniel, damit auch er seinen Urlaub auf dem Mond
 genießen kann. Schreibe ein Programm, dass:  
 
 - eine Zahl einliest
-- von dieser Zahl runter bis zu `1` zählt
+- von dieser Zahl abwärts bis zu `1` zählt
 - wenn der Countdown bei `0` angekommen ist, `START!!!` ausgibt
-
 
 ## Vorüberlegung
 
@@ -48,6 +47,7 @@ START!!!
 **Hinweis:** Die `10` wurde vom Benutzer eingegeben.
 
 ## Tipps:
+
 - Beachte, das `input(..)` einen Text liefert, konvertiere ihn mittels `int(..)` in eine Zahl
 - Willst du den Countdown verzögert ausgeben, dann den Befehl `time.sleep(..)` benutzen.
 

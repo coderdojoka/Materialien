@@ -12,12 +12,14 @@ tags: [t_if, t_while, t_text]
 ---
 
 ## Themen:
+
 - Eingabe über die Konsole. Siehe dazu das Tutorial XY
 - `if`-Abfragen. Siehe dazu das Tutorial XY
 - `while`-Schleifen. Siehe dazu das Tutorial XY
 - Texte zusammenfügen. Siehe dazu XY.
 
 ## Aufgabe:
+
 Schreibe ein Programm, dasfolgende Problem lösen musst:
 
 - Du, deine Ziege, ein Wolf und ein Sack Futter stehen an der linken Seite eines Flusses.
@@ -32,15 +34,17 @@ Wie kannst du alles auf die rechts Seite bringen?
 
 Um die Situation darzustellen, gib ein kleines Bild auf der Konsole aus:
 
-```
+```text
 -F-W-Z-Du-~~~~~~<=/=>~~~~~~-
 ```
+
 Der Anfang: Hier sieht man, dass das Futter (F), der Wolf (W), die Ziege (Z) und Du auf der
 linken Seite des Flusses stehen.
 
-```
+```text
 -F-Z-~~~~~~<=/=>~~~~~~-Du-W-
 ```
+
 Nach einer Überfahrt ändert sich die Situation: Du und der Wolf sind nun auf der rechten Seite. Allerdings ist die Ziege mit dem Futter alleine auf der linken Seite => Die Ziege frisst das Futter!
 
 ## Darstellung erzeugen
@@ -49,6 +53,7 @@ Am Besten erzeugst du die Ausgabe, indem du einen Text mit dem Mittelteil, dem F
 Anfang des Textes, also auf der linken Flusseite, oder am Ende, auf der rechten Seite, an.
 
 ## Programm-Gerüst
+
 1. du benötigst 4 Variablen, um zu speichern, ob die Figuren links oder rechts des Flusses stehen. Verwenden dafür die `True` (auf der linken Seite), `False` (auf der rechten Seite)
 2. lasse das Programm in einer Endlosschleife laufen
 3. Gib die aktuelle Situation aus
@@ -58,13 +63,13 @@ Anfang des Textes, also auf der linken Flusseite, oder am Ende, auf der rechten 
   - Bei einer ungültigen Eingabe, gib die Situation erneut aus und lies eine neue Eingabe ein
 5. Überprüfe die aktuelle Situation, kann der Wolf die Ziege fressen? Kann die Ziege das Futter fressen? Ist alles auf der rechten Seite? Falls ja, beende das Programm mit einer entsprechenden Meldung
 
-
 ## Beispielablauf:
+
 Es gibt verschiedene Situationen, die beachtet werden müssen.
 
 ### Ungültige Überfahrt
 
-```
+```text
 -F-W-Z-Du-~~~~~~<=/=>~~~~~~-
 
 Was willst du mit auf die andere Seite nehmen: nichts, wolf, ziege, futter?
@@ -74,7 +79,7 @@ Die Ziege hat das Futter gefressen!
 
 ### Gültige Überfahrt
 
-```
+```text
 -F-W-Z-Du-~~~~~~<=/=>~~~~~~-
 
 Was willst du mit auf die andere Seite nehmen: nichts, wolf, ziege, futter?
@@ -87,7 +92,7 @@ Was willst du mit auf die andere Seite nehmen: nichts, wolf, ziege, futter?
 
 ### Alles auf der rechten Seite => Ende
 
-```
+```text
 ...
 -Z-Du-~~~~~~<=/=>~~~~~~-W-F-
 
@@ -97,9 +102,10 @@ Geschafft! Du hast alles auf die rechte Seite gebracht!
 ```
 
 ### Ungültige Eingabe
+
 Die Eingabe `fisch` ist keine gültige Eingabe.
 
-```
+```text
 -F-W-Z-Du-~~~~~~<=/=>~~~~~~-
 
 Was willst du mit auf die andere Seite nehmen: nichts, wolf, ziege, futter?
@@ -111,7 +117,7 @@ Ungültige Eingabe
 
 Die Eingabe `futter` ist keine gültige Eingabe, da Du nicht auf der gleichen Seite wie das Futter bist!
 
-```
+```text
 Was willst du mit auf die andere Seite nehmen: nichts, wolf, ziege, futter?
 ziege
 -F-W-~~~~~~<=/=>~~~~~~-Du-Z-
@@ -124,7 +130,6 @@ Ungültige Eingabe
 ```
 
 **Hinweis:** Die `...` bedeuten, dass hier noch weitere Eingaben stattfinden. In den Beispiele sind `ziege`, `wolf`, `futter`, `fisch` die Benutzereingaben.
-
 
 ## Tipps:
 
@@ -142,7 +147,7 @@ while True:
         continue
 
     if tue_nichts:
-        pass       
+        pass
 
 ```
 

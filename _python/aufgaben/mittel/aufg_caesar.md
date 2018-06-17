@@ -32,6 +32,7 @@ Du kannst die Verschiebung programmieren, indem du einen Buchstaben in seine Asc
 dann die Verschiebung dazu addierst, und die neue Ascii-Zahl wieder in einen Buchstaben konvertierst.
 
 ## Aufgabe
+
 - Lies einen Text ein, diesen Text wollen wir verschlüsseln
 - Lies eine Zahl ein, diese Zahl ist der Verschiebeschlüssel
 - Verschlüssle den Text indem du jeden Buchstaben um den Verschiebeschlüssel weiter schiebst

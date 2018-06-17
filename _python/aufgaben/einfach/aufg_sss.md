@@ -26,17 +26,18 @@ Deine Aufgabe, schreibe ein Programm, das:
 - je nach Eingabe, sollst du die korrekte Antwort geben, um die Eingabe zu besiegen
 
 ## Vorüberlegung
+
 - Wie viele verschiedene Eingabemöglichkeiten gibt es?
 - Was kannst du bei einer falschen Eingabe tun?
 
-## Beispielabläufe:
+## Beispielabläufe
 
-```
+```text
 Was hat Trick für eine Figur: Stein
 Du kannst Stein mit Papier schlagen!
 ```
 
-```
+```text
 Was hat Trick für eine Figur: Papier
 Du kannst Stein mit Schere schlagen!
 ```

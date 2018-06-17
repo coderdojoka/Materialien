@@ -17,6 +17,7 @@ tags: [t_input, t_if]
 5. Vergleiche den Zeitunterschied der gewünschten Zeit aus 1. und gib eine Meldung aus, wie gut die Schätzung ist.
 
 ## Vorüberlegung:
+
 - Stell dir vor, du hast eine Uhr in der Hand und jemand sagt dir wann du anfangen und
   aufhören sollst du messen. Anschließend sollst du sagen können,
   wie viele Sekunden du gemessen hast. Welche Werte musst du dir dafür merken
@@ -25,7 +26,7 @@ tags: [t_input, t_if]
 
 ## Beispielablauf:
 
-```
+```text
 Versuche so gut wie möglich abzuschätzen, wann die unten gezeigte Zeit  
 abgelaufen ist.  
 Wenn du bereit bist drücke ENTER, um die Stopuhr zu starten.  
@@ -42,8 +43,8 @@ Das könnte besser sein :)
 
 **Hinweis:** `<ENTER>...<ENTER>` stellt hier nur die Benutzereingabe und Wartezeit dar.
 
-
 ## Tipps:
+
 Du kannst die aktuelle Zeit in Sekunden so ermitteln:
 
 ```python
@@ -53,11 +54,13 @@ import time
 # aktuelle Zeit in Sekunden
 sekunden = time.time()
 ```
+
 Dies liefert dir das aktuelle Zeit in Sekunden als Kommazahl mit vielen Nachkommastellen. Hier siehst du, wie man nur eine Nachkommastelle anzeigen kann:
 
 ```python
 meineZeit = 36.72345
 print("Du hast %.1f Sekunden gestoppt." % meineZeit) # 36.7
 ```
+
 Um Zahlen formatiert auszugeben, nutzt man Platzhalter: `%f` für Kommazahlen, `%d` für ganze Zahlen, innerhalb eines Textes.
 Mittels `%.1f` gibt man an, dass man genau eine Nachkommastelle will. Hinter dem Text gibt man mit `% meineZeit` an, welcher Wert formatiert eingefügt werden soll.
