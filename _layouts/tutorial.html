@@ -5,7 +5,7 @@ layout: default
 {% assign tut_link = page.collection | append: '/tutorials' %}
 
 {% if page.next_tut != null or page.prev_tut != null %}
-{% assign tuts = coll.docs | where_exp: "item","item.type=='tutorial'" %}
+{% assign tuts = coll.docs | where_exp: "item","item.layout=='tutorial'" %}
 
 {% for tut in tuts %}
   {% if tut.uid == page.prev_tut %}
@@ -29,13 +29,13 @@ layout: default
   <div class="float-container btn-container">
     <div class="splitLeft btn-back">
       {% if tutPrev != null %}
-      <a href="{{ tutPrev.url | absolute_url }}">{{ tutPrev.title }}</a>
+      <a href="{{ tutPrev.url | absolute_url }}">&lt;&nbsp; {{ tutPrev.title }}</a>
       {% endif %}
     </div>
 
     <div class="splitRight btn-forward">
       {% if tutNext != null %}
-      <a href="{{ tutNext.url | absolute_url }}">{{ tutNext.title }}</a>
+      <a href="{{ tutNext.url | absolute_url }}">{{ tutNext.title }} &nbsp;&gt;</a>
       {% endif %}
     </div>
   </div>

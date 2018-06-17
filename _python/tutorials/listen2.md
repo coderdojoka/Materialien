@@ -12,7 +12,7 @@ prev_tut: list1
 next_tut: list3
 ---
 
-## Zwei Listen zusammenfügen
+# Zwei Listen zusammenfügen
 
 Wir haben zwei Listen `liste1`und `liste2` und wollen sie zu einer Liste `listeNeu` zusammenfügen. Dies können wir mit dem Pluszeichen `+` erreichen:
 
@@ -39,11 +39,11 @@ listeNeu = liste1 + liste2 + [100,500]
 # Hier erhalten wir die Ausgabe: 0 1 2 3 4 5 6 7 8 100 500
 ```
 
-## Aus einer Liste ein Element herauslöschen
+# Aus einer Liste ein Element herauslöschen
 
-Wir haben eine Liste mit Farben: `farben = ['rot','gelb','grün','rot','blau']`. Wie man sieht, ist der Eintrag `'rot'` doppelt enthalten. Den vierten Eintrag müssen wir also entfernen.
+Wir haben eine Liste mit Farben: ` farben = ['rot','gelb','grün','rot','blau']`. Wie man sieht, ist der Eintrag `'rot'` doppelt enthalten. Den vierten Eintrag müssen wir also entfernen.
 
-### Die .pop()- Funktion
+# Die .pop()- Funktion
 
 Elemente aus der Liste entfernen kann man mit der Funktion .pop()
 
@@ -58,7 +58,7 @@ for eintrag in farben:
 # Ausgabe: rot gelb grün blau
 ```
 
-### Die .remove()-Funktion
+# Die .remove()-Funktion
 
 Eine weitere Möglichkeit, einen Wert zu entfernen bietet die Methode `remove(xy)` (engl.: entfernen). Diese Funktion schaut in der Liste nach und entfernt den ersten Eintrag mit dem Wert `xy`:
 
@@ -71,13 +71,13 @@ for eintrag in farben:
 # Die Ausgabe sieht dann so aus: gelb grün rot blau
 ```
 
-## Ein bestimmtes Element löschen
+# Ein bestimmtes Element löschen
 
 Wir haben wieder unsere Farbenliste und wissen, dass die Farbe zweimal
 vorkommt. Soll jetzt der zweite Eintrag von entfernt werden. Dafür
 benutzen wir die Methode
 
-## Die .index()-Funktion
+# Die .index()-Funktion
 
 Zuerst wird der erste Eintrag von `'rot'` ermittelt:
 
@@ -127,7 +127,7 @@ for eintrag in farben:
 # Bildschirmanzeige: rot gelb grün blau
 ```
 
-## Ein Element einfügen
+# Ein Element einfügen
 
 Ein Element an einer beliebigen Stelle der Liste hinzu fügen mit der
 Methode `insert(..)` (engl.: einfügen). In unserer Farbliste wollen wir an die zweite Stelle die Farbe `'lila'` hinzufügen. Wie müssen unserer Methode sagen an welcher Stelle und was wir hinzufügen wollen:
@@ -143,14 +143,11 @@ farben.insert(1, 'lila')
 
 # Eine Teilliste erzeugen
 
-Eine Liste von Elemente kann man mittels des Slicing-Operators aus einer
-Liste ausschneiden. Wie bei der Indizierung verwendet der
-Slicing-Operator eckige Klammern `[]`, aber jetzt werden zwei Werte
-erwartet `[start:ende]`:
+Eine Liste von Elemente kann man mittels des "Ausschneide"-Operators aus einer Liste ausschneiden.
+Wie bei der Indizierung verwendet der Ausschneide-Operator eckige Klammern `[]`, aber jetzt werden zwei Werte erwartet `[start:ende]`:
 
 > Du kannst dir das Ganze so merken. Schreibst du nur eine Zahl, z.B. die
-`2` in die Klammer, also `liste[2]` erhälst du das Element an dieser(der dritten) Stelle.
->
+`2` in die Klammer, also `liste[2]`erhälst du das Element an dieser(der dritten) Stelle.
 > Willst du allerdings nicht nur einen Wert, sondern einen Teil der Liste,
 z.B. das zweite bis zum vierten Element, so schreibt man `liste[1:4]`.
 
@@ -188,47 +185,38 @@ neue_farben = farben[:]
 
 ## Aufgabe 1: Landwirt Fritz Bauer
 
-1.  Landwirt Fritz Bauer hat sich zwei Listen mit Tieren, die sich auf
-    seinem Hof befinden, erstellt.
+1. Landwirt Fritz Bauer hat sich zwei Listen mit Tieren, die sich auf
+   seinem Hof befinden, erstellt.
 
-    ```python
-    liste1 = ['Kühe', 'Schafe', 'Ziegen', 'Schweine', 'Esel']
-    liste2 = ['Hühner', 'Enten', 'Tauben']
-    ```
+   ```python
+   liste1 = ['Kühe', 'Schafe', 'Ziegen', 'Esel']
+   liste2 = ['Hühner', 'Enten', 'Tauben']
+   ```
 
-    Es gibt zwei Möglichkeiten, aus den beiden Listen eine einzige Liste
-    zu machen. Zeig sie Herrn Bauer!
+   Es gibt zwei Möglichkeiten, aus den beiden Listen eine einzige Liste
+   zu machen. Zeig sie Herrn Bauer!
 
-2.  Wir haben jetzt eine neue Liste:
+2. Wir haben jetzt eine neue Liste:
 
-    ```python
-    liste = ['Kühe', 'Schafe', 'Ziegen', 'Schweine', 'Esel',
-     'Hühner', 'Enten', 'Tauben']
-    ```
+   ```python
+   liste = ['Kühe', 'Schafe', 'Ziegen', 'Esel', 'Hühner', 'Enten', 'Tauben']
+   ```
 
-    -   Herr Bauer tauscht mit seinem Nachbarn seinen Esel gegen
-        ein Pferd. Lösche den Esel aus der Liste und füge das
-        Pferd hinzu.
+   - Herr Bauer tauscht mit seinem Nachbarn seinen Esel gegen ein Pferd. Lösche den Esel aus der Liste und füge das Pferd hinzu.
+   - Herr Bauers Tochter Eliane wünscht sich zum Geburtstag ein Pony. Da Herr Bauer seiner Tochter nichts abschlagen kann, hat    sein Hof jetzt ein Tier mehr und er muss wieder seine Liste erweitern. Füge das Pony vor dem Pferd ein.  
 
-    -   Herr Bauers Tochter Eliane wünscht sich zum Geburtstag ein Pony.
-        Da Herr Bauer seiner Tochter nichts abschlagen kann, hat sein
-        Hof jetzt ein Tier mehr und er muss wieder seine Liste
-        erweitern. Füge das Pony vor dem Pferd ein.  
-
-        **Tipp:** lass Dir den Index für das Pferd anzeigen, dann kann
-        man das Pony leicht einfügen.
+     **Tipp:** lass Dir den Index für das Pferd anzeigen, dann kann man das Pony leicht einfügen.
 
 ## Aufgabe 2: Quadratzahlen
 
-Wir haben eine Liste der Zahlen 1 bis 10 und wollen nun die Quadrate
-dieser Zahlen ermitteln.
+Wir haben eine Liste der Zahlen 1 bis 10 und wollen nun die Quadrate dieser Zahlen ermitteln.
 
 ```python
 zahlen = [1,2,3,4,5,6,7,8,9,10]
 ```
 
+Zur Erinnerung: eine Quadratzahl bekommt man, wenn man die Zahl mit sich selber multipliziert.  
+Bsp. `2² = 2 * 2 = 4`:
 
-Zur Erinnerung: eine Quadratzahl bekommt man, wenn man die Zahl mit sich
-selber multipliziert. Bsp. `2² = 2 * 2 = 4`:
 
 

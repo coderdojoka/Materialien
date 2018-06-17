@@ -1,6 +1,6 @@
 ---
 layout: tutorial  
-title: Schleifen • Teil 2
+title: Schleifen • while
 autor: Mark, Norbert
 date: 2015-12-01
 version: 0.2
@@ -27,35 +27,32 @@ Im obigen Beispiel wiederholt die `while`-Schleife den eingerückten Code
 solange die Bedingung `1 <= 100` erfüllt ist. Dieses Beispiel gibt somit die Zahlen
 von `1` bis einschließlich `100` aus.
 
-### Syntax
+> Eine `while`-Schleife führt also solange Code aus bis eine Bedingung nicht mehr erfüllt ist!
 
-Eine `while`-Schleife hat den Syntax:
+### Merkregel: Die `while`-Schleife
 
-```
+```python
 while <Bedingung>:
-  # Anweisungen, die wiederholt werden
+  # Eingerückte Anweisungen, die wiederholt werden
   # solange die Bedingung erfüllt ist
+
+# Hier gehts normal weiter
 ```
 
 **Tipp:** Erklärungen und Beispiele zu Bedingungen findest du in dem Tutorial zu {% include gen_link.html uid="if" %}.
 
-Aufgaben
-========
+## Aufgaben
 
--   Schreibe eine -Schleife, die die Zahlen von 100 bis 0 in 2er
-    Schritten ausgibt.
+- Schreibe eine -Schleife, die die Zahlen von 100 bis 0 in 2er Schritten ausgibt.
 
--   Was tut folgendes Programm?
+- Was tut folgendes Programm?
 
-    ```
-    wert = 1
-    while wert < 10:
+  ```python
+  wert = 1
+  while wert < 10:
       wert = wert + wert
       print(wert)
-    ```
-
-    Versuche die Aufgabe mit Stift und Papier zu lösen, indem Du die
-    Werte einzeln ausrechnest. Schreibe das Programm nicht ab und führe
-    es nicht aus!  
-    Erst wenn Du eine Lösung hast, kannst du das Programm
-    abtippen, um deine Lösung zu überprüfen.
+  ```
+  
+  Versuche die Aufgabe mit Stift und Papier zu lösen, indem Du die Werte einzeln ausrechnest. Schreibe das Programm nicht ab und führe es nicht aus!  
+  Erst wenn Du eine Lösung hast, kannst du das Programm abtippen, um deine Lösung zu überprüfen.

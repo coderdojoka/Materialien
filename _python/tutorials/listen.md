@@ -12,8 +12,7 @@ tags: [t_list]
 next_tut: list2
 ---
 
-
-## Was sind Listen?
+# Was sind Listen?
 
 In Listen kann man verschiedene Informationen speichern. Zum Beispiel
 die Wochentage. Der Inhalt einer Liste wird zwischen eckige Klammern `[..]`
@@ -26,22 +25,20 @@ liste1 = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag']
 Wenn wir jetzt unsere Liste ausdrucken wollen und
 
 ```python
-print (liste1)
+print(liste1)
 ```
 
 eingeben, erhalten wir diese Bildschirmausgabe:
 
-```
-[’Montag’, ’Dienstag’, ’Mittwoch’, ’Donnerstag’]  
+```python
+['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag']  
 ```
 
-## Den Inhalt einer Liste mit der for-Schleife ausgeben
+# Den Inhalt einer Liste mit der for-Schleife ausgeben
 
 Wir wollen aber die Tage einzeln angezeigt haben. Dafür benutzen wir
 eine for-Schleife. Die Einträge werden zunächst in eine Variable
-geschrieben, die wir z.B. `eintrag` nennen und dann wird die `for`-Schleife so lange durchlaufen, wie Elemente in der Liste sind und die Einträge
-untereinander ausgegeben. Die Variable `eintrag` nimmt dabei in jedem
-Listen-Durchlauf die einzelnen Werte der Liste an.
+geschrieben, die wir z.B. `eintrag` nennen und dann wird die `for`-Schleife so lange durchlaufen, wie Elemente in der Liste sind und die Einträge untereinander ausgegeben. Die Variable `eintrag` nimmt dabei in jedem Listen-Durchlauf die einzelnen Werte der Liste an.
 
 ```python
 for eintrag in liste1:  
@@ -57,7 +54,7 @@ Mittwoch
 Donnerstag  
 ```
 
-## Anzahl der Elemente mit `len()` ermitteln
+# Anzahl der Elemente mit `len()` ermitteln
 
 Um herauszufinden, wieviele Einträge die Liste enthält, können wir die
 bereits bekannte Funktion `len()` einsetzen. Wir schreiben die Anzahl der
@@ -70,7 +67,7 @@ print (anzahl)
 
 Dies gibt 4 aus, d.h. es sind 4 Elemente in unserer Liste enthalten.
 
-## Einen Eintrag (z.B. den dritten) aus einer Liste lesen
+# Einen Eintrag (z.B. den dritten) aus einer Liste lesen
 
 Wie wir oben mit der `len`-Funktion gesehen haben, enthält unsere Liste 4
 Einträge.
@@ -88,7 +85,7 @@ Wir erinnern uns:
 Die Einträge in unsere Liste haben also folgende Indices.
 
 | liste1 = | "Montag" | "Dienstag" | "Mittwoch" | "Donnerstag" |
-|----------|:--------:|:----------:|:----------:|:------------:|
+|:--------:|:--------:|:----------:|:----------:|:------------:|
 | Index:   | 0        | 1          | 2          | 3            |
 
 Geben wir das dritte Element nun aus:
@@ -103,20 +100,20 @@ erhalten wir:
 Mittwoch
 ```  
 
-## Listen von hinten lesen
+# Listen von hinten lesen
 
 Man kann Listen auch vom rechts nach links lesen.
 
 Hierfür werden *negative Indices* beginnend beim *letzten* Element mit `-1` benutzt:
 
 | liste1 = | "Montag" | "Dienstag" | "Mittwoch" | "Donnerstag" |
-|----------|:--------:|:----------:|:----------:|:------------:|
+|:--------:|:--------:|:----------:|:----------:|:------------:|
 | Index:   | -4       | -3         | -2         | -1           |
 
 ein anderes Beispiel:
 
 | liste =     | "Hallo" | "Test" | "Welt" |
-|-------------|:-------:|-------:|:------:|
+|:-----------:|:-------:|:------:|:------:|
 | Index:      | 0       | 1      | 2      |
 | neg. Index: | -3      | -2     | -1     |
 
@@ -133,7 +130,7 @@ letzterEintrag = liste[-1] # = 'Welt'. Wir beginnen bei -1 !
 print(ersterEintrag, letzterEintrag) # => 'Hallo Welt'
 ```  
 
-## Einen Eintrag ans Ende der Liste einfügen
+# Einen Eintrag ans Ende der Liste einfügen
 
 Wollen wir jetzt den Freitag zur `liste1` hinzufügen, kann das mit der `.append(...)`-Funktion geschehen.  
 
@@ -154,4 +151,4 @@ Dienstag
 Mittwoch  
 Donnerstag  
 Freitag  
-```
+```  
