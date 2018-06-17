@@ -62,8 +62,7 @@
     .text {
         width: 100%;
         text-align: center;
-        float: right;
-        font-size: 20pt;
+        font-size: 16pt;
         padding: 0 1em 1em 1em;
     }
 }
@@ -82,4 +81,26 @@
         float: left;
         margin: 1%;
     }
+}
+
+
+
+
+@media (max-width: 600px){
+    .img-n-text {
+        .img, .text{
+            width: 100%;
+            float: none;
+        }
+    }
+
+    .thumbs-3{
+        .img-thumb {
+            float: none;
+            margin: 1em auto;
+            width: 80%;
+            max-width: 300px;
+        }
+    }
+
 }

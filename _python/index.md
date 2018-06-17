@@ -12,7 +12,7 @@ layout: page
 
 Hier findest du eine Reihe von Anleitungen und Beispielen, die nach Komplexität geordnet sind.
 
-{% include thumb3.html img0="python_beginner.svg" link0="/python/ersteschritte/" title0="Erste Schritte" 
+{% include thumb3.html img0="python_beginner.svg" link0="/python/einsteiger/" title0="Einsteiger" 
 img1="python_intermediate.svg" link1="/python/fortgeschritten/" title1="Fortgeschritten"
 img2="python_master.svg" link2="/python/meister/" title2="Meister" %}
 
