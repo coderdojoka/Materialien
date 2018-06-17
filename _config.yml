@@ -40,6 +40,6 @@ collections:
   scratch:
     output: true
     permalink: /:collection/:path/:title
-  html:
+  arduino:
     output: true
     permalink: /:collection/:path/:title

@@ -18,17 +18,16 @@
 
       {% for node in site.data.sidebar %}
         <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ site.url }}/{{ node.url }}">{{ node.name }}</a>
-      {% endfor %}
-
-    <!--  <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
-      <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
+      {% endfor %} 
     </nav>
-
 
     <p>
       &copy; {{ site.time | date: '%Y' }} <a href="http://coderdojoka.github.io">CoderDojo Karlsruhe</a>.
       <br>
       Erstellt mit <a href="https://jekyllrb.com/" class="">Jekyll</a> und <a href="http://hyde.getpoole.com/">Hyde</a>
+      <br>
+      <br>
+      <a href="http://coderdojoka.github.io/impressum">Impressum</a> | <a href="http://coderdojoka.github.io/datenschutz">Datenschutz</a>
     </p>
   </div>
 </div>

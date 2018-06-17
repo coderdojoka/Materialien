@@ -53,6 +53,6 @@ while <Bedingung>:
       wert = wert + wert
       print(wert)
   ```
-  
+
   Versuche die Aufgabe mit Stift und Papier zu lösen, indem Du die Werte einzeln ausrechnest. Schreibe das Programm nicht ab und führe es nicht aus!  
   Erst wenn Du eine Lösung hast, kannst du das Programm abtippen, um deine Lösung zu überprüfen.

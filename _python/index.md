@@ -8,7 +8,6 @@ layout: page
 {% assign tuts = site.python | where_exp:"item","item.type == 'tutorial'" %}
 {% assign exps = site.python | where_exp:"item","item.type == 'example'" %}
 
-
 ## Aufgaben, Tutorials und Beispiele
 
 Hier findest du eine Reihe von Anleitungen und Beispielen, die nach Komplexität geordnet sind.
@@ -38,8 +37,14 @@ Hier haben wir eine Liste mit hilfreichen Links zu externen Seiten rum ums Progr
 
 {% endcapture %}
 
+{% capture buttons %}
+Verdiene dir für deine Lernfortschritte in Python diese coolen Buttons!
+{% endcapture %}
+
 {% include  img_n_text.html img="notebook.svg" title='Befehlsreferenz' link="python/referenz"  description=referenz  %}
 
 {% include  img_n_text.html img="gears.svg" title='Eigene Projekte' link="python/projekte" class_extra="img-right"  description=projekte  %}
 
 {% include  img_n_text.html img="folder.svg" title='Weiterführende Links' link="python/links" description=links  %}
+
+{% include  img_n_text.html img="buttons/python_buttons.svg" title='Buttons' link="python/buttons" description=buttons  %}
