@@ -2,7 +2,7 @@
 title: Übersicht
 author: Mark
 date: 17.06.2018
-permalink: /python/einsteiger
+permalink: /python/einsteiger/
 layout: page
 ---
 

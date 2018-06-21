@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte
-permalink: /python/fortgeschritten
+permalink: /python/fortgeschritten/
 layout: page
 date: 2018-06-15
 author: Mark

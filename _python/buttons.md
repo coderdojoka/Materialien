@@ -1,6 +1,6 @@
 ---
 title: Buttons
-permalink: /python/buttons
+permalink: /python/buttons/
 layout: page
 ---
 

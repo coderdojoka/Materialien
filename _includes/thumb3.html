@@ -3,7 +3,7 @@
 
 <div class="img-thumb">
     <div class="img">
-        <a href="{{ include.link0 | absolute_url }}">
+        <a href="{{ site.url }}/{{ include.link0 }}">
         <img src="{{ site.url }}/_assets/imgs/{{ include.img0 }}" alt="{{ include.title0 }}">
         </a>
         {% if include.author0 %}
@@ -11,12 +11,12 @@
         {% endif %}
     </div>
     <div class="text">
-        <div><a href="{{ include.link0 | absolute_url }}">{{ include.title0 }}</a></div>        
+        <div><a href="{{ site.url }}/{{ include.link0 }}">{{ include.title0 }}</a></div>        
     </div>
 </div>
 <div class="img-thumb">
     <div class="img">
-        <a href="{{ include.link1 | absolute_url }}">
+        <a href="{{ site.url }}/{{ include.link1 }}">
             <img src="{{ site.url }}/_assets/imgs/{{ include.img1 }}" alt="{{ include.title1 }}">
         </a>
         {% if include.author1 %}
@@ -25,7 +25,7 @@
     </div>
     <div class="text">
         <div>
-            <a href="{{ include.link1 | absolute_url }}">{{ include.title1 }}</a>
+            <a href="{{ site.url }}/{{ include.link1 }}">{{ include.title1 }}</a>
         </div>
     </div>
 </div>
@@ -33,7 +33,7 @@
 
 <div class="img-thumb">
         <div class="img">
-            <a href="{{ include.link2 | absolute_url }}">
+            <a href="{{ site.url }}/{{ include.link2 }}">
             <img src="{{ site.url }}/_assets/imgs/{{ include.img2 }}" alt="{{ include.title2 }}">
             </a>
             {% if include.author2 %}
@@ -41,7 +41,7 @@
             {% endif %}
         </div>
         <div class="text">
-            <div><a href="{{ include.link2 | absolute_url }}">{{ include.title2 }}</a></div>        
+            <div><a href="{{ site.url }}/{{ include.link2 }}">{{ include.title2 }}</a></div>        
         </div>
     </div>
 
