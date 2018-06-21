@@ -14,7 +14,7 @@ permalink:  pretty
 
 # Setup
 title:            "Materialien"
-description:  'Materialiensammlung des Coderdojo Karlsruhe. Hier findest du Anleitungen, Aufgaben und Beispiele zu Scratch, Python und HTML.'
+description:  'Materialiensammlung des Coderdojo Karlsruhe. Hier findest du Anleitungen, Aufgaben und Beispiele.'
 tagline:      'Materialiensammlung des Coderdojo Karlsruhe'
 url:              http://coderdojoka.github.io/Materialien
 baseurl:          /
