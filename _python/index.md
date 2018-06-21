@@ -16,7 +16,7 @@ Hier findest du eine Reihe von Anleitungen und Beispielen, die nach Komplexität
 img1="python_intermediate.svg" link1="/python/fortgeschritten/" title1="Fortgeschritten"
 img2="python_master.svg" link2="/python/meister/" title2="Meister" %}
 
-Oder verwende die [Such-Funktion](/python/suche/), um alle vorhanden Anleitungen, Beispiele und Aufgaben zu durchsuchen!
+Oder verwende die [Such-Funktion]({{ "/python/suche/" | relative_url }}), um alle vorhanden Anleitungen, Beispiele und Aufgaben zu durchsuchen!
 
 -----
 
