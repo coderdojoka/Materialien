@@ -51,11 +51,13 @@ Ein Funktionsaufruf erkennt man im Allgemeinen an den runden Klammern `()` hinte
 Was in einer Zeile hinter einem `#`-Zeichen steht wird von Python ignoriert und nicht ausgeführt. Das ist nützlich für Notizen und um Code 'auszukommentieren', d.h. der Code wird nicht mehr ausgeführt, aber du musst ihn nicht löschen und kannst in jeder Zeit wieder einkommentieren.
 
 ## Variablen erstellen und ausgeben
+
 - Was sind Variablen
 - Allg. Aufbau beim Erstellen von Variablen NAME = WERT
 - print(meineVariable)
 
 ### Anführungszeichen - Wann und wann nicht?
+
 - Python erkennt Texte an Anführungzeichen. Alles was nicht in Anführungszeichen steht muss eine Variable, Befehl, o. ä. sein.
 - **Wichtig**: Variablen ohne Anführungszeichen, Texte mit Anführungszeichen!
 

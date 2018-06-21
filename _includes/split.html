@@ -1,0 +1,10 @@
+{% assign w_left = include.width | default: 50 %}
+{% assign w_right = 100 | minus: w_left %}
+{{ w_right }}
+<div class="split-2 {{ include.class }}">
+    <div class="left"  style="width: {{ w_left }}%;">
+        {{ include.left | markdownify }}
+    </div>
+    <div class="right" style="width: {{ w_right }}%;">
+        {{ include.right | markdownify }}
+</div>

@@ -1,6 +1,50 @@
 ---
 ---
+*{
+    box-sizing: border-box;
+}
+#search-input{
+    max-width: 100%;
+    font-size: 20pt;
+    margin: 1em;
+    padding: .2em;
+}
 
+#search-results{
+    max-width: 100%;
+    font-size: 18pt;
+    margin: .5em 1em;
+    padding: .2em;
+    list-style: none;
+
+    li{
+        margin: .2em;
+    }
+}
+
+
+
+.split-2 {
+    margin: 1em 0;
+    &:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+    .left {        
+        float: left;
+        padding: .5em;
+    }
+    .right {        
+        float: right;
+        padding: .5em;
+    }
+
+    img{
+        margin: .2em auto;
+        max-width: 100%;
+    }
+}
     
 .img-n-text {
     margin: 2em 0;
@@ -83,10 +127,15 @@
     }
 }
 
-
-
-
 @media (max-width: 600px){
+
+    .split-2{
+        .left, .right{
+            width: 100% !important;
+            float: none;
+        }
+    }
+
     .img-n-text {
         .img, .text{
             width: 100%;
