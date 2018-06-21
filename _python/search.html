@@ -2,6 +2,7 @@
 title: Suchfunktion
 permalink: /python/suche/
 layout: page
+author: Mark
 ---
 
 <h3>Durchsuche alle vorhandenen Anleitungen, Beispiele und Aufgaben.</h3>
@@ -11,3 +12,13 @@ layout: page
 
 <!-- script pointing to jekyll-search.js -->
 <script src="{{ site.url }}/_assets/simple-jekyll-search.min.js"></script>
+<script>
+    !function () { };
+    "use strict";
+    var sjs = SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('search-results'),
+        json: '{{ site.url}}/python/search.json'
+    });
+
+</script>
