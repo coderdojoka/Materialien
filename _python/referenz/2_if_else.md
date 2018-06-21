@@ -11,8 +11,8 @@ next: ref3
 prev: ref1
 ---
 
-
 ## Bedingung
+
 Eine Bedingung ist entweder Wahr (True) oder Falsch (False).
 
 ```python
@@ -21,6 +21,7 @@ print("Die Bedingung ist:", bedingung)
 ```
 
 ### Eine Bedingung negieren
+
 Wollen wir einen Bedingung umdrehen (ins Gegenteil kehren ) verwenden wir den `not`-Operator. Dieser macht `True` zu `False` und umgekehrt.
 
 ```python
@@ -43,6 +44,7 @@ if wert > 20: # wird NUR ausgeführt wenn die Bedingung wahr ist
 ```
 
 ## if-else-Abfragen
+
 Mit einer if-else Abfrage kann man auch auf eine nicht erfüllte Bedingung mit dem ’else’-Zweig reagieren. Es wird immer *entweder* der `if`-Zweig oder der `else`-Zweig ausgeführt.
 
 ```python
@@ -56,9 +58,11 @@ else: # wird NUR ausgeführt wenn die Bedingung nicht erfüllt ist
 ```
 
 ## Vergleichsoperationen:
+
 Alle Vergleichsoperationen liefern entweder Wahr oder Falsch. Diese können als Bedingung in einer `if`-Abfrage verwendet werden.
 
 ### Standardvergleichsoperationen
+
 ```python
 a = 10
 b = 20
@@ -83,6 +87,7 @@ a = "Hallo Welt"
 ```
 
 ### Überprüfung auf None
+
 `None` ist ein Spezialwert, der soviel ausdrückt wie Nichts. Diesen Wert verwendet man als Platzhaltere. Mit dem `is` Operator kann man testen ob eine Variable gleich `None` ist.
 
 ```python

@@ -43,7 +43,6 @@ meinText = "Hallo Welt"
 
 Du darfst deinen Variablen beliebige Namen geben, verwende aber am besten sinnvolle Namen. `a1` ist ein schlechter Name, `zaehler` ist ein besserer Name! Mögliche Zeichen sind u.a. Buchstaben und Zahlen, allerdigs keine Umlaute, z.B `ä` oder Leerzeichen.
 
-
 ## Ausgabe
 
 Mit der `print(..)`-Funktion kann man Text und/oder Variablen ausgeben.
@@ -77,8 +76,8 @@ wert = 10 ** 3 # = 1000 = 10 * 10 * 10
 
 ## Eingabe durch den Benutzer
 
-
 ### input - Text einlesen
+
 Die Funktion `input(..)` fordert den Benutzer auf einen Text einzugeben. Die `input(..)`-Funktion wartet solange, bis der Benutzer etwas eingetippt und mit der Enter-Taste bestätigt hat. Die Eingabe wird dann als Text zurückgegeben und in der Variablen `eingabeText` gespeichert.
 
 ```python
@@ -87,6 +86,7 @@ print(eingabeText) # gibt den eingelesenen Text aus
 ```
 
 ### input - Eine Zahl einlesen
+
 Will man einen Zahl einlesen, so muss man diese konvertieren! Die `input(..)`-Funktion gibt immer einen Text zurück.  
 Eine Zahl, die als Text vorliegt, konvertieren wir mittels `int(..)` in eine ganze Zahl oder mittels `float(..)` in eine Kommazahl:
 
