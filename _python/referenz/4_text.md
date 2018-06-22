@@ -61,6 +61,7 @@ print(teile)
 ```
 
 ## Texte zusammenfügen
+
 Eine Liste von Textstücken kann man wieder zu einem Text zusammenfügen:
 
 ```python
@@ -69,11 +70,39 @@ text = " ".join(teile) # klebt die Teile mit Leerzeichen dazwischen zusammen
 print(teile)
 ```
 
-
 ## Texte sind unveränderlich
+
 Man kann in einen Text nicht ohne weiteres verändern:
 
 ```python
 text = "Hallo Welt"
 text[1] = "o" # Erzeugt einen Fehler!
+```
+
+## Texte und Encodierungen
+
+Wie der Computer Texte und insbesondere Sonderzeichen interpretiert hängt von der verwendeten Codierung ab.
+Relevant sind im Prinzip Byte Codierungen und UTF-8 Codierung.
+
+**Wichtig:** Als Byte-Codierung werden die Buchstaben als Zahlen interpretiert.
+
+```python
+text1 = "Hallo Welt" # utf-8 Text
+text2 = b"Hallo Welt" # Byte-Text
+
+print(text1[0], text2[0]) # => H 72
+
+text2b = text2.encode() # utf-8 in Byte-Text
+text2u = text2b.decode() # Byte-Text in utf-8 Text
+```
+
+Dies macht vorallem bei Sonderzeichen (Nicht-Ascii Zeichen) einen Unterschied, da diese nicht als ein Zeichen sondern als mehrere dargestellt werden!
+
+```python
+text1 = "äöü"
+text2 = text1.encode()
+
+print(len(text1), text1) # => 3 äöü
+print(len(text2), text2) # => 6 b'\xc3\xa4\xc3\xb6\xc3\xbc'
+
 ```
