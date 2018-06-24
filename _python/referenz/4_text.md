@@ -104,5 +104,4 @@ text2 = text1.encode()
 
 print(len(text1), text1) # => 3 äöü
 print(len(text2), text2) # => 6 b'\xc3\xa4\xc3\xb6\xc3\xbc'
-
 ```

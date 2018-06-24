@@ -2,6 +2,7 @@
 date: 2018-06-15
 author: Mark
 parent: ersteschritte
+permalink: /python/einsteiger/hallowelt
 layout: exercise
 title: Erste Schritte - Grundlagen
 tags: [t_input]
@@ -29,8 +30,7 @@ Ein Pythonprogramm ist im Grunde nur eine Textdatei. Allerdings ist diese in sol
 - Die Ausführung einer Zeile kann dauern (z.B. `input(...)` wartet auf Benutzereingabe s.u.). alle weiteren Anweisungen werden  erst nach Abarbeitung der aktuellen Anweisung ausgeführt
 - Es gibt auch Kommentare. Diese werden vom Computer einfach ignoriert
 
-
-### Programm #1 hallo.py:  `Hallo Welt` ausgeben
+## Programm #1 hallo.py:  `Hallo Welt` ausgeben
 
 Erstelle dein erstes Python-Program
 
@@ -40,15 +40,46 @@ print("Hallo Welt")
 
 Schreibe obigen Code Zeichen für Zeichen ab. Führe ihn aus, was passiert?
 
-## Wie funktioniert die `print(...)`-Funktion?
+## Analyse Programm #1
 
-Ein Funktionsaufruf erkennt man im Allgemeinen an den runden Klammern `()` hinter einem Bezeichner wie z.B. `print`.
-- Allg. Aufbau von Funktionsaufrufen: NAME(Parameter1)
-- Texte in Anführungszeichen: `"`
-- Was passiert ohne Anführungszeichen?
+Das hallo.py Programm erzeugt die Aussgabe `Hallo Welt` auf der Konsole/Ausgabefenster, je nach dem wo/wie du das Programm ausführst, dass könnte z.B. so aussehen:
 
-## Kommentare
-Was in einer Zeile hinter einem `#`-Zeichen steht wird von Python ignoriert und nicht ausgeführt. Das ist nützlich für Notizen und um Code 'auszukommentieren', d.h. der Code wird nicht mehr ausgeführt, aber du musst ihn nicht löschen und kannst in jeder Zeit wieder einkommentieren.
+![Hallo.py](bilder/hallo.png)
+
+In deinem Programm wird die `print`-Funktion aufgerufen. Eine Funktion ist ein Programm-Stück, dass programmiert wurde, um einen bestimmten Zweck zu erfüllen. In unserem Fall gibt die `print`-Funktion den in Klammern übergebenen Wert in der Konsole aus. Funktionen werden aktiviert, indem man sie _"aufruft"_. Erst durch einen Funktionsaufruf wird der Code ausgeführt
+
+In unserem Beipspiel wird der Text `"Hallo Welt"` übergeben. Dieser Text erscheint dementsprechend, wenn das Programm ausgeführt wird.
+
+> **Merkregel Texte und Anführungszeichen**:  
+> Alles was in Anführungszeichen steht, ist für den Computer ein Text, auch _"string"_  genannt. Es sind sowohl einfache, als auch doppelte Anführungszeichen erlaubt.  
+>
+> **Beispiel**: `'Text in einfachen Anführungszeichen'`, bzw. `"Text in doppelten Anführungszeichen"`
+
+**Frage:** Was passiert, wenn man die Anführungszeichen vergisst?
+
+## Einen Funktionsaufruf genauer analysiert
+
+Ein Funktionsaufruf erkennt man im Allgemeinen an den runden Klammern `()` hinter einem Bezeichner wie z.B. `print`. Innerhalb diser Klammern können durch Kommas getrennt mehrere Werte, _Argumente_ genannt, übergeben werden. Es gibt aber auch Funktionen, denen nichts übergeben wird, dann sind die Klammern leer.
+
+![Funktionsaufruf](bilder/funktions_aufruf.svg)
+
+Die obige Grafik lässt sich auch gut durch folgende Merkregel zusammenfassen:
+
+> **Merkregel Funktionsaufrufe**  
+> Funktionsaufruf setzen sich aus **3 Teilen** zusammen:
+> 1. Der Bezeichner/Name der Funktion, hier: `print`
+> 2. Die Runden Klammern `(...)`, um die übergebenen Werte
+> 3. Die übergebenen Argumente/Werte, hier nur der Wert `"Hallo Welt"`
+
+## Einschub: Kommentare
+
+Dir werden öfters Zeilen über den Weg laufen, die mit einem  `#`-Zeichen beginnen. Diese Zeilen werden vom Computer/Python ignoriert und gehören nicht zum eigentlichen Programm. Sie dienen dazu, den Code mit Notizen/Erklärungen zu versehen! Du solltest dir auch angewöhnen möglichst viele Kommentare in deinen Code zu schreiben, damit du (und andere) später nachvollzeiehen können, was du getan hast.
+Beispiel:
+
+```python
+# Gibt Hallo Welt auf der Konsole aus
+print("Hallo Welt")
+```
 
 ## Variablen erstellen und ausgeben
 
@@ -100,7 +131,14 @@ Was in einer Zeile hinter einem `#`-Zeichen steht wird von Python ignoriert und 
 Hallo Mark!
 Du bist 24 Jahre alt.
 ```
+
 - Frage weitere Dinge ab und gib sie aus.
+
+## Zusammenfassung: Variablen erstellen
+
+Variablen können auf verschiedene Arten mit Werten gefüllt werden. Der grundlegende Aufbau ist aber immer der Gleiche.
+
+![Variablen erstellen](bilder/variablen.svg)
 
 
 ### Datentypen: Texte `str` und Zahlen `int`
