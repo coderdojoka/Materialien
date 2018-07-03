@@ -16,7 +16,7 @@ Als Programmierer sind Variablen deine besten Freunde. Variablen werden
 benutzt, um darin Werte zu speichern. Du kannst sie dir wie eine kleine
 Schublade vorstellen. Auf der Schublade steht der Name deiner Variablen.
 
-![Variablen als Schubladen](/_assets/imgs/schublade.png)
+![Variablen als Schubladen]({{ site.url }}/_assets/imgs/schublade.png)
 
 Du kannst die Schublade aufmachen und einen Wert z.B. eine Zahl
 reinlegen. Genauso kannst du zu jeder Zeit die Schublade aufmachen, um
@@ -66,6 +66,12 @@ Anfänglich mag es vielleicht etwas verwirrend erscheinen, aber man kann den Wer
 {% highlight python %}{% include select_lines.md lines=lines offset=24 limit=3 %}{% endhighlight %}
 
 Hier gilt einfach die Merkregel von oben. Zuerst wird die rechte Seite berechnet. Es wird der Wert von `zahl` gelesen und `1` dazu addiert. Dann wird die Variable auf der linken Seite auf den neu ausgerechneten Wert gesetzt.
+
+## Variablen erstellen
+
+Variablen können auf verschiedene Arten mit Werten gefüllt werden. Der grundlegende Aufbau ist aber immer der Gleiche.
+
+![Variablen erstellen]({{ site.url }}/_assets/imgs/variablen.svg)
 
 ## Aufgaben
 

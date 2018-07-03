@@ -81,29 +81,75 @@ Beispiel:
 print("Hallo Welt")
 ```
 
-## Variablen erstellen und ausgeben
+## Variablen
 
-- Was sind Variablen
-- Allg. Aufbau beim Erstellen von Variablen NAME = WERT
-- print(meineVariable)
+Als Programmierer sind Variablen deine besten Freunde. Variablen werden
+benutzt, um darin Werte zu speichern. Du kannst sie dir wie eine kleine
+Schublade vorstellen. Auf der Schublade steht der Name deiner Variablen.
+
+![Variablen als Schubladen](/_assets/imgs/schublade.png)
+
+Du kannst die Schublade aufmachen und einen Wert z.B. eine Zahl
+reinlegen. Genauso kannst du zu jeder Zeit die Schublade aufmachen, um
+den Wert zu lesen.
+
+```python
+# eine neue Variable erstellen
+zaehler = 42  # Wert schreiben
+
+print(zaehler)  # Wert lesen, gibt 42 aus
+```
+
+Auf der linken Seite des `=`-Zeichens steht der Name der Variablen, die erstellt wird.
+Auf der rechten Seite steht der Wert, der ihr zugewiesen wird.
+
+> **Merkregel Variablen**  
+> Um eine Variable zu erzeugen oder zu verändern verwendet man das `=`-Zeichen (den Zuweisungsoperator).
+>
+> **Links** des `=`-Zeichens steht die Variable und **rechts** der Wert.
+>
+
+Mithilfe des `print()`-Befehls, kann der Wert einer Variablen ausgegeben werden. Ausführlichere Infos gibt es in der Anleitung {% include gen_link.md uid="tut_var" %}.
 
 ### Anführungszeichen - Wann und wann nicht?
 
-- Python erkennt Texte an Anführungzeichen. Alles was nicht in Anführungszeichen steht muss eine Variable, Befehl, o. ä. sein.
-- **Wichtig**: Variablen ohne Anführungszeichen, Texte mit Anführungszeichen!
+Python erkennt Texte daran, dass sie in Anführungzeichen stehen. Alles was nicht in Anführungszeichen steht muss also eine Variable, Befehl, etc. sein. Deshalb ist es wichtig, Variablen-Namen **nie in Anführungszeichen** zu setzen, da sie sonst als Text interpretiert werden und nicht der Wert der Variablen verwendet wird.
 
+Was ist die Ausgabe dieses Programmes?
 
-### `Hallo Python` einlesen
-- `input("Schreib mir etwas: ")` schreiben, ausführen und *Hallo Python* eingeben `ENTER`-Taste drücken, was passiert?
-- Was wird ausgegeben? was nicht?
+```python
+variable = "Hallo Welt"
+print(variable)
+print("variable")
+```
+
+## Mit dem Computer schreiben
+
+Es wäre langweilig, wenn du nicht mit Computer, bzw. deinen Programmen interagieren könntest.
+Aus diesem Grund gibt es die `input(..)`-Funktion. Führe folgendes Programm aus:
+
+```python
+input("Schreib mir etwas: ")
+```
+
+Was passiert? Wird etwas ausgegeben? Beendet dein Programm?
+
+Wird das obige Programm ausgeführt, so sorgt der `input(..)`-Befehl, dafür, dass dein Programm wartet,
+ bist du etwas schreibst und mit `ENTER` bestätigst. Erst dann wird das Programm weiter ausgeführt.
 
 
 ### Programm #2: echo.py
-- Funktionen wie `input(..)` haben Rückgabewerte
-- Rückgabe von `input(..)` in einer Variable speichern und mit `print(..)` ausgeben
 
+Funktionen wie `input(..)` haben Rückgabewerte, d.h. sie nehmen nicht nur Werte an, sondern produzieren ggf. auch ein Ergebnis, den so genannten Rückgabewert. Mit dem Rückgabewert kannst du weiter arbeiten, z.B. ihn in einer Variabelen speichern. Was passiert, wenn du dieses Programm ausführst?
 
-### Texte kombinieren
+```python
+deineEingabe = input("Schreib mir etwas: ")
+print(deineEingabe)
+```
+
+Mehr Infos zu Eingaben und der `input(..)`-Funktion findest du im Tutorial zu  {% include gen_link.md uid="tut_input" %}.
+
+## Texte kombinieren
 - Plus-Operator/**Kombination** : `+` fügt zwei Text-Stücke zusammen: `text = "Hallo " + "Welt"`
 - Mal-Operator/**Wiederholung**: `*` wiederholt den Text: `text = "Ha" * 10`
 - Ausprobieren
@@ -133,13 +179,6 @@ Du bist 24 Jahre alt.
 ```
 
 - Frage weitere Dinge ab und gib sie aus.
-
-## Zusammenfassung: Variablen erstellen
-
-Variablen können auf verschiedene Arten mit Werten gefüllt werden. Der grundlegende Aufbau ist aber immer der Gleiche.
-
-![Variablen erstellen](bilder/variablen.svg)
-
 
 ### Datentypen: Texte `str` und Zahlen `int`
 - Python unterscheidet was für einen Datentyp Werte/Variablen haben.
