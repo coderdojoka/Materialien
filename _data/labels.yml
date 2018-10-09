@@ -7,6 +7,14 @@ html:
 scratch: 
   title: Scratch
   url: scratch
+arduino: 
+  title: Arduino
+  url: arduino
+roboauto:
+  arduino:
+    title: Roboter Auto
+    url: arduino/roboauto
+
 tutorial:
   python:
     title: Tutorials
