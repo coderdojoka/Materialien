@@ -2,8 +2,25 @@
 title: Einfaches Fahren
 layout: tutorial
 topic: roboauto
-author: Mark
+author: Mark, Laura
 date: 09.10.2018
 ---
 
+## Ziel
 Lasse das Roboterauto vorwärts und rückwärts fahren!
+
+## Präsentationsfolien
+[Hier]({{ site.url }}/_assets/arduino/folien/einfuehrung.odp) findest du die Präsentationsfolien.
+
+## Programm Code
+Vervollständige folgenden Code und lade ihn auf dein Roboter Auto hoch.
+
+{% highlight c++ %}
+{% include_relative code/fahren/einfuehrung.ino %}
+{% endhighlight %}
+
+[Lösung anzeigen](#fahren){:.show_solution}
+
+{% highlight c++ %}
+{% include_relative code/fahren/einfuehrung_final.ino %}
+{% endhighlight %}{: .hidden #fahren}
