@@ -3,7 +3,7 @@ title: Ultraschall Abstandssensor
 layout: tutorial
 uid: roboauto_ultraschall
 topic: roboauto
-author: Mark, Laura
+author: Laura, Marcel
 date: 09.10.2018
 ---
 

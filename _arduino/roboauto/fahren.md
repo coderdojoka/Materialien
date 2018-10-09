@@ -2,7 +2,7 @@
 title: Einfaches Fahren
 layout: tutorial
 topic: roboauto
-author: Mark, Laura
+author: Laura, Marcel
 next: roboauto_ultraschall
 date: 09.10.2018
 ---

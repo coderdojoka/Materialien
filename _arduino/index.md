@@ -8,7 +8,7 @@ date: 21.06.2018
 
 ## Programmiere unser Roboter Auto
 
-[Hier](/arduino/roboauto/) gehts zur Übersichtsseite.
+[Hier]({{ site.url }}/arduino/roboauto/) gehts zur Übersichtsseite.
 
 Die neusten Anleitungen findest du hier:
 
