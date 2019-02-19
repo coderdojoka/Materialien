@@ -2,10 +2,12 @@
 layout: tutorial
 title: Variablen
 author: Mark
-date: 2015-12-01
-uid: tut_var
+date: 2017-12-01
+permalink: /python/tutorials/variablen/
+uid: python-grundlagen-variablen
 level: 1
-topic: basics
+topic: python-grundlagen
+group: ersteschritte
 type: tutorial
 tags: [t_input]
 ---
@@ -88,4 +90,4 @@ Man kann in Variablen natürlich nicht nur Zahlen speichern. Es kann z.B. auch T
 
 {% highlight python %}{% include select_lines.md lines=lines offset=28 limit=3 %}{% endhighlight %}
 
-Mehr Infos zum Umgang mit Text findest du in dem gleichnamigen Tutorial ’Text’.
+Mehr Infos zum Umgang mit Text findest du in dem Tutorial {% include link_by_id.md uid="python-grundlagen-text" %}.

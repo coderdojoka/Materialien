@@ -5,7 +5,7 @@ author: [Mark, Norbert]
 date: 2015-12-01
 version: 0.2
 uid: list1
-topic: basics
+topic: python-grundlagen
 type: tutorial
 level: 2
 order: 1

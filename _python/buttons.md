@@ -1,6 +1,7 @@
 ---
 title: Buttons
 permalink: /python/buttons/
+uid: python-buttons
 layout: page
 ---
 

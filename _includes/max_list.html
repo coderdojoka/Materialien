@@ -7,5 +7,7 @@
 {% endfor %}
 </ul>
 {% if include.max > 0 %}
-<a href="{{ include.more }}">Alle anzeigen...</a>
+
+{% include link_by_id.html uid=include.more %}
+
 {% endif %}

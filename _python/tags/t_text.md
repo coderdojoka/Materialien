@@ -1,7 +1,8 @@
 ---
 layout: tag
 type: tag
-title: Text-Ops
+title: Text
+permalink: /python/tags/text/
 uid: t_text
 ---
 

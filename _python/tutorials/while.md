@@ -5,7 +5,7 @@ autor: Mark, Norbert
 date: 2015-12-01
 version: 0.2
 uid: while
-topic: basics
+topic: python-grundlagen
 type: tutorial
 tags: [t_while]
 level: 3
@@ -39,7 +39,7 @@ while <Bedingung>:
 # Hier gehts normal weiter
 ```
 
-**Tipp:** Erklärungen und Beispiele zu Bedingungen findest du in dem Tutorial zu {% include gen_link.html uid="if" %}.
+**Tipp:** Erklärungen und Beispiele zu Bedingungen findest du in dem Tutorial zu {% include link_by_id.html uid="if" %}.
 
 ## Aufgaben
 

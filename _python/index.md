@@ -16,12 +16,14 @@ Hier findest du eine Reihe von Anleitungen und Beispielen, die nach Komplexität
 img1="python_intermediate.svg" link1="/python/fortgeschritten/" title1="Fortgeschritten"
 img2="python_master.svg" link2="/python/meister/" title2="Meister" %}
 
-Oder verwende die [Such-Funktion]({{ "/python/suche/" | relative_url }}), um alle vorhanden Anleitungen, Beispiele und Aufgaben zu durchsuchen!
-
 -----
 
+{% capture suche %}
+Verwende die {% include link_by_id.md uid="python-suche" %}, um alle vorhanden Anleitungen, Beispiele und Aufgaben zu durchsuchen!
+{% endcapture %}
+
 {% capture referenz %}
-Hier findest du eine Übersicht über die wichtigsten Python Befehle und Konzepte. Wenn du z.B. herausfinden willst, welche Funktionen es für Listen gibt, wirst du hier fündig.
+Hier findest du eine {%include link_by_id.md uid="python-referenz" title="Übersicht" %} über die wichtigsten Python Befehle und Konzepte. Wenn du z.B. herausfinden willst, welche Funktionen es für Listen gibt, wirst du hier fündig.
 {% endcapture %}
 
 {% capture projekte %}
@@ -41,10 +43,13 @@ Hier haben wir eine Liste mit hilfreichen Links zu externen Seiten rum ums Progr
 Verdiene dir für deine Lernfortschritte in Python diese coolen Buttons!
 {% endcapture %}
 
-{% include  img_n_text.html img="notebook.svg" title='Befehlsreferenz' link="python/referenz"  description=referenz  %}
 
-{% include  img_n_text.html img="gears.svg" title='Eigene Projekte' link="python/projekte" class_extra="img-right"  description=projekte  %}
+{% include  img_n_text.html img="lupe.svg" id='python-suche' description=suche  %}
 
-{% include  img_n_text.html img="folder.svg" title='Weiterführende Links' link="python/links" description=links  %}
+{% include  img_n_text.html img="notebook.svg" id="python-referenz"  class_extra="img-right"  description=referenz  %}
 
-{% include  img_n_text.html img="buttons/python_buttons.svg" title='Buttons' link="python/buttons" description=buttons  %}
+{% include  img_n_text.html img="gears.svg" id="python-projekte" description=projekte  %}
+
+{% include  img_n_text.html img="folder.svg" id="python-links"  class_extra="img-right"  description=links  %}
+
+{% include  img_n_text.html img="buttons/python_buttons.svg" id="python-buttons" description=buttons  %}

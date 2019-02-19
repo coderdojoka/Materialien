@@ -4,7 +4,7 @@ title: Schleifen • for-Schleife
 author: Mark
 date: 2015-12-01
 uid: for
-topic: basics
+topic: python-grundlagen
 type: tutorial
 tags: [t_for]
 level: 3

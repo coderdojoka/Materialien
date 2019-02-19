@@ -3,7 +3,7 @@ author: mark
 date: 2016-04-22
 title: if-Abfragen
 layout: referenz
-topic: py_ref
+topic: python-referenz
 uid: ref2
 tags: [t_if]
 order: 2

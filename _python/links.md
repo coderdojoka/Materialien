@@ -1,6 +1,7 @@
 ---
 title: Weiterführende Links
 permalink: /python/links/
+uid: python-links
 author: Mark
 layout: page
 ---

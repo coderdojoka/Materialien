@@ -3,7 +3,7 @@ author: mark
 date: 2016-04-22
 title: Schleifen
 layout: referenz
-topic: py_ref
+topic: python-referenz
 uid: ref3
 tags: [t_while, t_for]
 order: 3

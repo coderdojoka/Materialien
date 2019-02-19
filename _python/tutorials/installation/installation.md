@@ -17,5 +17,5 @@ Danach den Installer ausführen. **WICHTIG**: Den Haken bei "Python zum Windows 
 
 Für Anfänger ist der Editor [Thonny](http://thonny.org/) eine hervorragende Wahl.
 
-Für komplexere Projekte und forgeschrittene Nutzer ist die [Pycharm Community Edition](https://www.jetbrains.com/pycharm/download/) eine gute Wahl. Tipps zum Umgang mit Pycharm kannst du hier: {% include gen_link.html uid="pycharm_spelling" %} finden.
+Für komplexere Projekte und forgeschrittene Nutzer ist die [Pycharm Community Edition](https://www.jetbrains.com/pycharm/download/) eine gute Wahl. Tipps zum Umgang mit Pycharm kannst du hier: {% include link_by_id.html uid="pycharm_spelling" %} finden.
 

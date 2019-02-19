@@ -15,7 +15,7 @@ Du willst Spiele in Python entwickeln? Dann bist du hier genau richtig!
 
 ## Installation
 
-Eine Anleitung findest unter {% include gen_link.html uid="pg_install" %}.
+Eine Anleitung findest unter {% include link_by_id.html uid="pg_install" %}.
  
 ## [Befehlsübersicht]({{ "python/pyenguin_referenz.html" | absolute_url }})
 Eine Übersicht mit den wichtigsten pyenguin Befehlen kannst hier finden.

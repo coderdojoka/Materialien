@@ -3,8 +3,9 @@ layout: example
 title: Hallo Welt
 file: code/text.py
 type: example
-folder: basics
+folder: python-grundlagen
 date: 2017-12-02
+level: 2
 tags: [t_input]
 ---
 

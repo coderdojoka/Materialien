@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Aufgaben Übersicht
-uid:  python_aufg
-permalink: python/aufgaben.html
+uid:  python-aufgaben
+permalink: python/aufgaben
 ---
 
 Hier findest du Aufgaben rund um Python. Die Aufgaben sind farblich nach Schwierigkeit sortiert.

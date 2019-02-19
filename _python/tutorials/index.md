@@ -1,12 +1,13 @@
 ---
 layout: page
 title: Tutorial-Übersicht
+uid: python-tutorials
 permalink: python/tutorials.html
 ---
 
 
 {% assign data = site.python | where_exp:"item","item.type == 'tutorial'" %}
-{% assign tuts = data | where_exp:"item","item.folder == basics" %}
+{% assign tuts = data | where_exp:"item","item.folder == python-grundlagen" %}
 
 {% include dump_items.html data=tuts %}
 

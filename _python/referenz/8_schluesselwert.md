@@ -3,7 +3,7 @@ author: Mark
 date: 2018-06-22
 title: Schluessel-Wert Speicher - Dictionaries
 layout: referenz
-topic: py_ref
+topic: python-referenz
 uid: ref8
 tags: [t_dict]
 order: 8

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Beispiele - Grundlagen
-filter_by: basics
+filter_by: python-grundlagen
 collection_name: python
 ---
 

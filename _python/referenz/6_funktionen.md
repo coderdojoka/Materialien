@@ -3,7 +3,7 @@ author: mark
 date: 2016-04-22
 title: Funktionen I
 layout: referenz
-topic: py_ref
+topic: python-referenz
 uid: ref6
 tags: [t_function]
 order: 6

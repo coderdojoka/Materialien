@@ -1,14 +1,12 @@
 <div class="img-n-text {{ include.class_extra }}">
     <div class="img">
-        <a href="{{ site.url }}/{{ include.link}}">
         <img src="{{ site.url }}/_assets/imgs/{{ include.img }}" alt="{{ include.title }}">
-        </a>
         {% if include.author %}
         <span class="img-info">Quelle: {{ include.author }}</span>
         {% endif %}
     </div>
     <div class="text">
-        <h2><a href="{{ site.url }}/{{ include.link}}">{{ include.title }}</a></h2>
+        <h2>{% include link_by_id.html uid=include.id %}</h2>
         <p>{{ include.description | markdownify }}</p>
     </div>
 </div>

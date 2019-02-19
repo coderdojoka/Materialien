@@ -3,7 +3,7 @@ author: mark
 date: 2016-04-22
 title: Text
 layout: referenz
-topic: py_ref
+topic: python-referenz
 uid: ref4
 tags: [t_text]
 order: 4

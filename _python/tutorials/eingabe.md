@@ -22,12 +22,12 @@ Was in den Klammern bei `input()` steht wird zuerst auf der Konsole ausgeben, da
 {% highlight python %}{% include select_lines.md lines=lines offset=2 limit=2 %}{% endhighlight %}
 
 Wie in dem Tutorial zu Variablen schon erklärt wurde, ist `name` eine Variable.
-Dieser Variable wird der Wert zugewiesen, den der Benutzer eintippt und
+Dieser Variable wird der Wert als Text zugewiesen, den der Benutzer eintippt und
 mittels `input()` gelesen wird.
 
 ## Zahlen einlesen
 
-Mittles `input()` kann nur Text eingelesen werden! Auch wenn der Benutzer `12` 
+Mittles `input()` kann **nur Text** eingelesen werden! Auch wenn der Benutzer `12` 
 eintippt, so wird dies als Text `"12"` interpretiert. Wir können mit Text
 allerdings nicht rechnen. Aus diesem Grund müssen wir den eingelesenen
 Text mithilfe von `int(...)` in eine ganze Zahl konvertieren.

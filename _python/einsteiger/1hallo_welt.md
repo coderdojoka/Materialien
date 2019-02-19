@@ -1,9 +1,9 @@
 ---
 date: 2018-06-15
 author: Mark
-parent: ersteschritte
+group: ersteschritte
 permalink: /python/einsteiger/hallowelt
-layout: exercise
+layout: tutorial
 title: Erste Schritte - Grundlagen
 tags: [t_input]
 related_exercises: [ka_input, ka_for]
@@ -109,7 +109,7 @@ Auf der rechten Seite steht der Wert, der ihr zugewiesen wird.
 > **Links** des `=`-Zeichens steht die Variable und **rechts** der Wert.
 >
 
-Mithilfe des `print()`-Befehls, kann der Wert einer Variablen ausgegeben werden. Ausführlichere Infos gibt es in der Anleitung {% include gen_link.md uid="tut_var" %}.
+Mithilfe des `print()`-Befehls, kann der Wert einer Variablen ausgegeben werden. Ausführlichere Infos gibt es in der Anleitung {% include link_by_id.md uid="tut_var" %}.
 
 ### Anführungszeichen - Wann und wann nicht?
 
@@ -147,7 +147,7 @@ deineEingabe = input("Schreib mir etwas: ")
 print(deineEingabe)
 ```
 
-Mehr Infos zu Eingaben und der `input(..)`-Funktion findest du im Tutorial zu  {% include gen_link.md uid="tut_input" %}.
+Mehr Infos zu Eingaben und der `input(..)`-Funktion findest du im Tutorial zu  {% include link_by_id.md uid="tut_input" %}.
 
 ## Texte kombinieren
 - Plus-Operator/**Kombination** : `+` fügt zwei Text-Stücke zusammen: `text = "Hallo " + "Welt"`

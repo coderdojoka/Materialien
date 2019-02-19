@@ -1,10 +1,12 @@
 ---
 layout: tutorial
-title: Text Operationen
+type: tutorial
+title: Text
 author: Mark
 date: 2015-12-01
-uid: tut_text
-topic: basics
+permalink: /python/tutorials/text/
+uid: python-grundlagen-text
+topic: python-grundlagen
 level: 2
 tags: [t_text]
 ---
@@ -15,7 +17,7 @@ tags: [t_text]
 An vielen Stellen beim Programmieren hat man mit Text zu tun. Man muss
 Texte lesen, auf bestimmte Buchstaben untersuchen, etc...
 
-```
+```python
 # eine Variable mit dem Wert 'Hallo Welt'
 meinText = "Hallo Welt"
 print(meinText)
@@ -29,7 +31,7 @@ Anführungszeichen stehen.
 
 Man kann Textstücke kombinieren:
 
-```
+```python
 name = "Mark"
 meinText = "Hallo " + name  # Textstücke zusammenkleben
 print(meinText)

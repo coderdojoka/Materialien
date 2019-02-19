@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Beispiele-Übersicht
+uid: python-beispiele
 permalink: python/beispiele.html
 ---
 

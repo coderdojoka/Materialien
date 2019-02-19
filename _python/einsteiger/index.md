@@ -16,20 +16,20 @@ layout: page
 
 # Python installieren
 
-Unter {% include gen_link.md uid="python_install" %} findest du eine Anleitung zur Installation von Python.
+Unter {% include link_by_id.md uid="python_install" %} findest du eine Anleitung zur Installation von Python.
 
 # Erste Schritte für komplette Neueinsteiger
 
-Du programmierst zum ersten Mal mit Python? Dann ist {% include gen_link.md uid="ersteschritte" %} genau das richtige für dich!
+Du programmierst zum ersten Mal mit Python? Dann ist {% include link_by_id.md uid="ersteschritte" %} genau das richtige für dich!
 
 # Tutorials
 
-{% include max_list.html data=tuts max=5 more="tutorials" %}
+{% include max_list.html data=tuts max=5 more="python-einsteiger-tutorials" %}
 
 # Aufgaben
 
-{% include max_list.html data=exs max=5 more="aufgaben" %}
+{% include max_list.html data=exs max=5 more="python-einsteiger-aufgaben" %}
 
 # Beispiele
 
-{% include max_list.html data=exps max=5 more="beispiele" %}
+{% include max_list.html data=exps max=5 more="python-beispiele" %}

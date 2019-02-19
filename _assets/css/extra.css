@@ -39,7 +39,7 @@ content > img {
 }
 
 .tags-container > .tag {
-    padding: 5px 10px 5px 0;
+    padding: 3px 10px 5px 0;
     vertical-align: middle;
     border-radius: 40px;
     background-color: rgb(211, 231, 228);

@@ -2,8 +2,9 @@
 layout: example
 title: Umgang mit Text
 file: code/text.py
-folder: basics
+folder: python-grundlagen
 type: example
+level: 2
 date: 2016-02-20
 tags: [t_text]
 ---

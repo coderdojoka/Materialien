@@ -4,7 +4,7 @@ title: Listen • Lösungen
 author: Mark, Norbert
 date: 2016-08-04
 uid: list3
-topic: basics
+topic: python-grundlagen
 type: tutorial
 tags: [t_list]
 level: 3

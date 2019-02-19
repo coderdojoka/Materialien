@@ -7,7 +7,7 @@ layout: page
 ---
 
 {% assign data = site.scratch | where_exp:"item","item.type == 'tutorial'" %}
-{% assign tuts = data | where_exp:"item","item.folder == basics" %}
+{% assign tuts = data | where_exp:"item","item.folder == python-grundlagen" %}
 
 {% include dump_items.html data=data %}
 
