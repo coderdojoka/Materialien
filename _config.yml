@@ -29,7 +29,7 @@ author:
 version:          0.1.0
 
 # Collections settings
-#collections_dir: collections
+collections_dir: content
 
 # output: true, renders pages within the collection 
 # permalink: specifiy directory and file name

@@ -1,2 +1,1 @@
-{% assign item = site.python | where_exp:"item","item.uid==include.uid" | last %}
-{% if item != null %}[{{ item.title }}]({{ site.url }}/{{ item.url }}){% else %}**Link(`{{ include.uid }}`) nicht gefunden!!**{% endif %}
+{% for coll in site.collections %}{% assign item = site.[coll.label] | where_exp:"item","item.uid==include.uid" | last %}{% if item != null %}{% break %}{% endif %}{% endfor %}{% if item != null %}[{{ item.title }}]({{ site.url }}/{{ item.url }}){% else %}**Link(`{{ include.uid }}`) nicht gefunden!!**{% endif %}

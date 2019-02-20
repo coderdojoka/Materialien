@@ -6,7 +6,7 @@
         {% endif %}
     </div>
     <div class="text">
-        <h2>{% include link_by_id.html uid=include.id %}</h2>
+        <h2>{% include link_by_id.html uid=include.uid collection=bubber %}</h2>
         <p>{{ include.description | markdownify }}</p>
     </div>
 </div>
