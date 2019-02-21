@@ -1,5 +1,5 @@
 ---
-title: Übersicht
+title: Python
 uid: python
 permalink: /python/
 layout: page

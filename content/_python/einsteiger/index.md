@@ -18,7 +18,7 @@ layout: page
 
 Unter {% include link_by_id.md uid="python_install" %} findest du eine Anleitung zur Installation von Python.
 
-# Erste Schritte für komplette Neueinsteiger
+# {% include link_by_id.md uid="ersteschritte" %} für komplette Neueinsteiger
 
 Du programmierst zum ersten Mal mit Python? Dann ist {% include link_by_id.md uid="ersteschritte" %} genau das richtige für dich!
 
