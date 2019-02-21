@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tutorial-Übersicht
+title: Tutorials
 uid: python-tutorials
 permalink: python/tutorials.html
 ---

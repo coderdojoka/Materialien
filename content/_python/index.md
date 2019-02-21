@@ -9,7 +9,7 @@ layout: page
 {% assign tuts = site.python | where_exp:"item","item.type == 'tutorial'" %}
 {% assign exps = site.python | where_exp:"item","item.type == 'example'" %}
 
-## Aufgaben, Tutorials und Beispiele
+##  {% include link_by_id.md uid="python-aufgaben" %}, {% include link_by_id.md uid="python-tutorials" %} und {% include link_by_id.md uid="python-beispiele" %}
 
 Hier findest du eine Reihe von Anleitungen und Beispielen, die nach Komplexität geordnet sind.
 

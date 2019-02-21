@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Beispiele-Übersicht
+title: Beispiele
 uid: python-beispiele
-permalink: python/beispiele.html
+permalink: /python/beispiele/
 ---
 
 {% assign data = site.python | where_exp:"item","item.type == 'example'" %}

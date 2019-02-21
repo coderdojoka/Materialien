@@ -8,8 +8,8 @@ author: Mark
 ---
 
 
-**TODO !!!**
+Tutorials:
 
 {% assign tuts = site.python | where_exp:"item","item.group == 'ersteschritte'" %}
 
-{% include max_list.html data=tuts max=3 %}
+{% include max_list.html data=tuts max=3 more="python-einsteiger-tutorials" %}

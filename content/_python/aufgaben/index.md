@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Aufgaben Übersicht
+title: Aufgaben
 uid:  python-aufgaben
 permalink: python/aufgaben
 ---
