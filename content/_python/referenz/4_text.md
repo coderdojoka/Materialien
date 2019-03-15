@@ -4,11 +4,11 @@ date: 2016-04-22
 title: Text
 layout: referenz
 topic: python-referenz
-uid: ref4
+uid: python-referenz-4
 tags: [t_text]
 order: 4
-next: ref5
-prev: ref3
+next: python-referenz-5
+prev: python-referenz-3
 ---
 
 Ein Text ist im Prinzip nur eine Liste von Buchstaben und Zeichen.

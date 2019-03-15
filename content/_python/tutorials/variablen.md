@@ -3,8 +3,8 @@ layout: tutorial
 title: Variablen
 author: Mark
 date: 2017-12-01
+uid: python-tutorial-variablen
 permalink: /python/tutorials/variablen/
-uid: python-grundlagen-variablen
 level: 1
 topic: python-grundlagen
 group: ersteschritte

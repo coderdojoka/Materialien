@@ -1,8 +1,9 @@
 ---
 title: Eingaben einlesen
 author: Mark  
-uid: tut_input
+uid: python-tutorial-input
 layout: tutorial
+type: tutorial
 group: ersteschritte
 ---
 

@@ -3,12 +3,12 @@ layout: tutorial
 title: Schleifen • for-Schleife
 author: Mark
 date: 2015-12-01
-uid: for
+uid: python-tutorial-for
 topic: python-grundlagen
 type: tutorial
 tags: [t_for]
 level: 3
-next: while
+next: python-tutorial-while
 ---
 
 ## Einstieg

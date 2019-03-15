@@ -1,8 +1,9 @@
 ---
-title: if-Abfragen  
-author: Mark
 layout: tutorial
 type: tutorial
+title: if-Abfragen  
+author: Mark
+uid: python-tutorial-if
 group: ersteschritte
 ---
 

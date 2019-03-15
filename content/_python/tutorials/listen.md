@@ -1,16 +1,16 @@
 ---
 layout: tutorial
 title: Listen • Teil 1
-author: [Mark, Norbert]
+author: Mark, Norbert
 date: 2015-12-01
 version: 0.2
-uid: list1
+uid: python-grundlagen-list-1
 topic: python-grundlagen
 type: tutorial
 level: 2
 order: 1
 tags: [t_list]
-next: list2
+next: python-grundlagen-list-2
 ---
 
 # Was sind Listen?

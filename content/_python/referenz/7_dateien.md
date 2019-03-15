@@ -4,11 +4,11 @@ date: 2016-04-22
 title: Dateien I
 layout: referenz
 topic: python-referenz
-uid: ref7
+uid: python-referenz-7
 tags: [t_io]
 order: 7
-next: ref10
-prev: ref6
+next: python-referenz-8
+prev: python-referenz-6
 ---
 
 Ein Computer speichert Informationen in Dateien. Dateien sind in Ordnern gruppiert.

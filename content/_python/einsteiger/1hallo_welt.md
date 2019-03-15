@@ -2,6 +2,7 @@
 date: 2018-06-15
 author: Mark
 group: ersteschritte
+uid: python-ersteschritte-1
 permalink: /python/einsteiger/hallowelt
 layout: tutorial
 title: Erste Schritte - Grundlagen

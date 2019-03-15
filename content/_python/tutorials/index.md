@@ -2,7 +2,7 @@
 layout: page
 title: Tutorials
 uid: python-tutorials
-permalink: python/tutorials.html
+permalink: python/tutorials
 ---
 
 

@@ -4,9 +4,9 @@ date: 2016-04-22
 title: Nützliches
 layout: referenz
 topic: python-referenz
-uid: ref10
+uid: python-referenz-10
 tags: [t_random, t_datetime, t_time]
-prev: ref9
+prev: python-referenz-9
 order: 10
 ---
 

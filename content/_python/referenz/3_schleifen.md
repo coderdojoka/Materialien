@@ -4,11 +4,11 @@ date: 2016-04-22
 title: Schleifen
 layout: referenz
 topic: python-referenz
-uid: ref3
+uid: python-referenz-3
 tags: [t_while, t_for]
 order: 3
-next: ref4
-prev: ref2
+next: python-referenz-4
+prev: python-referenz-2
 ---
 
 ## while-Schleife

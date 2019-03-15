@@ -4,11 +4,11 @@ date: 2018-06-22
 title: Schluessel-Wert Speicher - Dictionaries
 layout: referenz
 topic: python-referenz
-uid: ref8
+uid: python-referenz-8
 tags: [t_dict]
 order: 8
-next: ref9
-prev: ref7
+next: python-referenz-9
+prev: python-referenz-7
 ---
 
 Ein Schlüssel-Wert Speicher oder Wörterbuch oder Dictionary (`dict`) ist ein Container in dem du Werte unter einem bestimmten Text-Schlüssel ablegest. Du kannst es dir wie ein Schubladenschrank vorstellen. Die Schubladen sind mit Texten beschriftet und du kannst in jede Schublade einen Wert legen oder daraus lesen. Im Prinzip verhalten diese sich ähnlich wie Listen, nur das die Einträge nicht durchnummeriert sind, sonder freiwählbare Texte als Schlüssel fungieren.

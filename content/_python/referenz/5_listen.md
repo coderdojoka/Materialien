@@ -4,11 +4,11 @@ date: 2016-04-22
 title: Listen
 layout: referenz
 topic: python-referenz
-uid: ref5
+uid: python-referenz-5
 tags: [t_list]
 order: 5
-next: ref6
-prev: ref4
+next: python-referenz-6
+prev: python-referenz-4
 ---
 
 Eine Liste ist ein Container für verschiedene Werte oder Variablen. Du kannst dir einen Liste wie einen Schubladenschrank vorstellen. Die Schubladen sind durchnummeriert und du kannst in jede Schublade einen Wert legen oder daraus lesen.

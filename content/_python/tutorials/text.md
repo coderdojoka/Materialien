@@ -4,8 +4,8 @@ type: tutorial
 title: Text
 author: Mark
 date: 2015-12-01
+uid: python-tutorial-text
 permalink: /python/tutorials/text/
-uid: python-grundlagen-text
 topic: python-grundlagen
 level: 2
 tags: [t_text]

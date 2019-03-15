@@ -3,14 +3,14 @@ layout: tutorial
 title: Listen • Teil 2
 author: Mark, Norbert
 date: 2016-08-04
-uid: list2
+uid: python-grundlagen-list-2
 topic: python-grundlagen
 type: tutorial
 tags: [t_list]
 level: 3
 order: 2
-prev: list1
-next: list3
+prev: python-grundlagen-list-1
+next: python-grundlagen-list-3
 ---
 
 # Zwei Listen zusammenfügen

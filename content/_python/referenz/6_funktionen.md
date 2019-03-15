@@ -4,11 +4,11 @@ date: 2016-04-22
 title: Funktionen I
 layout: referenz
 topic: python-referenz
-uid: ref6
+uid: python-referenz-6
 tags: [t_function]
 order: 6
-next: ref10
-prev: ref6
+next: python-referenz-7
+prev: python-referenz-5
 ---
 
 ## Was ist eine Funktion?

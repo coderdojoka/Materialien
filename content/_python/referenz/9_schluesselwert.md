@@ -4,11 +4,11 @@ date: 2018-06-22
 title: Kommandozeilen-Argumente
 layout: referenz
 topic: python-referenz
-uid: ref9
+uid: python-referenz-9
 tags: [t_dict]
 order: 9
-next: ref10
-prev: ref8
+next: python-referenz-10
+prev: python-referenz-8
 ---
 
 Manchmal ist es nützlich das Programm über die Kommandozeile aufzurufen, und dabei direkt Startwerte zu übergeben.

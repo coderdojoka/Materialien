@@ -5,9 +5,9 @@ title: Grundlagen
 layout: referenz
 topic: python-referenz
 tags: [t_input]
-uid: ref1
+uid: python-referenz-1
 order: 1
-next: ref2
+next: python-referenz-2
 ---
 
 ## Kommentare

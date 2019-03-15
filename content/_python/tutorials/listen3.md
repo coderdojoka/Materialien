@@ -3,12 +3,13 @@ layout: tutorial
 title: Listen • Lösungen
 author: Mark, Norbert
 date: 2016-08-04
-uid: list3
+uid: python-grundlagen-list-3
 topic: python-grundlagen
 type: tutorial
 tags: [t_list]
 level: 3
-prev: list2
+order: 3
+prev: python-grundlagen-list-2
 ---
 
 # Schaue dir die Lösungen erst an, wenn du die Aufgaben selbständig gelöst hast!

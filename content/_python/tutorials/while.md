@@ -4,7 +4,8 @@ title: Schleifen • while
 autor: Mark, Norbert
 date: 2015-12-01
 version: 0.2
-uid: while
+uid: python-tutorial-while
+permalink: /python/tutorials/while/
 topic: python-grundlagen
 type: tutorial
 tags: [t_while]

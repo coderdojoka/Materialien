@@ -4,11 +4,11 @@ date: 2016-04-22
 title: if-Abfragen
 layout: referenz
 topic: python-referenz
-uid: ref2
+uid: python-referenz-2
 tags: [t_if]
 order: 2
-next: ref3
-prev: ref1
+next: python-referenz-3
+prev: python-referenz-1
 ---
 
 ## Bedingung
